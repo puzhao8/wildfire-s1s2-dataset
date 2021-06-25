@@ -130,14 +130,25 @@ Query ALOS SAR Data
 """ #################################################################
 Query Mask Data 
 ################################################################# """ 
+# VIIRS Active Fire
+
+
 # Fire Polygon
 
 
-# MTBS Mask
+# MODIS Burned Area Map (500m) / FireCCI50 (250m)
+
+
+# MTBS Burn Severity Mask
+
+
 
 
 # WaterMask
-
+""" =============== Froest Land Cover 2017 ================= """
+landCover = ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017")
+landCover = ee.Image(landCover.select("discrete_classification").rename('CGLS').setMulti({'IMG_LABEL': 'CGLS'}))#.eq(mainLandCover)
+waterMask0 = (landCover.neq(80).And(landCover.neq(200))).rename('water')
 
 
 
