@@ -20,8 +20,8 @@
     - mtbs: MTBS (United States, 30m) 
     - water: Water Mask (COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017, 100m)
 - auxiliary data
-    - DEM/DSM
-    - Land Cover
-    - Biome
+    - DEM/DSM (ALOS World 3D - 30m (AW3D30))
+    - Land Cover (NLCD-30m: USGS/NLCD_RELEASES/2016_REL/2016[_AK], Global CGLS-LC100: 100m)
+    - Biome (RESOLVE Ecoregions 2017)
     - LIA: local incidence angle
     - Moisture: Precipitation
