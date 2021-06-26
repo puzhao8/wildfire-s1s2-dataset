@@ -18,6 +18,7 @@ import json
 
 """ CFG """
 cfg = edict({
+    'where': 'AK', # 'US,
     "JSON": "G:\PyProjects\wildfire-s1s2-dataset\wildfire_events\MTBS_AK_2017_2019_events_ROI.json",
     "period": 'fire_period', # "season"
     "season": [-1, 2],
@@ -34,12 +35,20 @@ from gee.export import query_s1s2_and_export
 print(cfg.JSON)
 EVENT_SET = load_json(cfg.JSON)
 
-# LOOP HERE
-# event = EVENT_SET['ak6569814836520190622']
+EVENT_SET_subset = edict()
 for event_id in EVENT_SET.keys():
+    if EVENT_SET[event_id]["BurnBndAc"] > 1000:
+        EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
+
+print("\n\n==========> wildfire-s1s2-dataset <=========\n")
+print(f"total number of events to query: {len(EVENT_SET_subset)}")
+
+# LOOP HERE
+# event = EVENT_SET['al3107008672320170117']
+for event_id in ["ak6524416010220190610"]: # EVENT_SET_subset.keys():
     
     event = EVENT_SET[event_id]
-    event['where'] = 'AK' # 'US
+    event['where'] = cfg['where']
 
     if event['where'] in ['AK', 'US']:
         event['start_date'] = event['Ig_Date']
@@ -53,5 +62,5 @@ for event_id in EVENT_SET.keys():
     if event['where'] in ['EU']:
         pass
 
-    query_s1s2_and_export(cfg, event, scale=100, BUCKET="wildfire-s1s2-dataset", export_sat=['S2'])
+    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset-v1", export_sat=['S2'])
 

@@ -29,6 +29,7 @@ def updateCloudMaskS2(img):
 def rescale_s2(img): 
     return (img.select(['B2', 'B3', 'B4', 'B8', 'B11', 'B12']).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
+                .addBands(img.select('cloud'))
     )
 
 def get_s2_dict(queryEvent, cloud_level=10):
@@ -49,8 +50,16 @@ def get_s2_dict(queryEvent, cloud_level=10):
     cloudFilter = ee.Filter.lte("CLOUDY_PIXEL_PERCENTAGE", cloud_level)
 
     s2_dict = edict()
-    s2_dict['pre'] = MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year")).filter(cloudFilter).median()
-    s2_dict['post'] = MSI.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year")).filter(cloudFilter).median()
+    s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+                        .filter(cloudFilter)
+                        .map(updateCloudMaskS2)
+                        .median()
+                    )
+    s2_dict['post'] = (MSI.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
+                        .filter(cloudFilter)
+                        .map(updateCloudMaskS2)
+                        .median()
+                    )
     # s2_dict['cloud'] = None
 
     # rescale to [0, 1]
@@ -212,7 +221,7 @@ def get_mask_dict(queryEvent):
         US_2019 = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/US_HIST_FIRE_PERIM_2019_dd83")
         poly = (US_bef_2018.filterBounds(queryEvent.roi).filter(ee.Filter.gte("fireyear", 2017))
                     .merge(US_2019.filterBounds(queryEvent.roi))
-                    .filter(ee.Filter.gte("gisacres", 5000)) # burned area
+                    # .filter(ee.Filter.gte("gisacres", 5000)) # burned area
                 ).union(ee.ErrorMargin(30))
         polyImg = poly.style(color='white', fillColor='white', width=0).select('vis-red').gt(0).rename('poly')
         mask_dict['poly'] = polyImg.unmask()

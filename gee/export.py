@@ -1,3 +1,4 @@
+from gee.aux_data import get_aux_dict
 from gee.s1s2 import get_alos_dict
 import os
 import ee
@@ -53,7 +54,14 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     queryEvent = edict(event.copy())
     pprint(queryEvent)
 
-    queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
+    pprint(queryEvent.roi)
+    if queryEvent['BurnBndAc'] < 5000: # minimum roi 
+        print("==> queryEvent['BurnBndAc'] < 5000")
+        queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds().centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
+    else:
+        queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
+
+    pprint(queryEvent.roi.getInfo()['coordinates'])
 
     # fire period
     if 'fire_period' in cfg.period:
@@ -68,15 +76,17 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     print(queryEvent['period_start'].format().getInfo(), queryEvent['period_end'].format().getInfo())
 
 
-
     """ Query Data: S1, S2, & ALOS """
     from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict
+    from gee.aux_data import get_aux_dict
 
+    pprint(queryEvent.roi.getInfo()['coordinates'])
     export_dict = edict({
         'S2': get_s2_dict(queryEvent, cloud_level=10),
         'S1': get_s1_dict(queryEvent),
         'ALOS': get_alos_dict(queryEvent),
-        'mask': get_mask_dict(queryEvent)
+        'mask': get_mask_dict(queryEvent),
+        'AUZ': get_aux_dict()
     })
     
     export_dict = {key: export_dict[key] for key in export_sat}
@@ -100,6 +110,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
                 image = export_dict[sat][stage]
                 print(dst_url)
                 export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
+                
 
 
     

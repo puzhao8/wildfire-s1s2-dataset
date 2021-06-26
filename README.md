@@ -18,7 +18,7 @@
     - modis: MODIS Global Burned Area Product (500m)
     - viirs: VIIRS Global Active Fire (375m)
     - mtbs: MTBS (United States, 30m) 
-    - water: Water Mask (COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017, 100m)
+    - water: Water Mask (CGLS-LC100: 100m)
 - auxiliary data
     - DEM/DSM (ALOS World 3D - 30m (AW3D30))
     - Land Cover (NLCD-30m: USGS/NLCD_RELEASES/2016_REL/2016[_AK], Global CGLS-LC100: 100m)
