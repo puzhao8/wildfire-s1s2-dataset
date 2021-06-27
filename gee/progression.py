@@ -33,9 +33,9 @@ def rescale_s2(img):
     return (img.select(BANDS).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
                 .addBands(img.select('cloud'))
-    )
+        ).copyProperties(img, img.propertyNames())
 
-def get_s2_dict(queryEvent, cloud_level=10):
+def get_s2_progression(queryEvent, cloud_level=10):
     period_start = queryEvent.period_start
     period_end = queryEvent.period_end
     roi = queryEvent.roi
@@ -44,7 +44,7 @@ def get_s2_dict(queryEvent, cloud_level=10):
         cloud = img.select('cloud').updateMask(img.select(0).mask())
         cloud_pixels = cloud.eq(0).reduceRegion(ee.Reducer.sum(), roi, 60).get('cloud')
         all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), roi, 60).get('cloud')
-        return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100))
+        return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100)).copyProperties(img, img.propertyNames())
 
     S2_Dict = {
         'SR': "COPERNICUS/S2_SR",
@@ -56,49 +56,35 @@ def get_s2_dict(queryEvent, cloud_level=10):
         'TOA': "LANDSAT/LC08/C01/T1_TOA"
     }
 
-    MSI = ee.ImageCollection(S2_Dict['TOA']).filterBounds(queryEvent['roi'])
+    
     # cloudFilter = ee.Filter.lte("CLOUDY_PIXEL_PERCENTAGE", cloud_level)
-    cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", 2)
+    cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", 10)
 
-    s2_dict = edict()
-    s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
-                        .map(updateCloudMaskS2)
-                        .map(add_ROI_Cloud_Rate)
-                        .filter(cloudFilter)
-                        .median()
-                    )
-    s2_dict['post'] = (MSI.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
-                        .map(updateCloudMaskS2)
-                        .map(add_ROI_Cloud_Rate)
-                        .filter(cloudFilter)
-                        .median()
-                    )
-    # s2_dict['cloud'] = None
+    s2ImgCol = (ee.ImageCollection(S2_Dict['TOA'])
+                    .filterBounds(queryEvent['roi'])
+                    .filterDate(period_start, period_end)
+                    .map(updateCloudMaskS2)
+    )
 
-    # rescale to [0, 1]
-    s2_dict['pre'] = rescale_s2(s2_dict['pre'])
-    s2_dict['post'] = rescale_s2(s2_dict['post'])
+    s2ImgCol_grouped = group_MSI_ImgCol(s2ImgCol)
 
-    return s2_dict
+    # mosaic s2 data acquired on the same day
+    from gee.group_data import set_group_index_4_S2
+    s2_prgImgCol = (s2ImgCol_grouped
+                .map(set_group_index_4_S2)
+                .map(add_ROI_Cloud_Rate)
+                .filter(cloudFilter)
+                .map(rescale_s2)
+            )
+    
+    return s2_prgImgCol
 
 """ #################################################################
 Query S1 SAR Data
 ################################################################# """ 
 
 # Sentinel-1
-def set_group_index_4_S1(img, groupLevel=13, labelShowLevel=13):
-    orbitKey = (ee.String(img.get("orbitProperties_pass")).replace('DESCENDING', 'DSC').replace('ASCENDING', 'ASC')
-                .cat(ee.Number(img.get("relativeOrbitNumber_start")).int().format()))
-    Date = (img.date().format().slice(0, labelShowLevel)
-                .replace('-', '').replace('-', '').replace(':', '').replace(':', ''))
-    Name = (Date).cat('_').cat(orbitKey)
-
-    groupIndex = img.date().format().slice(0, groupLevel)  # 2017 - 07 - 23T14:11:22(len: 19)
-    return img.setMulti({
-        'GROUP_INDEX': groupIndex,
-        'IMG_LABEL': Name,
-        'Orbit_Key': orbitKey
-    })
+from gee.group_data import group_MSI_ImgCol, group_S1_by_date_orbit, set_group_index_4_S1
 
 def unionGeomFun(img, first):
     rightGeo = ee.Geometry(img.geometry())
@@ -119,66 +105,31 @@ def add_RFDI(img):
 def add_CR(img):
     return img.addBands(img.expression("b('VH')-b('VV')").rename('CR'))
 
-def get_s1_dict(queryEvent):
+def get_s1_progression(queryEvent):
     period_start = queryEvent.period_start
     period_end = queryEvent.period_end
     # start to query S1 data
-    S1_flt = ee.ImageCollection(ee.ImageCollection("COPERNICUS/S1_GRD")
-                            .filterBounds(queryEvent.roi)
-                            .filterMetadata('instrumentMode', "equals", 'IW')
-                            .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VV'))
-                            .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VH'))
-                        ).select(['VH', 'VV'])
+    S1_flt = (ee.ImageCollection("COPERNICUS/S1_GRD")
+                .filterBounds(queryEvent.roi)
+                .filterMetadata('instrumentMode', "equals", 'IW')
+                .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VV'))
+                .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VH'))
+                .filterDate(period_start, period_end)
+                .select(['VH', 'VV'])
+        )
 
-
-    S1_pre = (S1_flt.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+    s1ImgCol_grouped = group_S1_by_date_orbit(S1_flt)
+    s1ImgCol = (s1ImgCol_grouped
                     .map(add_RFDI)
                     .map(set_group_index_4_S1)
             )
 
-    S1_post = (S1_flt.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
-                    .map(add_RFDI)
-                    .map(set_group_index_4_S1)
-            )
 
-
-    if S1_pre.size().getInfo() == 0: #if there is no images in the before-year
-         S1_pre = (S1_flt.filterDate(period_start.advance(-2, 'month'), period_start)
-                    .map(add_RFDI)
-                    .map(set_group_index_4_S1)
-            )
-
-    if S1_post.size().getInfo() == 0: #if there is no images in the after-year
-         S1_post = (S1_flt.filterDate(queryEvent['end_date'], ee.Date(queryEvent['end_date']).advance(2, 'month'))
-                    .map(add_RFDI)
-                    .map(set_group_index_4_S1)
-            )
-
-    # SAR orbits
-    pre_orbits = S1_pre.aggregate_array("Orbit_Key").distinct().getInfo()
-    post_orbits = S1_post.aggregate_array("Orbit_Key").distinct().getInfo()
-    common_orbits = list(set(pre_orbits) & set(post_orbits))
-
-    # Compute average image for each orbit
-    S1_dict = edict({'pre':{}, 'post': {}})
-    for orbit in common_orbits:
-    # for orbit in ['DSC160']:
-        orbImgCol_pre = S1_pre.filter(ee.Filter.eq("Orbit_Key", orbit))#.sort("GROUP_INDEX", False)
-        orbImgCol_post = S1_post.filter(ee.Filter.eq("Orbit_Key", orbit))#.sort("GROUP_INDEX", False)
-
-        orb_images = orbImgCol_pre.filter(ee.Filter.eq("IMG_LABEL", orbImgCol_pre.first().get("IMG_LABEL")))
-        firstImgGeom = orb_images.first().geometry()
-        orb_geom = ee.Geometry(orb_images.iterate(unionGeomFun, firstImgGeom))
-
-        if orb_geom.contains(queryEvent.roi.buffer(-1e3), ee.ErrorMargin(1)).getInfo():
-            S1_dict['pre'][f"{orbit}"] = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
-            S1_dict['post'][f"{orbit}"] = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
-
-    return S1_dict
+    return s1ImgCol.select(['ND', 'VH', 'VV'])
 
 
 """ #################################################################
-Query ALOS L-Band SAR Data
+Query ALOS L-Band SAR Data (No Data)
 ################################################################# """ 
 
 # def toDB(img):
@@ -264,3 +215,58 @@ def get_mask_dict(queryEvent):
         pass
 
     return mask_dict
+
+
+from gee.aux_data import get_aux_dict
+""" Export Progression """
+def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+
+    """ Event to Query """
+    queryEvent = edict(event.copy())
+
+    queryEvent['period_start'] = ee.Date(queryEvent['start_date']).advance(-1, 'month')
+    queryEvent['period_end'] = ee.Date(queryEvent['end_date']).advance(1, 'month')
+    queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
+
+    # from gee.progression import get_s1_progression, get_s2_progression, get_mask_dict
+
+    export_dict = edict({
+            'S2': get_s2_progression(queryEvent, cloud_level=10),
+            'S1': get_s1_progression(queryEvent),
+            # 'ALOS': get_alos_dict(queryEvent),
+            'mask': get_mask_dict(queryEvent),
+            'AUZ': get_aux_dict()
+        })
+
+    export_dict = {key: export_dict[key] for key in export_sat}
+    pprint(export_dict)
+
+    """ Export Both SAR and MSI to Cloud """
+    from gee.export import export_image_to_CloudStorage
+
+    event_folder = f"{event.name}"
+
+    # Export Progression
+    for sat in [sat_ for sat_ in ['S1', 'S2'] if sat_ in export_dict]:
+
+        imgCol = export_dict[sat]
+
+        img_num = imgCol.size().getInfo()
+        print(f"\n--> {sat}: {img_num} <--")
+        imgList = imgCol.toList(img_num)
+        for i in range(0, img_num):
+            image = ee.Image(imgList.get(i))
+            imgLabel = image.get("IMG_LABEL").getInfo()
+            dst_url = f"{event_folder}/{sat}/{imgLabel}"
+
+            print(dst_url)
+            export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
+
+    # Export Mask 
+    for sat in [sat_ for sat_ in ["mask", "AUZ"] if sat_ in export_dict] :
+        for stage in export_dict[sat].keys():
+            mask = export_dict[sat][stage]
+            dst_url = f"{event_folder}/{sat}/{stage}"
+
+            print(dst_url)
+            export_image_to_CloudStorage(mask, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)

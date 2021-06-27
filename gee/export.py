@@ -52,7 +52,7 @@ from easydict import EasyDict as edict
 def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
     """ Event to Query """
     queryEvent = edict(event.copy())
-    pprint(queryEvent)
+    # pprint(queryEvent)
 
     # pprint(queryEvent.roi)
     if queryEvent['BurnBndAc'] < 5000: # minimum roi 
@@ -73,8 +73,8 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
         queryEvent['period_start'] = ee.Date(queryEvent['year']).advance(cfg.season[0], 'month')
         queryEvent['period_end'] = ee.Date(queryEvent['year']).advance(cfg.season[-1], 'month')
 
-    print(queryEvent['period_start'].format().getInfo(), queryEvent['period_end'].format().getInfo())
-
+    print("---> Fire Period <---")
+    print(queryEvent['period_start'].format().getInfo()[:10], queryEvent['period_end'].format().getInfo()[:10])
 
     """ Query Data: S1, S2, & ALOS """
     from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict

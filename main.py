@@ -40,13 +40,13 @@ for event_id in EVENT_SET.keys():
     if EVENT_SET[event_id]["BurnBndAc"] > 2000:
         EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
-print("\n\n==========> wildfire-s1s2-dataset <=========\n")
+print("\n\n==========> wildfire-s1s2-dataset <=========")
 num = len(EVENT_SET_subset)
-# print(f"total number of events to query: {num}")
+print(f"total number of events to query: {num} \n")
 
 # LOOP HERE
 # event = EVENT_SET['al3107008672320170117']
-for event_id in EVENT_SET_subset.keys(): #["ak6524416010220190610"]: # 
+for event_id in EVENT_SET_subset.keys(): #EVENT_SET_subset.keys(): #: # 
     
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
@@ -63,5 +63,6 @@ for event_id in EVENT_SET_subset.keys(): #["ak6524416010220190610"]: #
     if event['where'] in ['EU']:
         pass
 
+    print(f"-----------------> {event.name} <------------------ ")
     query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset-v1")
 
