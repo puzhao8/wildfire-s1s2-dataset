@@ -136,7 +136,7 @@ def get_s1_dict(queryEvent):
             )
 
     if S1_post.size().getInfo() == 0: #if there is no images in the after-year
-         S1_pre = (S1_flt.filterDate(period_end, period_end.advance(2, 'month'))
+         S1_post = (S1_flt.filterDate(queryEvent['end_date'], ee.Date(queryEvent['end_date']).advance(2, 'month'))
                     .map(add_RFDI)
                     .map(set_group_index_4_S1)
             )
@@ -219,11 +219,11 @@ def get_mask_dict(queryEvent):
     # print("firecci: ", firecci.bandNames().getInfo())
     mask_dict['firecci'] = firecci.select('BurnDate').unmask()
 
-    # Water
-    landCover = ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017")
-    landCover = ee.Image(landCover.select("discrete_classification").rename('CGLS').setMulti({'IMG_LABEL': 'CGLS'}))
-    water = (landCover.neq(80).And(landCover.neq(200))).rename('water')
-    mask_dict['water'] = water
+    # # Water (see aux_data.py)
+    # landCover = ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017")
+    # landCover = ee.Image(landCover.select("discrete_classification").rename('CGLS').setMulti({'IMG_LABEL': 'CGLS'}))
+    # water = (landCover.neq(80).And(landCover.neq(200))).rename('water')
+    # mask_dict['water'] = water
 
     # Polygon
     if WHERE in ['AK', 'US']:

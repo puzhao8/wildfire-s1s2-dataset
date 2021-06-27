@@ -63,5 +63,5 @@ for event_id in EVENT_SET_subset.keys(): #["ak6524416010220190610"]: #
     if event['where'] in ['EU']:
         pass
 
-    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset")
+    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset-v1")
 
