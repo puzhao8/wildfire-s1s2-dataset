@@ -157,7 +157,7 @@ def get_s1_dict(queryEvent):
         firstImgGeom = orb_images.first().geometry()
         orb_geom = ee.Geometry(orb_images.iterate(unionGeomFun, firstImgGeom))
 
-        if orb_geom.contains(queryEvent.roi.buffer(-4e3), ee.ErrorMargin(1)).getInfo():
+        if orb_geom.contains(queryEvent.roi.buffer(-1e3), ee.ErrorMargin(1)).getInfo():
             S1_dict['pre'][f"{orbit}"] = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
             S1_dict['post'][f"{orbit}"] = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
 

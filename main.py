@@ -21,7 +21,7 @@ cfg = edict({
     'where': 'AK', # 'US,
     "JSON": "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
     "period": 'fire_period', # "season"
-    "season": [-1, 2],
+    "season": [-1, 2], # [-1, 2] means last Dec. to this Feb.
 })
 
 
