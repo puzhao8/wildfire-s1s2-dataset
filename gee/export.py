@@ -49,12 +49,12 @@ from easydict import EasyDict as edict
 
 
 """ Query and Export """
-def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", export_sat=['S1', 'S2', 'ALOS', 'mask']):
+def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
     """ Event to Query """
     queryEvent = edict(event.copy())
     pprint(queryEvent)
 
-    pprint(queryEvent.roi)
+    # pprint(queryEvent.roi)
     if queryEvent['BurnBndAc'] < 5000: # minimum roi 
         print("==> queryEvent['BurnBndAc'] < 5000")
         queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds().centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
@@ -80,7 +80,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict
     from gee.aux_data import get_aux_dict
 
-    pprint(queryEvent.roi.getInfo()['coordinates'])
+    # pprint(queryEvent.roi.getInfo()['coordinates'])
     export_dict = edict({
         'S2': get_s2_dict(queryEvent, cloud_level=10),
         'S1': get_s1_dict(queryEvent),

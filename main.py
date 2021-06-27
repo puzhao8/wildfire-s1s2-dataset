@@ -19,7 +19,7 @@ import json
 """ CFG """
 cfg = edict({
     'where': 'AK', # 'US,
-    "JSON": "G:\PyProjects\wildfire-s1s2-dataset\wildfire_events\MTBS_AK_2017_2019_events_ROI.json",
+    "JSON": "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
     "period": 'fire_period', # "season"
     "season": [-1, 2],
 })
@@ -37,15 +37,16 @@ EVENT_SET = load_json(cfg.JSON)
 
 EVENT_SET_subset = edict()
 for event_id in EVENT_SET.keys():
-    if EVENT_SET[event_id]["BurnBndAc"] > 1000:
+    if EVENT_SET[event_id]["BurnBndAc"] > 2000:
         EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
 print("\n\n==========> wildfire-s1s2-dataset <=========\n")
-print(f"total number of events to query: {len(EVENT_SET_subset)}")
+num = len(EVENT_SET_subset)
+# print(f"total number of events to query: {num}")
 
 # LOOP HERE
 # event = EVENT_SET['al3107008672320170117']
-for event_id in ["ak6524416010220190610"]: # EVENT_SET_subset.keys():
+for event_id in EVENT_SET_subset.keys(): #["ak6524416010220190610"]: # 
     
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
@@ -62,5 +63,5 @@ for event_id in ["ak6524416010220190610"]: # EVENT_SET_subset.keys():
     if event['where'] in ['EU']:
         pass
 
-    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset-v1", export_sat=['S2'])
+    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset")
 

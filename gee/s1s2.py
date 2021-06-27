@@ -128,6 +128,19 @@ def get_s1_dict(queryEvent):
                     .map(set_group_index_4_S1)
             )
 
+
+    if S1_pre.size().getInfo() == 0: #if there is no images in the before-year
+         S1_pre = (S1_flt.filterDate(period_start.advance(-2, 'month'), period_start)
+                    .map(add_RFDI)
+                    .map(set_group_index_4_S1)
+            )
+
+    if S1_post.size().getInfo() == 0: #if there is no images in the after-year
+         S1_pre = (S1_flt.filterDate(period_end, period_end.advance(2, 'month'))
+                    .map(add_RFDI)
+                    .map(set_group_index_4_S1)
+            )
+
     # SAR orbits
     pre_orbits = S1_pre.aggregate_array("Orbit_Key").distinct().getInfo()
     post_orbits = S1_post.aggregate_array("Orbit_Key").distinct().getInfo()
@@ -144,7 +157,7 @@ def get_s1_dict(queryEvent):
         firstImgGeom = orb_images.first().geometry()
         orb_geom = ee.Geometry(orb_images.iterate(unionGeomFun, firstImgGeom))
 
-        if orb_geom.contains(queryEvent.roi, ee.ErrorMargin(1)).getInfo():
+        if orb_geom.contains(queryEvent.roi.buffer(-4e3), ee.ErrorMargin(1)).getInfo():
             S1_dict['pre'][f"{orbit}"] = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
             S1_dict['post'][f"{orbit}"] = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
 
