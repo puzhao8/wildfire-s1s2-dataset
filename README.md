@@ -29,8 +29,9 @@
     - poly: Official Polygon in Raster (10m)
         - event1.tif
         - event2.tif
+    - firecci: FIRECCI Global Burned Area Product (250m)
     - modis: MODIS Global Burned Area Product (500m)
-    - viirs: VIIRS Global Active Fire (375m)
+    - viirs: VIIRS Global Active Fire (375m, TBD...)
     - mtbs: MTBS (United States, 30m) 
 - **auxiliary data**
     - DEM/DSM (ALOS World 3D - 30m (AW3D30))
