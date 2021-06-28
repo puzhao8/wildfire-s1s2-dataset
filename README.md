@@ -18,10 +18,10 @@
     - modis: MODIS Global Burned Area Product (500m)
     - viirs: VIIRS Global Active Fire (375m)
     - mtbs: MTBS (United States, 30m) 
-    - water: Water Mask (CGLS-LC100: 100m)
 - **auxiliary data**
     - DEM/DSM (ALOS World 3D - 30m (AW3D30))
     - Land Cover (NLCD-30m: USGS/NLCD_RELEASES/2016_REL/2016[_AK], Global CGLS-LC100: 100m)
     - Biome (RESOLVE Ecoregions 2017)
+    - water: Water Mask (CGLS-LC100: 100m)
     - LIA: local incidence angle (TBD...)
     - Moisture: Precipitation (TBD...)

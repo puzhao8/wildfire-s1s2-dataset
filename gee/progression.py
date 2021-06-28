@@ -217,9 +217,9 @@ def get_mask_dict(queryEvent):
     return mask_dict
 
 
-from gee.aux_data import get_aux_dict
 """ Export Progression """
-def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+from gee.aux_data import get_aux_dict
+def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'mask', 'AUZ']):
 
     """ Event to Query """
     queryEvent = edict(event.copy())
@@ -260,7 +260,7 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
             dst_url = f"{event_folder}/{sat}/{imgLabel}"
 
             print(dst_url)
-            export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
+            # export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
 
     # Export Mask 
     for sat in [sat_ for sat_ in ["mask", "AUZ"] if sat_ in export_dict] :
@@ -268,5 +268,5 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
             mask = export_dict[sat][stage]
             dst_url = f"{event_folder}/{sat}/{stage}"
 
-            print(dst_url)
-            export_image_to_CloudStorage(mask, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
+            print(dst_url, mask.bandNames().getInfo())
+            # export_image_to_CloudStorage(mask, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
