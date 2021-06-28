@@ -3,18 +3,32 @@
 # wildfire-s1s2-dataset
 - **data: SAR and MSI Data**
     - S1: 10m Sentinel-1 SAR Data (Fire Year: 2019)
-        - ASC-pre (Before Year: 2018)
-        - ASC-post (After Year: 2020)
-        - DSC-pre (Before Year: 2018)
-        - DSC-post (After Year: 2020)
+        - pre (Before Year: 2018, mean)
+            - event1_ASC36.tif
+            - event1_DSC36.tif
+            - event2_ASC17.tif
+        - post (After Year: 2020, mean)
+            - event1_ASC36.tif
+            - event1_DSC36.tif
+            - event2_ASC17.tif
     - S2: 10m/20m Sentinel-2 MSI Data
-        - pre (Before Year: 2018)
-        - post (After Year: 2020)
+        - pre (Before Year: 2018, median)
+            - event1.tif
+            - event2.tif
+        - post (After Year: 2020, median)
+            - event1.tif
+            - event2.tif
     - ALOS: 25m ALOS PALSAR L-Band
         - pre (Before Year: 2018)
+            - event1.tif
+            - event2.tif
         - post (After Year: 2020)
+            - event1.tif
+            - event2.tif
 - **mask: Mask Data**
     - poly: Official Polygon in Raster (10m)
+        - event1.tif
+        - event2.tif
     - modis: MODIS Global Burned Area Product (500m)
     - viirs: VIIRS Global Active Fire (375m)
     - mtbs: MTBS (United States, 30m) 
