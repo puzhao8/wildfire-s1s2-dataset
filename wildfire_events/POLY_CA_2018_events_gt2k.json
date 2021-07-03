@@ -1,0 +1,5969 @@
+{
+    "CA_2018_PCWB_567": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4437.99960849,
+        "AGENCY": "PC-WB",
+        "BASRC": 1,
+        "BT_GID": 103,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-19",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-20",
+        "FIRECAUS": 0,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCWB_567",
+        "NFIREID": 567,
+        "POLY_HA": 4437.99960849,
+        "SDATE": "2018-08-09",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -112.14167888428119,
+                59.26449236393874
+            ],
+            [
+                -111.9717507470878,
+                59.37460611192893
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-10",
+        "modisEndDate": "2018-09-13",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_PCWB_2078": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3903.24511594,
+        "AGENCY": "PC-WB",
+        "BASRC": 1,
+        "BT_GID": 200,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-19",
+        "COMMENTS": "Null",
+        "EDATE": "2018-06-01",
+        "FIRECAUS": 0,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCWB_2078",
+        "NFIREID": 2078,
+        "POLY_HA": 3903.24511594,
+        "SDATE": "2018-05-20",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -113.72663808351803,
+                58.543739341539165
+            ],
+            [
+                -113.57231625183243,
+                58.6396542455606
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-08",
+        "modisEndDate": "2018-06-15",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_PCWB_1454": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3339.80960509,
+        "AGENCY": "PC-WB",
+        "BASRC": 1,
+        "BT_GID": 165,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-19",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-28",
+        "FIRECAUS": 0,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCWB_1454",
+        "NFIREID": 1454,
+        "POLY_HA": 3339.80960509,
+        "SDATE": "2018-07-10",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -113.97797633008824,
+                60.00100068152818
+            ],
+            [
+                -113.6596760619701,
+                60.04421585768764
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-06",
+        "modisEndDate": "2018-08-08",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_PCKO_1077": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3404.88913768,
+        "AGENCY": "PC-KO",
+        "BASRC": 1,
+        "BT_GID": 26,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-05",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-24",
+        "FIRECAUS": 0,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCKO_1077",
+        "NFIREID": 1077,
+        "POLY_HA": 3404.88913768,
+        "SDATE": "2018-08-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -116.02008013262656,
+                50.93980399245409
+            ],
+            [
+                -115.91233071142517,
+                51.04600023608625
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-31",
+        "modisEndDate": "2018-08-20",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_PCNA_926": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6803.65440378,
+        "AGENCY": "PC-NA",
+        "BASRC": 1,
+        "BT_GID": 121,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-25",
+        "COMMENTS": "Null",
+        "EDATE": "2018-06-21",
+        "FIRECAUS": 0,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCNA_926",
+        "NFIREID": 926,
+        "POLY_HA": 6803.65440378,
+        "SDATE": "2018-05-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.50501511872947,
+                61.53829876390734
+            ],
+            [
+                -126.22173207603008,
+                61.649424923057026
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-24",
+        "modisEndDate": "2018-07-23",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
+    },
+    "CA_2018_YT_1428": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5197.95667804,
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 667,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018XY009[comments:Collected 8-15-2018,SUBDIST_ID:XY,FIRESOURCE:GPS Trace,FIREMETHOD:GPS: Heliborne Trace]",
+        "EDATE": "2018-08-21",
+        "FIRECAUS": 0,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_YT_1428",
+        "NFIREID": 1428,
+        "POLY_HA": 5197.95667804,
+        "SDATE": "2018-07-26",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -134.78132466292206,
+                61.26013932580476
+            ],
+            [
+                -134.64686781194257,
+                61.41671060577472
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32608",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-26",
+        "modisEndDate": "2018-08-24",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_PCWB_438": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2569.78032523,
+        "AFSDATE": "2018-08-17",
+        "AGENCY": "PC-WB",
+        "BASRC": 1,
+        "BT_GID": 159,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-19",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCWB_438",
+        "NFIREID": 438,
+        "POLY_HA": 2569.78032523,
+        "SDATE": "2018-08-17",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -114.0000078705295,
+                59.085212175941635
+            ],
+            [
+                -113.81696055095229,
+                59.15969150536225
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-15",
+        "modisEndDate": "2018-09-05",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_PCGL_508": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2063.3033525,
+        "AFSDATE": "2018-08-22",
+        "AGENCY": "PC-GL",
+        "BASRC": 1,
+        "BT_GID": 6,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-05",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-24",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCGL_508",
+        "NFIREID": 508,
+        "POLY_HA": 2063.3033525,
+        "SDATE": "2018-08-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -117.30829925088632,
+                51.05771583275163
+            ],
+            [
+                -117.22827090583242,
+                51.199320639234806
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-04",
+        "modisEndDate": "2018-09-09",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_AB_441": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3600.39696201,
+        "AFSDATE": "2018-06-22",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 428,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-07",
+        "COMMENTS": "HWF-137-2018[alias:,BURNCODE:B,BURN_CLASS:4,pt_cause:Lightning,source:12 - digital/satellite imagery (pixel 10m - 20m)]",
+        "EDATE": "2018-07-12",
+        "FIRECAUS": 2,
+        "FIREMAPM": 4,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_AB_441",
+        "NFIREID": 441,
+        "POLY_HA": 3600.39696201,
+        "SDATE": "2018-06-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -119.28245720560982,
+                59.57168889420111
+            ],
+            [
+                -119.07159584873304,
+                59.65516034709514
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-28",
+        "modisEndDate": "2018-07-17",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_AB_656": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2175.33712133,
+        "AFSDATE": "2018-07-06",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 1043,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-08-11",
+        "COMMENTS": "HWF-165-2018[alias:,BURNCODE:B,BURN_CLASS:4,pt_cause:Lightning,source:12 - digital/satellite imagery (pixel 10m - 20m)]",
+        "EDATE": "2018-07-11",
+        "FIRECAUS": 2,
+        "FIREMAPM": 4,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_AB_656",
+        "NFIREID": 656,
+        "POLY_HA": 2175.33712133,
+        "SDATE": "2018-07-09",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -119.96112741753261,
+                59.909206879267465
+            ],
+            [
+                -119.74901057111072,
+                59.94303337817927
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-09",
+        "modisEndDate": "2018-07-16",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_AB_1412": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2633.74740803,
+        "AFSDATE": "2018-07-26",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 988,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-12-07",
+        "COMMENTS": "HWF-177-2018[alias:,BURNCODE:B,BURN_CLASS:4,pt_cause:Lightning,source:12 - digital/satellite imagery (pixel 10m - 20m)]",
+        "EDATE": "2018-07-28",
+        "FIRECAUS": 2,
+        "FIREMAPM": 4,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_AB_1412",
+        "NFIREID": 1412,
+        "POLY_HA": 2633.74740803,
+        "SDATE": "2018-07-27",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -119.51225815804834,
+                59.20921585142512
+            ],
+            [
+                -119.37428267874988,
+                59.288845988689445
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-26",
+        "modisEndDate": "2018-08-10",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_AB_990": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6380.09118452,
+        "AFSDATE": "2018-05-21",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 1553,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-03",
+        "COMMENTS": "LWF-099-2018[alias:Rock Island Complex Fire,BURNCODE:PB,BURN_CLASS:3,pt_cause:Lightning,source:5 - digitized from aerial photo] [...]",
+        "EDATE": "2018-05-29",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 4,
+        "NAME": "CA_2018_AB_990",
+        "NFIREID": 990,
+        "POLY_HA": 6380.09118452,
+        "SDATE": "2018-05-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -113.27187806671836,
+                55.43726411694793
+            ],
+            [
+                -113.0441641786854,
+                55.57442647895652
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-22",
+        "modisEndDate": "2018-06-06",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_AB_129": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4252.82037041,
+        "AFSDATE": "2018-05-23",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 599,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-14",
+        "COMMENTS": "LWF-119-2018[alias:Rock Island Complex Fire,BURNCODE:PB,BURN_CLASS:1,pt_cause:Lightning,source:5 - digitized from aerial photo] [...]",
+        "EDATE": "2018-06-18",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 4,
+        "NAME": "CA_2018_AB_129",
+        "NFIREID": 129,
+        "POLY_HA": 4252.82037041,
+        "SDATE": "2018-05-23",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -112.89296835444877,
+                55.41600862006963
+            ],
+            [
+                -112.7081309280446,
+                55.56630793407395
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-23",
+        "modisEndDate": "2018-06-04",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_AB_663": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2560.55209002,
+        "AFSDATE": "2018-05-28",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 1440,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-12-20",
+        "COMMENTS": "PWF-047-2018[alias:Lovet Creek Fire,BURNCODE:B,BURN_CLASS:4,pt_cause:Lightning,source:12 - digital/satellite imagery (pixel 10m - 20m)]",
+        "EDATE": "2018-07-09",
+        "FIRECAUS": 2,
+        "FIREMAPM": 4,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_AB_663",
+        "NFIREID": 663,
+        "POLY_HA": 2560.55209002,
+        "SDATE": "2018-05-28",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -118.16031031099749,
+                57.01861876991381
+            ],
+            [
+                -117.96466328485432,
+                57.081310862578974
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-24",
+        "modisEndDate": "2018-06-08",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_AB_1440": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4785.14343595,
+        "AFSDATE": "2018-06-23",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 334,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-11-28",
+        "COMMENTS": "SWF-094-2018[alias:Rabbit Lake Fire,BURNCODE:B,BURN_CLASS:3,pt_cause:Lightning,source:5 - digitized from aerial photo],SWF-094-2018[alias:Rabbit Lake Fire,BURNCODE:B,BURN_CLASS:2,pt_cause:Lightning,source:5 - digitized from aerial photo] [...]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 4,
+        "NAME": "CA_2018_AB_1440",
+        "NFIREID": 1440,
+        "POLY_HA": 4785.14343595,
+        "SDATE": "2018-06-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -113.14978789625833,
+                56.956513742152154
+            ],
+            [
+                -112.94373648492952,
+                57.068023544858434
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-21",
+        "modisEndDate": "2018-07-27",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_AB_1322": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3761.40637027,
+        "AFSDATE": "2018-05-24",
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 719,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-15",
+        "COMMENTS": "HWF-083-2018[alias:Little Rapids Fire,BURNCODE:B,BURN_CLASS:4,pt_cause:Lightning,source:5 - digitized from aerial photo],HWF-083-2018[alias:Little Rapids Fire,BURNCODE:B,BURN_CLASS:2,pt_cause:Lightning,source:5 - digitized from aerial photo] [...]",
+        "EDATE": "2018-05-28",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 4,
+        "NAME": "CA_2018_AB_1322",
+        "NFIREID": 1322,
+        "POLY_HA": 3761.40637027,
+        "SDATE": "2018-05-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -116.58706118814597,
+                58.86239012501947
+            ],
+            [
+                -116.46989654434805,
+                58.95541190160903
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-23",
+        "modisEndDate": "2018-06-02",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_439": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 17881.0796082,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 142,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-29",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-06",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_439",
+        "NFIREID": 439,
+        "POLY_HA": 17881.0796082,
+        "SDATE": "2018-08-05",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.68675151852234,
+                51.702463468061794
+            ],
+            [
+                -125.27423340534298,
+                51.85736202961401
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1608": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 9567.25031817,
+        "AFSDATE": "2018-08-12",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 158,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-29",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1608",
+        "NFIREID": 1608,
+        "POLY_HA": 9567.25031817,
+        "SDATE": "2018-08-12",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -124.53866589601958,
+                52.709029519851164
+            ],
+            [
+                -124.29468002128716,
+                52.81982853264873
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-10",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1386": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 70186.4626861,
+        "AFSDATE": "2018-07-31",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 102,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-11-09",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1386",
+        "NFIREID": 1386,
+        "POLY_HA": 70186.4626861,
+        "SDATE": "2018-07-31",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -127.14654714192517,
+                53.82711252768603
+            ],
+            [
+                -126.11410248273098,
+                54.09475142447627
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-31",
+        "modisEndDate": "2018-09-25",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_346": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 8887.96739291,
+        "AFSDATE": "2018-07-04",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 18,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-29",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-11",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_346",
+        "NFIREID": 346,
+        "POLY_HA": 8887.96739291,
+        "SDATE": "2018-07-10",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.8724129804345,
+                51.826533437970234
+            ],
+            [
+                -125.64096158492939,
+                52.1117335341725
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-06",
+        "modisEndDate": "2018-09-25",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2214": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 18859.6812504,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 166,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-13",
+        "COMMENTS": "Null",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2214",
+        "NFIREID": 2214,
+        "POLY_HA": 18859.6812504,
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.43174954233213,
+                53.86422892594407
+            ],
+            [
+                -124.91988231463363,
+                53.99511339231787
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "SDATE": null,
+        "EDATE": null,
+        "modisStartDate": "2018-07-31",
+        "modisEndDate": "2018-09-20",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_139": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 10192.260492,
+        "AFSDATE": "2018-07-27",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 156,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-16",
+        "COMMENTS": "Null",
+        "EDATE": "2018-11-04",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_139",
+        "NFIREID": 139,
+        "POLY_HA": 10192.260492,
+        "SDATE": "2018-07-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -116.5410934685858,
+                49.376612462379086
+            ],
+            [
+                -116.26770163262478,
+                49.60345988913551
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-13",
+        "modisEndDate": "2018-09-16",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1506": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7097.49993059,
+        "AFSDATE": "2018-07-30",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 101,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-13",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-30",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1506",
+        "NFIREID": 1506,
+        "POLY_HA": 7097.49993059,
+        "SDATE": "2018-07-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -124.68517277177062,
+                54.79523939625454
+            ],
+            [
+                -124.40224775516465,
+                54.89636825925555
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-08-31",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2210": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 33872.3127919,
+        "AFSDATE": "2018-07-31",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 31,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-24",
+        "COMMENTS": "Null",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2210",
+        "NFIREID": 2210,
+        "POLY_HA": 33872.3127919,
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.31960831411587,
+                52.60904804466713
+            ],
+            [
+                -125.61663315278145,
+                52.920073753458134
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "SDATE": null,
+        "EDATE": null,
+        "modisStartDate": "2018-07-30",
+        "modisEndDate": "2018-09-23",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_924": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 11391.5192181,
+        "AFSDATE": "2018-08-02",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 35,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-19",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_924",
+        "NFIREID": 924,
+        "POLY_HA": 11391.5192181,
+        "SDATE": "2018-08-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -118.65404218655078,
+                52.34517508441499
+            ],
+            [
+                -118.33056190106409,
+                52.45734436592507
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-28",
+        "modisEndDate": "2018-09-05",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2212": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 64259.1862278,
+        "AFSDATE": "2018-08-08",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 13,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-24",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-05",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2212",
+        "NFIREID": 2212,
+        "POLY_HA": 64259.1862278,
+        "SDATE": "2018-08-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.62716823242963,
+                52.98655160809263
+            ],
+            [
+                -125.81068192803116,
+                53.31633429161251
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-25",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_590": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7361.40119281,
+        "AFSDATE": "2018-07-28",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 49,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-16",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-08",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_590",
+        "NFIREID": 590,
+        "POLY_HA": 7361.40119281,
+        "SDATE": "2018-07-29",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -116.93717199104607,
+                49.10832084870932
+            ],
+            [
+                -116.74156411387779,
+                49.23535792627389
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-04",
+        "modisEndDate": "2018-09-25",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2211": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 56227.500596,
+        "AFSDATE": "2018-07-31",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 75,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-24",
+        "COMMENTS": "Null",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2211",
+        "NFIREID": 2211,
+        "POLY_HA": 56227.500596,
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.59095280549388,
+                52.764604807930645
+            ],
+            [
+                -125.69497377007373,
+                53.056292100900336
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "SDATE": null,
+        "EDATE": null,
+        "modisStartDate": "2018-07-30",
+        "modisEndDate": "2018-09-12",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1726": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5743.61069222,
+        "AFSDATE": "2018-08-06",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 202,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-24",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1726",
+        "NFIREID": 1726,
+        "POLY_HA": 5743.61069222,
+        "SDATE": "2018-08-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.62569386670745,
+                53.46093130644399
+            ],
+            [
+                -125.36982114036981,
+                53.547816954652525
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-03",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1330": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 16907.0458824,
+        "AFSDATE": "2018-07-17",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 177,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-14",
+        "COMMENTS": "Null",
+        "EDATE": "2018-10-06",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1330",
+        "NFIREID": 1330,
+        "POLY_HA": 16907.0458824,
+        "SDATE": "2018-07-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -120.4589303251546,
+                49.08979551717921
+            ],
+            [
+                -120.17357676300131,
+                49.29433573655893
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-16",
+        "modisEndDate": "2018-09-27",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1554": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6880.34631402,
+        "AFSDATE": "2018-08-08",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 164,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-31",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-24",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1554",
+        "NFIREID": 1554,
+        "POLY_HA": 6880.34631402,
+        "SDATE": "2018-08-09",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -123.57160890508352,
+                53.071194683364155
+            ],
+            [
+                -123.42452116156876,
+                53.210492791979874
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-09",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1001": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 8770.56964994,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 48,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-29",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1001",
+        "NFIREID": 1001,
+        "POLY_HA": 8770.56964994,
+        "SDATE": "2018-06-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.24602947285682,
+                52.86573034117521
+            ],
+            [
+                -125.00298853882298,
+                52.98932694732688
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-08-31",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_923": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2607.32126077,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 116,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-16",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-18",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_923",
+        "NFIREID": 923,
+        "POLY_HA": 2607.32126077,
+        "SDATE": "2018-08-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -115.78392422990242,
+                50.64682289836754
+            ],
+            [
+                -115.6540596546906,
+                50.71084850560702
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-08-21",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_274": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3626.21951165,
+        "AFSDATE": "2018-08-04",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 1,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_274",
+        "NFIREID": 274,
+        "POLY_HA": 3626.21951165,
+        "SDATE": "2018-08-06",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -130.69776445601175,
+                57.87073498609074
+            ],
+            [
+                -130.47700651243477,
+                57.94068973315158
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1451": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2125.33410881,
+        "AFSDATE": "2018-08-05",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 27,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-30",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1451",
+        "NFIREID": 1451,
+        "POLY_HA": 2125.33410881,
+        "SDATE": "2018-08-05",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.65355661526668,
+                55.06723051956662
+            ],
+            [
+                -126.55805842558983,
+                55.14202187424028
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-08-26",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_59": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3398.01729775,
+        "AFSDATE": "2018-06-21",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 157,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-17",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-12",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_59",
+        "NFIREID": 59,
+        "POLY_HA": 3398.01729775,
+        "SDATE": "2018-07-09",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -120.45204752788767,
+                59.49307077204979
+            ],
+            [
+                -120.24323852098324,
+                59.557416448825826
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-28",
+        "modisEndDate": "2018-07-17",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_182": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 92640.9801436,
+        "AFSDATE": "2018-08-04",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 45,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-20",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_182",
+        "NFIREID": 182,
+        "POLY_HA": 92640.9801436,
+        "SDATE": "2018-07-26",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -128.73957407035596,
+                59.22918220948804
+            ],
+            [
+                -127.58216404732433,
+                59.61934567543666
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-27",
+        "modisEndDate": "2018-09-15",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_94": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 17183.5495131,
+        "AFSDATE": "2018-05-22",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 93,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-03",
+        "COMMENTS": "Null",
+        "EDATE": "2018-06-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_94",
+        "NFIREID": 94,
+        "POLY_HA": 17183.5495131,
+        "SDATE": "2018-05-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -121.84976313507094,
+                57.07240691525925
+            ],
+            [
+                -121.48629043613647,
+                57.277366353083195
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-21",
+        "modisEndDate": "2018-06-27",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_584": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7915.3367865,
+        "AFSDATE": "2018-08-07",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 52,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-26",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_584",
+        "NFIREID": 584,
+        "POLY_HA": 7915.3367865,
+        "SDATE": "2018-08-16",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -131.0463313161916,
+                57.575680079553166
+            ],
+            [
+                -130.8995903580271,
+                57.79809016539108
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-13",
+        "modisEndDate": "2018-09-05",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1476": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3297.40909398,
+        "AFSDATE": "2018-08-12",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 141,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1476",
+        "NFIREID": 1476,
+        "POLY_HA": 3297.40909398,
+        "SDATE": "2018-08-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -129.13423708964945,
+                59.502356343822065
+            ],
+            [
+                -128.94742442713718,
+                59.63114716342895
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-23",
+        "modisEndDate": "2018-09-16",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1780": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 19243.5960127,
+        "AFSDATE": "2018-08-02",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 169,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-03",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1780",
+        "NFIREID": 1780,
+        "POLY_HA": 19243.5960127,
+        "SDATE": "2018-08-05",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -121.23756849746012,
+                57.33611891241043
+            ],
+            [
+                -120.82256655993068,
+                57.55276468556575
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-30",
+        "modisEndDate": "2018-09-09",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_267": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 101856.893841,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 172,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_267",
+        "NFIREID": 267,
+        "POLY_HA": 101856.893841,
+        "SDATE": "2018-05-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -131.60161727701248,
+                57.866771657331704
+            ],
+            [
+                -130.54305127253116,
+                58.27045588345473
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-08",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_2037": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 17286.6814525,
+        "AFSDATE": "2018-08-03",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 219,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-24",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2037",
+        "NFIREID": 2037,
+        "POLY_HA": 17286.6814525,
+        "SDATE": "2018-08-02",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -120.70958518654453,
+                58.86780061194962
+            ],
+            [
+                -120.27294782116087,
+                58.99583668471347
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-03",
+        "modisEndDate": "2018-09-22",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1457": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 54921.7945389,
+        "AFSDATE": "2018-07-30",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 67,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1457",
+        "NFIREID": 1457,
+        "POLY_HA": 54921.7945389,
+        "SDATE": "2018-08-04",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -128.71734016583744,
+                59.66967067397826
+            ],
+            [
+                -127.8234264860401,
+                59.94318630698208
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-03",
+        "modisEndDate": "2018-09-10",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1226": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4501.83773111,
+        "AFSDATE": "2018-07-31",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 128,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-20",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1226",
+        "NFIREID": 1226,
+        "POLY_HA": 4501.83773111,
+        "SDATE": "2018-08-02",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -127.80552194894823,
+                58.653027399176686
+            ],
+            [
+                -127.61322997471858,
+                58.736801249359374
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-04",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1211": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2250.82466086,
+        "AFSDATE": "2018-07-30",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 15,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1211",
+        "NFIREID": 1211,
+        "POLY_HA": 2250.82466086,
+        "SDATE": "2018-08-16",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.0884054452405,
+                55.82347412509831
+            ],
+            [
+                -124.86216901324492,
+                55.863920152719395
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-16",
+        "modisEndDate": "2018-09-28",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_313": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2197.61129439,
+        "AFSDATE": "2018-08-17",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 94,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_313",
+        "NFIREID": 313,
+        "POLY_HA": 2197.61129439,
+        "SDATE": "2018-08-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -129.53187961097572,
+                59.4634849065376
+            ],
+            [
+                -129.39090117543785,
+                59.5152491323478
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-18",
+        "modisEndDate": "2018-09-13",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_2200": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4465.66897444,
+        "AFSDATE": "2018-05-21",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 125,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-06-20",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2200",
+        "NFIREID": 2200,
+        "POLY_HA": 4465.66897444,
+        "SDATE": "2018-05-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -123.58360658023794,
+                58.37943885171526
+            ],
+            [
+                -123.44605284847394,
+                58.485038937061724
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-20",
+        "modisEndDate": "2018-06-04",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_1274": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5889.49744115,
+        "AFSDATE": "2018-07-29",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 182,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1274",
+        "NFIREID": 1274,
+        "POLY_HA": 5889.49744115,
+        "SDATE": "2018-07-29",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.22307207432279,
+                57.354162583445046
+            ],
+            [
+                -126.05010239833362,
+                57.4369623830642
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-27",
+        "modisEndDate": "2018-09-04",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_932": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7798.93294386,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 205,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-29",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_932",
+        "NFIREID": 932,
+        "POLY_HA": 7798.93294386,
+        "SDATE": "2018-08-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -127.30339586284697,
+                55.49178125876391
+            ],
+            [
+                -127.10029447724116,
+                55.67523443615805
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-08-25",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1030": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 16720.8120071,
+        "AFSDATE": "2018-07-17",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 120,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-14",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1030",
+        "NFIREID": 1030,
+        "POLY_HA": 16720.8120071,
+        "SDATE": "2018-07-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -119.94061607828267,
+                49.00030862388627
+            ],
+            [
+                -119.72301307277269,
+                49.194388451067965
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-15",
+        "modisEndDate": "2018-09-09",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_241": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 11320.7656856,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 90,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-31",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_241",
+        "NFIREID": 241,
+        "POLY_HA": 11320.7656856,
+        "SDATE": "2018-01-16",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -123.93389773440963,
+                53.0913638850274
+            ],
+            [
+                -123.63630329661146,
+                53.210432518718605
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-09",
+        "modisEndDate": "2018-09-12",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_897": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2123.98193041,
+        "AFSDATE": "2018-07-30",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 170,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_897",
+        "NFIREID": 897,
+        "POLY_HA": 2123.98193041,
+        "SDATE": "2018-07-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.3929831286601,
+                55.18491577640714
+            ],
+            [
+                -125.23299681662381,
+                55.22427043745416
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-31",
+        "modisEndDate": "2018-08-23",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2034": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 38589.5653635,
+        "AFSDATE": "2018-08-03",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 3,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-24",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_2034",
+        "NFIREID": 2034,
+        "POLY_HA": 38589.5653635,
+        "SDATE": "2018-08-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.75534893345777,
+                53.23572362679399
+            ],
+            [
+                -125.99423219671262,
+                53.421124800746036
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-09",
+        "modisEndDate": "2018-09-24",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_169": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4636.09311991,
+        "AFSDATE": "2018-08-07",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 1727,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-C12302[METHOD:Unknown,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_BC_169",
+        "NFIREID": 169,
+        "POLY_HA": 4636.09311991,
+        "SDATE": "2018-08-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -122.84946867636643,
+                52.77037004234604
+            ],
+            [
+                -122.7117619405958,
+                52.839381747069126
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-31",
+        "modisEndDate": "2018-09-27",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2113": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2227.66795694,
+        "AFSDATE": "2018-08-11",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 1450,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-N52497[METHOD:Corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-09-06",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_2113",
+        "NFIREID": 2113,
+        "POLY_HA": 2227.66795694,
+        "SDATE": "2018-08-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -118.13508426677305,
+                49.36760678797748
+            ],
+            [
+                -118.05927296217733,
+                49.427723055971896
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-10",
+        "modisEndDate": "2018-08-30",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_623": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2006.8779718,
+        "AFSDATE": "2018-07-27",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 277,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-N12024[METHOD:Non-corrected ground GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-10-27",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 2,
+        "NAME": "CA_2018_BC_623",
+        "NFIREID": 623,
+        "POLY_HA": 2006.8779718,
+        "SDATE": "2018-08-02",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -114.36850520481231,
+                49.11873052457628
+            ],
+            [
+                -114.23812017379905,
+                49.15892078595831
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-29",
+        "modisEndDate": "2018-08-19",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2184": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6841.22555489,
+        "AFSDATE": "2018-07-31",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 1219,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-C41745[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_2184",
+        "NFIREID": 2184,
+        "POLY_HA": 6841.22555489,
+        "SDATE": "2018-08-08",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -121.95153386135307,
+                51.38544424957686
+            ],
+            [
+                -121.7709187276102,
+                51.48882679784437
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-08",
+        "modisEndDate": "2018-08-19",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_2145": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2245.22335251,
+        "AFSDATE": "2018-06-21",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 698,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-G10696[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-12-10",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_2145",
+        "NFIREID": 2145,
+        "POLY_HA": 2245.22335251,
+        "SDATE": "2018-06-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -124.03834711494282,
+                53.40096612937696
+            ],
+            [
+                -123.861145900015,
+                53.447884764130286
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-22",
+        "modisEndDate": "2018-07-14",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1983": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3849.31641961,
+        "AFSDATE": "2018-08-11",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 344,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-N52489[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-09-10",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_1983",
+        "NFIREID": 1983,
+        "POLY_HA": 3849.31641961,
+        "SDATE": "2018-08-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -118.08431176210757,
+                49.46441518207433
+            ],
+            [
+                -117.96583614943042,
+                49.54312458891499
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-10",
+        "modisEndDate": "2018-09-11",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1360": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3111.72213027,
+        "AFSDATE": "2018-08-11",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 1714,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-N52548[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-09-10",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_1360",
+        "NFIREID": 1360,
+        "POLY_HA": 3111.72213027,
+        "SDATE": "2018-08-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -117.92212452781493,
+                49.348739182401644
+            ],
+            [
+                -117.8143687783456,
+                49.41101569874406
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-14",
+        "modisEndDate": "2018-09-10",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1414": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5949.2401825,
+        "AFSDATE": "2018-08-04",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 1336,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-V12167[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-09-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_1414",
+        "NFIREID": 1414,
+        "POLY_HA": 5949.2401825,
+        "SDATE": "2018-08-06",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -121.26003355301357,
+                49.07784602671363
+            ],
+            [
+                -121.05154572838272,
+                49.171520511360235
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-05",
+        "modisEndDate": "2018-09-02",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1168": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2136.26517147,
+        "AFSDATE": "2018-08-08",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 260,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-K62317[METHOD:Derived from satellite imagery,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-11-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 4,
+        "FIREMAPS": 6,
+        "NAME": "CA_2018_BC_1168",
+        "NFIREID": 1168,
+        "POLY_HA": 2136.26517147,
+        "SDATE": "2018-08-08",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -121.16353466299486,
+                49.76844323518073
+            ],
+            [
+                -121.04160754134307,
+                49.82290236777801
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-10",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1644": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2805.27801277,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 1517,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-V52153[METHOD:Unknown,WATER_REM:,UNBURN_REM:,MORE_INFO:],2018-V52154[METHOD:Unknown,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_BC_1644",
+        "NFIREID": 1644,
+        "POLY_HA": 2805.27801277,
+        "SDATE": "2018-08-05",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -124.16706102577547,
+                50.881337686271095
+            ],
+            [
+                -123.92788572033002,
+                50.94801166046563
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-02",
+        "modisEndDate": "2018-08-30",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1069": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2369.93321305,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 246,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-R41945[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:],2018-R41980[METHOD:Non-corrected ground GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_1069",
+        "NFIREID": 1069,
+        "POLY_HA": 2369.93321305,
+        "SDATE": "2018-08-05",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -127.86279139361588,
+                55.66831125563977
+            ],
+            [
+                -127.70302938433127,
+                55.71976021297542
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-13",
+        "modisEndDate": "2018-09-15",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_269": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2394.8796624,
+        "AFSDATE": "2018-08-11",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 793,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-N12513[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:],2018-N12515[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-09-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_269",
+        "NFIREID": 269,
+        "POLY_HA": 2394.8796624,
+        "SDATE": "2018-08-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -115.48245619687881,
+                49.058392069739504
+            ],
+            [
+                -115.37923701139067,
+                49.11466280744427
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-11",
+        "modisEndDate": "2018-09-17",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_MB_330": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 54304.8403433,
+        "AFEDATE": "2018-09-20",
+        "AFSDATE": "2018-05-28",
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 80,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-17",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-09",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_330",
+        "NFIREID": 330,
+        "POLY_HA": 54304.8403433,
+        "SDATE": "2018-07-15",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.78520850208726,
+                51.2115635208035
+            ],
+            [
+                -95.25232103806158,
+                51.577185984682274
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-07-12",
+        "modisEndDate": "2018-08-30",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1090": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 26305.8647398,
+        "AFEDATE": "2018-08-18",
+        "AFSDATE": "2018-07-12",
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 29,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_1090",
+        "NFIREID": 1090,
+        "POLY_HA": 26305.8647398,
+        "SDATE": "2018-06-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -98.55902848226968,
+                57.6710994720784
+            ],
+            [
+                -98.08666247363183,
+                57.86961782137662
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-28",
+        "modisEndDate": "2018-07-27",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1472": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4991.56242694,
+        "AFEDATE": "2018-09-11",
+        "AFSDATE": "2018-08-18",
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 146,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-22",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-19",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_1472",
+        "NFIREID": 1472,
+        "POLY_HA": 4991.56242694,
+        "SDATE": "2018-08-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -97.16010933232874,
+                57.264774427420306
+            ],
+            [
+                -96.90362272958374,
+                57.39630355199652
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-08-11",
+        "modisEndDate": "2018-08-21",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_913": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2284.17088971,
+        "AFEDATE": "2018-07-14",
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 57,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-03",
+        "COMMENTS": "Null",
+        "EDATE": "2018-06-29",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_913",
+        "NFIREID": 913,
+        "POLY_HA": 2284.17088971,
+        "SDATE": "2018-06-27",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.15005587106755,
+                52.89261415246281
+            ],
+            [
+                -95.00655063923327,
+                52.95709099168579
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "modisStartDate": "2018-06-25",
+        "modisEndDate": "2018-07-18",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1936": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5944.35350004,
+        "AFEDATE": "2018-08-11",
+        "AFSDATE": "2018-06-08",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 1738,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-17",
+        "COMMENTS": "MB2018NE056[notes:,datasource:Satellite imagery,sourcekeys:Landsat 8,creatmethd:Digitized from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-06-24",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_1936",
+        "NFIREID": 1936,
+        "POLY_HA": 5944.35350004,
+        "SDATE": "2018-06-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -92.53341684739283,
+                55.001988126000036
+            ],
+            [
+                -92.37118683967851,
+                55.114777458621546
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-09",
+        "modisEndDate": "2018-06-16",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_793": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2491.30819531,
+        "AFEDATE": "2018-07-11",
+        "AFSDATE": "2018-06-23",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 831,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-12",
+        "COMMENTS": "MB2018NE071[notes:,datasource:Satellite imagery,sourcekeys:Landsat 8,creatmethd:Digitized from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-07-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_793",
+        "NFIREID": 793,
+        "POLY_HA": 2491.30819531,
+        "SDATE": "2018-06-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -93.58420348483959,
+                55.47780273347803
+            ],
+            [
+                -93.48234645491615,
+                55.57691114811146
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-25",
+        "modisEndDate": "2018-07-02",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_305": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2885.69591658,
+        "AFEDATE": "2018-08-18",
+        "AFSDATE": "2018-07-12",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 1408,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "MB2018NE135[notes:,datasource:Satellite imagery,sourcekeys:Landsat 8,creatmethd:Digitized from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-07-11",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_305",
+        "NFIREID": 305,
+        "POLY_HA": 2885.69591658,
+        "SDATE": "2018-07-10",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -98.73650155328258,
+                57.38491597370598
+            ],
+            [
+                -98.57349413207747,
+                57.443300576942875
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-07-11",
+        "modisEndDate": "2018-07-18",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1253": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5239.12529293,
+        "AFEDATE": "2018-08-09",
+        "AFSDATE": "2018-06-23",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 249,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-28",
+        "COMMENTS": "MB2018NE072[notes:,datasource:GPS - rotary wing,sourcekeys:Visual Survey,creatmethd:Direct from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-08-10",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_MB_1253",
+        "NFIREID": 1253,
+        "POLY_HA": 5239.12529293,
+        "SDATE": "2018-06-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -100.88304195817936,
+                56.650855166970615
+            ],
+            [
+                -100.70934642991075,
+                56.763230517045805
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-20",
+        "modisEndDate": "2018-07-07",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_634": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 12645.6615321,
+        "AFEDATE": "2018-09-10",
+        "AFSDATE": "2018-07-28",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 1644,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-11",
+        "COMMENTS": "MB2018NE154[notes:,datasource:GPS - rotary wing,sourcekeys:Visual Survey,creatmethd:Direct from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-08-19",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_MB_634",
+        "NFIREID": 634,
+        "POLY_HA": 12645.6615321,
+        "SDATE": "2018-07-28",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -96.34706816985742,
+                59.20007794356146
+            ],
+            [
+                -96.10137342063723,
+                59.34001481965681
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-07-28",
+        "modisEndDate": "2018-08-22",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1514": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2091.59934061,
+        "AFEDATE": "2018-08-15",
+        "AFSDATE": "2018-06-24",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 1296,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-12",
+        "COMMENTS": "MB2018EA079[notes:Digitized from source, and GPS - rotary wing,datasource:Satellite imagery,sourcekeys:Landsat 8,creatmethd:Hybrid,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-06-29",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_1514",
+        "NFIREID": 1514,
+        "POLY_HA": 2091.59934061,
+        "SDATE": "2018-06-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -96.62615409088257,
+                52.681534390136186
+            ],
+            [
+                -96.48491534611607,
+                52.73412614892653
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-23",
+        "modisEndDate": "2018-07-07",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1249": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2312.84573516,
+        "AFEDATE": "2018-07-03",
+        "AFSDATE": "2018-06-27",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 479,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-10-12",
+        "COMMENTS": "MB2018NE104[notes:Digitized from source, and GPS - rotary wing,datasource:Satellite imagery,sourcekeys:Landsat 8,creatmethd:Hybrid,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-06-28",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_1249",
+        "NFIREID": 1249,
+        "POLY_HA": 2312.84573516,
+        "SDATE": "2018-06-28",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -96.24448980095097,
+                53.42266863533305
+            ],
+            [
+                -96.10868251307619,
+                53.4729932673062
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-25",
+        "modisEndDate": "2018-07-06",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_533": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2749.62978073,
+        "AFEDATE": "2018-08-18",
+        "AFSDATE": "2018-07-11",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 1301,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-22",
+        "COMMENTS": "MB2018NE126[notes:Digitized from source, and GPS - rotary wing,datasource:Satellite imagery,sourcekeys:Landsat 8,creatmethd:Hybrid,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-07-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_533",
+        "NFIREID": 533,
+        "POLY_HA": 2749.62978073,
+        "SDATE": "2018-07-09",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -99.47142006075092,
+                57.839241525608585
+            ],
+            [
+                -99.31137238934684,
+                57.907242287587685
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-07-10",
+        "modisEndDate": "2018-07-22",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_NT_3": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3390.66043327,
+        "AFSDATE": "2018-07-24",
+        "AGENCY": "NT",
+        "BASRC": 1,
+        "BT_GID": 7,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-20",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-02",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_NT_3",
+        "NFIREID": 3,
+        "POLY_HA": 3390.66043327,
+        "SDATE": "2018-07-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -124.1074790401891,
+                61.99884937072923
+            ],
+            [
+                -123.92459518618173,
+                62.06941226329836
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-25",
+        "modisEndDate": "2018-08-12",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1350": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 9406.91202616,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 37,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-03",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1350",
+        "NFIREID": 1350,
+        "POLY_HA": 9406.91202616,
+        "SDATE": "2018-07-15",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.07962896800446,
+                50.36196097366916
+            ],
+            [
+                -94.85626874015728,
+                50.53195302309241
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-11",
+        "modisEndDate": "2018-08-23",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_3146": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5107.31082058,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 139,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-26",
+        "COMMENTS": "Null",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_3146",
+        "NFIREID": 3146,
+        "POLY_HA": 5107.31082058,
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.00139761130649,
+                51.219015865203296
+            ],
+            [
+                -94.837971364307,
+                51.32287709291629
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "SDATE": null,
+        "EDATE": null,
+        "modisStartDate": "2018-07-14",
+        "modisEndDate": "2018-07-29",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_2213": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 8830.52495108,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 109,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-17",
+        "COMMENTS": "Null",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_2213",
+        "NFIREID": 2213,
+        "POLY_HA": 8830.52495108,
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.1062725751434,
+                52.00848614339806
+            ],
+            [
+                -94.87337886674311,
+                52.116289162328016
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "SDATE": null,
+        "EDATE": null,
+        "modisStartDate": "2018-08-17",
+        "modisEndDate": "2018-09-04",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_2101": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5500.10802817,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 130,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-17",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-19",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_2101",
+        "NFIREID": 2101,
+        "POLY_HA": 5500.10802817,
+        "SDATE": "2018-07-13",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -94.75901987732446,
+                51.56584459599647
+            ],
+            [
+                -94.54353780652116,
+                51.66324655442398
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-11",
+        "modisEndDate": "2018-08-05",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1532": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7126.78666606,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 9,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-03",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-13",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1532",
+        "NFIREID": 1532,
+        "POLY_HA": 7126.78666606,
+        "SDATE": "2018-06-27",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -94.945227181654,
+                52.824064712770664
+            ],
+            [
+                -94.71834796975375,
+                52.91898819574127
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-25",
+        "modisEndDate": "2018-07-14",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_2045": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6619.45970381,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 78,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-23",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_2045",
+        "NFIREID": 2045,
+        "POLY_HA": 6619.45970381,
+        "SDATE": "2018-07-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -89.06043120785125,
+                52.745813328082704
+            ],
+            [
+                -88.81231269777442,
+                52.89909601399035
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-02",
+        "modisEndDate": "2018-07-29",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1680": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 28919.7248814,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 53,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-23",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-15",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1680",
+        "NFIREID": 1680,
+        "POLY_HA": 28919.7248814,
+        "SDATE": "2018-07-08",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -88.36695599321396,
+                52.67478035449074
+            ],
+            [
+                -87.94382874751038,
+                52.9791692967835
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32616",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-02",
+        "modisEndDate": "2018-07-29",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1824": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2305.1298248,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 181,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-06",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-08",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1824",
+        "NFIREID": 1824,
+        "POLY_HA": 2305.1298248,
+        "SDATE": "2018-07-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -80.15371864707954,
+                46.690144817054154
+            ],
+            [
+                -80.05561221600759,
+                46.76449836296326
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-07",
+        "modisEndDate": "2018-07-19",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Deserts & Xeric Shrublands"
+    },
+    "CA_2018_ON_1667": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 22760.2295481,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 213,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-06",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1667",
+        "NFIREID": 1667,
+        "POLY_HA": 22760.2295481,
+        "SDATE": "2018-07-08",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -80.48340625955747,
+                47.35633165646055
+            ],
+            [
+                -80.1451108257389,
+                47.577934682178956
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-09",
+        "modisEndDate": "2018-08-05",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Deserts & Xeric Shrublands"
+    },
+    "CA_2018_ON_903": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3693.6152088,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 42,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-23",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-15",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_903",
+        "NFIREID": 903,
+        "POLY_HA": 3693.6152088,
+        "SDATE": "2018-06-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -89.59350229248929,
+                52.60346842926756
+            ],
+            [
+                -89.38049153468991,
+                52.714335731447015
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-21",
+        "modisEndDate": "2018-07-05",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_307": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3408.13369898,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 173,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-23",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_307",
+        "NFIREID": 307,
+        "POLY_HA": 3408.13369898,
+        "SDATE": "2018-07-10",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -87.81509267779242,
+                53.143611723296075
+            ],
+            [
+                -87.71010395901718,
+                53.24785643100487
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32616",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-30",
+        "modisEndDate": "2018-07-20",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1463": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 29547.8201352,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 61,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-26",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-30",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1463",
+        "NFIREID": 1463,
+        "POLY_HA": 29547.8201352,
+        "SDATE": "2018-07-15",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.00669063831441,
+                50.98258007055606
+            ],
+            [
+                -94.59232766984073,
+                51.23827088033589
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-18",
+        "modisEndDate": "2018-08-29",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1120": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 23759.033009,
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 221,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-10",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-10",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_1120",
+        "NFIREID": 1120,
+        "POLY_HA": 23759.033009,
+        "SDATE": "2018-06-16",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -92.85361667244386,
+                52.259173977760824
+            ],
+            [
+                -92.4904386015712,
+                52.510584783931165
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-09",
+        "modisEndDate": "2018-07-24",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_2164": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3304.88766859,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 767,
+        "BURNCLAS": 4,
+        "COMMENTS": "COC4[TYPE_C:IFR,WEATH_IND:14.1,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_2164",
+        "NFIREID": 2164,
+        "POLY_HA": 3304.88766859,
+        "SDATE": "2018-06-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -87.04237293389802,
+                55.68364221403524
+            ],
+            [
+                -86.86177366051288,
+                55.777392593917924
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32616",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": null,
+        "modisEndDate": null,
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_277": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3262.93849835,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 1212,
+        "BURNCLAS": 4,
+        "COMMENTS": "COC5[TYPE_C:IFR,WEATH_IND:14.3,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_277",
+        "NFIREID": 277,
+        "POLY_HA": 3262.93849835,
+        "SDATE": "2018-06-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -83.59670478738288,
+                53.01973069753406
+            ],
+            [
+                -83.36179989101126,
+                53.087322302080565
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32616",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-19",
+        "modisEndDate": "2018-06-30",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_561": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3049.5122171,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 1017,
+        "BURNCLAS": 4,
+        "COMMENTS": "FOR24[TYPE_C:IFR,WEATH_IND:8.2,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_561",
+        "NFIREID": 561,
+        "POLY_HA": 3049.5122171,
+        "SDATE": "2018-08-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -91.47365956484458,
+                48.48546226120604
+            ],
+            [
+                -91.33424263428287,
+                48.54513827295648
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-16",
+        "modisEndDate": "2018-09-07",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Deserts & Xeric Shrublands"
+    },
+    "CA_2018_ON_1035": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 8800.41742231,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 1178,
+        "BURNCLAS": 4,
+        "COMMENTS": "THU52[TYPE_C:IFR,WEATH_IND:0.7,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-09-08",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_1035",
+        "NFIREID": 1035,
+        "POLY_HA": 8800.41742231,
+        "SDATE": "2018-08-12",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -89.81205083341693,
+                50.65753621355044
+            ],
+            [
+                -89.60383010230585,
+                50.75839875737157
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-13",
+        "modisEndDate": "2018-09-07",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_184": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4348.74416608,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 1538,
+        "BURNCLAS": 4,
+        "COMMENTS": "COC14[TYPE_C:IFR,WEATH_IND:11.7,RESP_OBJ_C:MOD,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-07-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_184",
+        "NFIREID": 184,
+        "POLY_HA": 4348.74416608,
+        "SDATE": "2018-07-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -80.84423286195137,
+                49.84380878641025
+            ],
+            [
+                -80.66290332432314,
+                49.921372699308705
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-13",
+        "modisEndDate": "2018-08-16",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1590": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2695.8140861,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 423,
+        "BURNCLAS": 4,
+        "COMMENTS": "COC26[TYPE_C:IFR,WEATH_IND:12.6,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-08-04",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_1590",
+        "NFIREID": 1590,
+        "POLY_HA": 2695.8140861,
+        "SDATE": "2018-07-31",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -88.00260535637064,
+                55.62015533804209
+            ],
+            [
+                -87.8598840546666,
+                55.70475145289578
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32616",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-28",
+        "modisEndDate": "2018-08-12",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1866": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5001.30828595,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 1709,
+        "BURNCLAS": 4,
+        "COMMENTS": "SLK26[TYPE_C:IFR,WEATH_IND:20.1,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-06-27",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_1866",
+        "NFIREID": 1866,
+        "POLY_HA": 5001.30828595,
+        "SDATE": "2018-06-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -91.26573322260259,
+                54.398393485255426
+            ],
+            [
+                -91.00607799032848,
+                54.54049767353839
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-22",
+        "modisEndDate": "2018-07-18",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_969": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4650.70480533,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 230,
+        "BURNCLAS": 4,
+        "COMMENTS": "SLK48[TYPE_C:IFR,WEATH_IND:20.1,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-07-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_969",
+        "NFIREID": 969,
+        "POLY_HA": 4650.70480533,
+        "SDATE": "2018-07-09",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -90.34170991509657,
+                52.34099611675419
+            ],
+            [
+                -90.23149243697105,
+                52.42407616819729
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-07",
+        "modisEndDate": "2018-07-27",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_2063": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4363.32132303,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 919,
+        "BURNCLAS": 4,
+        "COMMENTS": "NIP53[TYPE_C:IFR,WEATH_IND:3.1,RESP_OBJ_C:MON,ACCURACY:Within 100 metres],SLK44[TYPE_C:IFR,WEATH_IND:20.3,RESP_OBJ_C:MON,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-08-18",
+        "FIRECAUS": 2,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_2063",
+        "NFIREID": 2063,
+        "POLY_HA": 4363.32132303,
+        "SDATE": "2018-07-11",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -89.02934512225329,
+                52.01077049364707
+            ],
+            [
+                -88.8828066276229,
+                52.126421298546866
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-05",
+        "modisEndDate": "2018-07-21",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_807": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2107.78976872,
+        "AFEDATE": "2018-07-18",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 1,
+        "BT_GID": 97,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-08-16",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_QC_807",
+        "NFIREID": 807,
+        "POLY_HA": 2107.78976872,
+        "SDATE": "2018-06-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -72.07144597536112,
+                52.70301503558125
+            ],
+            [
+                -71.94737940538262,
+                52.81947185936912
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "modisStartDate": null,
+        "modisEndDate": null,
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_916": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6621.03909485,
+        "AFEDATE": "2018-07-18",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 1,
+        "BT_GID": 50,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-08-16",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-05",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_QC_916",
+        "NFIREID": 916,
+        "POLY_HA": 6621.03909485,
+        "SDATE": "2018-06-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -72.30024099171574,
+                52.5512409498083
+            ],
+            [
+                -72.1921405508016,
+                52.703053518103225
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-29",
+        "modisEndDate": "2018-07-12",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_764": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3144.08430397,
+        "AFEDATE": "2018-07-17",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 1,
+        "BT_GID": 84,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-08-16",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_QC_764",
+        "NFIREID": 764,
+        "POLY_HA": 3144.08430397,
+        "SDATE": "2018-06-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -72.86997325123035,
+                53.23179404295248
+            ],
+            [
+                -72.75536365345286,
+                53.30368853276353
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-07-01",
+        "modisEndDate": "2018-07-19",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_197": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4940.2500234,
+        "AFEDATE": "2018-07-19",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 234,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080275[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-07-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_197",
+        "NFIREID": 197,
+        "POLY_HA": 4940.2500234,
+        "SDATE": "2018-06-28",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -68.57278570563354,
+                52.05652470757693
+            ],
+            [
+                -68.4149691762184,
+                52.184299391152344
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32619",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-23",
+        "modisEndDate": "2018-07-15",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_582": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3139.47811449,
+        "AFEDATE": "2018-08-02",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 665,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080277[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-07-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_582",
+        "NFIREID": 582,
+        "POLY_HA": 3139.47811449,
+        "SDATE": "2018-06-29",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -76.78644325145655,
+                52.564375612670865
+            ],
+            [
+                -76.64805783479497,
+                52.657799437107116
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-02",
+        "modisEndDate": "2018-07-07",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_1258": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5487.08802102,
+        "AFEDATE": "2018-08-02",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 1083,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080283[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-07-05",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_1258",
+        "NFIREID": 1258,
+        "POLY_HA": 5487.08802102,
+        "SDATE": "2018-06-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -75.7475384527598,
+                52.4665286410432
+            ],
+            [
+                -75.57147139592378,
+                52.56867327671579
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-28",
+        "modisEndDate": "2018-07-08",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_322": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5947.47785783,
+        "AFEDATE": "2018-07-21",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 1260,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080288[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-07-05",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_322",
+        "NFIREID": 322,
+        "POLY_HA": 5947.47785783,
+        "SDATE": "2018-06-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -77.01591660733932,
+                52.75643954375036
+            ],
+            [
+                -76.83401541540651,
+                52.8823489365584
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-29",
+        "modisEndDate": "2018-07-07",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_838": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6107.99374138,
+        "AFEDATE": "2018-07-21",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 226,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080301[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-07-06",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_838",
+        "NFIREID": 838,
+        "POLY_HA": 6107.99374138,
+        "SDATE": "2018-06-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -75.66303127107305,
+                52.87555212026294
+            ],
+            [
+                -75.520397915492,
+                53.010432427247224
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-28",
+        "modisEndDate": "2018-07-08",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_1175": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3759.45973453,
+        "AFEDATE": "2018-07-27",
+        "AFSDATE": "2018-06-28",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 629,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080304[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-07-12",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_1175",
+        "NFIREID": 1175,
+        "POLY_HA": 3759.45973453,
+        "SDATE": "2018-07-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -77.99328621920182,
+                51.06099522882314
+            ],
+            [
+                -77.80573019311238,
+                51.14415259862835
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-03",
+        "modisEndDate": "2018-07-18",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_487": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 10166.6785091,
+        "AFEDATE": "2018-09-13",
+        "AFSDATE": "2018-07-04",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 1294,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080368[SECTION:Intensive,METHODE:Relevé hélico et Satellite - RapidEye,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-08-06",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 6,
+        "NAME": "CA_2018_QC_487",
+        "NFIREID": 487,
+        "POLY_HA": 10166.6785091,
+        "SDATE": "2018-07-07",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -76.49087913350382,
+                49.02723495822279
+            ],
+            [
+                -76.19904953550102,
+                49.149837585678775
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-05",
+        "modisEndDate": "2018-07-31",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_1904": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3821.72024592,
+        "AFEDATE": "2018-09-01",
+        "AFSDATE": "2018-07-01",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 1022,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080405[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP],20181080420[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP],20181080408[SECTION:Nordique,METHODE:Satellite - Sentinel,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-08-19",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_QC_1904",
+        "NFIREID": 1904,
+        "POLY_HA": 3821.72024592,
+        "SDATE": "2018-07-12",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -79.08503850557845,
+                50.33205411303173
+            ],
+            [
+                -78.95487374345053,
+                50.57938960205983
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-05",
+        "modisEndDate": "2018-07-30",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1435": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 9388.0381346,
+        "AFEDATE": "2018-08-14",
+        "AFSDATE": "2018-06-18",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 332,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-23",
+        "COMMENTS": "18LA-WOODS[comments:, verbal updates June 23,SOURCE:GPS,CAUSE2:Lightning]",
+        "EDATE": "2018-06-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_SK_1435",
+        "NFIREID": 1435,
+        "POLY_HA": 9388.0381346,
+        "SDATE": "2018-06-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -103.4873783924225,
+                56.13710906650169
+            ],
+            [
+                -103.24772255914391,
+                56.23515674994585
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-12",
+        "modisEndDate": "2018-07-22",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_949": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6880.04199957,
+        "AFEDATE": "2018-09-04",
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 769,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-06",
+        "COMMENTS": "18SR-DUM[comments:L1C_T12VWL_A016755_20180906T183616,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-08-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_949",
+        "NFIREID": 949,
+        "POLY_HA": 6880.04199957,
+        "SDATE": "2018-08-02",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -109.58308021660325,
+                58.82216779242555
+            ],
+            [
+                -109.41920982575147,
+                58.95887988570762
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-01",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_492": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7406.63175028,
+        "AFEDATE": "2018-09-02",
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1471,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-06",
+        "COMMENTS": "18BN-WOODS[comments:L1C_T13VCC_A016755_20180906T183616,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_492",
+        "NFIREID": 492,
+        "POLY_HA": 7406.63175028,
+        "SDATE": "2018-08-10",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -107.99143765266926,
+                56.61053223696661
+            ],
+            [
+                -107.78782411907228,
+                56.748230130218346
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-08-07",
+        "modisEndDate": "2018-08-27",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_568": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3837.10819702,
+        "AFEDATE": "2018-07-03",
+        "AFSDATE": "2018-06-17",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1151,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-16",
+        "COMMENTS": "18DB-MOODY[comments:L1C_T13UFA_A016011_20180716T175415,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-06-21",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_568",
+        "NFIREID": 568,
+        "POLY_HA": 3837.10819702,
+        "SDATE": "2018-06-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -102.44393026764219,
+                54.43401919374195
+            ],
+            [
+                -102.27516735308028,
+                54.50632602605265
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-12",
+        "modisEndDate": "2018-06-30",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_538": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4629.15359176,
+        "AFEDATE": "2018-06-07",
+        "AFSDATE": "2018-05-21",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1387,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-05-28",
+        "COMMENTS": "18DB-POVOL[comments:L1C_T13UEA_A006402_20180528T180913,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-05-28",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_538",
+        "NFIREID": 538,
+        "POLY_HA": 4629.15359176,
+        "SDATE": "2018-05-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -104.14299525217125,
+                54.8259384478391
+            ],
+            [
+                -103.9984412938936,
+                54.92809989573686
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-05-24",
+        "modisEndDate": "2018-05-25",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1306": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4699.57947409,
+        "AFEDATE": "2018-09-04",
+        "AFSDATE": "2018-08-20",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1107,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-06",
+        "COMMENTS": "18SR-SMITH[comments:L1C_T13VDE_A016755_20180906T183616,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_1306",
+        "NFIREID": 1306,
+        "POLY_HA": 4699.57947409,
+        "SDATE": "2018-06-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -106.64818712645716,
+                58.26457018697916
+            ],
+            [
+                -106.4738178924993,
+                58.362685219002884
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-25",
+        "modisEndDate": "2018-09-07",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1959": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2905.88613092,
+        "AFEDATE": "2018-06-30",
+        "AFSDATE": "2018-06-25",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1489,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-18",
+        "COMMENTS": "18BN-FRISCO[comments:L1C_T12VXJ_A016040_20180718T183122,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_1959",
+        "NFIREID": 1959,
+        "POLY_HA": 2905.88613092,
+        "SDATE": "2018-06-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -109.2013848452033,
+                57.439553784220685
+            ],
+            [
+                -109.08769618260094,
+                57.50593960006132
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-24",
+        "modisEndDate": "2018-07-05",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1732": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 13435.4189717,
+        "AFEDATE": "2018-06-13",
+        "AFSDATE": "2018-05-12",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 379,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-08",
+        "COMMENTS": "18BN-LANGLY[comments:L1C_T12VXJ_A015468_20180608T183731,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-07-26",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_1732",
+        "NFIREID": 1732,
+        "POLY_HA": 13435.4189717,
+        "SDATE": "2018-05-12",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -109.11339821900232,
+                57.230619241333024
+            ],
+            [
+                -108.80352952146816,
+                57.384999506967226
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-05-21",
+        "modisEndDate": "2018-05-30",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1063": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 8911.85364714,
+        "AFEDATE": "2018-07-06",
+        "AFSDATE": "2018-06-18",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1303,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-05",
+        "COMMENTS": "18LX-ARTHUR[comments:L1C_T13VDE_A015854_20180705T182113,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_1063",
+        "NFIREID": 1063,
+        "POLY_HA": 8911.85364714,
+        "SDATE": "2018-06-20",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -105.15304917109027,
+                57.654250183325
+            ],
+            [
+                -104.89917811306252,
+                57.78083091574871
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-18",
+        "modisEndDate": "2018-07-24",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1853": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4834.51906406,
+        "AFEDATE": "2018-07-05",
+        "AFSDATE": "2018-06-22",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1169,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-05",
+        "COMMENTS": "18LX-TIMSON[comments:L1C_T13VDE_A015854_20180705T182113,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_1853",
+        "NFIREID": 1853,
+        "POLY_HA": 4834.51906406,
+        "SDATE": "2018-06-23",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -106.60825674127211,
+                57.805153410275615
+            ],
+            [
+                -106.4131930029437,
+                57.894156294841025
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-22",
+        "modisEndDate": "2018-07-28",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_1236": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5035.65423803,
+        "AFEDATE": "2018-08-22",
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1401,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-08-17",
+        "COMMENTS": "18BN-CARSWELL[comments:L1C_T12VWL_A016469_20180817T183719,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-08-05",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_1236",
+        "NFIREID": 1236,
+        "POLY_HA": 5035.65423803,
+        "SDATE": "2018-08-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -109.26361931388502,
+                58.6806188691205
+            ],
+            [
+                -109.09348714940788,
+                58.784236165618026
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-07-28",
+        "modisEndDate": "2018-08-11",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_115": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4514.31986411,
+        "AFEDATE": "2018-07-20",
+        "AFSDATE": "2018-06-18",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1274,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-03",
+        "COMMENTS": "18SR-MARGETTS[comments:L1C_T13VDG_A006917_20180703T183026,SOURCE:Sentinel-2,CAUSE2:Lightning]",
+        "EDATE": "2018-06-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_115",
+        "NFIREID": 115,
+        "POLY_HA": 4514.31986411,
+        "SDATE": "2018-06-20",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -106.16136912851786,
+                59.54713635941649
+            ],
+            [
+                -105.99373559038628,
+                59.63914975192762
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-19",
+        "modisEndDate": "2018-07-28",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_427": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 8804.88236644,
+        "AFEDATE": "2018-07-25",
+        "AFSDATE": "2018-06-23",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 1465,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-16",
+        "COMMENTS": "18BN-LARRY[comments:L1C_T12VWH_A016898_20180916T183006,SOURCE:Sentinel-2,CAUSE2:Lightning],18BN-KAYLE[comments:L1C_T12VWH_A016898_20180916T183006,SOURCE:Sentinel-2,CAUSE2:Lightning] [...]",
+        "EDATE": "2018-06-25",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_SK_427",
+        "NFIREID": 427,
+        "POLY_HA": 8804.88236644,
+        "SDATE": "2018-06-23",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -109.9187305896461,
+                56.392722051065796
+            ],
+            [
+                -109.6763948400471,
+                56.54717542601661
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-21",
+        "modisEndDate": "2018-07-08",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_1709": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 22688.1245361,
+        "AFSDATE": "2018-07-06",
+        "AGENCY": "YT",
+        "BASRC": 1,
+        "BT_GID": 178,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-04",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1709",
+        "NFIREID": 1709,
+        "POLY_HA": 22688.1245361,
+        "SDATE": "2018-07-06",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -129.53924678550322,
+                60.28076429690916
+            ],
+            [
+                -129.05129279560603,
+                60.457528957720754
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-04",
+        "modisEndDate": "2018-08-31",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_1664": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7269.87845053,
+        "AFSDATE": "2018-07-23",
+        "AGENCY": "YT",
+        "BASRC": 1,
+        "BT_GID": 218,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-22",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1664",
+        "NFIREID": 1664,
+        "POLY_HA": 7269.87845053,
+        "SDATE": "2018-07-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -129.94092264586914,
+                60.55393526639933
+            ],
+            [
+                -129.75343278472707,
+                60.6662188921644
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-24",
+        "modisEndDate": "2018-09-02",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_1356": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4229.16664694,
+        "AFSDATE": "2018-07-08",
+        "AGENCY": "YT",
+        "BASRC": 1,
+        "BT_GID": 160,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-09-18",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1356",
+        "NFIREID": 1356,
+        "POLY_HA": 4229.16664694,
+        "SDATE": "2018-07-30",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -130.3314949277884,
+                60.64675677132475
+            ],
+            [
+                -130.05001054491973,
+                60.740393005681895
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-09",
+        "modisEndDate": "2018-09-10",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_1150": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5291.92762613,
+        "AFSDATE": "2018-06-21",
+        "AGENCY": "YT",
+        "BASRC": 1,
+        "BT_GID": 30,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-25",
+        "COMMENTS": "Null",
+        "EDATE": "2018-07-28",
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1150",
+        "NFIREID": 1150,
+        "POLY_HA": 5291.92762613,
+        "SDATE": "2018-06-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -128.3531142045189,
+                61.11879794080079
+            ],
+            [
+                -128.13207486406634,
+                61.215021296193505
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-06-21",
+        "modisEndDate": "2018-08-03",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
+    },
+    "CA_2018_YT_548": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3355.09814855,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 1448,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018TE001[comments:Collected 8-13-2018,SUBDIST_ID:TE,FIRESOURCE:GPS Trace,FIREMETHOD:GPS: Heliborne Trace]",
+        "EDATE": "2018-08-03",
+        "FIRECAUS": 2,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_YT_548",
+        "NFIREID": 548,
+        "POLY_HA": 3355.09814855,
+        "SDATE": "2018-08-01",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -131.68684618857483,
+                60.38067367814342
+            ],
+            [
+                -131.520353329667,
+                60.50086392212969
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32608",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-29",
+        "modisEndDate": "2018-08-21",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_2024": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6544.96663458,
+        "AFSDATE": "2018-07-13",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 1427,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018DA008[comments:,SUBDIST_ID:DA,FIRESOURCE:30m LandSAT 8 Satellite Imagery,FIREMETHOD:Digitize: Heads-up]",
+        "EDATE": "2018-08-01",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_2024",
+        "NFIREID": 2024,
+        "POLY_HA": 6544.96663458,
+        "SDATE": "2018-07-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -139.1292621464295,
+                63.223123253824106
+            ],
+            [
+                -138.89553130199022,
+                63.30795521824385
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32607",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-12",
+        "modisEndDate": "2018-08-27",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
+    },
+    "CA_2018_YT_1172": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2819.62486699,
+        "AFSDATE": "2018-06-07",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 852,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018OC001[comments:,SUBDIST_ID:OC,FIRESOURCE:30m LandSAT 8 Satellite Imagery,FIREMETHOD:Digitize: Heads-up]",
+        "EDATE": "2018-06-07",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1172",
+        "NFIREID": 1172,
+        "POLY_HA": 2819.62486699,
+        "SDATE": "2018-06-04",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -140.9999750891549,
+                66.43395553959382
+            ],
+            [
+                -140.79081376027068,
+                66.50583316195963
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32607",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": null,
+        "modisEndDate": null,
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
+    },
+    "CA_2018_YT_1788": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 7015.05091223,
+        "AFSDATE": "2018-06-22",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 1282,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018RR001[comments:,SUBDIST_ID:RR,FIRESOURCE:30m LandSAT 8 Satellite Imagery,FIREMETHOD:Digitize: Heads-up]",
+        "EDATE": "2018-08-02",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1788",
+        "NFIREID": 1788,
+        "POLY_HA": 7015.05091223,
+        "SDATE": "2018-06-23",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -133.96268478091585,
+                62.9153699952709
+            ],
+            [
+                -133.62434648626692,
+                63.00820220975463
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32608",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-08",
+        "modisEndDate": "2018-08-20",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_1668": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2147.27029103,
+        "AFSDATE": "2018-08-01",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 766,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018XY011[comments:,SUBDIST_ID:XY,FIRESOURCE:30m LandSAT 8 Satellite Imagery,FIREMETHOD:Digitize: Heads-up]",
+        "EDATE": "2018-08-23",
+        "FIRECAUS": 2,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1668",
+        "NFIREID": 1668,
+        "POLY_HA": 2147.27029103,
+        "SDATE": "2018-08-02",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -134.59612604780128,
+                60.01423233234375
+            ],
+            [
+                -134.46162072077382,
+                60.10536765457425
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32608",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-08-03",
+        "modisEndDate": "2018-08-23",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_PCPA_494": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 18574.5186083,
+        "AFEDATE": "2018-06-12",
+        "AFSDATE": "2018-05-15",
+        "AGENCY": "PC-PA",
+        "BASRC": 1,
+        "BT_GID": 191,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-07",
+        "COMMENTS": "Null",
+        "EDATE": "2018-05-23",
+        "FIRECAUS": 3,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCPA_494",
+        "NFIREID": 494,
+        "POLY_HA": 18574.5186083,
+        "SDATE": "2018-05-06",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -106.62571472860971,
+                53.58343750601561
+            ],
+            [
+                -106.25701872835435,
+                53.84689507589362
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-04-20",
+        "modisEndDate": "2018-05-27",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1436": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 4796.32682072,
+        "AFEDATE": "2018-05-19",
+        "AFSDATE": "2018-04-29",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 822,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-05-01",
+        "COMMENTS": "MB2018EA015[notes:,datasource:GPS - rotary wing,sourcekeys:Visual Survey,creatmethd:Direct from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-04-30",
+        "FIRECAUS": 3,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_MB_1436",
+        "NFIREID": 1436,
+        "POLY_HA": 4796.32682072,
+        "SDATE": "2018-04-29",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -96.0266517379386,
+                49.183536858265356
+            ],
+            [
+                -95.87672065110539,
+                49.276090939288835
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-04-12",
+        "modisEndDate": "2018-05-04",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Deserts & Xeric Shrublands"
+    },
+    "CA_2018_SK_2084": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6463.12513125,
+        "AFEDATE": "2018-06-17",
+        "AFSDATE": "2018-05-13",
+        "AGENCY": "SK",
+        "BASRC": 3,
+        "BT_GID": 825,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-05-23",
+        "COMMENTS": "18DN-TUFF[comments:,SOURCE:airborne gps_d,CAUSE2:Industry]",
+        "EDATE": "2018-07-06",
+        "FIRECAUS": 3,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_SK_2084",
+        "NFIREID": 2084,
+        "POLY_HA": 6463.12513125,
+        "SDATE": "2018-05-13",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -108.61957632087156,
+                54.43124958056537
+            ],
+            [
+                -108.4483674528268,
+                54.60528772006348
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32612",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-05-13",
+        "modisEndDate": "2018-05-16",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_BC_950": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 15263.2818334,
+        "AFSDATE": "2018-07-30",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 216,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-29",
+        "COMMENTS": "Null",
+        "EDATE": "2018-11-21",
+        "FIRECAUS": 4,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_950",
+        "NFIREID": 950,
+        "POLY_HA": 15263.2818334,
+        "SDATE": "2018-06-22",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -124.63783500683702,
+                53.29437289236967
+            ],
+            [
+                -124.1435649595661,
+                53.41174946480268
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-29",
+        "modisEndDate": "2018-09-03",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1209": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 72171.6770388,
+        "AFSDATE": "2018-07-27",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 41,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-13",
+        "COMMENTS": "Null",
+        "EDATE": "2018-10-24",
+        "FIRECAUS": 4,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1209",
+        "NFIREID": 1209,
+        "POLY_HA": 72171.6770388,
+        "SDATE": "2018-07-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -125.32168599139057,
+                54.098664909329074
+            ],
+            [
+                -124.392185043845,
+                54.359526415144266
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-07-28",
+        "modisEndDate": "2018-09-12",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1298": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 52517.883123,
+        "AFSDATE": "2018-06-20",
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 210,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-13",
+        "COMMENTS": "Null",
+        "EDATE": "2018-09-05",
+        "FIRECAUS": 4,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_BC_1298",
+        "NFIREID": 1298,
+        "POLY_HA": 52517.883123,
+        "SDATE": "2018-08-02",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.02623008398884,
+                53.70091213238401
+            ],
+            [
+                -125.01904774231666,
+                53.90676985627046
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "modisStartDate": "2018-08-01",
+        "modisEndDate": "2018-09-27",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_BC_1693": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2465.19575963,
+        "AFSDATE": "2018-05-23",
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 850,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018-K20351[METHOD:Non-corrected airborne GPS,WATER_REM:,UNBURN_REM:,MORE_INFO:]",
+        "EDATE": "2018-05-25",
+        "FIRECAUS": 4,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_BC_1693",
+        "NFIREID": 1693,
+        "POLY_HA": 2465.19575963,
+        "SDATE": "2018-05-23",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -120.86043766934479,
+                51.14742850928903
+            ],
+            [
+                -120.7578971843712,
+                51.21650937284796
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-05-25",
+        "modisEndDate": "2018-06-09",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2018_MB_527": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6362.97801855,
+        "AFEDATE": "2018-07-18",
+        "AFSDATE": "2018-06-11",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 770,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-26",
+        "COMMENTS": "MB2018NE058[notes:,datasource:GPS - rotary wing,sourcekeys:Visual Survey,creatmethd:Direct from source,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-07-22",
+        "FIRECAUS": 4,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_MB_527",
+        "NFIREID": 527,
+        "POLY_HA": 6362.97801855,
+        "SDATE": "2018-06-17",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -93.95757279478866,
+                54.686990404292494
+            ],
+            [
+                -93.70815084887643,
+                54.768116040610664
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32615",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-06-11",
+        "modisEndDate": "2018-06-28",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_1941": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3540.54126066,
+        "AFEDATE": "2018-06-02",
+        "AFSDATE": "2018-05-19",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 801,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-05-22",
+        "COMMENTS": "MB2018CE063[notes:,datasource:GPS - rotary wing,sourcekeys:Visual Survey,creatmethd:Direct from source,waterrem:t,unburnrem:f,perimtype:Final] [...]",
+        "EDATE": "2018-05-23",
+        "FIRECAUS": 4,
+        "FIREMAPM": 3,
+        "FIREMAPS": 3,
+        "NAME": "CA_2018_MB_1941",
+        "NFIREID": 1941,
+        "POLY_HA": 3540.54126066,
+        "SDATE": "2018-05-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -98.24492319220558,
+                50.98482309840079
+            ],
+            [
+                -98.13661963042246,
+                51.1851690397993
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": null,
+        "modisEndDate": null,
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_705": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2491.54087384,
+        "AFEDATE": "2018-07-04",
+        "AFSDATE": "2018-06-16",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 969,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080242[SECTION:Intensive,METHODE:Relevé hélico et Satellite - RapidEye,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-06-24",
+        "FIRECAUS": 4,
+        "FIREMAPM": 2,
+        "FIREMAPS": 6,
+        "NAME": "CA_2018_QC_705",
+        "NFIREID": 705,
+        "POLY_HA": 2491.54087384,
+        "SDATE": "2018-06-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -72.70608040758677,
+                50.11606903467454
+            ],
+            [
+                -72.60689902477452,
+                50.17914271819073
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32618",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-16",
+        "modisEndDate": "2018-06-20",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_QC_880": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 12257.3747181,
+        "AFEDATE": "2018-08-28",
+        "AFSDATE": "2018-06-26",
+        "AGENCY": "QC",
+        "BASRC": 3,
+        "BT_GID": 1174,
+        "BURNCLAS": 4,
+        "COMMENTS": "20181080261[SECTION:Intensive,METHODE:Relevé hélico et Satellite - RapidEye,ORG_SOURCE:MFFP]",
+        "EDATE": "2018-06-29",
+        "FIRECAUS": 4,
+        "FIREMAPM": 2,
+        "FIREMAPS": 6,
+        "NAME": "CA_2018_QC_880",
+        "NFIREID": 880,
+        "POLY_HA": 12257.3747181,
+        "SDATE": "2018-06-26",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -69.85889952926763,
+                49.13560697681909
+            ],
+            [
+                -69.57844947609105,
+                49.28999637131888
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32619",
+        "modis_min_area": 100.0,
+        "CAPDATE": null,
+        "modisStartDate": "2018-06-23",
+        "modisEndDate": "2018-07-15",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_SK_464": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2434.36088623,
+        "AFEDATE": "2018-06-07",
+        "AFSDATE": "2018-05-12",
+        "AGENCY": "SK",
+        "BASRC": 1,
+        "BT_GID": 88,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-06-07",
+        "COMMENTS": "Null",
+        "EDATE": "2018-05-15",
+        "FIRECAUS": 4,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_SK_464",
+        "NFIREID": 464,
+        "POLY_HA": 2434.36088623,
+        "SDATE": "2018-05-12",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -106.23105466109442,
+                53.16664510902671
+            ],
+            [
+                -106.07295071927051,
+                53.22339203415696
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": null,
+        "modisEndDate": null,
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_YT_1481": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2591.68933426,
+        "AFSDATE": "2018-04-26",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 420,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018DA001[comments:,SUBDIST_ID:DA,FIRESOURCE:30m LandSAT 8 Satellite Imagery,FIREMETHOD:Digitize: Heads-up]",
+        "EDATE": "2018-05-12",
+        "FIRECAUS": 4,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_1481",
+        "NFIREID": 1481,
+        "POLY_HA": 2591.68933426,
+        "SDATE": "2018-04-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -139.42299793350335,
+                63.3467631353677
+            ],
+            [
+                -139.19728127288985,
+                63.396925340441854
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32607",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-04-16",
+        "modisEndDate": "2018-05-16",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
+    },
+    "CA_2018_MB_529": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 22895.2774658,
+        "AFEDATE": "2018-08-21",
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 79,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-17",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-25",
+        "FIRECAUS": 1,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_MB_529",
+        "NFIREID": 529,
+        "POLY_HA": 22895.2774658,
+        "SDATE": "2018-05-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.5093506481303,
+                51.95268375136766
+            ],
+            [
+                -95.15306759789088,
+                52.15719864406058
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "modisStartDate": "2018-05-18",
+        "modisEndDate": "2018-06-04",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_640": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 9017.61795041,
+        "AFEDATE": "2018-07-17",
+        "AFSDATE": "2018-04-24",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 545,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-06",
+        "COMMENTS": "MB2018WE006[notes:,datasource:GPS - unknown,sourcekeys:Visual Survey,creatmethd:Buffered coordinate,waterrem:t,unburnrem:f,perimtype:Final] [...]",
+        "EDATE": "2018-06-21",
+        "FIRECAUS": 1,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_MB_640",
+        "NFIREID": 640,
+        "POLY_HA": 9017.61795041,
+        "SDATE": "2018-04-28",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -100.73969035164042,
+                52.69802924009983
+            ],
+            [
+                -100.457506378083,
+                52.84387751696931
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2018-04-21",
+        "modisEndDate": "2018-06-26",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_MB_2183": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 2189.56508033,
+        "AFEDATE": "2018-07-01",
+        "AFSDATE": "2018-05-19",
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 1690,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-06",
+        "COMMENTS": "MB2018WE005[notes:Digitized from source, and GPS - rotary wing,datasource:Satellite imagery,sourcekeys:Sentinel 2,creatmethd:Hybrid,waterrem:t,unburnrem:f,perimtype:Final]",
+        "EDATE": "2018-06-19",
+        "FIRECAUS": 1,
+        "FIREMAPM": 2,
+        "FIREMAPS": 10,
+        "NAME": "CA_2018_MB_2183",
+        "NFIREID": 2183,
+        "POLY_HA": 2189.56508033,
+        "SDATE": "2018-05-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -100.95862074949639,
+                52.73118390562908
+            ],
+            [
+                -100.86657645134463,
+                52.7888777948009
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32613",
+        "modis_min_area": 100.0,
+        "modisStartDate": null,
+        "modisEndDate": null,
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_529": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 3626.89775842,
+        "AFEDATE": "2018-08-21",
+        "AGENCY": "ON",
+        "BASRC": 1,
+        "BT_GID": 79,
+        "BURNCLAS": 4,
+        "CAPDATE": "2019-05-17",
+        "COMMENTS": "Null",
+        "EDATE": "2018-08-25",
+        "FIRECAUS": 1,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_ON_529",
+        "NFIREID": 529,
+        "POLY_HA": 3626.89775842,
+        "SDATE": "2018-05-21",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -95.15308166250067,
+                52.01008428889091
+            ],
+            [
+                -95.08894873732865,
+                52.13675399598151
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "modisStartDate": "2018-05-21",
+        "modisEndDate": "2018-08-30",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2018_ON_1059": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 11668.8652533,
+        "AGENCY": "ON",
+        "BASRC": 3,
+        "BT_GID": 1329,
+        "BURNCLAS": 4,
+        "COMMENTS": "PAR33[TYPE_C:IFR,WEATH_IND:23.7,RESP_OBJ_C:FUL,ACCURACY:Within 100 metres]",
+        "EDATE": "2018-08-02",
+        "FIRECAUS": 1,
+        "FIREMAPM": 0,
+        "FIREMAPS": 0,
+        "NAME": "CA_2018_ON_1059",
+        "NFIREID": 1059,
+        "POLY_HA": 11668.8652533,
+        "SDATE": "2018-07-18",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -80.8062112268645,
+                45.841764022218534
+            ],
+            [
+                -80.63518648963628,
+                46.001346088034005
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32617",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-16",
+        "modisEndDate": "2018-08-05",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Deserts & Xeric Shrublands"
+    },
+    "CA_2018_YT_780": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 5043.8485219,
+        "AFSDATE": "2018-07-22",
+        "AGENCY": "YT",
+        "BASRC": 3,
+        "BT_GID": 418,
+        "BURNCLAS": 4,
+        "COMMENTS": "2018MA002[comments:,SUBDIST_ID:MA,FIRESOURCE:30m LandSAT 8 Satellite Imagery,FIREMETHOD:Digitize: Heads-up]",
+        "EDATE": "2018-08-01",
+        "FIRECAUS": 1,
+        "FIREMAPM": 2,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_YT_780",
+        "NFIREID": 780,
+        "POLY_HA": 5043.8485219,
+        "SDATE": "2018-07-25",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -134.9889809586381,
+                63.69678639830192
+            ],
+            [
+                -134.68948180297104,
+                63.77927249659538
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32608",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2018-07-18",
+        "modisEndDate": "2018-08-08",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    }
+}

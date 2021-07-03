@@ -49,17 +49,27 @@ from easydict import EasyDict as edict
 
 
 """ Query and Export """
-def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
     """ Event to Query """
     queryEvent = edict(event.copy())
     # pprint(queryEvent)
 
     # pprint(queryEvent.roi)
-    if queryEvent['BurnBndAc'] < 5000: # minimum roi 
-        print("==> queryEvent['BurnBndAc'] < 5000")
-        queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds().centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
-    else:
+    if event['where'] in ['AK', 'US']:
+        burned_area = queryEvent['BurnBndAc'] * 0.4047 # to ha
+    
+    if 'CA' in event['where']:
+        burned_area = queryEvent['ADJ_HA']
+
+    
+    if len(event['roi']) == 2: # if two points provided .. 
+        queryEvent['roi'] = ee.Geometry.Rectangle(event['roi']).bounds()
+    else: # if five points provided ...
         queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
+    
+    if burned_area <= 5000: # minimum roi 
+        print("==> queryEvent['BurnBndAc'] < 2000ha")
+        queryEvent['roi'] = queryEvent['roi'].centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
 
     pprint(queryEvent.roi.getInfo()['coordinates'])
 
@@ -89,7 +99,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
         'AUZ': get_aux_dict()
     })
     
-    export_dict = {key: export_dict[key] for key in export_sat}
+    export_dict = {key: export_dict[key] for key in export}
     pprint(export_dict)
 
     """ Export Both SAR and MSI to Cloud """

@@ -6,7 +6,12 @@ from easydict import EasyDict as edict
 class MODIS_POLY:
   def __init__(self, cfg):
     self.cfg = cfg
-    self.cfg.roi = ee.Geometry.Rectangle(self.cfg.roi)
+
+    if len(self.cfg.roi) == 2:
+      self.cfg.roi = ee.Geometry.Rectangle(self.cfg.roi)
+    else:
+      self.cfg.roi = ee.Geometry.Polygon(self.cfg.roi)
+
     self.modis = ee.ImageCollection("MODIS/006/MCD64A1")
     self.FireCCI51 = ee.ImageCollection("ESA/CCI/FireCCI/5_1")
 
@@ -56,7 +61,7 @@ class MODIS_POLY:
 
       # Compute inPoly area and set BurnDate
       self.polyCol = (polyFeatCol.map(self.compute_polyArea) 
-                            .filter(ee.Filter.gte('area', self.cfg.areaTH)) 
+                            .filter(ee.Filter.gte('area', self.cfg.modis_min_area)) 
                             .map(self.setBurnDate) 
                             .sort('area', False))
 

@@ -8,12 +8,12 @@ from pathlib import Path
 from astropy.visualization import PercentileInterval
 interval_98 = PercentileInterval(98)
 
-bucket = "wildfire-s1s2-dataset-v1"
+bucket = "wildfire-s1s2-dataset-ca"
 rootPath = Path(f"D:\{bucket}")
 vis_dict = {
-    # 'ALOS': [0, 1, 2],
-    # 'S1': [0, 1, 2],
-    # 'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
+    'ALOS': [0, 1, 2],
+    'S1': [0, 1, 2],
+    'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
     'mask': 0,
     'AUZ': 0
 }
@@ -29,6 +29,7 @@ for sat in vis_dict.keys():
             print(dst_url)
             
             image = tiff.imread(rootPath / sat / stage / filename)
+            image = np.nan_to_num(image, -30)
             print(image.shape)
 
             if sat in ['mask', 'AUZ']: plt.imsave(dst_url, interval_98(image), vmin=0, vmax=1)

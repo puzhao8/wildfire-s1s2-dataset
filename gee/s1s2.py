@@ -28,8 +28,8 @@ def updateCloudMaskS2(img):
 
 
 def rescale_s2(img): 
-    # BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
-    BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
+    BANDS = ['B2', 'B3', 'B4', 'B8', 'B8A', 'B11', 'B12'] # 6 bands
+    # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
     return (img.select(BANDS).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
                 .addBands(img.select('cloud'))
@@ -58,7 +58,7 @@ def get_s2_dict(queryEvent, cloud_level=10):
 
     MSI = ee.ImageCollection(S2_Dict['TOA']).filterBounds(queryEvent['roi'])
     # cloudFilter = ee.Filter.lte("CLOUDY_PIXEL_PERCENTAGE", cloud_level)
-    cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", 2)
+    cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", 5)
 
     s2_dict = edict()
     s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
@@ -256,9 +256,21 @@ def get_mask_dict(queryEvent):
         WHERE = "CONUS" if WHERE == "US" else "AK"
         mtbs = ee.Image.loadGeoTIFF(f"gs://eo4wildfire/US_BurnSeverityRaster/mtbs_{WHERE}_{queryEvent.year}.tif")
         mask_dict['mtbs'] = mtbs.select('B0').rename('mtbs')
+    
 
-    if WHERE in ['CA']:
-        pass
+    if 'CA' in WHERE:
+        # CA
+        CA_2017 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919")
+        CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
+        CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
+        CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019)
+
+        poly = (CA_BurnAreaPolys.filterBounds(queryEvent.roi)
+                        .filter(ee.Filter.gte("year", queryEvent.year))
+                ).union(ee.ErrorMargin(30))
+        polyImg = poly.style(color='white', fillColor='white', width=0).select('vis-red').gt(0).rename('poly')
+        mask_dict['poly'] = polyImg.unmask()
+
 
     if WHERE in ['EU']:
         pass

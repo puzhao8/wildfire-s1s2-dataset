@@ -1,4 +1,5 @@
 import ee
+from pyasn1.type.univ import Null
 ee.Initialize()
 
 from easydict import EasyDict as edict
@@ -18,15 +19,23 @@ os.environ["PYDEVD_THREAD_DUMP_ON_WARN_EVALUATION_TIMEOUT"] = "True"
 
 
 
+def save_fireEvents_to_json(EVENT_SET, save_url):
+    ## """ Save Dict to YAML and READ """
+
+    # save wildfire events to json
+    with open(f"{save_url}.json", 'w') as fp:
+        json.dump(EVENT_SET, fp, ensure_ascii=False, indent=4)
+
 def set_property(feat):
-        return feat.set("NAME", ee.String(feat.get("AGENCY")).cat(ee.Number(feat.get("NFIREID")).toInt().format()))\
+        return feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
+                .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
                 # .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
                 # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
 
 def get_local_crs_by_query_S2(roi):
         return ee.ImageCollection("COPERNICUS/S2")\
-                    .filterDate("2018-01-01", "2019-01-01")\
-                    .filterBounds(roi.centroid(ee.ErrorMargin(1))).first()\
+                    .filterDate("2020-05-01", "2021-01-01")\
+                    .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
                     .select(0).projection().crs().getInfo()
 
 class FIREEVENT:
@@ -34,13 +43,14 @@ class FIREEVENT:
         # super().__init__(cfg)
 
         self.cfg = cfg
-        self.cfg.saveName = f"{cfg.COUNTRY}_{cfg.YEAR}_Wildfire_Events_gt{int(cfg.ADJ_HA_TH)}ha_buf_1e4"
+        self.cfg.saveName = f"POLY_{cfg.COUNTRY}_{cfg.YEAR}_events_gt2k"
+        self.save_url = f"./wildfire_events/{self.cfg.saveName}"
 
         ## Canada Wildfire Polygons 
         # BC_FirePerimeter = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/BC_Historical_Fire_Polygon_before2020").map(setYear)     
 
-        CA_2017 = ee.FeatureCollection("users/tutorial_test/BA_reference/nbac_2017_r9_20190919")
-        CA_2018 = ee.FeatureCollection("users/tutorial_test/BA_reference/nbac_2018_r9_20200703")
+        CA_2017 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919")
+        CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
         CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
         self.CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019)
 
@@ -50,11 +60,9 @@ class FIREEVENT:
     def __call__(self):
         self.query_biome_climate_zone()
         self.query_wildfire_events_info()
-        
-        save_url = f"wildfire_events/{self.cfg.saveName}"
 
         # self.save_fireEvents_to_yaml(save_url)
-        self.save_fireEvents_to_json(save_url)
+        # self.save_fireEvents_to_json(save_url)
 
 
     def get_biome(self, roi):
@@ -87,36 +95,57 @@ class FIREEVENT:
                             .map(set_property)
         )
 
-        polyList = polyFiltered.toList(polyFiltered.size())
+        # firename list
+        nameList = polyFiltered.aggregate_array("NAME").getInfo()
 
         print("\n\n---------------------> logs <---------------------")
         print(f"There are {polyFiltered.size().getInfo()} wildfire events (>{int(self.cfg.ADJ_HA_TH)} ha) in {self.cfg.YEAR}.")
 
-        for idx in range(0, polyFiltered.size().getInfo()):
-            # poly = polyFiltered.first()
-            poly = ee.FeatureCollection(polyList.get(idx))
+        # for idx in range(0, 2): #polyFiltered.size().getInfo()):
+        for name in nameList:
+            
+            poly = polyFiltered.filter(ee.Filter.eq("NAME", name)).first()
+            burned_area = poly.get("ADJ_HA").getInfo()
+            
+            # poly = ee.Feature(polyList.get(idx))
             # polyMap = poly.style(color='white', fillColor='white', width=0) \
             #         .select('vis-red').gt(0).rename('poly')
 
-            # get bottom-left and top-right points
-            roi = ee.Feature(poly).buffer(self.cfg.bufferSize).bounds().geometry()
-            crs = get_local_crs_by_query_S2(roi)
 
-            coordinates = ee.List(roi.coordinates().get(0))
-            rect = ee.List(coordinates.get(0)).cat(coordinates.get(2)).getInfo()
+            # get bottom-left and top-right points
+            roi = poly.geometry().bounds()       
+            crs = get_local_crs_by_query_S2(roi)
+            # crs = "EPSG:4326"
+
+            # rect = roi.coordinates().get(0).getInfo()
+
+            coordinates = roi.coordinates().get(0).getInfo()
+            rect = [coordinates[0], coordinates[2]]
+            print("rect: ", rect)
 
             event = edict(poly.toDictionary().getInfo())
-            eventName = f'CA_{event.YEAR}_{event.NAME}'
+            eventName = f"CA_{event.YEAR}_{event.NAME}".replace("-","")
 
-            print(f"{idx}: {eventName}")
+            print(f"{eventName}: {burned_area}")
             print(f"CRS: {crs}")
 
             event.update({
+                'NAME': eventName,
                 'roi': rect,
                 'year': event.YEAR,
                 'crs': crs,
-                'areaTH': self.cfg.MIN_HA_TH,
+                'modis_min_area': self.cfg.modis_min_area,
             })
+
+            # convert property (in number) into Date
+            for property in ["AFSDATE", "AFEDATE", "SDATE", "EDATE", "CAPDATE"]:
+                value = poly.get(property).getInfo()
+                if value is not None:
+                    event[property] = ee.Date(poly.get(property)).format().slice(0,10).getInfo() 
+                else:
+                    event[property] = None
+
+
 
             # Obtain Burn Period from MODIS Burned Area Products
             modis = MODIS_POLY(event)
@@ -133,6 +162,8 @@ class FIREEVENT:
             event.BIOME_NAME = self.eco_names.getInfo()[int(event.BIOME_NUM)]
 
             self.EVENT_SET.update({eventName: event})
+
+            save_fireEvents_to_json(self.EVENT_SET, self.save_url)
 
     def define_event_by_poly(self, poly):
         # polyMap = poly.style(color='white', fillColor='white', width=0) \
@@ -224,13 +255,6 @@ class FIREEVENT:
         with open(yml_url, 'rt') as ymlfile:
             self.EVENT_SET = yaml.load(ymlfile)
 
-
-    def save_fireEvents_to_json(self, save_url):
-        ## """ Save Dict to YAML and READ """
-
-        # save wildfire events to json
-        with open(f"{save_url}.json", 'w') as fp:
-            json.dump(self.event, fp, ensure_ascii=False, indent=4)
 
 
 

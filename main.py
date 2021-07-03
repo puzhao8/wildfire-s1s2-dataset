@@ -16,14 +16,20 @@ import yaml
 import numpy as np
 import json
 
+json_dict = {
+    'AK': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
+    'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
+    'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json",
+}
+
 """ CFG """
 cfg = edict({
-    'where': 'AK', # 'US,
-    "JSON": "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
+    'where': 'CA_2017', # 'US,
     "period": 'fire_period', # "season"
     "season": [-1, 2], # [-1, 2] means last Dec. to this Feb.
 })
 
+cfg['JSON'] = json_dict[cfg.where]
 
 """ #################################################################
 Wildfire Event
@@ -37,8 +43,13 @@ EVENT_SET = load_json(cfg.JSON)
 
 EVENT_SET_subset = edict()
 for event_id in EVENT_SET.keys():
-    if EVENT_SET[event_id]["BurnBndAc"] > 2000:
-        EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
+    if cfg['where'] in ['AK', 'US']:
+        if EVENT_SET[event_id]["BurnBndAc"] >= 2000:
+            EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
+
+    if cfg['where'] in ['CA_2017', 'CA_2018', 'CA_2019']:
+        if EVENT_SET[event_id]["ADJ_HA"] >= 2000:
+            EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
 print("\n\n==========> wildfire-s1s2-dataset <=========")
 num = len(EVENT_SET_subset)
@@ -57,12 +68,17 @@ for event_id in EVENT_SET_subset.keys(): #EVENT_SET_subset.keys(): #: #
         event['year'] = ee.Number(event['YEAR']).format().getInfo()
         # pprint(event)
 
-    if event['where'] in ['CA']:
-        pass
+    if event['where'] in ['CA_2017', 'CA_2018', 'CA_2019']:
+        event['start_date'] = event['SDATE'] or event['modisStartDate'] or event["AFSDATE"]
+        event['end_date'] = event['EDATE'] or event['modisEndDate'] or event["AFEDATE"]
+        event['year'] = ee.Number(event['YEAR']).format().getInfo()
+
+        tmp = event['NAME'].split("_")
+        event['name'] = f"{tmp[0]}_{tmp[-1]}_{tmp[1]}_{tmp[2]}"
 
     if event['where'] in ['EU']:
         pass
 
     print(f"-----------------> {event.name} <------------------ ")
-    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset-v1")
+    query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset-ca")
 
