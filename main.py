@@ -20,11 +20,12 @@ json_dict = {
     'AK': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
     'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
     'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json",
+    'CA_2018': "./wildfire_events/POLY_CA_2018_events_gt2k.json",
 }
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2017', # 'US,
+    'where': 'CA_2018', # 'US,
     "period": 'fire_period', # "season"
     "season": [-1, 2], # [-1, 2] means last Dec. to this Feb.
 })
@@ -73,8 +74,10 @@ for event_id in EVENT_SET_subset.keys(): #EVENT_SET_subset.keys(): #: #
         event['end_date'] = event['EDATE'] or event['modisEndDate'] or event["AFEDATE"]
         event['year'] = ee.Number(event['YEAR']).format().getInfo()
 
-        tmp = event['NAME'].split("_")
-        event['name'] = f"{tmp[0]}_{tmp[-1]}_{tmp[1]}_{tmp[2]}"
+        event['name'] = event['NAME']
+
+        # tmp = event['NAME'].split("_")
+        # event['name'] = f"{tmp[0]}_{tmp[-1]}_{tmp[1]}_{tmp[2]}"
 
     if event['where'] in ['EU']:
         pass

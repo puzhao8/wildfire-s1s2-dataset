@@ -61,7 +61,6 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     if 'CA' in event['where']:
         burned_area = queryEvent['ADJ_HA']
 
-    
     if len(event['roi']) == 2: # if two points provided .. 
         queryEvent['roi'] = ee.Geometry.Rectangle(event['roi']).bounds()
     else: # if five points provided ...
@@ -70,6 +69,8 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     if burned_area <= 5000: # minimum roi 
         print("==> queryEvent['BurnBndAc'] < 2000ha")
         queryEvent['roi'] = queryEvent['roi'].centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
+    
+    queryEvent.roi = queryEvent.roi.buffer(2e3).bounds() # added on July-03-2021
 
     pprint(queryEvent.roi.getInfo()['coordinates'])
 
