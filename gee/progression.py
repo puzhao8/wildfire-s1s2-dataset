@@ -77,7 +77,7 @@ def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False):
             )
     
     if filter_by_cloud: s2_prgImgCol = s2_prgImgCol.filter(cloudFilter)
-    return s2_prgImgCol
+    return s2_prgImgCol.select(queryEvent.S2_BANDS)
 
 """ #################################################################
 Query S1 SAR Data
@@ -178,16 +178,21 @@ def get_mask_dict(queryEvent):
     mask_dict['modis'] = modis.select('BurnDate').unmask()
 
     # FireCCI51
-    FireCCI51 = ee.ImageCollection("ESA/CCI/FireCCI/5_1")
-    firecci = FireCCI51.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(1, 'year')).mosaic()
-    # print("firecci: ", firecci.bandNames().getInfo())
-    mask_dict['firecci'] = firecci.select('BurnDate').unmask()
+    if eval(queryEvent.year) <= 2019:
+        FireCCI51 = ee.ImageCollection("ESA/CCI/FireCCI/5_1")
+        firecci = FireCCI51.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(1, 'year')).mosaic()
+        # print("firecci: ", firecci.bandNames().getInfo())
+        mask_dict['firecci'] = firecci.select('BurnDate').unmask()
 
     # # Water (see aux_data.py)
     # landCover = ee.Image("COPERNICUS/Landcover/100m/Proba-V-C3/Global/2017")
     # landCover = ee.Image(landCover.select("discrete_classification").rename('CGLS').setMulti({'IMG_LABEL': 'CGLS'}))
     # water = (landCover.neq(80).And(landCover.neq(200))).rename('water')
     # mask_dict['water'] = water
+
+    if eval(queryEvent.year) == 2021:
+        from gee.active_fire_prg import get_daily_viirs_progression
+        mask_dict['viirs'] = get_daily_viirs_progression(queryEvent.roi).select('prg').rename('BurnDate').unmask()
 
     # Polygon
     if WHERE in ['AK', 'US']:
@@ -220,18 +225,22 @@ def get_mask_dict(queryEvent):
 """ Export Progression """
 from gee.aux_data import get_aux_dict
 def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'mask', 'AUZ']):
+    roi_cloud_level = cfg.roi_cloud_level
+    filter_by_cloud = cfg.filter_by_cloud
+    extend_months = cfg.extend_months
 
     """ Event to Query """
     queryEvent = edict(event.copy())
 
-    queryEvent['period_start'] = ee.Date(queryEvent['start_date']).advance(-1, 'month')
-    queryEvent['period_end'] = ee.Date(queryEvent['end_date']).advance(1, 'month')
+    queryEvent['period_start'] = ee.Date(queryEvent['start_date']).advance(-extend_months, 'month')
+    queryEvent['period_end'] = ee.Date(queryEvent['end_date']).advance(extend_months, 'month')
     queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
+    queryEvent['S2_BANDS'] = cfg.S2_BANDS
 
     # from gee.progression import get_s1_progression, get_s2_progression, get_mask_dict
 
     export_dict = edict({
-            'S2': get_s2_progression(queryEvent, cloud_level=20, filter_by_cloud=False),
+            'S2': get_s2_progression(queryEvent, cloud_level=roi_cloud_level, filter_by_cloud=filter_by_cloud),
             'S1': get_s1_progression(queryEvent),
             # 'ALOS': get_alos_dict(queryEvent),
             'mask': get_mask_dict(queryEvent),

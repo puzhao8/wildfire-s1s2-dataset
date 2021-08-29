@@ -11,7 +11,7 @@ cfg = edict({
         # 'yml_url': 'CA_2017_Wildfire_V1.yaml'
     })
 
-for YEAR in range(2018, 2020):
+for YEAR in range(2019, 2020):
     cfg.YEAR = YEAR
 
     fireEvents = FIREEVENT(cfg)
