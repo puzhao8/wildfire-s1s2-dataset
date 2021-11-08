@@ -1,0 +1,41 @@
+{
+    "CA_2018_PCNA_926": {
+        "ADJ_FLG": 0,
+        "ADJ_HA": 6803.65440378,
+        "AGENCY": "PC-NA",
+        "BASRC": 1,
+        "BT_GID": 121,
+        "BURNCLAS": 4,
+        "CAPDATE": "2018-07-25",
+        "COMMENTS": "Null",
+        "EDATE": "2018-06-21",
+        "FIRECAUS": 0,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NAME": "CA_2018_PCNA_926",
+        "NFIREID": 926,
+        "POLY_HA": 6803.65440378,
+        "SDATE": "2018-05-24",
+        "VERSION": "2018_r9_20200703",
+        "YEAR": 2018,
+        "roi": [
+            [
+                -126.50501511872947,
+                61.53829876390734
+            ],
+            [
+                -126.22173207603008,
+                61.649424923057026
+            ]
+        ],
+        "year": 2018,
+        "crs": "EPSG:32609",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2018-05-24",
+        "modisEndDate": "2018-07-23",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
+    }
+}

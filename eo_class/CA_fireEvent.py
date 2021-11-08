@@ -27,23 +27,23 @@ def save_fireEvents_to_json(EVENT_SET, save_url):
         json.dump(EVENT_SET, fp, ensure_ascii=False, indent=4)
 
 def set_property(feat):
-        return feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
-                .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
-                # .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
-                # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
+    return feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
+            .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
+            # .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
+            # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
 
 def get_local_crs_by_query_S2(roi):
-        return ee.ImageCollection("COPERNICUS/S2")\
-                    .filterDate("2020-05-01", "2021-01-01")\
-                    .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
-                    .select(0).projection().crs().getInfo()
+    return ee.ImageCollection("COPERNICUS/S2")\
+                .filterDate("2020-05-01", "2021-01-01")\
+                .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
+                .select(0).projection().crs().getInfo()
 
 class FIREEVENT:
     def __init__(self, cfg):
         # super().__init__(cfg)
 
         self.cfg = cfg
-        self.cfg.saveName = f"POLY_{cfg.COUNTRY}_{cfg.YEAR}_events_gt2k"
+        self.cfg.saveName = f"POLY_{cfg.COUNTRY}_{cfg.YEAR}_events_test"
         self.save_url = f"./wildfire_events/{self.cfg.saveName}"
 
         ## Canada Wildfire Polygons 
@@ -53,6 +53,7 @@ class FIREEVENT:
         CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
         CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
         self.CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019)
+        # self.CA_BurnAreaPolys = CA_2019
 
         # CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
         # self.CA_BurnAreaPolys = CA_2019
@@ -115,7 +116,9 @@ class FIREEVENT:
             # get bottom-left and top-right points
             roi = poly.geometry().bounds()       
             crs = get_local_crs_by_query_S2(roi)
+            
             # crs = "EPSG:4326"
+            print(f"crs: {crs}")
 
             # rect = roi.coordinates().get(0).getInfo()
 
