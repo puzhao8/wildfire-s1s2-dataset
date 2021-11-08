@@ -4,22 +4,20 @@ ee.Initialize()
 from datetime import datetime
 
 def get_daily_viirs_progression(prg_roi, start_date=None, end_date=None):
-    base_AF_SUOMI_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/SUOMI_VIIRS_C2_Global_Archived_May")
-    base_AF_J1_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/J1_VIIRS_C2_Global_Archived_May")
+    base_AF_SUOMI_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/SUOMI_VIIRS_C2_Global_Archived_2021")
+    base_AF_J1_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/SUOMI_VIIRS_C2_Global_Archived_2021")
     AF_BASE = base_AF_SUOMI_VIIRS.merge(base_AF_J1_VIIRS)
 
-    AF_SUOMI_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/SUOMI_VIIRS_C2_Global_7d")
-    AF_J1_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/J1_VIIRS_C2_Global_7d")
-    AF_MODIS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/MODIS_C6_1_Global_7d")
+    # AF_SUOMI_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/SUOMI_VIIRS_C2_Global_7d")
+    # AF_J1_VIIRS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/J1_VIIRS_C2_Global_7d")
+    # AF_MODIS = ee.FeatureCollection("users/omegazhangpzh/NRT_AF/MODIS_C6_1_Global_7d")
         
     def set_buffer(pnt): return pnt.buffer(ee.Number(375).divide(2)).bounds()
     def set_julian_day(pnt): return pnt.set("julian_day", ee.Date(pnt.get("ACQ_DATE")).getRelative('day', 'year'))
 
-    viirs_af = (AF_SUOMI_VIIRS.merge(AF_J1_VIIRS)#.merge(AF_MODIS)
-                        .filterBounds(prg_roi)
-                        .merge(AF_BASE.filterBounds(prg_roi))
+    viirs_af = (AF_BASE.filterBounds(prg_roi)
                         .map(set_julian_day)
-        )
+                )
                     
     #   // print("before filtering: " + viirs_af.size().getInfo())
     if start_date is None: start_date = "2021-05-01"

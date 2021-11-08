@@ -6,10 +6,30 @@ import ee
 ee.Initialize()
 
 
+def get_pntsFilter(roi, buffer_size=0):
+    ## ==> Point Filters <==
+    pnt_roi = roi.buffer(buffer_size, ee.ErrorMargin(1)).bounds()
+    coordList = ee.List(pnt_roi.coordinates().get(0))
+    btmLeft = ee.Geometry.Point(coordList.get(0))
+    btmRight = ee.Geometry.Point(coordList.get(1))
+    topRight = ee.Geometry.Point(coordList.get(2))
+    topLeft = ee.Geometry.Point(coordList.get(3))
+
+    # if len(pntsList) > 0:
+    pntsFilter = ee.Filter.And(
+        # ee.Filter.geometry(btmLeft),
+        ee.Filter.geometry(btmRight),
+        # ee.Filter.geometry(topRight),
+        ee.Filter.geometry(topLeft)
+    )
+
+    return pntsFilter
+
 cfg = edict({
     "roi_cloud_level": 30,
     "filter_by_cloud": True,
-    "S2_BANDS": ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'],
+    # "S2_BANDS": ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'],
+    "S2_BANDS": ['NBR1'],
     "extend_months": 0, # 1
 })
 
@@ -61,6 +81,34 @@ EVENT_SET = edict({
         "where": 'CA'
     },
 
+    'CA_2021_Kamloops': {
+        "name": "US_2021_Kamloops",
+        "roi": [-122.50374742390655,50.01650250726357,
+                -120.22957750203155,51.70484697718656],
+        "year": 2021,
+        'crs': "EPSG:32610",
+
+        "modisStartDate": "2021-06-25",
+        "modisEndDate": "2021-09-10",
+
+        'orbKeyList': ['DSC13'],
+
+        "where": 'CA'
+    },
+
+    'US_2021_Dixie': {
+        "name": "US_2021_Dixie_V3",
+        "roi": [-121.75405666134564,39.5671341526342,
+                -119.88638088009564,40.92552027566895],
+        "year": 2021,
+        'crs': "EPSG:32610",
+
+        "modisStartDate": "2021-06-16",
+        "modisEndDate": "2021-09-17",
+
+        "where": 'US'
+    },
+
     # "SE2018Ljusdals": {
     #     'name': 'SE2018Ljusdals', # Enskogen (A, C, F), 
     #     'roi': [15.137434283688016, 61.86566784664094,
@@ -73,18 +121,24 @@ EVENT_SET = edict({
         
     #     "where": 'SE'
     # }
+
+
 })
 
 
 # event = EVENT_SET['CA2017Elephant']
 
-for name in ['CA2021CrissCreek']: # list(EVENT_SET.keys())[:1]:
+for name in ['CA_2021_Kamloops']: # list(EVENT_SET.keys())[:1]:
     event = EVENT_SET[name]
 
     event['start_date'] = event['modisStartDate']
     event['end_date'] = event['modisEndDate']
     event['year'] = ee.Number(event['year']).format().getInfo()
+    event['pntsFilter'] = get_pntsFilter(ee.Geometry.Rectangle(event['roi']), -1000)
+
     event['roi'] = ee.Geometry.Rectangle(event['roi']).getInfo()['coordinates'][0]
+
+    
 
     # pprint(event['roi'])
 
@@ -97,6 +151,6 @@ for name in ['CA2021CrissCreek']: # list(EVENT_SET.keys())[:1]:
         event, 
         scale=20, 
         BUCKET="wildfire-prg-dataset-v1", 
-        # export_sat=['mask'],
-        export_sat=['mask', 'AUZ', 'S2']
+        export_sat=['mask'],
+        # export_sat=['S1', 'S2', 'mask', 'AUZ']
     )
