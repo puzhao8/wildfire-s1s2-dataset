@@ -71,7 +71,6 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
         queryEvent['roi'] = queryEvent['roi'].centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
     
     queryEvent.roi = queryEvent.roi.buffer(2e3).bounds() # added on July-03-2021
-
     pprint(queryEvent.roi.getInfo()['coordinates'])
 
     # fire period

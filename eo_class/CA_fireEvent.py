@@ -89,12 +89,14 @@ class FIREEVENT:
         # bufferSize = 0
 
         self.EVENT_SET = edict()
-        polyFiltered = (self.CA_BurnAreaPolys
+        polyFilteredV0 = (self.CA_BurnAreaPolys
                             .filter(ee.Filter.eq("YEAR", self.cfg.YEAR))
                             .filter(ee.Filter.gt("ADJ_HA", self.cfg.ADJ_HA_TH))\
                             # .filter(ee.Filter.lte("ADJ_HA", self.cfg.ADJ_HA_TH))
-                            .map(set_property)
+                            # .map(set_property)
         )
+
+        polyFiltered = polyFilteredV0.map(set_property)
 
         # firename list
         nameList = polyFiltered.aggregate_array("NAME").getInfo()
@@ -104,17 +106,14 @@ class FIREEVENT:
 
         # for idx in range(0, 2): #polyFiltered.size().getInfo()):
         for name in nameList:
-            
-            poly = polyFiltered.filter(ee.Filter.eq("NAME", name)).first()
-            burned_area = poly.get("ADJ_HA").getInfo()
-            
-            # poly = ee.Feature(polyList.get(idx))
-            # polyMap = poly.style(color='white', fillColor='white', width=0) \
-            #         .select('vis-red').gt(0).rename('poly')
+            AGENCY = name.split("_")[0]
+            NFIREID = eval(name.split("_")[-1])
 
-
+            poly = polyFilteredV0.filter(ee.Filter.eq("NFIREID", NFIREID)).filter(ee.Filter.eq("AGENCY", AGENCY))#.first()
+            burned_area = max(poly.aggregate_array("ADJ_HA").getInfo())
+            
             # get bottom-left and top-right points
-            roi = poly.geometry().bounds()       
+            roi = poly.union(ee.ErrorMargin(100)).geometry().bounds()       
             crs = get_local_crs_by_query_S2(roi)
             
             # crs = "EPSG:4326"
@@ -126,8 +125,8 @@ class FIREEVENT:
             rect = [coordinates[0], coordinates[2]]
             print("rect: ", rect)
 
-            event = edict(poly.toDictionary().getInfo())
-            eventName = f"CA_{event.YEAR}_{event.NAME}".replace("-","")
+            event = edict(poly.first().toDictionary().getInfo())
+            eventName = f"CA_{event.YEAR}_{name}".replace("-","")
 
             print(f"{eventName}: {burned_area}")
             print(f"CRS: {crs}")
@@ -147,8 +146,6 @@ class FIREEVENT:
                     event[property] = ee.Date(poly.get(property)).format().slice(0,10).getInfo() 
                 else:
                     event[property] = None
-
-
 
             # Obtain Burn Period from MODIS Burned Area Products
             modis = MODIS_POLY(event)
