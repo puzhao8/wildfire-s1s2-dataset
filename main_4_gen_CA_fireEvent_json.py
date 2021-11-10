@@ -5,7 +5,7 @@ from easydict import EasyDict as edict
 cfg = edict({
         'COUNTRY': 'CA',
         # 'YEAR': 2017,
-        'ADJ_HA_TH': 2e3, # 2e4, burned areas
+        'ADJ_HA_TH': 5e3, # 2e4, burned areas
         'modis_min_area': 1e2, # ignore small polygons for modis, 1e4
         'bufferSize': 1e4,
         # 'yml_url': 'CA_2017_Wildfire_V1.yaml'

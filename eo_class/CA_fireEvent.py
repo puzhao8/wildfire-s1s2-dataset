@@ -33,10 +33,12 @@ def set_property(feat):
                 # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
 
 def get_local_crs_by_query_S2(roi):
-        return ee.ImageCollection("COPERNICUS/S2")\
-                    .filterDate("2020-05-01", "2021-01-01")\
-                    .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
-                    .select(0).projection().crs().getInfo()
+        # return ee.ImageCollection("COPERNICUS/S2")\
+        #             .filterDate("2020-05-01", "2021-01-01")\
+        #             .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
+        #             .select(0).projection().crs().getInfo()
+
+        return "EPSG:32610"
 
 class FIREEVENT:
     def __init__(self, cfg):
@@ -119,7 +121,9 @@ class FIREEVENT:
 
             # rect = roi.coordinates().get(0).getInfo()
 
-            coordinates = roi.coordinates().get(0).getInfo()
+            coordinates = ee.List(roi.coordinates().get(0)).serialize()
+            print(coordinates)
+
             rect = [coordinates[0], coordinates[2]]
             print("rect: ", rect)
 

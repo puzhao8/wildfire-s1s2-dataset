@@ -8,22 +8,24 @@ from pathlib import Path
 from astropy.visualization import PercentileInterval
 interval_98 = PercentileInterval(98)
 
-bucket = "wildfire-s1s2-dataset-ca"
+bucket = "wildfire-s1s2-dataset-ca-v2"
 rootPath = Path(f"D:\{bucket}")
 vis_dict = {
     'ALOS': [0, 1, 2],
     'S1': [0, 1, 2],
-    'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
+    # 'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
+    'S2': [5, 3, 2], # B2, B3, B4, B8, B11, B12
     'mask': 0,
     'AUZ': 0
 }
 
 sat = os.listdir(rootPath)
-for sat in vis_dict.keys():
+for sat in ['S2']: #['S1', 'S2', 'mask', 'AUZ']: # vis_dict.keys():
     for stage in os.listdir(rootPath / sat):
-        for filename in os.listdir(rootPath / sat / stage):
+        fileList = [filename for filename in os.listdir(rootPath / sat / stage) if filename.endswith(".tif")]
+        for filename in fileList:
 
-            save_dir = Path("D:/") / f"{bucket}-check" / sat / stage
+            save_dir = Path("D:/") / f"{bucket}-check-V1" / sat / stage
             if not os.path.exists(save_dir): os.makedirs(save_dir)
             dst_url =  save_dir / f"{filename[:-4]}.png"
             print(dst_url)

@@ -8,18 +8,18 @@ logger = logging.getLogger(__name__)
 
 
 def check_export_task(task, imgName):
-        import time
-        # Block until the task completes.
-        logger.info('Running export from GEE to drive or cloudStorage...')
-        while task.active():
-            time.sleep(30)
+    import time
+    # Block until the task completes.
+    logger.info('Running export from GEE to drive or cloudStorage...')
+    while task.active():
+        time.sleep(30)
 
-        # Error condition
-        if task.status()['state'] != 'COMPLETED':
-            logger.info("Error with export: {}".format(imgName))
-        else:
-            logger.info("Export completed: {}".format(imgName))
-        logger.info("---------------------------------------------------")
+    # Error condition
+    if task.status()['state'] != 'COMPLETED':
+        logger.info("Error with export: {}".format(imgName))
+    else:
+        logger.info("Export completed: {}".format(imgName))
+    logger.info("---------------------------------------------------")
 
 
 def export_image_to_CloudStorage(image, aoi, dst_url, scale=20, crs="EPSG:4326", BUCKET="wildfire-s1s2-dataset"):
@@ -67,7 +67,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
         queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
     
     if burned_area <= 5000: # minimum roi 
-        print("==> queryEvent['BurnBndAc'] < 2000ha")
+        print("==> queryEvent['BurnBndAc'] < 5000ha")
         queryEvent['roi'] = queryEvent['roi'].centroid(ee.ErrorMargin(30)).buffer(10240).bounds()
     
     queryEvent.roi = queryEvent.roi.buffer(2e3).bounds() # added on July-03-2021
@@ -79,7 +79,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
         queryEvent['period_start'] = ee.Date(queryEvent['start_date']).advance(-1, 'month')
         queryEvent['period_end'] = ee.Date(queryEvent['start_date']).advance(2, 'month')
 
-    # season period
+    # season period: for AK only?
     if 'season' in cfg.period:
         queryEvent['period_start'] = ee.Date(queryEvent['year']).advance(cfg.season[0], 'month')
         queryEvent['period_end'] = ee.Date(queryEvent['year']).advance(cfg.season[-1], 'month')

@@ -28,14 +28,14 @@ def updateCloudMaskS2(img):
 
 
 def rescale_s2(img): 
-    BANDS = ['B2', 'B3', 'B4', 'B8', 'B8A', 'B11', 'B12'] # 6 bands
+    BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
     # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
     return (img.select(BANDS).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
-                .addBands(img.select('cloud'))
+                # .addBands(img.select('cloud'))
     )
 
-def get_s2_dict(queryEvent, cloud_level=10):
+def get_s2_dict(queryEvent, cloud_level=5):
     period_start = queryEvent.period_start
     period_end = queryEvent.period_end
     roi = queryEvent.roi
@@ -58,20 +58,26 @@ def get_s2_dict(queryEvent, cloud_level=10):
 
     MSI = ee.ImageCollection(S2_Dict['TOA']).filterBounds(queryEvent['roi'])
     # cloudFilter = ee.Filter.lte("CLOUDY_PIXEL_PERCENTAGE", cloud_level)
-    cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", 5)
+    cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", cloud_level)
+
+    print("post: ", period_start.advance(1, 'year').format().getInfo(), \
+        period_end.advance(1, "year").format().getInfo())
 
     s2_dict = edict()
     s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
                         .map(updateCloudMaskS2)
                         .map(add_ROI_Cloud_Rate)
                         .filter(cloudFilter)
-                        .median()
+                        # .median()
+                        .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
+
                     )
     s2_dict['post'] = (MSI.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
                         .map(updateCloudMaskS2)
                         .map(add_ROI_Cloud_Rate)
                         .filter(cloudFilter)
-                        .median()
+                        # .median()
+                        .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
                     )
     # s2_dict['cloud'] = None
 
@@ -105,7 +111,7 @@ def unionGeomFun(img, first):
     return ee.Geometry(first).union(rightGeo)
 
 def toNatural(img):
-        return ee.Image(10.0).pow(img.divide(10.0))
+    return ee.Image(10.0).pow(img.divide(10.0))
 
 def toDB(img):
     return ee.Image(img).log10().multiply(10.0)
@@ -254,7 +260,7 @@ def get_mask_dict(queryEvent):
                     
         # USA MTBS
         WHERE = "CONUS" if WHERE == "US" else "AK"
-        mtbs = ee.Image.loadGeoTIFF(f"gs://eo4wildfire/US_BurnSeverityRaster/mtbs_{WHERE}_{queryEvent.year}.tif")
+        mtbs = ee.Image.loadGeoTIFF(f"gs://sar4wildfire/US_BurnSeverityRaster/mtbs_{WHERE}_{queryEvent.year}.tif")
         mask_dict['mtbs'] = mtbs.select('B0').rename('mtbs')
     
 
