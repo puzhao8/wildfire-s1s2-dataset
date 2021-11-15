@@ -6,16 +6,17 @@ import matplotlib.pyplot as plt
 import tifffile as tiff
 from pathlib import Path
 from astropy.visualization import PercentileInterval
-interval_98 = PercentileInterval(98)
+interval_98 = PercentileInterval(95)
 
-bucket = "wildfire-s1s2-dataset-ca"
+bucket = "wildfire-s1s2-dataset-ca-2019-median"
 rootPath = Path(f"D:\{bucket}")
 vis_dict = {
-    'ALOS': [0, 1, 2],
-    'S1': [0, 1, 2],
-    'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
-    'mask': 0,
-    'AUZ': 0
+    # 'ALOS': [0, 1, 2],
+    # 'S1': [0, 1, 2],
+    # 'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
+    'S2': [5, 3, 2], # B2, B3, B4, B8, B11, B12
+    # 'mask': 0,
+    # 'AUZ': 0
 }
 
 sat = os.listdir(rootPath)
@@ -23,7 +24,7 @@ for sat in vis_dict.keys():
     for stage in os.listdir(rootPath / sat):
         for filename in os.listdir(rootPath / sat / stage):
 
-            save_dir = Path("D:/") / f"{bucket}-check" / sat / stage
+            save_dir = Path("D:/") / f"{bucket}-check-v1" / sat / stage
             if not os.path.exists(save_dir): os.makedirs(save_dir)
             dst_url =  save_dir / f"{filename[:-4]}.png"
             print(dst_url)
