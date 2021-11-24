@@ -84,7 +84,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
         queryEvent['period_end'] = ee.Date(queryEvent['year']).advance(cfg.season[-1], 'month')
 
     print("---> Fire Period <---")
-    print(queryEvent['period_start'].format().getInfo()[:10], queryEvent['period_end'].format().getInfo()[:10])
+    print(queryEvent['start_date'], queryEvent['end_date'])
 
     """ Query Data: S1, S2, & ALOS """
     from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict
@@ -94,9 +94,9 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     export_dict = edict({
         'S2': get_s2_dict(queryEvent, cloud_level=10),
         'S1': get_s1_dict(queryEvent),
-        'ALOS': get_alos_dict(queryEvent),
-        'mask': get_mask_dict(queryEvent),
-        'AUZ': get_aux_dict()
+        # 'ALOS': get_alos_dict(queryEvent),
+        # 'mask': get_mask_dict(queryEvent),
+        # 'AUZ': get_aux_dict()
     })
     
     export_dict = {key: export_dict[key] for key in export}
@@ -107,7 +107,8 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
 
     saveName = f"{event.name}"
     for sat in export_dict.keys():
-        for stage in export_dict[sat].keys():
+        # for stage in export_dict[sat].keys():
+        for stage in ['post']:
             dst_url = f"{sat}/{stage}/{saveName}"
 
             if 'S1' == sat:

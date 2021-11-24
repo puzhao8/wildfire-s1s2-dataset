@@ -190,7 +190,7 @@
         "modis_min_area": 100.0,
         "AFEDATE": null,
         "modisStartDate": "2019-05-15",
-        "modisEndDate": "2019-09-27",
+        "modisEndDate": "2019-08-01",
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },

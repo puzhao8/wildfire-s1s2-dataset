@@ -67,10 +67,10 @@ print(f"total number of events to query: {num} \n")
 
 # LOOP HERE
 # event = EVENT_SET['al3107008672320170117']
-# idx_stop = list(EVENT_SET_subset.keys()).index("CA_BC_1157_2017")
-# print(f"idx_stop: {idx_stop}")
+idx_stop = list(EVENT_SET_subset.keys()).index("CA_2019_ON_965")
+print(f"idx_stop: {idx_stop}")
 
-for event_id in list(EVENT_SET_subset.keys()) : #EVENT_SET_subset.keys(): #: # [idx_stop:] 
+for event_id in list(EVENT_SET_subset.keys()): #EVENT_SET_subset.keys(): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
@@ -94,10 +94,15 @@ for event_id in list(EVENT_SET_subset.keys()) : #EVENT_SET_subset.keys(): #: # [
     if event['where'] in ['EU']:
         pass
 
-    print(f"-----------------> {event.name} <------------------ ")
-    query_s1s2_and_export(cfg, event, 
-            scale=20, 
-            BUCKET="wildfire-s1s2-dataset-ca-2019-median",
-            # export=['S2']
-            export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
-        )
+    # # added on Nov-24-2021
+    # if event.start_date is None: event['start_date'] = f"{event['YEAR']}-06-01"
+    # if event.end_date is None: event['end_date'] = f"{event['YEAR']}-09-01"
+    
+    if ('end_date' in event.keys()):
+        print(f"-----------------> {event.name} <------------------ ")
+        query_s1s2_and_export(cfg, event, 
+                scale=20, 
+                BUCKET="wildfire-s1s2-dataset-canada-freshscar",
+                export=['S2', 'S1']
+                # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
+            )

@@ -8,7 +8,7 @@ from pathlib import Path
 from astropy.visualization import PercentileInterval
 interval_98 = PercentileInterval(95)
 
-bucket = "wildfire-s1s2-dataset-ca-2019-median"
+bucket = "wildfire-s1s2-dataset-ca-2019-freshscar"
 rootPath = Path(f"D:\{bucket}")
 vis_dict = {
     # 'ALOS': [0, 1, 2],
