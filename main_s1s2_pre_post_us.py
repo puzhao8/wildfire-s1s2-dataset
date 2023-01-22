@@ -102,7 +102,8 @@ for event_id in list(EVENT_SET_subset.keys()): #EVENT_SET_subset.keys(): #: # [i
     
         query_s1s2_and_export(cfg, event, 
                 scale=20, 
-                BUCKET="wildfire-s1s2-dataset-us-freshscar",
+                BUCKET="wildfire-dataset",
+                dataset_folder="wildfire-s1s2-dataset-us",
                 export=['S2', 'S1']
                 # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
             )

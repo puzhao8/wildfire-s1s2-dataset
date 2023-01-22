@@ -48,9 +48,7 @@ from prettyprinter import pprint
 from easydict import EasyDict as edict
 
 
-""" Query and Export """
-def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
-    """ Event to Query """
+def update_query_event(cfg, event):
     queryEvent = edict(event.copy())
     # pprint(queryEvent)
 
@@ -73,7 +71,7 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     queryEvent.roi = queryEvent.roi.buffer(2e3).bounds() # added on July-03-2021
     pprint(queryEvent.roi.getInfo()['coordinates'])
 
-    # fire period
+        # fire period
     if 'fire_period' in cfg.period:
         queryEvent['period_start'] = ee.Date(queryEvent['start_date']).advance(-1, 'month')
         queryEvent['period_end'] = ee.Date(queryEvent['start_date']).advance(2, 'month')
@@ -85,6 +83,13 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
 
     print("---> Fire Period <---")
     print(queryEvent['start_date'], queryEvent['end_date'])
+
+    return queryEvent
+
+
+""" Query and Export """
+def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca', export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+    """ Event to Query """
 
     """ Query Data: S1, S2, & ALOS """
     from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict
@@ -105,11 +110,11 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
     """ Export Both SAR and MSI to Cloud """
     from gee.export import export_image_to_CloudStorage
 
-    saveName = f"{event.name}"
+    saveName = f"{queryEvent.name}"
     for sat in export_dict.keys():
         # for stage in export_dict[sat].keys():
         for stage in ['post']:
-            dst_url = f"{sat}/{stage}/{saveName}"
+            dst_url = f"{dataset_folder}/{sat}/{stage}/{saveName}"
 
             if 'S1' == sat:
                 for orbKey in export_dict[sat][stage]:
@@ -123,5 +128,50 @@ def query_s1s2_and_export(cfg, event, scale=20, BUCKET="wildfire-s1s2-dataset", 
                 export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
                 
 
+""" MODIS """
+def query_modis_and_export(event, scale=500, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca'):
+    # gee code: https:#code.earthengine.google.com/f7cd69c6b51d7b175a1550e2a06f296e
 
+    def add_ROI_Cloud_Rate(img):
+        cloud = img.select('cloud')
+        cloud_pixels = cloud.eq(0).reduceRegion(ee.Reducer.sum(), event.roi, 1000).get('cloud')
+        all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), event.roi, 1000).get('cloud')
+        return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100))
+
+    modis = ee.ImageCollection("MODIS/061/MOD09GA")
+    filtered = (modis.filterDate(event.modisEndDate, ee.Date(event.modisEndDate).advance(30, 'day'))
+                        .map(maskClouds)
+                        .map(add_ROI_Cloud_Rate)
+                        .filter(ee.Filter.lte("ROI_CLOUD_RATE", 20))
+                        .map(maskEmptyPixels)
+                )
     
+    image = filtered.first().select(['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b07']).rename(['Red', 'NIR', 'SWIR'])
+    saveName = f"{event.name}"
+    dst_url = f"{dataset_folder}/{'modis'}/{'post'}/{saveName}"
+    export_image_to_CloudStorage(image, event.roi, str(dst_url), scale=scale, crs=event.crs, BUCKET=BUCKET)
+
+
+# Modis Cloud Masking example.
+# Calculate how frequently a location is labeled as clear (i.e. non-cloudy)
+# according to the "internal cloud algorithm flag" of the MODIS "state 1km"
+# QA band.
+
+# A function to mask out pixels that did not have observations.
+def maskEmptyPixels(image):
+  # Find pixels that had observations.
+  withObs = image.select('num_observations_1km').gt(0)
+  return image.updateMask(withObs)
+
+# A function to mask out cloudy pixels.
+def maskClouds(image):
+  # Select the QA band.
+  QA = image.select('state_1km')
+  # Make a mask to get bit 10, the internal_cloud_algorithm_flag bit.
+  bitMask = 1 << 10
+  # Return an image masking out cloudy areas.
+  cloud_mask = QA.bitwiseAnd(bitMask).eq(0)
+  # return image.updateMask(cloud_mask);
+  return image.addBands(cloud_mask.rename('cloud'))
+
+""" VIIRS """

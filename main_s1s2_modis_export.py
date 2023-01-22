@@ -10,7 +10,6 @@ from typing import Dict
 import ee
 ee.Initialize()
 
-
 # from eo_class.modisPoly import MODIS_POLY
 import yaml
 import numpy as np
@@ -71,7 +70,6 @@ print(f"total number of events to query: {num} \n")
 # print(f"idx_stop: {idx_stop}")
 # for event_id in list(EVENT_SET_subset.keys())[idx_stop:idx_stop+1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
-
 for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]
@@ -101,16 +99,21 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
     # if event.end_date is None: event['end_date'] = f"{event['YEAR']}-09-01"
 
     queryEvent = update_query_event(cfg, event)
-    dataset_folder = "wildfire-s1s2-dataset-ca-modis"
     
     if ('end_date' in event.keys()):
         print(f"-----------------> {event.name} <------------------ ")
 
-        # Sentinel-1, Sentinel-2
-        query_s1s2_and_export(queryEvent, 
-                scale=20, 
-                BUCKET="wildfire-dataset",
-                dataset_folder=dataset_folder,
-                export=['S2'],
-                # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
-            )
+        # # Sentinel-1, Sentinel-2
+        # query_s1s2_and_export(queryEvent, 
+        #         scale=20, 
+        #         BUCKET="wildfire-dataset",
+        #         dataset_folder=dataset_folder,
+        #         export=['S2'],
+        #         # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
+        #     )
+
+        # modis
+        query_modis_and_export(queryEvent, 
+                scale=500, 
+                BUCKET="wildfire-dataset", 
+                dataset_folder="wildfire-s1s2-dataset-ca-modis")
