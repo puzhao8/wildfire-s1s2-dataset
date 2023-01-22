@@ -129,8 +129,10 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
                 
 
 """ MODIS """
-def query_modis_and_export(event, scale=500, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca'):
+def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca', export_mask=True):
     # gee code: https:#code.earthengine.google.com/f7cd69c6b51d7b175a1550e2a06f296e
+
+    event = edict(event)
 
     def add_ROI_Cloud_Rate(img):
         cloud = img.select('cloud')
@@ -138,18 +140,106 @@ def query_modis_and_export(event, scale=500, BUCKET="wildfire-dataset", dataset_
         all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), event.roi, 1000).get('cloud')
         return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100))
 
-    modis = ee.ImageCollection("MODIS/061/MOD09GA")
-    filtered = (modis.filterDate(event.modisEndDate, ee.Date(event.modisEndDate).advance(30, 'day'))
+    modis = ee.ImageCollection("MODIS/061/MOD09GA") # Terra (MOD) vs. Aqua (MYD)
+    filtered_modis = (modis.filterDate(event.end_date, ee.Date(event.end_date).advance(30, 'day'))
+                        .map(maskClouds)
+                        .map(add_ROI_Cloud_Rate)
+                        .filter(ee.Filter.lte("ROI_CLOUD_RATE", 10))
+                        .map(maskEmptyPixels)
+                )
+    
+    img_modis = filtered_modis.first()
+    
+    # modis mask (500m modis monthly vs. 250m modis daily)
+    if 500 == scale:
+        # MODIS
+        mask_name = 'modis'
+        mask = (ee.ImageCollection("MODIS/006/MCD64A1")
+                    .filterDate(ee.Date(event.start_date).advance(-30, 'day'), ee.Date(event.end_date).advance(30, 'day'))
+                    .mosaic()
+                    .select('BurnDate').int16()
+                    .unmask()
+        )
+
+    elif 250 == scale: 
+        # Terra MODIS Data: merge Terra 250m and 500m            
+        img_modis = filtered_modis.map(modis_terra_merger).first()
+
+        # FireCCI51
+        mask_name = 'firecci'
+        mask = (ee.ImageCollection("ESA/CCI/FireCCI/5_1")
+            .filterDate(ee.Date(event.start_date).advance(-30, 'day'), ee.Date(event.end_date).advance(30, 'day'))
+            .mosaic()
+            .select('BurnDate').int16()
+            .unmask()
+        )
+
+    else:
+        print("scale can only be 250m or 500m!")
+
+    ''' Export '''
+    saveName = f"{event.name}"
+    export_image_to_CloudStorage(
+        image=img_modis.select(['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b07']).rename(['Red', 'NIR', 'SWIR']).int16(), 
+        aoi=event.roi, 
+        dst_url=f"{dataset_folder}/{'modis'}/{'post'}/{saveName}", 
+        scale=scale, 
+        crs=event.crs, 
+        BUCKET=BUCKET
+    )
+
+    if export_mask:
+        export_image_to_CloudStorage(
+                image=mask.select(['BurnDate']).int16(), 
+                aoi=event.roi, 
+                dst_url=f"{dataset_folder}/{'mask'}/{mask_name}/{saveName}", 
+                scale=scale, 
+                crs=event.crs, 
+                BUCKET=BUCKET
+            )
+
+    # VIIRS 500m Daily 
+    # M11-SWIR (2.2), I3-SWIR1 (1.6), I2-NIR (0.865), I1-Red (0.640) 
+    if False:
+        # query viirs image based on modis image date                    
+        image_date = img_modis.date()
+        img_viirs = (ee.ImageCollection("NOAA/VIIRS/001/VNP09GA")
+                            .filterDate(image_date, ee.Date(image_date).advance(1, 'day'))
+                    ).first()
+
+        export_image_to_CloudStorage(
+            image=img_viirs.select(['I1', 'I2', 'M11']).rename(['Red', 'NIR', 'SWIR']).int16(), 
+            aoi=event.roi, 
+            dst_url=f"{dataset_folder}/{'viirs'}/{'post'}/{saveName}", 
+            scale=scale, 
+            crs=event.crs, 
+            BUCKET=BUCKET
+        )
+
+    ##TODO: write codes for exporting modis progression / time series images
+    if False:
+        prgImgCol = (modis.filterDate(ee.Date(event.start_date).advance(-10, 'day'), ee.Date(event.end_date).advance(10, 'day'))
                         .map(maskClouds)
                         .map(add_ROI_Cloud_Rate)
                         .filter(ee.Filter.lte("ROI_CLOUD_RATE", 20))
                         .map(maskEmptyPixels)
                 )
-    
-    image = filtered.first().select(['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b07']).rename(['Red', 'NIR', 'SWIR'])
-    saveName = f"{event.name}"
-    dst_url = f"{dataset_folder}/{'modis'}/{'post'}/{saveName}"
-    export_image_to_CloudStorage(image, event.roi, str(dst_url), scale=scale, crs=event.crs, BUCKET=BUCKET)
+        img_num = prgImgCol.size().getInfo()
+        print(f"\n--> MODIS Progression Images: {img_num} <--")
+        imgList = prgImgCol.toList(img_num)
+
+        for i in range(0, img_num):
+            image = ee.Image(imgList.get(i))
+            imgLabel = image.date().format().slice(0,10).replace("-",'_')
+
+            export_image_to_CloudStorage(
+                image=image.select(['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b07']).rename(['Red', 'NIR', 'SWIR']).int16(), 
+                aoi=event.roi, 
+                dst_url=f"wildfire-modis-prg-dataset/{saveName}/{imgLabel}", 
+                scale=scale, 
+                crs=event.crs, 
+                BUCKET=BUCKET
+            )
 
 
 # Modis Cloud Masking example.
@@ -159,19 +249,22 @@ def query_modis_and_export(event, scale=500, BUCKET="wildfire-dataset", dataset_
 
 # A function to mask out pixels that did not have observations.
 def maskEmptyPixels(image):
-  # Find pixels that had observations.
-  withObs = image.select('num_observations_1km').gt(0)
-  return image.updateMask(withObs)
+    # Find pixels that had observations.
+    withObs = image.select('num_observations_1km').gt(0)
+    return image.updateMask(withObs)
 
 # A function to mask out cloudy pixels.
 def maskClouds(image):
-  # Select the QA band.
-  QA = image.select('state_1km')
-  # Make a mask to get bit 10, the internal_cloud_algorithm_flag bit.
-  bitMask = 1 << 10
-  # Return an image masking out cloudy areas.
-  cloud_mask = QA.bitwiseAnd(bitMask).eq(0)
-  # return image.updateMask(cloud_mask);
-  return image.addBands(cloud_mask.rename('cloud'))
+    # Select the QA band.
+    QA = image.select('state_1km')
+    # Make a mask to get bit 10, the internal_cloud_algorithm_flag bit.
+    bitMask = 1 << 10
+    # Return an image masking out cloudy areas.
+    cloud_mask = QA.bitwiseAnd(bitMask).eq(0)
+    # return image.updateMask(cloud_mask);
+    return image.addBands(cloud_mask.rename('cloud'))
 
-""" VIIRS """
+def modis_terra_merger(img):
+    date = img.date()
+    img_250m = ee.ImageCollection("MODIS/061/MOD09GQ").filterDate(date, ee.Date(date).advance(1, 'day')).first()
+    return img.select('sur_refl_b07').addBands(img_250m.select(['sur_refl_b01', 'sur_refl_b02']))

@@ -253,13 +253,14 @@ def get_mask_dict(queryEvent):
 
     # MODIS
     MODIS = ee.ImageCollection("MODIS/006/MCD64A1")
-    modis = MODIS.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(1, 'year')).mosaic()
+    modis = MODIS.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
     # print("modis: ", modis.bandNames().getInfo())
     mask_dict['modis'] = modis.select('BurnDate').unmask()
 
     # FireCCI51
     FireCCI51 = ee.ImageCollection("ESA/CCI/FireCCI/5_1")
-    firecci = FireCCI51.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(1, 'year')).mosaic()
+    firecci = FireCCI51.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
+
     # print("firecci: ", firecci.bandNames().getInfo())
     mask_dict['firecci'] = firecci.select('BurnDate').unmask()
 

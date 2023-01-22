@@ -25,7 +25,7 @@ json_dict = {
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2017', # 'US,
+    'where': 'CA_2019', # 'US,
     'minBurnArea': 2000,
 
     # # AK
@@ -44,7 +44,7 @@ cfg['JSON'] = json_dict[cfg.where]
 Wildfire Event
 ################################################################# """ 
 from eo_class.fireEvent import load_json
-from gee.export import update_query_event, query_s1s2_and_export, query_modis_and_export
+from gee.export import update_query_event, query_s1s2_and_export, query_modis_viirs_and_export
 
 
 print(cfg.JSON)
@@ -66,11 +66,11 @@ print(f"total number of events to query: {num} \n")
 
 # # LOOP HERE
 # # # event = EVENT_SET['al3107008672320170117']
-# idx_stop = list(EVENT_SET_subset.keys()).index("CA_2017_BC_990")
+# idx_stop = list(EVENT_SET_subset.keys()).index("CA_2019_ON_733")
 # print(f"idx_stop: {idx_stop}")
-# for event_id in list(EVENT_SET_subset.keys())[idx_stop:idx_stop+1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
+# for event_id in list(EVENT_SET_subset.keys())[idx_stop:]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
-for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
+for event_id in sorted(list(EVENT_SET_subset.keys())): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
@@ -100,7 +100,7 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
 
     queryEvent = update_query_event(cfg, event)
     
-    if ('end_date' in event.keys()):
+    if event['end_date'] is not None:
         print(f"-----------------> {event.name} <------------------ ")
 
         # # Sentinel-1, Sentinel-2
@@ -112,8 +112,12 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
         #         # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
         #     )
 
-        # modis
-        query_modis_and_export(queryEvent, 
-                scale=500, 
+        # modis and mask: https://code.earthengine.google.com/0a4c93f0c18ba0ec030d8d1878bed6e3 (check exported data)
+        query_modis_viirs_and_export(queryEvent, 
+                scale=250, 
                 BUCKET="wildfire-dataset", 
-                dataset_folder="wildfire-s1s2-dataset-ca-modis")
+                dataset_folder="wildfire-dataset-modis-s2-ak",
+                export_mask=True)
+
+    else:
+        print(f"-----------------> {event.name}: end date is None <------------------ ")
