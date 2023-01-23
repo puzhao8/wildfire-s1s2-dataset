@@ -25,6 +25,18 @@
         - post (After Year: 2020)
             - event1.tif
             - event2.tif
+    - MODIS: 250m & 500m Daily (SR)
+        - post 
+            - event1.tif
+            - event2.tif
+        - progression
+            - event1
+                - 2022-06-01.tif
+                - 2022-06-02.tif
+            - event2
+                - 2022-06-10.tif
+                - 2022-06-11.tif
+
 - **mask: Mask Data**
     - poly: Official Polygon in Raster (10m)
         - event1.tif

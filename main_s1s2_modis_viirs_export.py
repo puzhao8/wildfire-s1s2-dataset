@@ -112,7 +112,7 @@ for event_id in sorted(list(EVENT_SET_subset.keys())): #list(EVENT_SET_subset.ke
         #         # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
         #     )
 
-        # modis and mask: https://code.earthengine.google.com/0a4c93f0c18ba0ec030d8d1878bed6e3 (check exported data)
+        # modis and mask: https://code.earthengine.google.com/13d3c13ebb7b6b1ffe3bb461b60d2b30 (check exported data)
         query_modis_viirs_and_export(queryEvent, 
                 scale=250, 
                 BUCKET="wildfire-dataset", 

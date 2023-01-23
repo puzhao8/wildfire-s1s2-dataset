@@ -27,11 +27,13 @@ def get_local_crs_by_query_S2(roi):
 
 # save wildfire events to json
 def save_fireEvent_to_json(event: edict, json_url: str) -> None:
+    ''' write a dictionary object into a json file specified by the second parameter '''
     with open(json_url, 'w') as fp:
         json.dump(edict(event), fp, ensure_ascii=False, indent=4)
 
 # save wildfire events to json
 def load_json(url) -> edict:
+    ''' read a json file and convert'''
     with open(url, 'r') as fp:
         data = edict(json.load(fp))
     return data
@@ -42,46 +44,60 @@ class FIREEVENT:
     by a specified name, ROI, and YEAR.
     """
 
-    def __init__(self, cfg):
-        # super().__init__(cfg)
-        self.cfg = cfg
-        self.cfg['MIN_HA_TH'] = 1e3 # ignore small polygons in modis, 1e4
+    def __init__(self, 
+            country= 'EU',
+            min_burned_area = 2e3, # 2e4, burned areas
+            modis_min_area = 1e2, # ignore small polygons for modis, 1e4
+            buffer_size = 1e4,
+            poly_min_area = 1e3, # ignore small polygons in modis, 1e4,
+            save_url = f"wildfire_events/fire_events_exported.json", 
+            save_flag = True,
+            event_name = None,
+            event_year = 2017,
+            roi = None,
+        ):
+        
+        self.country = country
+        self.min_burned_area = min_burned_area
+        self.modis_min_area = modis_min_area
+        self.buffer_size = buffer_size
+        self.poly_min_area = poly_min_area
+        self.save_url = save_url
+        self.save_flag = save_flag
+        self.event_name = event_name
+        self.event_year = event_year
+        self.roi = roi
 
-    def __call__(self):
-        """ query biome -> query modis -> save derived fireEvent. """
 
-        self.query_biome_climate_zone()
-        event = self.query_modis_fireEvent_info()
-        # self.save_fireEvents_set()
-
-        save_fireEvent_to_json(event, f"wildfire_events/{self.cfg.name}.json")
-
-
-    def get_biome(self, roi):
-        return self.biomeImg.reduceRegion(ee.Reducer.mode(), roi, 500).getInfo()['BIOME_NUM']
+    @classmethod
+    def get_biome(biomeImg, roi):
+        return biomeImg.reduceRegion(ee.Reducer.mode(), roi, 500).getInfo()['BIOME_NUM']
 
     def query_biome_climate_zone(self):
         """ query biome data. """
 
         ### Climate Zone ###
         ecoRegions = ee.FeatureCollection("RESOLVE/ECOREGIONS/2017")
-        self.eco_palette = ecoRegions.aggregate_array("COLOR_BIO").distinct()
-        self.eco_names = ecoRegions.aggregate_array("BIOME_NAME").distinct()
+        eco_palette = ecoRegions.aggregate_array("COLOR_BIO").distinct()
+        eco_names = ecoRegions.aggregate_array("BIOME_NAME").distinct()
 
         biomeRegions = ecoRegions.setMulti({
-            'palette': self.eco_palette,
-            'names': self.eco_names 
+            'palette': eco_palette,
+            'names': eco_names 
         })
 
-        self.biomeImg = ee.FeatureCollection(biomeRegions).reduceToImage(['BIOME_NUM'], ee.Reducer.first()).rename("BIOME_NUM")
+        biomeImg = ee.FeatureCollection(biomeRegions).reduceToImage(['BIOME_NUM'], ee.Reducer.first()).rename("BIOME_NUM")
+        return biomeImg, eco_names
 
     def query_modis_fireEvent_info(self):
         """ query modis progression data to derive fireStartDate and fireEndDate. """
 
         event = edict()
 
+        self.biomeImg, self.eco_names = self.query_biome_climate_zone()
+
         # get bottom-left and top-right points
-        roi = ee.Geometry.Rectangle(list(self.cfg.roi))
+        roi = ee.Geometry.Rectangle(self.roi)
         crs = get_local_crs_by_query_S2(roi)
 
         coordinates = ee.List(roi.coordinates().get(0))
@@ -90,12 +106,17 @@ class FIREEVENT:
         print(f"{self.cfg.name}")
         print(f"CRS: {crs}")
 
+
         event.update({
-            'name': self.cfg.name,
+            'name': self.event_name,
             'roi': rect,
-            'year': self.cfg.YEAR,
+            'year': self.event_year, # modified from self.cfg.year
             'crs': crs,
-            'areaTH': self.cfg.MIN_HA_TH,
+            'areaTH': self.poly_min_area,
+
+            # Get BIOME info. 
+            'BIOME_NUM': int(self.get_biome(self.biomeImg, roi)),
+            'BIOME_NAME': self.eco_names.getInfo()[event.BIOME_NUM],
         })
 
         # Obtain Burn Period from MODIS Burned Area Products
@@ -108,38 +129,30 @@ class FIREEVENT:
         event.modisStartDate = modis.unionPoly.startDate 
         event.modisEndDate = modis.unionPoly.endDate 
 
-        # Get BIOME info. 
-        event.BIOME_NUM = int(self.get_biome(roi))
-        event.BIOME_NAME = self.eco_names.getInfo()[event.BIOME_NUM]
-        
-        self.event = event
-        return event
-
-
-    def save_fireEvent_to_yaml(self, yaml_url):
-        ## """ Save Dict to YAML and READ """
-
-        # yml_url = f"outputs/{self.cfg.name}.yaml"
-        with open(yaml_url, 'wt') as ymlfile:
-            yaml.dump(self.event, ymlfile) # deafult_flow_style=False
-
-    def load_fireEvents_yaml(self, yml_url):
-        with open(yml_url, 'rt') as ymlfile:
-            self.EVENT_SET = yaml.load(ymlfile) # Loader=yaml.UnsafeLoader
-
-
+        if self.save_json: save_fireEvent_to_json(event, self.save_url)
 
 
 if __name__=="__main__":
 
-    cfg = edict({
-        'name': 'BC2017C10784',
-        'YEAR': 2017,
-        'roi': [-124.52783481782407, 52.26491528311718, -122.73599679662699, 53.35226349843808],
-    })
+    cfg = edict(
+            country= 'EU',
+            min_burned_area = 2e3, # 2e4, burned areas
+            modis_min_area = 1e2, # ignore small polygons for modis, 1e4
+            buffer_size = 1e4,
+            poly_min_area = 1e3, # ignore small polygons in modis, 1e4,
+            save_url = f"wildfire_events/fire_events_exported.json", 
+            save_flag = True,
+            event_name = None,
+            event_year = 2017,
+            roi = None,
 
-    fireEvent = FIREEVENT(cfg)
-    fireEvent()
+        # 'name': 'BC2017C10784',
+        # 'YEAR': 2017,
+        # 'roi': [-124.52783481782407, 52.26491528311718, -122.73599679662699, 53.35226349843808],
+        )
 
-    your_fire = fireEvent.event
-    pprint(your_fire)
+    fireEvent = FIREEVENT(**cfg)
+    fireEvent.query_modis_fireEvent_info()
+
+    # your_fire = fireEvent.event
+    # pprint(your_fire)
