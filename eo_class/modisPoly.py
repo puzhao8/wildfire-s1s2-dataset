@@ -108,8 +108,8 @@ class MODIS_POLY:
   # compute the cloud-coverage in polygon
   def computeCloudCoverInPoly(self, img, poly):
       cloudImg = ee.Image(img.select("QA60")).gte(1024)
-      cloudAreaInPoly = compute_imgArea(cloudImg, poly)
-      cloudCoverInPoly = cloudAreaInPoly.divide(ee.Number(polyFeat.get("area"))).multiply(100).round()
+      cloudAreaInPoly = self.compute_imgArea(cloudImg, poly)
+      cloudCoverInPoly = cloudAreaInPoly.divide(ee.Number(poly.get("area"))).multiply(100).round()
       return img.setMulti({'CLOUD_COVERAGE_INPOLY': self.cfg.cloudCoverageInPolyLevel})
 
   ###############################################/
@@ -165,7 +165,7 @@ class MODIS_POLY:
       img = img.reduce(ee.Reducer.anyNonZero())
       poly = img.reduceToVectors({
         'geometry': self.cfg.roi,
-        'scale': polyScale,
+        'scale': 100,
         'crs': self.cfg.crs,
         'geometryType': 'polygon',
         'maxPixels': 20000000,
@@ -184,3 +184,8 @@ class MODIS_POLY:
         'maxPixels': 86062013
       })
       return stats
+
+
+if __name__ == "__main__":
+
+  modis = MODIS_POLY()

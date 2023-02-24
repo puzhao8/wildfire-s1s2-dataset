@@ -149,8 +149,6 @@ class FIREEVENT:
                 else:
                     event[property] = None
 
-
-
             # Obtain Burn Period from MODIS Burned Area Products
             modis = MODIS_POLY(event)
             modis()
