@@ -28,11 +28,13 @@ def updateCloudMaskS2(img):
 
 
 def rescale_s2(img): 
-    BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
+    BANDS = ['B4', 'B8', 'B12'] # 6 bands
+    # BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
     # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
-    return (img.select(BANDS).toFloat()
+    return (img.select(BANDS)
+                .toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
-                # .addBands(img.select('cloud'))
+                # # .addBands(img.select('cloud'))
     )
 
 def get_s2_dict(queryEvent, cloud_level=5):
@@ -64,25 +66,40 @@ def get_s2_dict(queryEvent, cloud_level=5):
         period_end.advance(1, "year").format().getInfo())
 
     s2_dict = edict()
-    s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
-                        .map(updateCloudMaskS2)
-                        .map(add_ROI_Cloud_Rate)
-                        .filter(cloudFilter)
-                        # .median()
-                        .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
+    # s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+    #                     .map(updateCloudMaskS2)
+    #                     .map(add_ROI_Cloud_Rate)
+    #                     .filter(cloudFilter)
+    #                     .median()
+    #                     # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
 
-                    )
-    s2_dict['post'] = (MSI.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
-                        .map(updateCloudMaskS2)
-                        .map(add_ROI_Cloud_Rate)
-                        .filter(cloudFilter)
-                        # .median()
-                        .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
-                    )
+    #                 )
+    
+
+    if queryEvent.end_date is not None:
+        # post image in the same year
+        s2_dict['post'] = (MSI.filterDate(queryEvent.end_date, ee.Date(queryEvent.end_date).advance(2,"month"))
+                            .map(updateCloudMaskS2)
+                            .map(add_ROI_Cloud_Rate)
+                            .filter(cloudFilter)
+                            .median()
+                            # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
+                        )#.uint16()
+    
+    else: 
+        # post image in next year
+        s2_dict['post'] = (MSI.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
+                            .map(updateCloudMaskS2)
+                            .map(add_ROI_Cloud_Rate)
+                            .filter(cloudFilter)
+                            .median()
+                            # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
+                        )
+
     # s2_dict['cloud'] = None
 
     # rescale to [0, 1]
-    s2_dict['pre'] = rescale_s2(s2_dict['pre'])
+    # s2_dict['pre'] = rescale_s2(s2_dict['pre'])
     s2_dict['post'] = rescale_s2(s2_dict['post'])
 
     return s2_dict
@@ -142,17 +159,25 @@ def get_s1_dict(queryEvent):
                     .map(set_group_index_4_S1)
             )
 
-    S1_post = (S1_flt.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
-                    .map(add_RFDI)
-                    .map(set_group_index_4_S1)
-            )
+    if queryEvent.end_date is not None:
+        # post s1 image in the same year
+        S1_post = (S1_flt.filterDate(queryEvent.end_date, ee.Date(queryEvent.end_date).advance(2,"month"))
+                        .map(add_RFDI)
+                        .map(set_group_index_4_S1)
+                )
 
+    else:
+        # post s1 image in the next year
+        S1_post = (S1_flt.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
+                        .map(add_RFDI)
+                        .map(set_group_index_4_S1)
+                )
 
-    if S1_pre.size().getInfo() == 0: #if there is no images in the before-year
-         S1_pre = (S1_flt.filterDate(period_start.advance(-2, 'month'), period_start)
-                    .map(add_RFDI)
-                    .map(set_group_index_4_S1)
-            )
+    # if S1_pre.size().getInfo() == 0: #if there is no images in the before-year
+    #      S1_pre = (S1_flt.filterDate(period_start.advance(-2, 'month'), period_start)
+    #                 .map(add_RFDI)
+    #                 .map(set_group_index_4_S1)
+    #         )
 
     if S1_post.size().getInfo() == 0: #if there is no images in the after-year
          S1_post = (S1_flt.filterDate(queryEvent['end_date'], ee.Date(queryEvent['end_date']).advance(2, 'month'))
@@ -228,13 +253,14 @@ def get_mask_dict(queryEvent):
 
     # MODIS
     MODIS = ee.ImageCollection("MODIS/006/MCD64A1")
-    modis = MODIS.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(1, 'year')).mosaic()
+    modis = MODIS.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
     # print("modis: ", modis.bandNames().getInfo())
     mask_dict['modis'] = modis.select('BurnDate').unmask()
 
     # FireCCI51
     FireCCI51 = ee.ImageCollection("ESA/CCI/FireCCI/5_1")
-    firecci = FireCCI51.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(1, 'year')).mosaic()
+    firecci = FireCCI51.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
+
     # print("firecci: ", firecci.bandNames().getInfo())
     mask_dict['firecci'] = firecci.select('BurnDate').unmask()
 

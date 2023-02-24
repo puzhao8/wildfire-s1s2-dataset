@@ -1,5 +1,5 @@
 {
-    "CA_NT_145_2017": {
+    "CA_2017_NT_145": {
         "ADJ_FLG": 0,
         "ADJ_HA": 8209.44881854,
         "AFSDATE": "2017-08-10",
@@ -13,7 +13,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 5,
         "FIREMAPS": 5,
-        "NAME": "CA_NT_145_2017",
+        "NAME": "CA_2017_NT_145",
         "NFIREID": 145,
         "POLY_HA": 8209.44881854,
         "SDATE": "2017-08-31",
@@ -38,7 +38,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_2025_2017": {
+    "CA_2017_ON_2025": {
         "ADJ_FLG": 0,
         "ADJ_HA": 13731.1627937,
         "AFEDATE": "2017-09-19",
@@ -52,7 +52,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 0,
         "FIREMAPS": 0,
-        "NAME": "CA_ON_2025_2017",
+        "NAME": "CA_2017_ON_2025",
         "NFIREID": 2025,
         "POLY_HA": 13731.1627937,
         "SDATE": "2017-07-03",
@@ -77,7 +77,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_2361_2017": {
+    "CA_2017_ON_2361": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2131.16504975,
         "AFEDATE": "2017-09-23",
@@ -91,7 +91,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 0,
         "FIREMAPS": 0,
-        "NAME": "CA_ON_2361_2017",
+        "NAME": "CA_2017_ON_2361",
         "NFIREID": 2361,
         "POLY_HA": 2131.16504975,
         "SDATE": "2017-07-28",
@@ -116,7 +116,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_2135_2017": {
+    "CA_2017_ON_2135": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4522.32695678,
         "AFEDATE": "2017-10-03",
@@ -130,7 +130,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 0,
         "FIREMAPS": 0,
-        "NAME": "CA_ON_2135_2017",
+        "NAME": "CA_2017_ON_2135",
         "NFIREID": 2135,
         "POLY_HA": 4522.32695678,
         "SDATE": "2017-08-12",
@@ -155,7 +155,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_2059_2017": {
+    "CA_2017_ON_2059": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4036.84586669,
         "AFEDATE": "2017-09-18",
@@ -169,7 +169,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 0,
         "FIREMAPS": 0,
-        "NAME": "CA_ON_2059_2017",
+        "NAME": "CA_2017_ON_2059",
         "NFIREID": 2059,
         "POLY_HA": 4036.84586669,
         "SDATE": "2017-07-28",
@@ -194,7 +194,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_2197_2017": {
+    "CA_2017_ON_2197": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2244.06170304,
         "AFEDATE": "2017-09-18",
@@ -208,7 +208,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 0,
         "FIREMAPS": 0,
-        "NAME": "CA_ON_2197_2017",
+        "NAME": "CA_2017_ON_2197",
         "NFIREID": 2197,
         "POLY_HA": 2244.06170304,
         "SDATE": "2017-07-30",
@@ -233,7 +233,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_AB_3184_2017": {
+    "CA_2017_AB_3184": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2524.92267465,
         "AGENCY": "AB",
@@ -245,7 +245,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_AB_3184_2017",
+        "NAME": "CA_2017_AB_3184",
         "NFIREID": 3184,
         "POLY_HA": 2524.92267465,
         "VERSION": "2017_r9_20190919",
@@ -272,7 +272,7 @@
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
-    "CA_AB_204_2017": {
+    "CA_2017_AB_204": {
         "ADJ_FLG": 0,
         "ADJ_HA": 13638.2698792,
         "AFSDATE": "2017-09-01",
@@ -286,7 +286,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_AB_204_2017",
+        "NAME": "CA_2017_AB_204",
         "NFIREID": 204,
         "POLY_HA": 13638.2698792,
         "SDATE": "2017-09-06",
@@ -311,7 +311,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1644_2017": {
+    "CA_2017_MB_1644": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4626.45954191,
         "AFEDATE": "2017-10-05",
@@ -325,7 +325,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_MB_1644_2017",
+        "NAME": "CA_2017_MB_1644",
         "NFIREID": 1644,
         "POLY_HA": 4626.45954191,
         "SDATE": "2017-08-11",
@@ -350,7 +350,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_890_2017": {
+    "CA_2017_MB_890": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4006.25993343,
         "AFEDATE": "2017-09-25",
@@ -364,7 +364,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_MB_890_2017",
+        "NAME": "CA_2017_MB_890",
         "NFIREID": 890,
         "POLY_HA": 4006.25993343,
         "SDATE": "2017-07-22",
@@ -389,7 +389,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_969_2017": {
+    "CA_2017_MB_969": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2241.84683136,
         "AFEDATE": "2017-10-01",
@@ -403,7 +403,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_MB_969_2017",
+        "NAME": "CA_2017_MB_969",
         "NFIREID": 969,
         "POLY_HA": 2241.84683136,
         "SDATE": "2017-09-08",
@@ -428,7 +428,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_QC_2117_2017": {
+    "CA_2017_QC_2117": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4119.16068849,
         "AFEDATE": "2017-07-02",
@@ -442,7 +442,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 3,
-        "NAME": "CA_QC_2117_2017",
+        "NAME": "CA_2017_QC_2117",
         "NFIREID": 2117,
         "POLY_HA": 4119.16068849,
         "SDATE": "2017-06-08",
@@ -467,7 +467,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_1860_2017": {
+    "CA_2017_BC_1860": {
         "ADJ_FLG": 0,
         "ADJ_HA": 12236.3587102,
         "AGENCY": "BC",
@@ -479,7 +479,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_BC_1860_2017",
+        "NAME": "CA_2017_BC_1860",
         "NFIREID": 1860,
         "POLY_HA": 12236.3587102,
         "SDATE": "2017-08-29",
@@ -506,7 +506,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_989_2017": {
+    "CA_2017_BC_989": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4831.22279975,
         "AGENCY": "BC",
@@ -518,7 +518,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_BC_989_2017",
+        "NAME": "CA_2017_BC_989",
         "NFIREID": 989,
         "POLY_HA": 4831.22279975,
         "SDATE": "2017-07-07",
@@ -545,7 +545,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_180_2017": {
+    "CA_2017_BC_180": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4655.15660075,
         "AGENCY": "BC",
@@ -557,7 +557,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_BC_180_2017",
+        "NAME": "CA_2017_BC_180",
         "NFIREID": 180,
         "POLY_HA": 4655.15660075,
         "SDATE": "2017-08-10",
@@ -584,7 +584,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_1871_2017": {
+    "CA_2017_BC_1871": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2303.54904595,
         "AGENCY": "BC",
@@ -596,7 +596,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_BC_1871_2017",
+        "NAME": "CA_2017_BC_1871",
         "NFIREID": 1871,
         "POLY_HA": 2303.54904595,
         "SDATE": "2017-08-08",
@@ -623,7 +623,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_MB_1302_2017": {
+    "CA_2017_MB_1302": {
         "ADJ_FLG": 0,
         "ADJ_HA": 6086.93094692,
         "AFEDATE": "2017-10-01",
@@ -637,7 +637,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 3,
         "FIREMAPS": 3,
-        "NAME": "CA_MB_1302_2017",
+        "NAME": "CA_2017_MB_1302",
         "NFIREID": 1302,
         "POLY_HA": 6086.93094692,
         "SDATE": "2017-08-14",
@@ -662,7 +662,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_AB_532_2017": {
+    "CA_2017_AB_532": {
         "ADJ_FLG": 0,
         "ADJ_HA": 10954.0407033,
         "AGENCY": "AB",
@@ -675,7 +675,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 2,
         "FIREMAPS": 4,
-        "NAME": "CA_AB_532_2017",
+        "NAME": "CA_2017_AB_532",
         "NFIREID": 532,
         "POLY_HA": 10954.0407033,
         "SDATE": "2017-08-14",
@@ -701,7 +701,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_68_2017": {
+    "CA_2017_NT_68": {
         "ADJ_FLG": 0,
         "ADJ_HA": 39616.4027143,
         "AFEDATE": "2017-08-29",
@@ -716,7 +716,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_68_2017",
+        "NAME": "CA_2017_NT_68",
         "NFIREID": 68,
         "POLY_HA": 39616.4027143,
         "SDATE": "2017-07-07",
@@ -740,7 +740,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_BC_1157_2017": {
+    "CA_2017_BC_1157": {
         "ADJ_FLG": 0,
         "ADJ_HA": 180866.538107,
         "AGENCY": "BC",
@@ -753,7 +753,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1157_2017",
+        "NAME": "CA_2017_BC_1157",
         "NFIREID": 1157,
         "POLY_HA": 180866.538107,
         "SDATE": "2017-03-28",
@@ -779,7 +779,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_889_2017": {
+    "CA_2017_BC_889": {
         "ADJ_FLG": 0,
         "ADJ_HA": 6524.488544,
         "AGENCY": "BC",
@@ -792,7 +792,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_889_2017",
+        "NAME": "CA_2017_BC_889",
         "NFIREID": 889,
         "POLY_HA": 6524.488544,
         "SDATE": "2017-07-07",
@@ -818,7 +818,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_944_2017": {
+    "CA_2017_BC_944": {
         "ADJ_FLG": 0,
         "ADJ_HA": 24753.1945886,
         "AGENCY": "BC",
@@ -831,7 +831,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_944_2017",
+        "NAME": "CA_2017_BC_944",
         "NFIREID": 944,
         "POLY_HA": 24753.1945886,
         "SDATE": "2017-06-25",
@@ -857,7 +857,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_ON_1773_2017": {
+    "CA_2017_ON_1773": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2502.47202725,
         "AFEDATE": "2017-09-10",
@@ -872,7 +872,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_ON_1773_2017",
+        "NAME": "CA_2017_ON_1773",
         "NFIREID": 1773,
         "POLY_HA": 2502.47202725,
         "SDATE": "2017-07-29",
@@ -896,7 +896,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_1094_2017": {
+    "CA_2017_ON_1094": {
         "ADJ_FLG": 0,
         "ADJ_HA": 11967.6261603,
         "AFEDATE": "2017-10-06",
@@ -911,7 +911,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_ON_1094_2017",
+        "NAME": "CA_2017_ON_1094",
         "NFIREID": 1094,
         "POLY_HA": 11967.6261603,
         "SDATE": "2017-07-07",
@@ -935,7 +935,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_QC_959_2017": {
+    "CA_2017_QC_959": {
         "ADJ_FLG": 0,
         "ADJ_HA": 13371.5365666,
         "AFEDATE": "2017-06-16",
@@ -950,7 +950,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_QC_959_2017",
+        "NAME": "CA_2017_QC_959",
         "NFIREID": 959,
         "POLY_HA": 13371.5365666,
         "SDATE": "2017-06-06",
@@ -974,7 +974,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_1650_2017": {
+    "CA_2017_ON_1650": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7246.07075725,
         "AFEDATE": "2017-09-12",
@@ -989,7 +989,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_ON_1650_2017",
+        "NAME": "CA_2017_ON_1650",
         "NFIREID": 1650,
         "POLY_HA": 7246.07075725,
         "SDATE": "2017-08-10",
@@ -1013,7 +1013,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_1592_2017": {
+    "CA_2017_ON_1592": {
         "ADJ_FLG": 0,
         "ADJ_HA": 6312.9518807,
         "AFEDATE": "2017-09-27",
@@ -1028,7 +1028,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_ON_1592_2017",
+        "NAME": "CA_2017_ON_1592",
         "NFIREID": 1592,
         "POLY_HA": 6312.9518807,
         "SDATE": "2017-08-04",
@@ -1052,7 +1052,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_2301_2017": {
+    "CA_2017_BC_2301": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4293.91198989,
         "AGENCY": "BC",
@@ -1065,7 +1065,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_2301_2017",
+        "NAME": "CA_2017_BC_2301",
         "NFIREID": 2301,
         "POLY_HA": 4293.91198989,
         "SDATE": "2017-08-31",
@@ -1091,7 +1091,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_PCWB_341_2017": {
+    "CA_2017_PCWB_341": {
         "ADJ_FLG": 0,
         "ADJ_HA": 24348.3548204,
         "AGENCY": "PC-WB",
@@ -1104,7 +1104,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_341_2017",
+        "NAME": "CA_2017_PCWB_341",
         "NFIREID": 341,
         "POLY_HA": 24348.3548204,
         "SDATE": "2017-05-29",
@@ -1130,7 +1130,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_166_2017": {
+    "CA_2017_NT_166": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2642.59578173,
         "AFEDATE": "2017-10-03",
@@ -1145,7 +1145,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_166_2017",
+        "NAME": "CA_2017_NT_166",
         "NFIREID": 166,
         "POLY_HA": 2642.59578173,
         "SDATE": "2017-07-24",
@@ -1169,7 +1169,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_181_2017": {
+    "CA_2017_NT_181": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5714.65232483,
         "AFEDATE": "2017-10-03",
@@ -1184,7 +1184,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_181_2017",
+        "NAME": "CA_2017_NT_181",
         "NFIREID": 181,
         "POLY_HA": 5714.65232483,
         "SDATE": "2017-07-27",
@@ -1208,7 +1208,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_63_2017": {
+    "CA_2017_NT_63": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2058.7826152,
         "AFEDATE": "2017-08-23",
@@ -1223,7 +1223,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_63_2017",
+        "NAME": "CA_2017_NT_63",
         "NFIREID": 63,
         "POLY_HA": 2058.7826152,
         "SDATE": "2017-07-14",
@@ -1247,7 +1247,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_71_2017": {
+    "CA_2017_NT_71": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3229.53832113,
         "AFEDATE": "2017-08-22",
@@ -1262,7 +1262,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_71_2017",
+        "NAME": "CA_2017_NT_71",
         "NFIREID": 71,
         "POLY_HA": 3229.53832113,
         "SDATE": "2017-08-02",
@@ -1286,7 +1286,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_617_2017": {
+    "CA_2017_SK_617": {
         "ADJ_FLG": 0,
         "ADJ_HA": 17285.8221201,
         "AFEDATE": "2017-09-26",
@@ -1296,12 +1296,12 @@
         "BT_GID": 1049,
         "BURNCLAS": 4,
         "CAPDATE": "2017-10-12",
-        "COMMENTS": "17SR-CUSHING[comments:LE07_L1TP_038019_20171012,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17SR-CUSHING[comments:LE07_L1TP_0380191012,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-09-08",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_617_2017",
+        "NAME": "CA_2017_SK_617",
         "NFIREID": 617,
         "POLY_HA": 17285.8221201,
         "SDATE": "2017-08-08",
@@ -1325,7 +1325,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_418_2017": {
+    "CA_2017_SK_418": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7119.353441,
         "AFEDATE": "2017-08-25",
@@ -1335,12 +1335,12 @@
         "BT_GID": 1182,
         "BURNCLAS": 4,
         "CAPDATE": "2017-10-12",
-        "COMMENTS": "17SR-MOOSONEES[comments:LE07_L1TP_038019_20171012,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17SR-MOOSONEES[comments:LE07_L1TP_0380191012,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-08-15",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_418_2017",
+        "NAME": "CA_2017_SK_418",
         "NFIREID": 418,
         "POLY_HA": 7119.353441,
         "SDATE": "2017-07-26",
@@ -1364,7 +1364,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_901_2017": {
+    "CA_2017_MB_901": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3022.70118122,
         "AFEDATE": "2017-10-01",
@@ -1374,12 +1374,12 @@
         "BT_GID": 244,
         "BURNCLAS": 4,
         "CAPDATE": "2017-10-14",
-        "COMMENTS": "17LA-LAURIE[comments:Updated via LandSat LC08_L1TP_035021_20171014 (djones),source:VIIRS,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17LA-LAURIE[comments:Updated via LandSat LC08_L1TP_0350211014 (djones),source:VIIRS,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-09-09",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_901_2017",
+        "NAME": "CA_2017_MB_901",
         "NFIREID": 901,
         "POLY_HA": 3022.70118122,
         "SDATE": "2017-08-13",
@@ -1403,7 +1403,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_64_2017": {
+    "CA_2017_YT_64": {
         "ADJ_FLG": 0,
         "ADJ_HA": 13011.5932063,
         "AFEDATE": "2017-09-27",
@@ -1417,7 +1417,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_64_2017",
+        "NAME": "CA_2017_YT_64",
         "NFIREID": 64,
         "POLY_HA": 13011.5932063,
         "SDATE": "2017-06-13",
@@ -1442,7 +1442,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_60_2017": {
+    "CA_2017_YT_60": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2354.44520331,
         "AFEDATE": "2017-08-22",
@@ -1456,7 +1456,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_60_2017",
+        "NAME": "CA_2017_YT_60",
         "NFIREID": 60,
         "POLY_HA": 2354.44520331,
         "SDATE": "2017-08-08",
@@ -1481,7 +1481,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_85_2017": {
+    "CA_2017_YT_85": {
         "ADJ_FLG": 0,
         "ADJ_HA": 6652.78345,
         "AFEDATE": "2017-09-30",
@@ -1495,7 +1495,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_85_2017",
+        "NAME": "CA_2017_YT_85",
         "NFIREID": 85,
         "POLY_HA": 6652.78345,
         "SDATE": "2017-06-19",
@@ -1520,7 +1520,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_79_2017": {
+    "CA_2017_YT_79": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5283.03512395,
         "AFEDATE": "2017-09-30",
@@ -1534,7 +1534,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_79_2017",
+        "NAME": "CA_2017_YT_79",
         "NFIREID": 79,
         "POLY_HA": 5283.03512395,
         "SDATE": "2017-06-20",
@@ -1559,7 +1559,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_91_2017": {
+    "CA_2017_YT_91": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2448.58582598,
         "AFEDATE": "2017-09-30",
@@ -1573,7 +1573,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_91_2017",
+        "NAME": "CA_2017_YT_91",
         "NFIREID": 91,
         "POLY_HA": 2448.58582598,
         "SDATE": "2017-07-08",
@@ -1598,7 +1598,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_3_2017": {
+    "CA_2017_YT_3": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2117.96492145,
         "AFEDATE": "2017-08-16",
@@ -1612,7 +1612,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_3_2017",
+        "NAME": "CA_2017_YT_3",
         "NFIREID": 3,
         "POLY_HA": 2117.96492145,
         "SDATE": "2017-06-21",
@@ -1637,7 +1637,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_4_2017": {
+    "CA_2017_YT_4": {
         "ADJ_FLG": 0,
         "ADJ_HA": 30747.3791154,
         "AFEDATE": "2017-08-22",
@@ -1651,7 +1651,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_4_2017",
+        "NAME": "CA_2017_YT_4",
         "NFIREID": 4,
         "POLY_HA": 30747.3791154,
         "SDATE": "2017-06-22",
@@ -1676,7 +1676,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_144_2017": {
+    "CA_2017_YT_144": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2066.0749879,
         "AFEDATE": "2017-10-27",
@@ -1690,7 +1690,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_144_2017",
+        "NAME": "CA_2017_YT_144",
         "NFIREID": 144,
         "POLY_HA": 2066.0749879,
         "SDATE": "2017-05-30",
@@ -1715,7 +1715,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_841_2017": {
+    "CA_2017_MB_841": {
         "ADJ_FLG": 0,
         "ADJ_HA": 11443.4873952,
         "AFEDATE": "2017-10-01",
@@ -1729,7 +1729,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_841_2017",
+        "NAME": "CA_2017_MB_841",
         "NFIREID": 841,
         "POLY_HA": 11443.4873952,
         "SDATE": "2017-08-05",
@@ -1754,7 +1754,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_QC_1214_2017": {
+    "CA_2017_QC_1214": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2587.49074831,
         "AFEDATE": "2017-06-07",
@@ -1768,7 +1768,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_QC_1214_2017",
+        "NAME": "CA_2017_QC_1214",
         "NFIREID": 1214,
         "POLY_HA": 2587.49074831,
         "SDATE": "2017-06-07",
@@ -1793,7 +1793,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1687_2017": {
+    "CA_2017_MB_1687": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7104.17781376,
         "AFEDATE": "2017-09-23",
@@ -1807,7 +1807,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1687_2017",
+        "NAME": "CA_2017_MB_1687",
         "NFIREID": 1687,
         "POLY_HA": 7104.17781376,
         "SDATE": "2017-08-12",
@@ -1832,7 +1832,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_900_2017": {
+    "CA_2017_MB_900": {
         "ADJ_FLG": 0,
         "ADJ_HA": 11981.04024,
         "AFEDATE": "2017-07-20",
@@ -1846,7 +1846,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_900_2017",
+        "NAME": "CA_2017_MB_900",
         "NFIREID": 900,
         "POLY_HA": 11981.04024,
         "SDATE": "2017-06-26",
@@ -1871,7 +1871,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_980_2017": {
+    "CA_2017_MB_980": {
         "ADJ_FLG": 0,
         "ADJ_HA": 8742.24503605,
         "AFEDATE": "2017-10-03",
@@ -1885,7 +1885,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_980_2017",
+        "NAME": "CA_2017_MB_980",
         "NFIREID": 980,
         "POLY_HA": 8742.24503605,
         "SDATE": "2017-07-13",
@@ -1910,7 +1910,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_965_2017": {
+    "CA_2017_MB_965": {
         "ADJ_FLG": 0,
         "ADJ_HA": 8232.73397664,
         "AFEDATE": "2017-08-24",
@@ -1924,7 +1924,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_965_2017",
+        "NAME": "CA_2017_MB_965",
         "NFIREID": 965,
         "POLY_HA": 8232.73397664,
         "SDATE": "2017-07-13",
@@ -1949,7 +1949,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_871_2017": {
+    "CA_2017_MB_871": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3881.107904,
         "AFEDATE": "2017-09-25",
@@ -1963,7 +1963,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_871_2017",
+        "NAME": "CA_2017_MB_871",
         "NFIREID": 871,
         "POLY_HA": 3881.107904,
         "SDATE": "2017-07-21",
@@ -1988,7 +1988,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1431_2017": {
+    "CA_2017_MB_1431": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2146.74629983,
         "AFEDATE": "2017-09-04",
@@ -2002,7 +2002,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1431_2017",
+        "NAME": "CA_2017_MB_1431",
         "NFIREID": 1431,
         "POLY_HA": 2146.74629983,
         "SDATE": "2017-07-21",
@@ -2027,7 +2027,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_472_2017": {
+    "CA_2017_MB_472": {
         "ADJ_FLG": 0,
         "ADJ_HA": 8128.44124065,
         "AFEDATE": "2017-10-01",
@@ -2041,7 +2041,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_472_2017",
+        "NAME": "CA_2017_MB_472",
         "NFIREID": 472,
         "POLY_HA": 8128.44124065,
         "SDATE": "2017-08-04",
@@ -2066,7 +2066,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_914_2017": {
+    "CA_2017_MB_914": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3909.11808587,
         "AFEDATE": "2017-08-24",
@@ -2080,7 +2080,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_914_2017",
+        "NAME": "CA_2017_MB_914",
         "NFIREID": 914,
         "POLY_HA": 3909.11808587,
         "SDATE": "2017-08-05",
@@ -2105,7 +2105,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_374_2017": {
+    "CA_2017_MB_374": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4982.63087877,
         "AFEDATE": "2017-10-01",
@@ -2119,7 +2119,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_374_2017",
+        "NAME": "CA_2017_MB_374",
         "NFIREID": 374,
         "POLY_HA": 4982.63087877,
         "SDATE": "2017-08-04",
@@ -2144,7 +2144,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_837_2017": {
+    "CA_2017_MB_837": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2500.5979547,
         "AFEDATE": "2017-10-01",
@@ -2158,7 +2158,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_837_2017",
+        "NAME": "CA_2017_MB_837",
         "NFIREID": 837,
         "POLY_HA": 2500.5979547,
         "SDATE": "2017-08-05",
@@ -2183,7 +2183,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_892_2017": {
+    "CA_2017_MB_892": {
         "ADJ_FLG": 0,
         "ADJ_HA": 10529.1728996,
         "AFEDATE": "2017-09-25",
@@ -2197,7 +2197,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_892_2017",
+        "NAME": "CA_2017_MB_892",
         "NFIREID": 892,
         "POLY_HA": 10529.1728996,
         "SDATE": "2017-08-09",
@@ -2222,7 +2222,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_886_2017": {
+    "CA_2017_MB_886": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4118.38238523,
         "AFEDATE": "2017-09-02",
@@ -2236,7 +2236,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_886_2017",
+        "NAME": "CA_2017_MB_886",
         "NFIREID": 886,
         "POLY_HA": 4118.38238523,
         "SDATE": "2017-08-12",
@@ -2261,7 +2261,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1292_2017": {
+    "CA_2017_MB_1292": {
         "ADJ_FLG": 0,
         "ADJ_HA": 28963.3650097,
         "AFEDATE": "2017-10-03",
@@ -2275,7 +2275,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1292_2017",
+        "NAME": "CA_2017_MB_1292",
         "NFIREID": 1292,
         "POLY_HA": 28963.3650097,
         "SDATE": "2017-08-19",
@@ -2300,7 +2300,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1403_2017": {
+    "CA_2017_MB_1403": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2137.25178649,
         "AFEDATE": "2017-09-27",
@@ -2314,7 +2314,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1403_2017",
+        "NAME": "CA_2017_MB_1403",
         "NFIREID": 1403,
         "POLY_HA": 2137.25178649,
         "SDATE": "2017-08-14",
@@ -2339,7 +2339,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1294_2017": {
+    "CA_2017_MB_1294": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2027.12256452,
         "AFEDATE": "2017-09-30",
@@ -2353,7 +2353,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1294_2017",
+        "NAME": "CA_2017_MB_1294",
         "NFIREID": 1294,
         "POLY_HA": 2027.12256452,
         "SDATE": "2017-08-19",
@@ -2378,7 +2378,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1501_2017": {
+    "CA_2017_MB_1501": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2229.93807819,
         "AFEDATE": "2017-09-25",
@@ -2392,7 +2392,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1501_2017",
+        "NAME": "CA_2017_MB_1501",
         "NFIREID": 1501,
         "POLY_HA": 2229.93807819,
         "SDATE": "2017-08-12",
@@ -2417,7 +2417,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1332_2017": {
+    "CA_2017_MB_1332": {
         "ADJ_FLG": 0,
         "ADJ_HA": 6361.80962268,
         "AFEDATE": "2017-09-27",
@@ -2431,7 +2431,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_1332_2017",
+        "NAME": "CA_2017_MB_1332",
         "NFIREID": 1332,
         "POLY_HA": 6361.80962268,
         "SDATE": "2017-08-19",
@@ -2456,7 +2456,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_132_2017": {
+    "CA_2017_NT_132": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4168.94858095,
         "AFEDATE": "2017-10-03",
@@ -2471,7 +2471,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_132_2017",
+        "NAME": "CA_2017_NT_132",
         "NFIREID": 132,
         "POLY_HA": 4168.94858095,
         "SDATE": "2017-07-12",
@@ -2495,7 +2495,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_74_2017": {
+    "CA_2017_NT_74": {
         "ADJ_FLG": 0,
         "ADJ_HA": 26277.002906,
         "AFEDATE": "2017-08-29",
@@ -2510,7 +2510,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_74_2017",
+        "NAME": "CA_2017_NT_74",
         "NFIREID": 74,
         "POLY_HA": 26277.002906,
         "SDATE": "2017-07-02",
@@ -2534,7 +2534,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_126_2017": {
+    "CA_2017_NT_126": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5150.91801237,
         "AFEDATE": "2017-10-03",
@@ -2549,7 +2549,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_126_2017",
+        "NAME": "CA_2017_NT_126",
         "NFIREID": 126,
         "POLY_HA": 5150.91801237,
         "SDATE": "2017-07-14",
@@ -2573,7 +2573,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_121_2017": {
+    "CA_2017_NT_121": {
         "ADJ_FLG": 0,
         "ADJ_HA": 17549.8700372,
         "AFEDATE": "2017-10-03",
@@ -2588,7 +2588,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_121_2017",
+        "NAME": "CA_2017_NT_121",
         "NFIREID": 121,
         "POLY_HA": 17549.8700372,
         "SDATE": "2017-07-13",
@@ -2612,7 +2612,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_128_2017": {
+    "CA_2017_NT_128": {
         "ADJ_FLG": 0,
         "ADJ_HA": 16654.6827814,
         "AFEDATE": "2017-10-03",
@@ -2627,7 +2627,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_128_2017",
+        "NAME": "CA_2017_NT_128",
         "NFIREID": 128,
         "POLY_HA": 16654.6827814,
         "SDATE": "2017-07-12",
@@ -2651,7 +2651,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_124_2017": {
+    "CA_2017_NT_124": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2730.00608948,
         "AFEDATE": "2017-10-03",
@@ -2666,7 +2666,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_124_2017",
+        "NAME": "CA_2017_NT_124",
         "NFIREID": 124,
         "POLY_HA": 2730.00608948,
         "SDATE": "2017-08-01",
@@ -2690,7 +2690,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_651_2017": {
+    "CA_2017_SK_651": {
         "ADJ_FLG": 0,
         "ADJ_HA": 15315.0677784,
         "AFEDATE": "2017-09-18",
@@ -2705,7 +2705,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_651_2017",
+        "NAME": "CA_2017_SK_651",
         "NFIREID": 651,
         "POLY_HA": 15315.0677784,
         "SDATE": "2017-08-11",
@@ -2729,7 +2729,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_286_2017": {
+    "CA_2017_SK_286": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4044.56799231,
         "AFEDATE": "2017-08-22",
@@ -2744,7 +2744,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_286_2017",
+        "NAME": "CA_2017_SK_286",
         "NFIREID": 286,
         "POLY_HA": 4044.56799231,
         "SDATE": "2017-07-23",
@@ -2768,7 +2768,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_313_2017": {
+    "CA_2017_SK_313": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4481.00046363,
         "AFEDATE": "2017-08-25",
@@ -2783,7 +2783,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_313_2017",
+        "NAME": "CA_2017_SK_313",
         "NFIREID": 313,
         "POLY_HA": 4481.00046363,
         "SDATE": "2017-07-25",
@@ -2807,7 +2807,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_596_2017": {
+    "CA_2017_SK_596": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7155.42053819,
         "AFEDATE": "2017-09-25",
@@ -2822,7 +2822,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_596_2017",
+        "NAME": "CA_2017_SK_596",
         "NFIREID": 596,
         "POLY_HA": 7155.42053819,
         "SDATE": "2017-07-23",
@@ -2846,7 +2846,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_592_2017": {
+    "CA_2017_SK_592": {
         "ADJ_FLG": 0,
         "ADJ_HA": 46502.1416787,
         "AFEDATE": "2017-09-19",
@@ -2861,7 +2861,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_592_2017",
+        "NAME": "CA_2017_SK_592",
         "NFIREID": 592,
         "POLY_HA": 46502.1416787,
         "SDATE": "2017-08-11",
@@ -2885,7 +2885,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_210_2017": {
+    "CA_2017_NT_210": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2716.87940052,
         "AFEDATE": "2017-09-26",
@@ -2900,7 +2900,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_210_2017",
+        "NAME": "CA_2017_NT_210",
         "NFIREID": 210,
         "POLY_HA": 2716.87940052,
         "SDATE": "2017-07-14",
@@ -2924,7 +2924,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_219_2017": {
+    "CA_2017_NT_219": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2081.33226097,
         "AFEDATE": "2017-09-01",
@@ -2939,7 +2939,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_219_2017",
+        "NAME": "CA_2017_NT_219",
         "NFIREID": 219,
         "POLY_HA": 2081.33226097,
         "SDATE": "2017-07-24",
@@ -2963,7 +2963,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_237_2017": {
+    "CA_2017_NT_237": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2725.55594951,
         "AFEDATE": "2017-09-01",
@@ -2978,7 +2978,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_237_2017",
+        "NAME": "CA_2017_NT_237",
         "NFIREID": 237,
         "POLY_HA": 2725.55594951,
         "SDATE": "2017-08-02",
@@ -3002,7 +3002,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_990_2017": {
+    "CA_2017_BC_990": {
         "ADJ_FLG": 0,
         "ADJ_HA": 214293.384013,
         "AGENCY": "BC",
@@ -3015,7 +3015,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_990_2017",
+        "NAME": "CA_2017_BC_990",
         "NFIREID": 990,
         "POLY_HA": 214293.384013,
         "SDATE": "2017-06-19",
@@ -3041,7 +3041,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_966_2017": {
+    "CA_2017_BC_966": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4667.6701646,
         "AGENCY": "BC",
@@ -3054,7 +3054,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_966_2017",
+        "NAME": "CA_2017_BC_966",
         "NFIREID": 966,
         "POLY_HA": 4667.6701646,
         "SDATE": "2017-07-07",
@@ -3080,7 +3080,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1040_2017": {
+    "CA_2017_BC_1040": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2831.670894,
         "AGENCY": "BC",
@@ -3093,7 +3093,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1040_2017",
+        "NAME": "CA_2017_BC_1040",
         "NFIREID": 1040,
         "POLY_HA": 2831.670894,
         "SDATE": "2017-07-07",
@@ -3119,7 +3119,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1014_2017": {
+    "CA_2017_BC_1014": {
         "ADJ_FLG": 0,
         "ADJ_HA": 9518.82466001,
         "AGENCY": "BC",
@@ -3132,7 +3132,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1014_2017",
+        "NAME": "CA_2017_BC_1014",
         "NFIREID": 1014,
         "POLY_HA": 9518.82466001,
         "SDATE": "2017-07-07",
@@ -3158,7 +3158,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_856_2017": {
+    "CA_2017_BC_856": {
         "ADJ_FLG": 0,
         "ADJ_HA": 410381.645202,
         "AGENCY": "BC",
@@ -3171,7 +3171,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_856_2017",
+        "NAME": "CA_2017_BC_856",
         "NFIREID": 856,
         "POLY_HA": 410381.645202,
         "SDATE": "2017-02-12",
@@ -3197,7 +3197,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1005_2017": {
+    "CA_2017_BC_1005": {
         "ADJ_FLG": 0,
         "ADJ_HA": 9007.70271865,
         "AGENCY": "BC",
@@ -3210,7 +3210,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1005_2017",
+        "NAME": "CA_2017_BC_1005",
         "NFIREID": 1005,
         "POLY_HA": 9007.70271865,
         "SDATE": "2017-07-07",
@@ -3236,7 +3236,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_ON_1111_2017": {
+    "CA_2017_ON_1111": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7752.27182241,
         "AFEDATE": "2017-09-28",
@@ -3251,7 +3251,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_ON_1111_2017",
+        "NAME": "CA_2017_ON_1111",
         "NFIREID": 1111,
         "POLY_HA": 7752.27182241,
         "SDATE": "2017-07-07",
@@ -3275,7 +3275,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_ON_1076_2017": {
+    "CA_2017_ON_1076": {
         "ADJ_FLG": 0,
         "ADJ_HA": 16760.0830733,
         "AFEDATE": "2017-08-26",
@@ -3290,7 +3290,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_ON_1076_2017",
+        "NAME": "CA_2017_ON_1076",
         "NFIREID": 1076,
         "POLY_HA": 16760.0830733,
         "SDATE": "2017-07-07",
@@ -3314,7 +3314,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWL_2418_2017": {
+    "CA_2017_PCWL_2418": {
         "ADJ_FLG": 0,
         "ADJ_HA": 18807.7130484,
         "AGENCY": "PC-WL",
@@ -3327,7 +3327,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWL_2418_2017",
+        "NAME": "CA_2017_PCWL_2418",
         "NFIREID": 2418,
         "POLY_HA": 18807.7130484,
         "SDATE": "2017-08-31",
@@ -3353,7 +3353,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_AB_2418_2017": {
+    "CA_2017_AB_2418": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2193.80697346,
         "AGENCY": "AB",
@@ -3366,7 +3366,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_AB_2418_2017",
+        "NAME": "CA_2017_AB_2418",
         "NFIREID": 2418,
         "POLY_HA": 2193.80697346,
         "SDATE": "2017-08-31",
@@ -3392,7 +3392,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_2418_2017": {
+    "CA_2017_BC_2418": {
         "ADJ_FLG": 0,
         "ADJ_HA": 12874.4839752,
         "AGENCY": "BC",
@@ -3405,7 +3405,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_2418_2017",
+        "NAME": "CA_2017_BC_2418",
         "NFIREID": 2418,
         "POLY_HA": 12874.4839752,
         "SDATE": "2017-08-31",
@@ -3431,7 +3431,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_SK_393_2017": {
+    "CA_2017_SK_393": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2234.14702268,
         "AFEDATE": "2017-09-19",
@@ -3441,12 +3441,12 @@
         "BT_GID": 1124,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-29",
-        "COMMENTS": "17SR-JANZEN[comments:LC08_L1TP_037019_20170929,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17SR-JANZEN[comments:LC08_L1TP_0370190929,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-08-15",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_393_2017",
+        "NAME": "CA_2017_SK_393",
         "NFIREID": 393,
         "POLY_HA": 2234.14702268,
         "SDATE": "2017-08-04",
@@ -3470,7 +3470,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_275_2017": {
+    "CA_2017_SK_275": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4494.18186643,
         "AFEDATE": "2017-08-22",
@@ -3480,12 +3480,12 @@
         "BT_GID": 662,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-29",
-        "COMMENTS": "17SR-OLDMAN[comments:LC08_L1TP_041018_20170929,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17SR-OLDMAN[comments:LC08_L1TP_0410180929,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-08-15",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_275_2017",
+        "NAME": "CA_2017_SK_275",
         "NFIREID": 275,
         "POLY_HA": 4494.18186643,
         "SDATE": "2017-07-27",
@@ -3509,7 +3509,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_296_2017": {
+    "CA_2017_SK_296": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4064.34191087,
         "AFEDATE": "2017-09-19",
@@ -3519,12 +3519,12 @@
         "BT_GID": 1111,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-29",
-        "COMMENTS": "17SR-PATTERSON[comments:LC08_L1TP_037018_20170929,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17SR-PATTERSON[comments:LC08_L1TP_0370180929,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-08-15",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_296_2017",
+        "NAME": "CA_2017_SK_296",
         "NFIREID": 296,
         "POLY_HA": 4064.34191087,
         "SDATE": "2017-08-04",
@@ -3548,7 +3548,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_152_2017": {
+    "CA_2017_NT_152": {
         "ADJ_FLG": 0,
         "ADJ_HA": 14406.596157,
         "AFEDATE": "2017-10-03",
@@ -3563,7 +3563,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_152_2017",
+        "NAME": "CA_2017_NT_152",
         "NFIREID": 152,
         "POLY_HA": 14406.596157,
         "SDATE": "2017-07-23",
@@ -3587,7 +3587,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_41_2017": {
+    "CA_2017_NT_41": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7354.16035679,
         "AFEDATE": "2017-07-19",
@@ -3602,7 +3602,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_41_2017",
+        "NAME": "CA_2017_NT_41",
         "NFIREID": 41,
         "POLY_HA": 7354.16035679,
         "SDATE": "2017-06-30",
@@ -3626,7 +3626,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_200_2017": {
+    "CA_2017_NT_200": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4900.51542395,
         "AFEDATE": "2017-09-02",
@@ -3641,7 +3641,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_200_2017",
+        "NAME": "CA_2017_NT_200",
         "NFIREID": 200,
         "POLY_HA": 4900.51542395,
         "SDATE": "2017-07-31",
@@ -3665,7 +3665,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_4235_2017": {
+    "CA_2017_NT_4235": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7004.08113886,
         "AFEDATE": "2017-09-02",
@@ -3679,7 +3679,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_4235_2017",
+        "NAME": "CA_2017_NT_4235",
         "NFIREID": 4235,
         "POLY_HA": 7004.08113886,
         "VERSION": "2017_r9_20190919",
@@ -3704,7 +3704,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWB_281_2017": {
+    "CA_2017_PCWB_281": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3624.89308299,
         "AGENCY": "PC-WB",
@@ -3717,7 +3717,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_281_2017",
+        "NAME": "CA_2017_PCWB_281",
         "NFIREID": 281,
         "POLY_HA": 3624.89308299,
         "SDATE": "2017-07-02",
@@ -3743,7 +3743,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWB_322_2017": {
+    "CA_2017_PCWB_322": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5916.88262746,
         "AGENCY": "PC-WB",
@@ -3756,7 +3756,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_322_2017",
+        "NAME": "CA_2017_PCWB_322",
         "NFIREID": 322,
         "POLY_HA": 5916.88262746,
         "SDATE": "2017-08-13",
@@ -3782,7 +3782,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_182_2017": {
+    "CA_2017_NT_182": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4062.69716181,
         "AFEDATE": "2017-09-09",
@@ -3797,7 +3797,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_182_2017",
+        "NAME": "CA_2017_NT_182",
         "NFIREID": 182,
         "POLY_HA": 4062.69716181,
         "SDATE": "2017-07-10",
@@ -3821,7 +3821,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_185_2017": {
+    "CA_2017_NT_185": {
         "ADJ_FLG": 0,
         "ADJ_HA": 10788.0354519,
         "AFEDATE": "2017-09-02",
@@ -3836,7 +3836,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_185_2017",
+        "NAME": "CA_2017_NT_185",
         "NFIREID": 185,
         "POLY_HA": 10788.0354519,
         "SDATE": "2017-07-22",
@@ -3860,7 +3860,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_199_2017": {
+    "CA_2017_NT_199": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3743.70907194,
         "AFEDATE": "2017-09-02",
@@ -3875,7 +3875,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_199_2017",
+        "NAME": "CA_2017_NT_199",
         "NFIREID": 199,
         "POLY_HA": 3743.70907194,
         "SDATE": "2017-07-27",
@@ -3899,7 +3899,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWB_241_2017": {
+    "CA_2017_PCWB_241": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2526.47158331,
         "AGENCY": "PC-WB",
@@ -3912,7 +3912,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_241_2017",
+        "NAME": "CA_2017_PCWB_241",
         "NFIREID": 241,
         "POLY_HA": 2526.47158331,
         "SDATE": "2017-06-07",
@@ -3938,7 +3938,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_214_2017": {
+    "CA_2017_NT_214": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4658.02160645,
         "AFEDATE": "2017-09-02",
@@ -3953,7 +3953,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_214_2017",
+        "NAME": "CA_2017_NT_214",
         "NFIREID": 214,
         "POLY_HA": 4658.02160645,
         "SDATE": "2017-08-05",
@@ -3977,7 +3977,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_164_2017": {
+    "CA_2017_NT_164": {
         "ADJ_FLG": 0,
         "ADJ_HA": 13057.0945732,
         "AFEDATE": "2017-09-09",
@@ -3992,7 +3992,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_164_2017",
+        "NAME": "CA_2017_NT_164",
         "NFIREID": 164,
         "POLY_HA": 13057.0945732,
         "SDATE": "2017-08-02",
@@ -4016,7 +4016,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWB_217_2017": {
+    "CA_2017_PCWB_217": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2402.27120742,
         "AGENCY": "PC-WB",
@@ -4029,7 +4029,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_217_2017",
+        "NAME": "CA_2017_PCWB_217",
         "NFIREID": 217,
         "POLY_HA": 2402.27120742,
         "SDATE": "2017-07-27",
@@ -4055,7 +4055,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWB_258_2017": {
+    "CA_2017_PCWB_258": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2554.89566677,
         "AGENCY": "PC-WB",
@@ -4068,7 +4068,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_258_2017",
+        "NAME": "CA_2017_PCWB_258",
         "NFIREID": 258,
         "POLY_HA": 2554.89566677,
         "SDATE": "2017-06-21",
@@ -4094,7 +4094,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_188_2017": {
+    "CA_2017_NT_188": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7320.50583243,
         "AFEDATE": "2017-09-02",
@@ -4109,7 +4109,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_188_2017",
+        "NAME": "CA_2017_NT_188",
         "NFIREID": 188,
         "POLY_HA": 7320.50583243,
         "SDATE": "2017-07-24",
@@ -4133,7 +4133,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_201_2017": {
+    "CA_2017_NT_201": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3511.29707043,
         "AFEDATE": "2017-09-09",
@@ -4148,7 +4148,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_201_2017",
+        "NAME": "CA_2017_NT_201",
         "NFIREID": 201,
         "POLY_HA": 3511.29707043,
         "SDATE": "2017-07-18",
@@ -4172,7 +4172,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_177_2017": {
+    "CA_2017_NT_177": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3418.9783706,
         "AFEDATE": "2017-09-09",
@@ -4187,7 +4187,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_177_2017",
+        "NAME": "CA_2017_NT_177",
         "NFIREID": 177,
         "POLY_HA": 3418.9783706,
         "SDATE": "2017-08-04",
@@ -4211,7 +4211,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_197_2017": {
+    "CA_2017_NT_197": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2592.10408981,
         "AFEDATE": "2017-09-02",
@@ -4226,7 +4226,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_197_2017",
+        "NAME": "CA_2017_NT_197",
         "NFIREID": 197,
         "POLY_HA": 2592.10408981,
         "SDATE": "2017-07-27",
@@ -4250,7 +4250,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_173_2017": {
+    "CA_2017_NT_173": {
         "ADJ_FLG": 0,
         "ADJ_HA": 32709.3938139,
         "AFEDATE": "2017-09-25",
@@ -4265,7 +4265,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_173_2017",
+        "NAME": "CA_2017_NT_173",
         "NFIREID": 173,
         "POLY_HA": 32709.3938139,
         "SDATE": "2017-07-22",
@@ -4289,7 +4289,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_PCWB_4230_2017": {
+    "CA_2017_PCWB_4230": {
         "ADJ_FLG": 0,
         "ADJ_HA": 38831.0079096,
         "AFSDATE": "2017-07-19",
@@ -4303,7 +4303,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCWB_4230_2017",
+        "NAME": "CA_2017_PCWB_4230",
         "NFIREID": 4230,
         "POLY_HA": 38831.0079096,
         "SDATE": "2017-07-18",
@@ -4328,7 +4328,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_51_2017": {
+    "CA_2017_NT_51": {
         "ADJ_FLG": 0,
         "ADJ_HA": 22736.7595517,
         "AFEDATE": "2017-08-29",
@@ -4343,7 +4343,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_51_2017",
+        "NAME": "CA_2017_NT_51",
         "NFIREID": 51,
         "POLY_HA": 22736.7595517,
         "SDATE": "2017-06-19",
@@ -4367,7 +4367,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_191_2017": {
+    "CA_2017_NT_191": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7153.78567589,
         "AFEDATE": "2017-09-02",
@@ -4382,7 +4382,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_191_2017",
+        "NAME": "CA_2017_NT_191",
         "NFIREID": 191,
         "POLY_HA": 7153.78567589,
         "SDATE": "2017-08-01",
@@ -4406,7 +4406,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_AB_347_2017": {
+    "CA_2017_AB_347": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4708.99704678,
         "AFSDATE": "2017-08-05",
@@ -4420,7 +4420,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_AB_347_2017",
+        "NAME": "CA_2017_AB_347",
         "NFIREID": 347,
         "POLY_HA": 4708.99704678,
         "SDATE": "2017-08-05",
@@ -4445,7 +4445,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_270_2017": {
+    "CA_2017_SK_270": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2553.34813405,
         "AFEDATE": "2017-08-22",
@@ -4455,12 +4455,12 @@
         "BT_GID": 1346,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-21",
-        "COMMENTS": "17SR-BULMER[comments:LC08_L1TP_041018_20170929_20170929_01_RT,source:LandSat8,cause2:Lightning,capture_by:Sindy Nicholson]",
+        "COMMENTS": "17SR-BULMER[comments:LC08_L1TP_04101809290929_01_RT,source:LandSat8,cause2:Lightning,capture_by:Sindy Nicholson]",
         "EDATE": "2017-08-15",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_270_2017",
+        "NAME": "CA_2017_SK_270",
         "NFIREID": 270,
         "POLY_HA": 2553.34813405,
         "SDATE": "2017-07-25",
@@ -4484,7 +4484,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_48_2017": {
+    "CA_2017_NT_48": {
         "ADJ_FLG": 0,
         "ADJ_HA": 40933.1140754,
         "AFEDATE": "2017-08-29",
@@ -4499,7 +4499,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_48_2017",
+        "NAME": "CA_2017_NT_48",
         "NFIREID": 48,
         "POLY_HA": 40933.1140754,
         "SDATE": "2017-06-25",
@@ -4523,7 +4523,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_1551_2017": {
+    "CA_2017_BC_1551": {
         "ADJ_FLG": 0,
         "ADJ_HA": 9172.08438496,
         "AGENCY": "BC",
@@ -4536,7 +4536,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1551_2017",
+        "NAME": "CA_2017_BC_1551",
         "NFIREID": 1551,
         "POLY_HA": 9172.08438496,
         "SDATE": "2017-07-14",
@@ -4562,7 +4562,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_2038_2017": {
+    "CA_2017_BC_2038": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2283.259814,
         "AGENCY": "BC",
@@ -4575,7 +4575,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_2038_2017",
+        "NAME": "CA_2017_BC_2038",
         "NFIREID": 2038,
         "POLY_HA": 2283.259814,
         "SDATE": "2017-07-28",
@@ -4601,7 +4601,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_PCKO_1551_2017": {
+    "CA_2017_PCKO_1551": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7027.22210378,
         "AGENCY": "PC-KO",
@@ -4614,7 +4614,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCKO_1551_2017",
+        "NAME": "CA_2017_PCKO_1551",
         "NFIREID": 1551,
         "POLY_HA": 7027.22210378,
         "SDATE": "2017-07-14",
@@ -4640,7 +4640,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1851_2017": {
+    "CA_2017_BC_1851": {
         "ADJ_FLG": 0,
         "ADJ_HA": 23153.4853793,
         "AGENCY": "BC",
@@ -4653,7 +4653,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1851_2017",
+        "NAME": "CA_2017_BC_1851",
         "NFIREID": 1851,
         "POLY_HA": 23153.4853793,
         "SDATE": "2017-07-26",
@@ -4679,7 +4679,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1816_2017": {
+    "CA_2017_BC_1816": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3846.10676428,
         "AGENCY": "BC",
@@ -4692,7 +4692,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1816_2017",
+        "NAME": "CA_2017_BC_1816",
         "NFIREID": 1816,
         "POLY_HA": 3846.10676428,
         "SDATE": "2017-07-17",
@@ -4718,7 +4718,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_2013_2017": {
+    "CA_2017_BC_2013": {
         "ADJ_FLG": 0,
         "ADJ_HA": 8272.12526295,
         "AGENCY": "BC",
@@ -4731,7 +4731,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_2013_2017",
+        "NAME": "CA_2017_BC_2013",
         "NFIREID": 2013,
         "POLY_HA": 8272.12526295,
         "SDATE": "2017-08-22",
@@ -4757,7 +4757,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_NT_90_2017": {
+    "CA_2017_NT_90": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2337.71245879,
         "AFEDATE": "2017-08-27",
@@ -4772,7 +4772,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_90_2017",
+        "NAME": "CA_2017_NT_90",
         "NFIREID": 90,
         "POLY_HA": 2337.71245879,
         "SDATE": "2017-07-30",
@@ -4796,7 +4796,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_789_2017": {
+    "CA_2017_SK_789": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2585.60243635,
         "AFEDATE": "2017-09-20",
@@ -4806,12 +4806,12 @@
         "BT_GID": 811,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-27",
-        "COMMENTS": "17LA-DAKOTA[comments:Updated via LandSat LC08_L1TP_038020_20170927 (djones),source:hand-drawn,cause2:Lightning,capture_by:Wes Boehr]",
+        "COMMENTS": "17LA-DAKOTA[comments:Updated via LandSat LC08_L1TP_0380200927 (djones),source:hand-drawn,cause2:Lightning,capture_by:Wes Boehr]",
         "EDATE": "2017-08-28",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_789_2017",
+        "NAME": "CA_2017_SK_789",
         "NFIREID": 789,
         "POLY_HA": 2585.60243635,
         "SDATE": "2017-08-11",
@@ -4835,7 +4835,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_1146_2017": {
+    "CA_2017_BC_1146": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2203.82768333,
         "AGENCY": "BC",
@@ -4848,7 +4848,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1146_2017",
+        "NAME": "CA_2017_BC_1146",
         "NFIREID": 1146,
         "POLY_HA": 2203.82768333,
         "SDATE": "2017-07-14",
@@ -4874,7 +4874,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_PCGL_1376_2017": {
+    "CA_2017_PCGL_1376": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2635.22973247,
         "AGENCY": "PC-GL",
@@ -4887,7 +4887,7 @@
         "FIRECAUS": 0,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_PCGL_1376_2017",
+        "NAME": "CA_2017_PCGL_1376",
         "NFIREID": 1376,
         "POLY_HA": 2635.22973247,
         "SDATE": "2017-07-14",
@@ -4913,7 +4913,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_YT_46_2017": {
+    "CA_2017_YT_46": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5090.58986131,
         "AFEDATE": "2017-09-30",
@@ -4928,7 +4928,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_46_2017",
+        "NAME": "CA_2017_YT_46",
         "NFIREID": 46,
         "POLY_HA": 5090.58986131,
         "SDATE": "2017-07-14",
@@ -4952,7 +4952,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_45_2017": {
+    "CA_2017_YT_45": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4531.00115566,
         "AFEDATE": "2017-09-30",
@@ -4967,7 +4967,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_45_2017",
+        "NAME": "CA_2017_YT_45",
         "NFIREID": 45,
         "POLY_HA": 4531.00115566,
         "SDATE": "2017-07-08",
@@ -4991,7 +4991,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_44_2017": {
+    "CA_2017_YT_44": {
         "ADJ_FLG": 0,
         "ADJ_HA": 6902.29787501,
         "AFEDATE": "2017-09-30",
@@ -5006,7 +5006,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_44_2017",
+        "NAME": "CA_2017_YT_44",
         "NFIREID": 44,
         "POLY_HA": 6902.29787501,
         "SDATE": "2017-06-30",
@@ -5030,7 +5030,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_BC_1695_2017": {
+    "CA_2017_BC_1695": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2147.82694202,
         "AGENCY": "BC",
@@ -5043,7 +5043,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1695_2017",
+        "NAME": "CA_2017_BC_1695",
         "NFIREID": 1695,
         "POLY_HA": 2147.82694202,
         "SDATE": "2017-09-02",
@@ -5069,7 +5069,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1127_2017": {
+    "CA_2017_BC_1127": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4962.55872082,
         "AGENCY": "BC",
@@ -5082,7 +5082,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1127_2017",
+        "NAME": "CA_2017_BC_1127",
         "NFIREID": 1127,
         "POLY_HA": 4962.55872082,
         "SDATE": "2017-07-06",
@@ -5108,7 +5108,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1671_2017": {
+    "CA_2017_BC_1671": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3103.11771641,
         "AGENCY": "BC",
@@ -5121,7 +5121,7 @@
         "FIRECAUS": 4,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1671_2017",
+        "NAME": "CA_2017_BC_1671",
         "NFIREID": 1671,
         "POLY_HA": 3103.11771641,
         "SDATE": "2017-07-07",
@@ -5147,7 +5147,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_1194_2017": {
+    "CA_2017_BC_1194": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2683.49905028,
         "AGENCY": "BC",
@@ -5160,7 +5160,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_1194_2017",
+        "NAME": "CA_2017_BC_1194",
         "NFIREID": 1194,
         "POLY_HA": 2683.49905028,
         "SDATE": "2017-07-07",
@@ -5186,7 +5186,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_YT_55_2017": {
+    "CA_2017_YT_55": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2883.98038788,
         "AFEDATE": "2017-09-30",
@@ -5201,7 +5201,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_55_2017",
+        "NAME": "CA_2017_YT_55",
         "NFIREID": 55,
         "POLY_HA": 2883.98038788,
         "SDATE": "2017-07-08",
@@ -5225,7 +5225,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_40_2017": {
+    "CA_2017_YT_40": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2123.90884118,
         "AFEDATE": "2017-08-22",
@@ -5240,7 +5240,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_40_2017",
+        "NAME": "CA_2017_YT_40",
         "NFIREID": 40,
         "POLY_HA": 2123.90884118,
         "SDATE": "2017-07-08",
@@ -5264,7 +5264,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_43_2017": {
+    "CA_2017_YT_43": {
         "ADJ_FLG": 0,
         "ADJ_HA": 49223.5683482,
         "AFEDATE": "2017-09-30",
@@ -5279,7 +5279,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_43_2017",
+        "NAME": "CA_2017_YT_43",
         "NFIREID": 43,
         "POLY_HA": 49223.5683482,
         "SDATE": "2017-06-19",
@@ -5303,7 +5303,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_SK_805_2017": {
+    "CA_2017_SK_805": {
         "ADJ_FLG": 0,
         "ADJ_HA": 21394.5891195,
         "AFEDATE": "2017-09-20",
@@ -5313,12 +5313,12 @@
         "BT_GID": 960,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-16",
-        "COMMENTS": "17LA-LAKE2[comments:cloudy image LE07_L1TP_038020_20170916,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17LA-LAKE2[comments:cloudy image LE07_L1TP_0380200916,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-09-09",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_805_2017",
+        "NAME": "CA_2017_SK_805",
         "NFIREID": 805,
         "POLY_HA": 21394.5891195,
         "SDATE": "2017-07-21",
@@ -5342,7 +5342,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_794_2017": {
+    "CA_2017_SK_794": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2434.13736119,
         "AFEDATE": "2017-09-20",
@@ -5352,12 +5352,12 @@
         "BT_GID": 1043,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-16",
-        "COMMENTS": "17LA-GRAHAM2[comments:Updated via LandSat LE07_L1TP_038020_20170916 cloudy image (djones),source:hand drawn,cause2:Lightning,capture_by:Ira Elderkin]",
+        "COMMENTS": "17LA-GRAHAM2[comments:Updated via LandSat LE07_L1TP_0380200916 cloudy image (djones),source:hand drawn,cause2:Lightning,capture_by:Ira Elderkin]",
         "EDATE": "2017-09-09",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_794_2017",
+        "NAME": "CA_2017_SK_794",
         "NFIREID": 794,
         "POLY_HA": 2434.13736119,
         "SDATE": "2017-08-14",
@@ -5381,7 +5381,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_21_2017": {
+    "CA_2017_YT_21": {
         "ADJ_FLG": 0,
         "ADJ_HA": 38635.2675077,
         "AFEDATE": "2017-08-22",
@@ -5396,7 +5396,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_21_2017",
+        "NAME": "CA_2017_YT_21",
         "NFIREID": 21,
         "POLY_HA": 38635.2675077,
         "SDATE": "2017-07-08",
@@ -5420,7 +5420,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_15_2017": {
+    "CA_2017_YT_15": {
         "ADJ_FLG": 0,
         "ADJ_HA": 4200.5228469,
         "AFEDATE": "2017-08-22",
@@ -5435,7 +5435,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_15_2017",
+        "NAME": "CA_2017_YT_15",
         "NFIREID": 15,
         "POLY_HA": 4200.5228469,
         "SDATE": "2017-06-22",
@@ -5459,7 +5459,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_18_2017": {
+    "CA_2017_YT_18": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2701.4349272,
         "AFEDATE": "2017-08-22",
@@ -5474,7 +5474,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_18_2017",
+        "NAME": "CA_2017_YT_18",
         "NFIREID": 18,
         "POLY_HA": 2701.4349272,
         "SDATE": "2017-07-14",
@@ -5498,7 +5498,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_22_2017": {
+    "CA_2017_YT_22": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5958.39383333,
         "AFEDATE": "2017-08-22",
@@ -5513,7 +5513,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_22_2017",
+        "NAME": "CA_2017_YT_22",
         "NFIREID": 22,
         "POLY_HA": 5958.39383333,
         "SDATE": "2017-07-08",
@@ -5537,7 +5537,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_9_2017": {
+    "CA_2017_YT_9": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7043.29686379,
         "AFEDATE": "2017-08-22",
@@ -5552,7 +5552,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_9_2017",
+        "NAME": "CA_2017_YT_9",
         "NFIREID": 9,
         "POLY_HA": 7043.29686379,
         "SDATE": "2017-07-08",
@@ -5576,7 +5576,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_8_2017": {
+    "CA_2017_YT_8": {
         "ADJ_FLG": 0,
         "ADJ_HA": 23751.4189875,
         "AFEDATE": "2017-08-22",
@@ -5591,7 +5591,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_8_2017",
+        "NAME": "CA_2017_YT_8",
         "NFIREID": 8,
         "POLY_HA": 23751.4189875,
         "SDATE": "2017-07-08",
@@ -5615,7 +5615,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_YT_7_2017": {
+    "CA_2017_YT_7": {
         "ADJ_FLG": 0,
         "ADJ_HA": 18413.1473654,
         "AFEDATE": "2017-08-22",
@@ -5630,7 +5630,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_7_2017",
+        "NAME": "CA_2017_YT_7",
         "NFIREID": 7,
         "POLY_HA": 18413.1473654,
         "SDATE": "2017-06-25",
@@ -5654,7 +5654,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_YT_27_2017": {
+    "CA_2017_YT_27": {
         "ADJ_FLG": 0,
         "ADJ_HA": 73833.6091068,
         "AFEDATE": "2017-09-27",
@@ -5669,7 +5669,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_YT_27_2017",
+        "NAME": "CA_2017_YT_27",
         "NFIREID": 27,
         "POLY_HA": 73833.6091068,
         "SDATE": "2017-06-19",
@@ -5693,7 +5693,7 @@
         "BIOME_NUM": 11,
         "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands"
     },
-    "CA_SK_1082_2017": {
+    "CA_2017_SK_1082": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5939.19163611,
         "AFEDATE": "2017-09-24",
@@ -5708,7 +5708,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_1082_2017",
+        "NAME": "CA_2017_SK_1082",
         "NFIREID": 1082,
         "POLY_HA": 5939.19163611,
         "SDATE": "2017-08-04",
@@ -5732,7 +5732,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_1201_2017": {
+    "CA_2017_SK_1201": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5270.5609262,
         "AFEDATE": "2017-09-25",
@@ -5747,7 +5747,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_1201_2017",
+        "NAME": "CA_2017_SK_1201",
         "NFIREID": 1201,
         "POLY_HA": 5270.5609262,
         "SDATE": "2017-08-09",
@@ -5771,7 +5771,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_1033_2017": {
+    "CA_2017_SK_1033": {
         "ADJ_FLG": 0,
         "ADJ_HA": 46303.6462722,
         "AFEDATE": "2017-10-16",
@@ -5786,7 +5786,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_1033_2017",
+        "NAME": "CA_2017_SK_1033",
         "NFIREID": 1033,
         "POLY_HA": 46303.6462722,
         "SDATE": "2017-08-06",
@@ -5810,7 +5810,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_1058_2017": {
+    "CA_2017_SK_1058": {
         "ADJ_FLG": 0,
         "ADJ_HA": 114606.041203,
         "AFEDATE": "2017-10-16",
@@ -5825,7 +5825,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_1058_2017",
+        "NAME": "CA_2017_SK_1058",
         "NFIREID": 1058,
         "POLY_HA": 114606.041203,
         "SDATE": "2017-08-06",
@@ -5849,7 +5849,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_993_2017": {
+    "CA_2017_SK_993": {
         "ADJ_FLG": 0,
         "ADJ_HA": 17879.6961935,
         "AFEDATE": "2017-09-23",
@@ -5864,7 +5864,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_993_2017",
+        "NAME": "CA_2017_SK_993",
         "NFIREID": 993,
         "POLY_HA": 17879.6961935,
         "SDATE": "2017-08-11",
@@ -5888,7 +5888,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_904_2017": {
+    "CA_2017_MB_904": {
         "ADJ_FLG": 0,
         "ADJ_HA": 12143.3599155,
         "AFEDATE": "2017-10-01",
@@ -5903,7 +5903,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_MB_904_2017",
+        "NAME": "CA_2017_MB_904",
         "NFIREID": 904,
         "POLY_HA": 12143.3599155,
         "SDATE": "2017-08-06",
@@ -5927,7 +5927,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_880_2017": {
+    "CA_2017_SK_880": {
         "ADJ_FLG": 0,
         "ADJ_HA": 13086.6963078,
         "AFEDATE": "2017-09-23",
@@ -5937,12 +5937,12 @@
         "BT_GID": 801,
         "BURNCLAS": 4,
         "CAPDATE": "2017-10-03",
-        "COMMENTS": "17LA-FORD[comments:Updated via LandSat LC08_L1TP_037021_20171003 (djones),source:VIIRS,cause2:Lightning,capture_by:Wes Boehr]",
+        "COMMENTS": "17LA-FORD[comments:Updated via LandSat LC08_L1TP_0370211003 (djones),source:VIIRS,cause2:Lightning,capture_by:Wes Boehr]",
         "EDATE": "2017-09-09",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_880_2017",
+        "NAME": "CA_2017_SK_880",
         "NFIREID": 880,
         "POLY_HA": 13086.6963078,
         "SDATE": "2017-08-13",
@@ -5966,7 +5966,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_BC_796_2017": {
+    "CA_2017_BC_796": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2004.62261598,
         "AGENCY": "BC",
@@ -5979,7 +5979,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_796_2017",
+        "NAME": "CA_2017_BC_796",
         "NFIREID": 796,
         "POLY_HA": 2004.62261598,
         "SDATE": "2017-07-09",
@@ -6005,7 +6005,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_776_2017": {
+    "CA_2017_BC_776": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7626.00849447,
         "AGENCY": "BC",
@@ -6018,7 +6018,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_776_2017",
+        "NAME": "CA_2017_BC_776",
         "NFIREID": 776,
         "POLY_HA": 7626.00849447,
         "SDATE": "2017-07-07",
@@ -6044,7 +6044,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_798_2017": {
+    "CA_2017_BC_798": {
         "ADJ_FLG": 0,
         "ADJ_HA": 5330.49259797,
         "AGENCY": "BC",
@@ -6057,7 +6057,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_798_2017",
+        "NAME": "CA_2017_BC_798",
         "NFIREID": 798,
         "POLY_HA": 5330.49259797,
         "SDATE": "2017-07-07",
@@ -6083,7 +6083,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_BC_849_2017": {
+    "CA_2017_BC_849": {
         "ADJ_FLG": 0,
         "ADJ_HA": 17161.4547478,
         "AGENCY": "BC",
@@ -6096,7 +6096,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_BC_849_2017",
+        "NAME": "CA_2017_BC_849",
         "NFIREID": 849,
         "POLY_HA": 17161.4547478,
         "SDATE": "2017-03-16",
@@ -6122,7 +6122,7 @@
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
-    "CA_NT_250_2017": {
+    "CA_2017_NT_250": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2734.54977299,
         "AFEDATE": "2017-09-01",
@@ -6137,7 +6137,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_250_2017",
+        "NAME": "CA_2017_NT_250",
         "NFIREID": 250,
         "POLY_HA": 2734.54977299,
         "SDATE": "2017-08-09",
@@ -6161,7 +6161,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_246_2017": {
+    "CA_2017_NT_246": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2238.7056721,
         "AFEDATE": "2017-09-01",
@@ -6176,7 +6176,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_246_2017",
+        "NAME": "CA_2017_NT_246",
         "NFIREID": 246,
         "POLY_HA": 2238.7056721,
         "SDATE": "2017-08-05",
@@ -6200,7 +6200,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_176_2017": {
+    "CA_2017_NT_176": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2629.99128951,
         "AFEDATE": "2017-09-26",
@@ -6215,7 +6215,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_176_2017",
+        "NAME": "CA_2017_NT_176",
         "NFIREID": 176,
         "POLY_HA": 2629.99128951,
         "SDATE": "2017-07-24",
@@ -6239,7 +6239,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_235_2017": {
+    "CA_2017_NT_235": {
         "ADJ_FLG": 0,
         "ADJ_HA": 3525.60634053,
         "AFEDATE": "2017-08-31",
@@ -6254,7 +6254,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_235_2017",
+        "NAME": "CA_2017_NT_235",
         "NFIREID": 235,
         "POLY_HA": 3525.60634053,
         "SDATE": "2017-07-27",
@@ -6278,7 +6278,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_228_2017": {
+    "CA_2017_NT_228": {
         "ADJ_FLG": 0,
         "ADJ_HA": 89988.6619949,
         "AFEDATE": "2017-08-31",
@@ -6293,7 +6293,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_228_2017",
+        "NAME": "CA_2017_NT_228",
         "NFIREID": 228,
         "POLY_HA": 89988.6619949,
         "SDATE": "2017-07-15",
@@ -6317,7 +6317,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_211_2017": {
+    "CA_2017_NT_211": {
         "ADJ_FLG": 0,
         "ADJ_HA": 269583.553027,
         "AFEDATE": "2017-09-25",
@@ -6332,7 +6332,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_211_2017",
+        "NAME": "CA_2017_NT_211",
         "NFIREID": 211,
         "POLY_HA": 269583.553027,
         "SDATE": "2017-07-07",
@@ -6356,7 +6356,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_23_2017": {
+    "CA_2017_NT_23": {
         "ADJ_FLG": 0,
         "ADJ_HA": 7781.19584333,
         "AFEDATE": "2017-08-25",
@@ -6371,7 +6371,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_23_2017",
+        "NAME": "CA_2017_NT_23",
         "NFIREID": 23,
         "POLY_HA": 7781.19584333,
         "SDATE": "2017-08-01",
@@ -6395,7 +6395,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_17_2017": {
+    "CA_2017_NT_17": {
         "ADJ_FLG": 0,
         "ADJ_HA": 25598.885202,
         "AFEDATE": "2017-08-25",
@@ -6410,7 +6410,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 7,
         "FIREMAPS": 9,
-        "NAME": "CA_NT_17_2017",
+        "NAME": "CA_2017_NT_17",
         "NFIREID": 17,
         "POLY_HA": 25598.885202,
         "SDATE": "2017-07-30",
@@ -6434,7 +6434,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_SK_321_2017": {
+    "CA_2017_SK_321": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2262.55600917,
         "AFEDATE": "2017-08-20",
@@ -6444,12 +6444,12 @@
         "BT_GID": 1118,
         "BURNCLAS": 4,
         "CAPDATE": "2017-09-17",
-        "COMMENTS": "17SR-PEARSON[comments:LC08_L1TP_040018_20170917,source:LandSat,cause2:Lightning,capture_by:djones]",
+        "COMMENTS": "17SR-PEARSON[comments:LC08_L1TP_0400180917,source:LandSat,cause2:Lightning,capture_by:djones]",
         "EDATE": "2017-08-15",
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 9,
-        "NAME": "CA_SK_321_2017",
+        "NAME": "CA_2017_SK_321",
         "NFIREID": 321,
         "POLY_HA": 2262.55600917,
         "SDATE": "2017-07-27",
@@ -6473,7 +6473,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_NT_222_2017": {
+    "CA_2017_NT_222": {
         "ADJ_FLG": 0,
         "ADJ_HA": 22308.656232,
         "AFEDATE": "2017-08-31",
@@ -6488,7 +6488,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 10,
-        "NAME": "CA_NT_222_2017",
+        "NAME": "CA_2017_NT_222",
         "NFIREID": 222,
         "POLY_HA": 22308.656232,
         "SDATE": "2017-08-01",
@@ -6512,7 +6512,7 @@
         "BIOME_NUM": 6,
         "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
     },
-    "CA_MB_1440_2017": {
+    "CA_2017_MB_1440": {
         "ADJ_FLG": 0,
         "ADJ_HA": 2513.15018105,
         "AFEDATE": "2017-10-01",
@@ -6526,7 +6526,7 @@
         "FIRECAUS": 2,
         "FIREMAPM": 2,
         "FIREMAPS": 10,
-        "NAME": "CA_MB_1440_2017",
+        "NAME": "CA_2017_MB_1440",
         "NFIREID": 1440,
         "POLY_HA": 2513.15018105,
         "SDATE": "2017-08-18",

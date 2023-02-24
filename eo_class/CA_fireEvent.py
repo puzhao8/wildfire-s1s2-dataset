@@ -27,25 +27,23 @@ def save_fireEvents_to_json(EVENT_SET, save_url):
         json.dump(EVENT_SET, fp, ensure_ascii=False, indent=4)
 
 def set_property(feat):
-        return feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
-                .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
-                # .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
-                # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
+    return feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
+            .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
+            # .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
+            # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
 
 def get_local_crs_by_query_S2(roi):
-        # return ee.ImageCollection("COPERNICUS/S2")\
-        #             .filterDate("2020-05-01", "2021-01-01")\
-        #             .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
-        #             .select(0).projection().crs().getInfo()
-
-        return "EPSG:32610"
+    return ee.ImageCollection("COPERNICUS/S2")\
+                .filterDate("2020-05-01", "2021-01-01")\
+                .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
+                .select(0).projection().crs().getInfo()
 
 class FIREEVENT:
     def __init__(self, cfg):
         # super().__init__(cfg)
 
         self.cfg = cfg
-        self.cfg.saveName = f"POLY_{cfg.COUNTRY}_{cfg.YEAR}_events_gt2k"
+        self.cfg.saveName = f"POLY_{cfg.COUNTRY}_{cfg.YEAR}_events_test"
         self.save_url = f"./wildfire_events/{self.cfg.saveName}"
 
         ## Canada Wildfire Polygons 
@@ -55,6 +53,7 @@ class FIREEVENT:
         CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
         CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
         self.CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019)
+        # self.CA_BurnAreaPolys = CA_2019
 
         # CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
         # self.CA_BurnAreaPolys = CA_2019
@@ -90,12 +89,14 @@ class FIREEVENT:
         # bufferSize = 0
 
         self.EVENT_SET = edict()
-        polyFiltered = (self.CA_BurnAreaPolys
+        polyFilteredV0 = (self.CA_BurnAreaPolys
                             .filter(ee.Filter.eq("YEAR", self.cfg.YEAR))
                             .filter(ee.Filter.gt("ADJ_HA", self.cfg.ADJ_HA_TH))\
                             # .filter(ee.Filter.lte("ADJ_HA", self.cfg.ADJ_HA_TH))
-                            .map(set_property)
+                            # .map(set_property)
         )
+
+        polyFiltered = polyFilteredV0.map(set_property)
 
         # firename list
         nameList = polyFiltered.aggregate_array("NAME").getInfo()
@@ -105,30 +106,27 @@ class FIREEVENT:
 
         # for idx in range(0, 2): #polyFiltered.size().getInfo()):
         for name in nameList:
-            
-            poly = polyFiltered.filter(ee.Filter.eq("NAME", name)).first()
-            burned_area = poly.get("ADJ_HA").getInfo()
-            
-            # poly = ee.Feature(polyList.get(idx))
-            # polyMap = poly.style(color='white', fillColor='white', width=0) \
-            #         .select('vis-red').gt(0).rename('poly')
+            AGENCY = name.split("_")[0]
+            NFIREID = eval(name.split("_")[-1])
 
-
+            poly = polyFilteredV0.filter(ee.Filter.eq("NFIREID", NFIREID)).filter(ee.Filter.eq("AGENCY", AGENCY))#.first()
+            burned_area = max(poly.aggregate_array("ADJ_HA").getInfo())
+            
             # get bottom-left and top-right points
-            roi = poly.geometry().bounds()       
+            roi = poly.union(ee.ErrorMargin(100)).geometry().bounds()       
             crs = get_local_crs_by_query_S2(roi)
+            
             # crs = "EPSG:4326"
+            print(f"crs: {crs}")
 
             # rect = roi.coordinates().get(0).getInfo()
 
-            coordinates = ee.List(roi.coordinates().get(0)).serialize()
-            print(coordinates)
-
+            coordinates = roi.coordinates().get(0).getInfo()
             rect = [coordinates[0], coordinates[2]]
             print("rect: ", rect)
 
-            event = edict(poly.toDictionary().getInfo())
-            eventName = f"CA_{event.YEAR}_{event.NAME}".replace("-","")
+            event = edict(poly.first().toDictionary().getInfo())
+            eventName = f"CA_{event.YEAR}_{name}".replace("-","")
 
             print(f"{eventName}: {burned_area}")
             print(f"CRS: {crs}")

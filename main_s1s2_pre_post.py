@@ -21,12 +21,12 @@ json_dict = {
     'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
     'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json", # "minBurnArea": 2000
     'CA_2018': "./wildfire_events/POLY_CA_2018_events_gt2k.json",
-    'CA_2019': "./wildfire_events/POLY_CA_2019_events_test.json",
+    'CA_2019': "./wildfire_events/POLY_CA_2019_events_gt2k.json",
 }
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2019', # 'US,
+    'where': 'CA_2017', # 'US,
     'minBurnArea': 2000,
 
     # # AK
@@ -45,7 +45,7 @@ cfg['JSON'] = json_dict[cfg.where]
 Wildfire Event
 ################################################################# """ 
 from eo_class.fireEvent import load_json
-from gee.export import query_s1s2_and_export
+from gee.export import update_query_event, query_s1s2_and_export, query_modis_and_export
 
 
 print(cfg.JSON)
@@ -65,12 +65,14 @@ print("\n\n==========> wildfire-s1s2-dataset <=========")
 num = len(EVENT_SET_subset)
 print(f"total number of events to query: {num} \n")
 
-# LOOP HERE
-# event = EVENT_SET['al3107008672320170117']
-idx_stop = list(EVENT_SET_subset.keys()).index("CA_BC_1157_2017")
-print(f"idx_stop: {idx_stop}")
+# # LOOP HERE
+# # # event = EVENT_SET['al3107008672320170117']
+# idx_stop = list(EVENT_SET_subset.keys()).index("CA_2017_BC_990")
+# print(f"idx_stop: {idx_stop}")
+# for event_id in list(EVENT_SET_subset.keys())[idx_stop:idx_stop+1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
-for event_id in list(EVENT_SET_subset.keys())[idx_stop:] : #EVENT_SET_subset.keys(): #: # [idx_stop:] 
+
+for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
@@ -94,13 +96,21 @@ for event_id in list(EVENT_SET_subset.keys())[idx_stop:] : #EVENT_SET_subset.key
     if event['where'] in ['EU']:
         pass
 
-    print(f"-----------------> {event.name} <------------------ ")
-    query_s1s2_and_export(cfg, event, 
-            scale=20, 
-            BUCKET="wildfire-s1s2-dataset-ca-summer-2018",
-            export=['S2']
-            # export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']
-        )
+    # # added on Nov-24-2021
+    # if event.start_date is None: event['start_date'] = f"{event['YEAR']}-06-01"
+    # if event.end_date is None: event['end_date'] = f"{event['YEAR']}-09-01"
 
+    queryEvent = update_query_event(cfg, event)
+    dataset_folder = "wildfire-s1s2-dataset-ca-modis"
     
+    if ('end_date' in event.keys()):
+        print(f"-----------------> {event.name} <------------------ ")
 
+        # Sentinel-1, Sentinel-2
+        query_s1s2_and_export(queryEvent, 
+                scale=20, 
+                BUCKET="wildfire-dataset",
+                dataset_folder=dataset_folder,
+                export=['S2'],
+                # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
+            )

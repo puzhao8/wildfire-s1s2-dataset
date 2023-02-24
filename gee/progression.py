@@ -15,26 +15,17 @@ import numpy as np
 import json
 
 
-def get_pntFilter(roi):
-    ''' Point Filter '''
-    roi = roi.buffer(-2e3)
-    coordList = ee.List(roi.coordinates().get(0))
-    p0 = ee.Geometry.Point(coordList.get(0))  # Bottom-Left
-    p1 = ee.Geometry.Point(coordList.get(1))  # Bottom-Right
-    p2 = ee.Geometry.Point(coordList.get(2))  # Top-Right
-    p3 = ee.Geometry.Point(coordList.get(3))  # Top-Left
-    pntsFilter = ee.Filter.And(
-        ee.Filter.geometry(p0)
-        , ee.Filter.geometry(p1)
-        , ee.Filter.geometry(p2)
-#         , ee.Filter.geometry(p3)
-    )
-    return pntsFilter
-
-
 """ #################################################################
 Query S2 MSI Data 
 ################################################################# """ 
+
+def add_NBR(img):
+    NBR = img.normalizedDifference(['B12', 'B8']).select('nd').rename('NBR')
+    NBR1 = img.normalizedDifference(['B12', 'B11']).select('nd').rename('NBR1')
+    # return img.addBands(NBR).addBands(NBR1).copyProperties(img, img.propertyNames())
+    return img.addBands(NBR).addBands(NBR1).copyProperties(img, img.propertyNames())
+
+
 def updateCloudMaskS2(img): 
     qa = img.select('QA60')  # 
     cloudBitMask = 1 << 10
@@ -45,23 +36,22 @@ def updateCloudMaskS2(img):
 
 
 def rescale_s2(img): 
-    BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
-    # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
+    # BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
+    BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
     return (img.select(BANDS).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
                 .addBands(img.select('cloud'))
         ).copyProperties(img, img.propertyNames())
 
-def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False, pntsFilterFlag=False):
-
+def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False):
     period_start = queryEvent.period_start
     period_end = queryEvent.period_end
     roi = queryEvent.roi
 
     def add_ROI_Cloud_Rate(img):
         cloud = img.select('cloud').updateMask(img.select(0).mask())
-        cloud_pixels = cloud.eq(0).reduceRegion(ee.Reducer.sum(), roi, 60, bestEffort=True).get('cloud')
-        all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), roi, 60, bestEffort=True).get('cloud')
+        cloud_pixels = cloud.eq(0).reduceRegion(ee.Reducer.sum(), roi, 200).get('cloud')
+        all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), roi, 200).get('cloud')
         return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100)).copyProperties(img, img.propertyNames())
 
     S2_Dict = {
@@ -85,6 +75,7 @@ def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False, pntsFi
     )
 
     s2ImgCol_grouped = group_MSI_ImgCol(s2ImgCol)
+    if True: s2ImgCol_grouped = s2ImgCol_grouped.filter(queryEvent.pntsFilter)
 
     # mosaic s2 data acquired on the same day
     from gee.group_data import set_group_index_4_S2
@@ -95,12 +86,11 @@ def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False, pntsFi
             )
     
     if filter_by_cloud: s2_prgImgCol = s2_prgImgCol.filter(cloudFilter)
+  
+    pprint(s2_prgImgCol.aggregate_array("IMG_LABEL").getInfo())
+    print(f"s2_prgImgCol: {s2_prgImgCol.size().getInfo()}")
 
-    if pntsFilterFlag:
-        pntsFilter = get_pntFilter(roi)
-        s2_prgImgCol = s2_prgImgCol.filter(pntsFilter)
-
-    return s2_prgImgCol.select(queryEvent.S2_BANDS)
+    return s2_prgImgCol.map(add_NBR).select(queryEvent.S2_BANDS)
 
 """ #################################################################
 Query S1 SAR Data
@@ -142,14 +132,16 @@ def get_s1_progression(queryEvent):
         )
 
     s1ImgCol_grouped = group_S1_by_date_orbit(S1_flt)
+    if False: s1ImgCol_grouped = s1ImgCol_grouped.filter(queryEvent.pntsFilter)
+
     s1ImgCol = (s1ImgCol_grouped
                     .map(add_RFDI)
                     .map(set_group_index_4_S1)
             )
 
-    if 'orbNumList' in queryEvent.keys():
-        orbNumList = queryEvent['orbNumList']
-        s1ImgCol = s1ImgCol.filter(ee.Filter.inList(opt_leftField='relativeOrbitNumber_start', opt_rightValue=orbNumList))
+    if ('orbKeyList' in queryEvent.keys()) and (len(queryEvent.orbKeyList) > 0):
+        s1ImgCol = s1ImgCol.filter(ee.Filter.inList(opt_leftField='Orbit_Key', opt_rightValue=queryEvent.orbKeyList))
+
 
     return s1ImgCol.select(['ND', 'VH', 'VV'])
 
@@ -220,11 +212,6 @@ def get_mask_dict(queryEvent):
         from gee.active_fire_prg import get_daily_viirs_progression
         mask_dict['viirs'] = get_daily_viirs_progression(queryEvent.roi).select('prg').rename('BurnDate').unmask()
 
-    if eval(queryEvent.year) <= 2020:
-        from gee.active_fire_prg import get_archived_viirs_progression
-        mask_dict['viirs'] = get_archived_viirs_progression(queryEvent.roi, eval(queryEvent.year)).select('prg').rename('BurnDate').unmask()
-
-
     # Polygon
     if WHERE in ['AK', 'US']:
         print(WHERE)
@@ -245,12 +232,19 @@ def get_mask_dict(queryEvent):
         mask_dict['mtbs'] = mtbs.select('B0').rename('mtbs')
 
     if WHERE in ['CA']:
-        pass
+
+        poly = (ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/BC_2021_Kamloops")
+                    .filterBounds(queryEvent.roi)
+                    # .filter(ee.Filter.gte("gisacres", 5000)) # burned area
+                ).union(ee.ErrorMargin(30))
+        polyImg = poly.style(color='white', fillColor='white', width=0).select('vis-red').gt(0).rename('poly')
+        mask_dict['poly'] = polyImg.unmask()
 
     if WHERE in ['EU']:
         pass
 
-    return mask_dict
+    # return mask_dict
+    return {'poly': mask_dict['poly']}
 
 
 """ Export Progression """
@@ -271,10 +265,11 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
     # from gee.progression import get_s1_progression, get_s2_progression, get_mask_dict
 
     export_dict = edict({
-            'S2': get_s2_progression(queryEvent, cfg.roi_cloud_level, filter_by_cloud, cfg.pntsFilterFlag),
-            'S1': get_s1_progression(queryEvent),
-            # 'ALOS': get_alos_dict(queryEvent),
             'mask': get_mask_dict(queryEvent),
+            'S1': get_s1_progression(queryEvent),
+            'S2': get_s2_progression(queryEvent, cloud_level=roi_cloud_level, filter_by_cloud=filter_by_cloud),
+            # 'ALOS': get_alos_dict(queryEvent),
+            
             'AUZ': get_aux_dict()
         })
 

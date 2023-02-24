@@ -109,7 +109,7 @@ class MODIS_POLY:
   def computeCloudCoverInPoly(self, img, poly):
       cloudImg = ee.Image(img.select("QA60")).gte(1024)
       cloudAreaInPoly = self.compute_imgArea(cloudImg, poly)
-      cloudCoverInPoly = cloudAreaInPoly.divide(ee.Number(poly.get("area"))).multiply(100).round()
+      cloudCoverInPoly = cloudAreaInPoly.divide(ee.Number(polyFeat.get("area"))).multiply(100).round()
       return img.setMulti({'CLOUD_COVERAGE_INPOLY': self.cfg.cloudCoverageInPolyLevel})
 
   ###############################################/
@@ -184,8 +184,3 @@ class MODIS_POLY:
         'maxPixels': 86062013
       })
       return stats
-
-
-if __name__ == "__main__":
-
-  modis = MODIS_POLY()
