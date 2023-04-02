@@ -15,6 +15,13 @@ import yaml
 import numpy as np
 import json
 
+
+# save wildfire events to json
+def save_edict_to_json(event: edict, json_url: str) -> None:
+    ''' write a dictionary object into a json file specified by the second parameter '''
+    with open(json_url, 'w') as fp:
+        json.dump(edict(event), fp, ensure_ascii=False, indent=4)
+
 json_dict = {
     'AK': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
     'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
@@ -70,6 +77,8 @@ print(f"total number of events to query: {num} \n")
 # print(f"idx_stop: {idx_stop}")
 # for event_id in list(EVENT_SET_subset.keys())[idx_stop:]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
+ALL_EVENTS = edict()
+fp = open(f"/Users/puzhao/PyProjects/wildfire-s1s2-dataset/wildfire_events_final/Canada_Wildfires_2017to2019.json", 'w')
 for event_id in sorted(list(EVENT_SET_subset.keys())): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]
@@ -113,11 +122,21 @@ for event_id in sorted(list(EVENT_SET_subset.keys())): #list(EVENT_SET_subset.ke
         #     )
 
         # modis and mask: https://code.earthengine.google.com/13d3c13ebb7b6b1ffe3bb461b60d2b30 (check exported data)
-        query_modis_viirs_and_export(queryEvent, 
-                scale=250, 
-                BUCKET="wildfire-dataset", 
-                dataset_folder="wildfire-dataset-modis-s2-ak",
-                export_mask=True)
+        modis_cloud_free_date = query_modis_viirs_and_export(queryEvent, 
+                                    scale=250, 
+                                    BUCKET="wildfire-dataset", 
+                                    dataset_folder="wildfire-dataset-modis-s2-ak",
+                                    export_mask=False)
+
+        ''' export final roi '''
+        coordinates = ee.List(queryEvent.roi.coordinates().get(0))
+        event['roi'] = ee.List(coordinates.get(0)).cat(coordinates.get(2)).getInfo()
+        event['modis_cloud_free_date'] = modis_cloud_free_date.getInfo()
+        ALL_EVENTS.update({event.name: event})
 
     else:
         print(f"-----------------> {event.name}: end date is None <------------------ ")
+
+    # save_edict_to_json(NEW_EVENT_SET, f"/Users/puzhao/PyProjects/wildfire-s1s2-dataset/wildfire_events_final/{cfg.where}.json")
+
+json.dump(ALL_EVENTS, fp, ensure_ascii=False, indent=4)

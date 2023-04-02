@@ -81,6 +81,8 @@ class FIREEVENT:
             buffer_size = 1e4,
             min_burned_area = 2e3, # 2e4, burned areas
             modis_min_area = 1e2, # ignore small polygons for modis, 1e4
+            save_flag = True,
+            save_url = f"wildfire_events/fire_events_exported.json", 
             **kwargs
         ):
         
@@ -88,6 +90,8 @@ class FIREEVENT:
         self.min_burned_area = min_burned_area
         self.modis_min_area = modis_min_area
         self.buffer_size = buffer_size
+        self.save_url = save_url
+        self.save_flag = save_flag
         self.event_name = event_name
         self.event_year = event_year
         self.roi = roi
@@ -115,12 +119,10 @@ class FIREEVENT:
         biomeImg = ee.FeatureCollection(biomeRegions).reduceToImage(['BIOME_NUM'], ee.Reducer.first()).rename("BIOME_NUM")
         return biomeImg, eco_names
 
-    def query_modis_fireEvent_info(self, event=None, save_flag = True,
-            save_url = f"wildfire_events/fire_events_exported.json"):
+    def query_modis_fireEvent_info(self):
         """ query modis progression data to derive fireStartDate and fireEndDate. """
 
-        if event is not None: event = edict(event)
-        else: event = edict()
+        event = edict()
 
         # get bottom-left and top-right points
         roi = ee.Geometry.Rectangle(self.roi)
@@ -132,13 +134,13 @@ class FIREEVENT:
         coordinates = ee.List(roi.coordinates().get(0))
         rect = ee.List(coordinates.get(0)).cat(coordinates.get(2)).getInfo()
         
-        # print(f"event name: {event.name}")
+        print(f"event name: {self.event_name}")
         print(f"CRS: {crs}")
 
         biome_num, biome_name = self.get_biome(roi)
 
         event.update({
-            'country': self.country,
+            'name': self.event_name,
             'roi': rect,
             'year': self.event_year, # modified from self.cfg.year
             'crs': crs,
@@ -162,8 +164,7 @@ class FIREEVENT:
         # event.modisStartDate = modis.unionPoly.startDate 
         # event.modisEndDate = modis.unionPoly.endDate 
 
-        if save_flag: save_fireEvent_to_json(event, save_url)
-        return event
+        if self.save_flag: save_fireEvent_to_json(event, self.save_url)
 
 
 if __name__=="__main__":
@@ -173,9 +174,6 @@ if __name__=="__main__":
             event_name = 'BC2017C10784',
             event_year = 2017,
             roi = [-124.52783481782407, 52.26491528311718, -122.73599679662699, 53.35226349843808],
-            
-            save_flag = True,
-            save_url = f"wildfire_events/fire_events_exported.json", 
 
             min_burned_area = 2e3, # 2e4, burned areas
             modis_min_area = 1e2, # ignore small polygons for modis, 1e4
@@ -188,7 +186,9 @@ if __name__=="__main__":
         )
 
     fireEvent = FIREEVENT(**cfg)
-    fireEvent.query_modis_fireEvent_info()
+    fireEvent.query_modis_fireEvent_info(
+        save_flag = True,
+        save_url = f"wildfire_events/fire_events_exported.json", )
 
     # your_fire = fireEvent.event
     # pprint(your_fire)

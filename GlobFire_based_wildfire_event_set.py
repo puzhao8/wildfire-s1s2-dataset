@@ -30,17 +30,27 @@ def poly_to_event(poly: ee.Feature) -> dict:
             ...
         }
     '''
+
+    roi =  ee.Feature(poly).bounds().geometry().geometries()
+    coordinates = ee.List(roi.coordinates().get(0))
+
     event = edict(poly.toDictionary().getInfo())
-    roi =  ee.Feature(poly_list.get(0)).buffer(buffer_size).bounds().geometry()
+
     # event['crs'] = get_local_crs_by_query_S2(roi)
 
     # centroid coordinates
-    centroid = roi.centroid(ee.ErrorMargin(500)).coordinates()
-    longtitude = ee.Number(centroid.get(0)).multiply(1e3).round().int16()
-    latitude = ee.Number(centroid.get(1)).multiply(1e3).round().int16()
-    event['name'] = f"EU_{poly.get('year')}_ID_{poly.get('Id').getInfo()}_{longtitude.format().getInfo()}E_{latitude.format().getInfo()}N"
+    # centroid = ee.List(roi.centroid(ee.ErrorMargin(500)).coordinates())
+    centroid = ee.List(coordinates.get(0))
+    longtitude = ee.Number(centroid.get(0)).multiply(1e3).round().format().slice(0, -2)
+    latitude = ee.Number(centroid.get(1)).multiply(1e3).round().format().slice(0, -2)
+    event['name'] = ee.String('EU_').cat(ee.Number(poly.get('year')).format())\
+            .cat("_ID_").cat(ee.Number(poly.get('Id')).format())\
+                .cat('_').cat(longtitude).cat('E_').cat(latitude).cat('N')\
+                    .getInfo()
 
-    coordinates = ee.List(roi.coordinates().get(0))
+    # event['name'] = f"EU_{poly.get('Id').getInfo()}"
+    # event['name'] = f"EU_{poly.get('year').getInfo()}_ID_{poly.get('Id').getInfo()}_{longtitude.format().getInfo()}E_{latitude.format().getInfo()}N"
+
     event['roi'] = ee.List(coordinates.get(0)).cat(coordinates.get(2)).getInfo()
 
     event['start_date'] = ee.Date(poly.get('IDate')).format().slice(0, 10).getInfo()
@@ -71,8 +81,8 @@ if __name__ == "__main__":
     # query region
     region = ee.FeatureCollection(EU)
     firePolys = (GWIS.filterBounds(region)
-                    .filter(ee.Filter.gt("IDate", ee.Date("2017").millis()))
-                    .filter(ee.Filter.lte("FDate", ee.Date("2018").millis()))
+                    .filter(ee.Filter.gte("IDate", ee.Date("2017").millis()))
+                    .filter(ee.Filter.lt("IDate", ee.Date("2018").millis()))
                     .map(add_property)
                     .filter(ee.Filter.gt("area_ha", 2000))
                     #   .merge(SWE)
@@ -80,27 +90,25 @@ if __name__ == "__main__":
                 
     poly_num = firePolys.size()
     poly_list = firePolys.toList(poly_num)
-
-
-    buffer_size = 1e3 # expand wildfire roi
+    print(f"Total numnber of fire events: {poly_num.getInfo()}")
 
     EVENT_SET = {}
-    for idx in range(10, 11):
+    for idx in range(0, 2):
 
         poly = ee.Feature(poly_list.get(idx))
         event = poly_to_event(poly)
         event.update({
-            'modis_min_area': 1e2, # ignore small polygons for modis, 1e4
-            'bufferSize': 1e4,
-            })
+            'buffer_size': int(1e4),
+        })
+
         print(f'event name: {event.name}')
 
-        fireEvent = FIREEVENT(event)
-        fireEvent()
+        # update roi, add crs, BIOME_NUM, BIOME_NAME etc.
+        fireEvent = FIREEVENT(**event)
+        event = fireEvent.query_modis_fireEvent_info(event=event, save_flag=False, save_url=f"wildfire_events/GlobFire_EU_exported.json")
 
-        # EVENT_SET.update({event.name: event})
-
-    # save_fireEvent_to_json(EVENT_SET, "wildfire_events/EU_test.json")
+        EVENT_SET.update({event.name: event})
+        save_fireEvent_to_json(EVENT_SET, "wildfire_events/GlobFire_EU_events.json")
 
 
 

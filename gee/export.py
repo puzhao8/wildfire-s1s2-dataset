@@ -141,7 +141,7 @@ def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", da
         return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100))
 
     modis = ee.ImageCollection("MODIS/061/MOD09GA") # Terra (MOD) vs. Aqua (MYD)
-    filtered_modis = (modis.filterDate(event.end_date, ee.Date(event.end_date).advance(30, 'day'))
+    filtered_modis = (modis.filterDate(event.end_date, ee.Date(event.end_date).advance(90, 'day'))
                         .map(maskClouds)
                         .map(add_ROI_Cloud_Rate)
                         .filter(ee.Filter.lte("ROI_CLOUD_RATE", 10))
@@ -179,14 +179,15 @@ def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", da
 
     ''' Export '''
     saveName = f"{event.name}"
-    export_image_to_CloudStorage(
-        image=img_modis.select(['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b07']).rename(['Red', 'NIR', 'SWIR']).int16(), 
-        aoi=event.roi, 
-        dst_url=f"{dataset_folder}/{'modis'}/{'post'}/{saveName}", 
-        scale=scale, 
-        crs=event.crs, 
-        BUCKET=BUCKET
-    )
+    if False:
+        export_image_to_CloudStorage(
+            image=img_modis.select(['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b07']).rename(['Red', 'NIR', 'SWIR']).int16(), 
+            aoi=event.roi, 
+            dst_url=f"{dataset_folder}/{'modis'}/{'post'}/{saveName}", 
+            scale=scale, 
+            crs=event.crs, 
+            BUCKET=BUCKET
+        )
 
     if export_mask:
         export_image_to_CloudStorage(
@@ -240,6 +241,8 @@ def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", da
                 crs=event.crs, 
                 BUCKET=BUCKET
             )
+
+    return img_modis.date().format().slice(0, 10)
 
 
 # Modis Cloud Masking example.

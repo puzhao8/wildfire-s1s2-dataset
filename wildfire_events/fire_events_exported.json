@@ -1,0 +1,18 @@
+{
+    "name": "BC2017C10784",
+    "roi": [
+        -124.67859625080014,
+        52.17493349077426,
+        -122.58523536365091,
+        53.445610669320544
+    ],
+    "year": 2017,
+    "crs": "EPSG:32610",
+    "BIOME_NUM": 5,
+    "BIOME_NAME": "Mangroves",
+    "modis_min_area": 100.0,
+    "julian_start": 91,
+    "julian_end": 270,
+    "modisStartDate": "2017-04-01",
+    "modisEndDate": "2017-09-27"
+}
