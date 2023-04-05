@@ -65,7 +65,7 @@ class MODIS_POLY:
                             .map(self.setBurnDate) 
                             .sort('area', False))
 
-      self.polyNum = self.polyCol.size()
+      self.polyNum = self.polyCol.size().getInfo()
     
 
   def __call__(self):
@@ -103,7 +103,7 @@ class MODIS_POLY:
 
 
   def func_dissolve(self, feat):
-      return feat.dissolve(maxError=200, proj=self.cfg.crs)
+      return feat.dissolve(maxError=10, proj=self.cfg.crs)
 
   # compute the cloud-coverage in polygon
   def computeCloudCoverInPoly(self, img, poly):
@@ -184,7 +184,3 @@ class MODIS_POLY:
         'maxPixels': 86062013
       })
       return stats
-
-
-
-
