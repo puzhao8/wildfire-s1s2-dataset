@@ -51,8 +51,11 @@ class FIREEVENT:
 
         CA_2017 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919")
         CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
-        CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
-        self.CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019)
+        CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")
+        CA_2020 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2020_r9_20210810")
+        CA_2021 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2021_r9_20220624")
+
+        self.CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019).merge(CA_2020).merge(CA_2021)
         # self.CA_BurnAreaPolys = CA_2019
 
         # CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
