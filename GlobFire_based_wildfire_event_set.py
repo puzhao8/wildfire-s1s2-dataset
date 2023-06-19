@@ -20,7 +20,7 @@ def add_property(poly):
     area_ha = poly.geometry().area(ee.ErrorMargin(100)).multiply(1e-4).round()
     return poly.set("year", year).set('area_ha', area_ha)
 
-def poly_to_event(poly: ee.Feature) -> dict:
+def poly_to_event(poly: ee.Feature, buffer_size: int=2e3) -> dict:
     ''' convert single polygon into an event dictionary
         return {
             'name': 'ID_xxxxxx_-1739E_23890N',
@@ -31,7 +31,7 @@ def poly_to_event(poly: ee.Feature) -> dict:
         }
     '''
 
-    roi =  ee.Feature(poly).bounds().geometry().geometries()
+    roi =  ee.Feature(poly).buffer(buffer_size).bounds().geometry()
     coordinates = ee.List(roi.coordinates().get(0))
 
     event = edict(poly.toDictionary().getInfo())
@@ -89,26 +89,29 @@ if __name__ == "__main__":
                 )
                 
     poly_num = firePolys.size()
-    poly_list = firePolys.toList(poly_num)
+    poly_list = ee.List(firePolys.toList(poly_num))
     print(f"Total numnber of fire events: {poly_num.getInfo()}")
 
     EVENT_SET = {}
-    for idx in range(0, 2):
+    for idx in range(0, 10):
 
-        poly = ee.Feature(poly_list.get(idx))
-        event = poly_to_event(poly)
-        event.update({
-            'buffer_size': int(1e4),
-        })
+        poly = ee.Feature(poly_list.get(idx)) # get(idx)
+        print(poly.get('area_ha').getInfo())
 
-        print(f'event name: {event.name}')
+        if(poly.get('area_ha').getInfo() < 1e10): # remove anamoly polygon by area_ha property
+            event = poly_to_event(poly=poly, buffer_size=2e3)
+            event.update({
+                    'buffer_size': int(2e3)
+                })
 
-        # update roi, add crs, BIOME_NUM, BIOME_NAME etc.
-        fireEvent = FIREEVENT(**event)
-        event = fireEvent.query_modis_fireEvent_info(event=event, save_flag=False, save_url=f"wildfire_events/GlobFire_EU_exported.json")
+            print(f'event name: {event.name}')
 
-        EVENT_SET.update({event.name: event})
-        save_fireEvent_to_json(EVENT_SET, "wildfire_events/GlobFire_EU_events.json")
+            # update roi, add crs, BIOME_NUM, BIOME_NAME etc.
+            fireEvent = FIREEVENT(**event)
+            event = fireEvent.query_modis_fireEvent_info(event=event, save_flag=True, save_url=f"wildfire_events/GlobFire_EU_exported.json")
+
+            EVENT_SET.update({event.name: event})
+            save_fireEvent_to_json(EVENT_SET, "wildfire_events/GlobFire_EU_events.json")
 
 
 

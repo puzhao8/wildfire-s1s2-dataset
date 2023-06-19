@@ -26,15 +26,28 @@ def get_pntsFilter(roi, buffer_size=0):
     return pntsFilter
 
 cfg = edict({
-    "roi_cloud_level": 30,
+    "roi_cloud_level": 30, # cloud percentage range from 0 - 100, 0 for cloud-free
     "filter_by_cloud": True,
     # "S2_BANDS": ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'],
-    "S2_BANDS": ['NBR1'],
+    "S2_BANDS": ['B4', 'B8', 'B12'], # Red, NIR, SWIR2
+    # "S2_BANDS": ['NBR1'],
     "extend_months": 0, # 1
 })
 
 # Wildfire Event
 EVENT_SET = edict({
+
+    'CA2023XXXXX': {
+        "name": "CA2023XXXXX",
+        "roi": [-121.7697, 50.6512, -120.7068, 51.5224],
+        "year": 2023,
+        'crs': "EPSG:32610",
+
+        "modisStartDate": "2023-06-01",
+        "modisEndDate": "2023-12-31",
+
+        "where": 'non-known'
+    },
 
     'CA2017Elephant': {
         "name": "CA2017Elephant",
@@ -149,8 +162,8 @@ for name in ['CA_2021_Kamloops']: # list(EVENT_SET.keys())[:1]:
     query_progression_and_export(
         cfg, 
         event, 
-        scale=20, 
-        BUCKET="wildfire-prg-dataset-v1", 
-        export_sat=['mask'],
+        scale=20, # spatial resolution
+        BUCKET="wildfire-prg-dataset-v1", # GCP
+        export_sat=['S2', 'S1'],
         # export_sat=['S1', 'S2', 'mask', 'AUZ']
     )

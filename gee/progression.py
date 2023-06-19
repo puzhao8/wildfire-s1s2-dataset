@@ -36,8 +36,9 @@ def updateCloudMaskS2(img):
 
 
 def rescale_s2(img): 
+    BANDS = ['B4', 'B8', 'B12'] # 6 bands
     # BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
-    BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
+    # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
     return (img.select(BANDS).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
                 .addBands(img.select('cloud'))
