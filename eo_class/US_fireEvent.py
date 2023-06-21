@@ -27,10 +27,14 @@ def save_fireEvents_to_json(EVENT_SET, save_url):
         json.dump(EVENT_SET, fp, ensure_ascii=False, indent=4)
 
 def set_property(feat):
-    return feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
-            .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
-            # .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
-            # .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
+    YEAR = ee.String(feat.get('Event_ID')).slice(-8,-4).getInfo()
+    return feat.set("NAME", ee.String(f"US_{YEAR}_").cat(feat.get('Event_ID')))
+        # # Canada
+        # feat.set("NAME", ee.String(feat.get("AGENCY")).cat("_")\
+        #     .cat(ee.Number(feat.get("NFIREID")).toInt().format()))
+        #     .set("polyStartDate", ee.Date(feat.get("SDATE")).format().slice(0, 10))\
+        #     .set('polyEndDate', ee.Date(feat.get("EDATE")).format().slice(0, 10))
+
 
 def get_local_crs_by_query_S2(roi):
     return ee.ImageCollection("COPERNICUS/S2")\
@@ -43,23 +47,12 @@ class FIREEVENT:
         # super().__init__(cfg)
 
         self.cfg = cfg
-        self.cfg.saveName = f"POLY_{cfg.COUNTRY}_{cfg.YEAR}_events"
+        self.cfg.saveName = f"MTBS_{cfg.COUNTRY}_{cfg.YEAR}_events"
         self.save_url = f"./wildfire_events/{self.cfg.saveName}"
 
-        ## Canada Wildfire Polygons 
-        # BC_FirePerimeter = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/BC_Historical_Fire_Polygon_before2020").map(setYear)     
+        # MTBS 
+        self.BurnAreaPolys = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/MTBS_Perimeter_1984_2021")
 
-        CA_2017 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919")
-        CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
-        CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")
-        CA_2020 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2020_r9_20210810")
-        CA_2021 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2021_r9_20220624")
-
-        self.CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019).merge(CA_2020).merge(CA_2021)
-        # self.CA_BurnAreaPolys = CA_2019
-
-        # CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
-        # self.CA_BurnAreaPolys = CA_2019
 
     def __call__(self):
         self.query_biome_climate_zone()
@@ -92,63 +85,50 @@ class FIREEVENT:
         # bufferSize = 0
 
         self.EVENT_SET = edict()
-        polyFilteredV0 = (self.CA_BurnAreaPolys
-                            .filter(ee.Filter.eq("YEAR", self.cfg.YEAR))
-                            .filter(ee.Filter.gt("ADJ_HA", self.cfg.ADJ_HA_TH))\
+        year_filter = ee.Filter.And(ee.Filter.gte("Ig_Date", ee.Date(f"{self.cfg.YEAR}-01-01").millis()),
+                                    ee.Filter.lte("Ig_Date", ee.Date(f"{self.cfg.YEAR}-12-31").millis()))
+        polyFiltered = (self.BurnAreaPolys
+                            .filter(year_filter)
+                            .filter(ee.Filter.gt("BurnBndAc", self.cfg.ADJ_HA_TH * 2.471))\
                             # .filter(ee.Filter.lte("ADJ_HA", self.cfg.ADJ_HA_TH))
                             # .map(set_property)
         )
 
-        polyFiltered = polyFilteredV0.map(set_property)
+        # polyFiltered = polyFilteredV0.map(set_property)
 
         # firename list
-        nameList = polyFiltered.aggregate_array("NAME").getInfo()
+        nameList = polyFiltered.aggregate_array("Event_ID").getInfo()
 
         print("\n\n---------------------> logs <---------------------")
         print(f"There are {polyFiltered.size().getInfo()} wildfire events (>{int(self.cfg.ADJ_HA_TH)} ha) in {self.cfg.YEAR}.")
 
         # for idx in range(0, 2): #polyFiltered.size().getInfo()):
-        for name in nameList:
-            AGENCY = name.split("_")[0]
-            NFIREID = eval(name.split("_")[-1])
-
-            poly = polyFilteredV0.filter(ee.Filter.eq("NFIREID", NFIREID)).filter(ee.Filter.eq("AGENCY", AGENCY))#.first()
-            burned_area = max(poly.aggregate_array("ADJ_HA").getInfo())
+        for event_id in nameList:
+            year = event_id[-8:-4]
+            poly = polyFiltered.filter(ee.Filter.eq("Event_ID", event_id))
             
             # get bottom-left and top-right points
             roi = poly.union(ee.ErrorMargin(100)).geometry().bounds()       
             crs = get_local_crs_by_query_S2(roi)
-            
-            # crs = "EPSG:4326"
-            print(f"crs: {crs}")
-
-            # rect = roi.coordinates().get(0).getInfo()
 
             coordinates = roi.coordinates().get(0).getInfo()
             rect = [coordinates[0], coordinates[2]]
             print("rect: ", rect)
 
             event = edict(poly.first().toDictionary().getInfo())
-            eventName = f"CA_{event.YEAR}_{name}".replace("-","")
+            eventName = f"US_{year}_{event_id}"
 
-            print(f"{eventName}: {burned_area}")
+            print(f"{eventName}")
             print(f"CRS: {crs}")
 
             event.update({
                 'NAME': eventName,
                 'roi': rect,
-                'year': event.YEAR,
+                'year': int(year),
                 'crs': crs,
                 'modis_min_area': self.cfg.modis_min_area,
             })
 
-            # convert property (in number) into Date
-            for property in ["AFSDATE", "AFEDATE", "SDATE", "EDATE", "CAPDATE"]:
-                value = poly.get(property).getInfo()
-                if value is not None:
-                    event[property] = ee.Date(poly.get(property)).format().slice(0,10).getInfo() 
-                else:
-                    event[property] = None
 
             # Obtain Burn Period from MODIS Burned Area Products
             modis = MODIS_POLY(event)
@@ -216,7 +196,7 @@ class FIREEVENT:
         # bufferSize = 0
 
         self.EVENT_SET = edict()
-        polyFiltered = (self.CA_BurnAreaPolys
+        polyFiltered = (self.BurnAreaPolys
                             .filter(ee.Filter.eq("YEAR", self.cfg.YEAR))
                             .filter(ee.Filter.gt("ADJ_HA", self.cfg.ADJ_HA_TH))\
                             # .filter(ee.Filter.lte("ADJ_HA", self.cfg.ADJ_HA_TH))

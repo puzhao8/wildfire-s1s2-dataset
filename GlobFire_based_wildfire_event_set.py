@@ -20,7 +20,7 @@ def add_property(poly):
     area_ha = poly.geometry().area(ee.ErrorMargin(100)).multiply(1e-4).round()
     return poly.set("year", year).set('area_ha', area_ha)
 
-def poly_to_event(poly: ee.Feature, buffer_size: int=2e3) -> dict:
+def poly_to_event(poly: ee.Feature, buffer_size: int=2e3, region: str='EU') -> dict:
     ''' convert single polygon into an event dictionary
         return {
             'name': 'ID_xxxxxx_-1739E_23890N',
@@ -43,7 +43,7 @@ def poly_to_event(poly: ee.Feature, buffer_size: int=2e3) -> dict:
     centroid = ee.List(coordinates.get(0))
     longtitude = ee.Number(centroid.get(0)).multiply(1e3).round().format().slice(0, -2)
     latitude = ee.Number(centroid.get(1)).multiply(1e3).round().format().slice(0, -2)
-    event['name'] = ee.String('EU_').cat(ee.Number(poly.get('year')).format())\
+    event['name'] = ee.String(f'{region}_').cat(ee.Number(poly.get('year')).format())\
             .cat("_ID_").cat(ee.Number(poly.get('Id')).format())\
                 .cat('_').cat(longtitude).cat('E_').cat(latitude).cat('N')\
                     .getInfo()
@@ -74,55 +74,59 @@ if __name__ == "__main__":
             [[[-14.516530068259499, 71.20061603508908],
             [-14.516530068259499, 34.04930741835553],
             [51.7530011817405, 34.04930741835553],
-            [51.7530011817405, 71.20061603508908]]])
+            [51.7530011817405, 71.20061603508908]]], None, False)
+    
+    # Russia
+    RU = ee.Geometry.Polygon(
+        [[[67.50924333961639, 77.9174373628489],
+          [67.50924333961639, 51.51399986909121],
+          [190.20455583961643, 51.51399986909121],
+          [190.20455583961643, 77.9174373628489]]], None, False)
+
+    REGION = {'EU': EU, 'RU': RU}
+
+    def create_wildfire_events_based_on_GlobFire(region:str='EU', year:int=2017, export_flag:bool=True):
+        # query region
+        firePolys = (GWIS.filterBounds(REGION[region])
+                        .filter(ee.Filter.gte("IDate", ee.Date(str(year)).millis()))
+                        .filter(ee.Filter.lt("IDate", ee.Date(str(year+1)).millis()))
+                        .map(add_property)
+                        .filter(ee.Filter.gt("area_ha", 2000))
+                        #   .merge(SWE)
+                    )
+                    
+        poly_num = firePolys.size()
+        poly_list = ee.List(firePolys.toList(poly_num))
+        print(f"Total number of fire events in {year}: {poly_num.getInfo()}")
+
+        if export_flag:
+            EVENT_SET = {}
+            for idx in range(1, poly_num.getInfo()):
+                print(f"------------------ idx: {idx} ----------------------")
+
+                poly = ee.Feature(poly_list.get(idx)) # get(idx)
+                area = float(poly.get('area_ha').getInfo())
+                if(area < 1e10): # remove anamoly polygon by area_ha property
+                    event = poly_to_event(poly=poly, buffer_size=2e3, region=region)
+                    event.update({
+                            'buffer_size': int(2e3)
+                        })
+
+                    print(f'event: {event.name}')
+                    print(f'area: {area}')
+
+                    # update roi, add crs, BIOME_NUM, BIOME_NAME etc.
+                    fireEvent = FIREEVENT(country=region, **event)
+                    event = fireEvent.query_modis_fireEvent_info(event=event, save_flag=True, save_url=f"wildfire_events/GlobFire_EU_exported.json")
+
+                    EVENT_SET.update({event.name: event})
+                    save_fireEvent_to_json(EVENT_SET, f"wildfire_events/GlobFire_{region}_{year}_events.json")
+
+                else:
+                    print("Too large polygon !!!", poly.get('area_ha').getInfo())
 
 
     ''' configuration '''
-    # query region
-    region = ee.FeatureCollection(EU)
-    firePolys = (GWIS.filterBounds(region)
-                    .filter(ee.Filter.gte("IDate", ee.Date("2017").millis()))
-                    .filter(ee.Filter.lt("IDate", ee.Date("2018").millis()))
-                    .map(add_property)
-                    .filter(ee.Filter.gt("area_ha", 2000))
-                    #   .merge(SWE)
-                )
-                
-    poly_num = firePolys.size()
-    poly_list = ee.List(firePolys.toList(poly_num))
-    print(f"Total numnber of fire events: {poly_num.getInfo()}")
-
-    EVENT_SET = {}
-    for idx in range(0, 10):
-
-        poly = ee.Feature(poly_list.get(idx)) # get(idx)
-        print(poly.get('area_ha').getInfo())
-
-        if(poly.get('area_ha').getInfo() < 1e10): # remove anamoly polygon by area_ha property
-            event = poly_to_event(poly=poly, buffer_size=2e3)
-            event.update({
-                    'buffer_size': int(2e3)
-                })
-
-            print(f'event name: {event.name}')
-
-            # update roi, add crs, BIOME_NUM, BIOME_NAME etc.
-            fireEvent = FIREEVENT(**event)
-            event = fireEvent.query_modis_fireEvent_info(event=event, save_flag=True, save_url=f"wildfire_events/GlobFire_EU_exported.json")
-
-            EVENT_SET.update({event.name: event})
-            save_fireEvent_to_json(EVENT_SET, "wildfire_events/GlobFire_EU_events.json")
-
-
-
-
-
-    ''' display '''
-    # # Map.addLayer(MGRS, {}, 'MGRS')
-    # Map.centerObject(region, 3)
-    # Map.addLayer(firePolys, {}, 'firePolys', false)
-    # Map.addLayer(firePolys.style({color: 'red', fillColor: "#ff000000"}), {}, 'fire')
-    # Map.addLayer(ee.FeatureCollection([firePolys.first()]), {}, 'firePolys-first')
-
-    # Map.addLayer(country_bounds_map, {}, 'country_bounds_map', false)
-    # Map.addLayer(region.style({color:'purple', fillColor:'#ff000000', width:1}), {}, 'country')
+    for region in ['RU', 'EU']:
+        for year in range(2017, 2022):
+            create_wildfire_events_based_on_GlobFire(region, year, True)
