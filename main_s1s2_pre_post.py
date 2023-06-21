@@ -17,16 +17,24 @@ import numpy as np
 import json
 
 json_dict = {
+    # United States
     'AK': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
     'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
+
+    # Canada 2017-2021
     'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json", # "minBurnArea": 2000
     'CA_2018': "./wildfire_events/POLY_CA_2018_events_gt2k.json",
     'CA_2019': "./wildfire_events/POLY_CA_2019_events_gt2k.json",
+    'CA_2020': "./wildfire_events_final/Canada_Wildfires_2020.json",
+    'CA_2021': "./wildfire_events_final/Canada_Wildfires_2021.json"
+
+    # GlobFire
+
 }
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2017', # 'US,
+    'where': 'CA_2021', # 'US,
     'minBurnArea': 2000,
 
     # # AK
@@ -71,7 +79,7 @@ print(f"total number of events to query: {num} \n")
 # print(f"idx_stop: {idx_stop}")
 # for event_id in list(EVENT_SET_subset.keys())[idx_stop:idx_stop+1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
-
+''' Loop over each wildfire event '''
 for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]
@@ -101,7 +109,7 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
     # if event.end_date is None: event['end_date'] = f"{event['YEAR']}-09-01"
 
     queryEvent = update_query_event(cfg, event)
-    dataset_folder = "wildfire-s1s2-dataset-ca-modis"
+    dataset_folder = "wildfire-s1s2-dataset-ca-2021"
     
     if ('end_date' in event.keys()):
         print(f"-----------------> {event.name} <------------------ ")
@@ -111,6 +119,6 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
                 scale=20, 
                 BUCKET="wildfire-dataset",
                 dataset_folder=dataset_folder,
-                export=['S2'],
-                # export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
+                # export=['S2'],
+                export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
             )
