@@ -1,0 +1,26 @@
+{
+    "Event_ID_21028813": {
+        "FDate": 1504828800000,
+        "IDate": 1504051200000,
+        "Id": 21028813,
+        "area_ha": 9059,
+        "year": 2017,
+        "roi": [
+            71.1859937984188,
+            52.368171231107674,
+            71.55067934035772,
+            52.536093868987344
+        ],
+        "name": "Event_ID_21028813",
+        "buffer_size": 2000,
+        "country": "RU",
+        "crs": "EPSG:32642",
+        "BIOME_NUM": 8,
+        "BIOME_NAME": "Tropical & Subtropical Coniferous Forests",
+        "modis_min_area": 100.0,
+        "julian_start": 99,
+        "julian_end": 251,
+        "modisStartDate": "2017-04-09",
+        "modisEndDate": "2017-09-08"
+    }
+}

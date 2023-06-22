@@ -9,6 +9,8 @@ from eo_class.fireEvent import get_local_crs_by_query_S2, FIREEVENT
 import ee
 ee.Initialize()
 
+import time
+
 def add_property(poly):
     ''' add specific properties including 
         'year': 2022,
@@ -107,26 +109,42 @@ if __name__ == "__main__":
                 poly = ee.Feature(poly_list.get(idx)) # get(idx)
                 area = float(poly.get('area_ha').getInfo())
                 if(area < 1e10): # remove anamoly polygon by area_ha property
-                    event = poly_to_event(poly=poly, buffer_size=2e3, region=region)
+                    # event = poly_to_event(poly=poly, buffer_size=2e3, region=region)
+
+                    time_start = time.time()
+
+                    roi =  ee.Feature(poly).buffer(2e3).bounds().geometry()
+                    coordinates = ee.List(roi.coordinates().get(0))
+
+                    print("Elapsed time before toDict: {:.2f} seconds".format(time.time() - time_start))
+                    event = edict(poly.toDictionary().getInfo())
+                    print("Elapsed time after toDict: {:.2f} seconds".format(time.time() - time_start))
+
+                    event['roi'] = ee.List(coordinates.get(0)).cat(coordinates.get(2)).getInfo()
+                    print("Elapsed time after roi: {:.2f} seconds".format(time.time() - time_start))
+
                     event.update({
+                            'name': ee.String('Event_ID_').cat(ee.Number(poly.get('Id')).format()).getInfo(),
                             'buffer_size': int(2e3)
                         })
 
                     print(f'event: {event.name}')
                     print(f'area: {area}')
 
+                    print("Elapsed time: {:.2f} seconds".format(time.time() - time_start))
+
                     # update roi, add crs, BIOME_NUM, BIOME_NAME etc.
                     fireEvent = FIREEVENT(country=region, **event)
                     event = fireEvent.query_modis_fireEvent_info(event=event, save_flag=True, save_url=f"wildfire_events/GlobFire_EU_exported.json")
 
                     EVENT_SET.update({event.name: event})
-                    save_fireEvent_to_json(EVENT_SET, f"wildfire_events/GlobFire_{region}_{year}_events.json")
+                    save_fireEvent_to_json(EVENT_SET, f"wildfire_events/GlobFire_{region}_{year}_events_TEST.json")
 
                 else:
                     print("Too large polygon !!!", poly.get('area_ha').getInfo())
 
 
     ''' configuration '''
-    for region in ['RU', 'EU']:
+    for region in ['RU']:
         for year in range(2017, 2022):
             create_wildfire_events_based_on_GlobFire(region, year, True)
