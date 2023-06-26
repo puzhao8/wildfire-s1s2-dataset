@@ -5,7 +5,12 @@
 conda env create -f environment.yaml
 ```
 
-## export multi-source data, such as Sentinel-1/2 or ALOS PALSAR
+## prepare event database into json (skip this if ready)
+``` shell
+python main_4_gen_[CA]_fireEvent_json.py
+```
+
+## export multi-source data, such as Sentinel-1/2 or others
 ``` shell
 python main_s1s2_pre_post.py
 ```
@@ -15,10 +20,7 @@ python main_s1s2_pre_post.py
 python main_s1s2_modis_viirs_export.py
 ```
 
-## prepare event database into json
-``` shell
-python main_4_gen_[CA]_fireEvent_json.py
-```
+
 
 # wildfire-s1s2-dataset
 - **data: SAR and MSI Data**

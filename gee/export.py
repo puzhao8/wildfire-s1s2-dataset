@@ -89,6 +89,15 @@ def update_query_event(cfg, event):
 
 """ Query and Export """
 def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca', export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+    """
+        queryEvent: the event info used to query data
+        scale: the spatial resolution in meters, 20 as default
+        BUCKET: Google Cloud Storage (GCS) Bucket, make sure it is available in your GCS
+        dataset_folder: unique folder name for a specific task 
+        export: a list including all data sources to export, S2, S1, and ALOS denote Sentinel-2, Sentinel-1, and ALOS PARSAR respectively. mask denotes the reference masks rasterized from official fire perimiters, or MODIS/VIIRS Montly Burned Area products, while AUZ denotes some auxiliary data, such as land cover, DEM/DSM or climate zone etc.
+    """
+        
+        
     """ Event to Query """
 
     """ Query Data: S1, S2, & ALOS """
