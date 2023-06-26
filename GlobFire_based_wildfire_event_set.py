@@ -70,6 +70,7 @@ if __name__ == "__main__":
     country = country_bounds.filter(ee.Filter.stringContains("ADM0_NAME", 'Spain')).union(ee.ErrorMargin(500))
     # print("country_flt", country.limit(10))
 
+    # https://code.earthengine.google.com/a080090843ce709afe661170d503fe2c
     EU = ee.Geometry.Polygon(
             [[[-14.516530068259499, 71.20061603508908],
             [-14.516530068259499, 34.04930741835553],
@@ -82,8 +83,13 @@ if __name__ == "__main__":
           [67.50924333961639, 51.51399986909121],
           [190.20455583961643, 51.51399986909121],
           [190.20455583961643, 77.9174373628489]]], None, False)
+    
 
-    REGION = {'EU': EU, 'RU': RU}
+    AU = ee.Geometry.Rectangle([
+        111.3338994563071,-39.63862931935165,
+        155.9823369563071,-10.659448888822409], None, False)
+    
+    REGION = {'EU': EU, 'RU': RU, 'AU': AU}
 
     def create_wildfire_events_based_on_GlobFire(region:str='EU', year:int=2017, export_flag:bool=True):
         # query region
@@ -97,7 +103,7 @@ if __name__ == "__main__":
                     
         poly_num = firePolys.size()
         poly_list = ee.List(firePolys.toList(poly_num))
-        print(f"Total number of fire events in {year}: {poly_num.getInfo()}")
+        print(f"Total number of fire events in {year} across {region}: {poly_num.getInfo()}")
 
         if export_flag:
             EVENT_SET = {}
@@ -127,6 +133,9 @@ if __name__ == "__main__":
 
 
     ''' configuration '''
-    for region in ['RU', 'EU']:
-        for year in range(2017, 2022):
-            create_wildfire_events_based_on_GlobFire(region, year, True)
+    # for region in ['RU', 'EU']:
+    #     for year in range(2017, 2022):
+    #         create_wildfire_events_based_on_GlobFire(region, year, False)
+
+    for year in range(2017, 2022):
+        create_wildfire_events_based_on_GlobFire(region='EU', year=year, export_flag=False)

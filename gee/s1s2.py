@@ -99,7 +99,7 @@ def get_s2_dict(queryEvent, cloud_level=5):
     # s2_dict['cloud'] = None
 
     # rescale to [0, 1]
-    # s2_dict['pre'] = rescale_s2(s2_dict['pre'])
+    s2_dict['pre'] = rescale_s2(s2_dict['pre'])
     s2_dict['post'] = rescale_s2(s2_dict['post'])
 
     return s2_dict
