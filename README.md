@@ -1,20 +1,21 @@
 "# wildfire-s1s2-dataset" 
-# create python evnironment
+# Tutoiral
+## create python evnironment
 ``` shell
 conda env create -f environment.yaml
 ```
 
-# export multi-source data, such as Sentinel-1/2 and ALOS
+## export multi-source data, such as Sentinel-1/2 or ALOS PALSAR
 ``` shell
 python main_s1s2_pre_post.py
 ```
 
-# export modis/viirs data
+## export modis/viirs data
 ``` shell
 python main_s1s2_modis_viirs_export.py
 ```
 
-# prepare event database into json
+## prepare event database into json
 ``` shell
 python main_4_gen_[CA]_fireEvent_json.py
 ```
