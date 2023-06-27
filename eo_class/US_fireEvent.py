@@ -17,7 +17,7 @@ import os
 os.environ["PYDEVD_WARN_EVALUATION_TIMEOUT"] = "1e5"
 os.environ["PYDEVD_THREAD_DUMP_ON_WARN_EVALUATION_TIMEOUT"] = "True"
 
-
+from eo_class.modisPoly import get_first_cloud_free_modis
 
 def save_fireEvents_to_json(EVENT_SET, save_url):
     ## """ Save Dict to YAML and READ """
@@ -51,7 +51,8 @@ class FIREEVENT:
         self.save_url = f"./wildfire_events/{self.cfg.saveName}"
 
         # MTBS 
-        self.BurnAreaPolys = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/MTBS_Perimeter_1984_2021")
+        # self.BurnAreaPolys = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/MTBS_Perimeter_1984_2021")
+        self.BurnAreaPolys = ee.FeatureCollection("USFS/GTAC/MTBS/burned_area_boundaries/v1")
 
 
     def __call__(self):
@@ -139,6 +140,13 @@ class FIREEVENT:
             # Use MODIS BurnDate to correct fireStartDate and fireEndDate
             event.modisStartDate = modis.unionPoly.startDate 
             event.modisEndDate = modis.unionPoly.endDate 
+
+            # add the date when the first cloud-free modis image was acquried after fire
+            temp_date = event.Post_ID[-8:]
+            landsat_post_date = f"{temp_date[-8:-4]}-{temp_date[-4:-2]}-{temp_date[-2:]}"
+            end_date = event['modisEndDate'] or landsat_post_date or ee.Date(event.YEAR).advance(9, 'month')
+            modis_cloud_free_date = get_first_cloud_free_modis(roi, end_date)
+            event.modis_cloud_free_date = modis_cloud_free_date
 
             # Get BIOME info. 
             event.BIOME_NUM = self.get_biome(roi)

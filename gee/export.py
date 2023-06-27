@@ -53,7 +53,7 @@ def update_query_event(cfg, event):
     # pprint(queryEvent)
 
     # pprint(queryEvent.roi)
-    if event['where'] in ['AK', 'US']:
+    if ('US' in cfg['where']) or ('AK' in cfg['where']):
         burned_area = queryEvent['BurnBndAc'] * 0.4047 # to ha
     
     if 'CA' in event['where']:
@@ -108,9 +108,9 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
     export_dict = edict({
         'S2': get_s2_dict(queryEvent, cloud_level=10),
         'S1': get_s1_dict(queryEvent),
-        # 'ALOS': get_alos_dict(queryEvent),
-        # 'mask': get_mask_dict(queryEvent),
-        # 'AUZ': get_aux_dict()
+        'ALOS': get_alos_dict(queryEvent),
+        'mask': get_mask_dict(queryEvent),
+        'AUZ': get_aux_dict()
     })
     
     export_dict = {key: export_dict[key] for key in export}
@@ -121,8 +121,8 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
 
     saveName = f"{queryEvent.name}"
     for sat in export_dict.keys():
-        # for stage in export_dict[sat].keys():
-        for stage in ['post']:
+        for stage in export_dict[sat].keys():
+        # for stage in ['post', 'pre']:
             dst_url = f"{dataset_folder}/{sat}/{stage}/{saveName}"
 
             if 'S1' == sat:
@@ -185,7 +185,7 @@ def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", da
 
     else:
         print("scale can only be 250m or 500m!")
-        
+
 
     ''' Export '''
     saveName = f"{event.name}"

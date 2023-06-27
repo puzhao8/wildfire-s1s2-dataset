@@ -66,14 +66,14 @@ def get_s2_dict(queryEvent, cloud_level=5):
         period_end.advance(1, "year").format().getInfo())
 
     s2_dict = edict()
-    # s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
-    #                     .map(updateCloudMaskS2)
-    #                     .map(add_ROI_Cloud_Rate)
-    #                     .filter(cloudFilter)
-    #                     .median()
-    #                     # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
+    s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+                        .map(updateCloudMaskS2)
+                        .map(add_ROI_Cloud_Rate)
+                        .filter(cloudFilter)
+                        .median()
+                        # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
 
-    #                 )
+                    )
     
 
     if queryEvent.end_date is not None:
@@ -271,23 +271,27 @@ def get_mask_dict(queryEvent):
     # mask_dict['water'] = water
 
     # Polygon
-    if WHERE in ['AK', 'US']:
+    if WHERE in ['AK', 'US', 'US_2020', 'US_2021']:
         print(WHERE)
 
-        # USA
-        US_bef_2018 = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/US_HIST_FIRE_PERIMTRS_2000_2018_DD83")
-        US_2019 = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/US_HIST_FIRE_PERIM_2019_dd83")
-        poly = (US_bef_2018.filterBounds(queryEvent.roi).filter(ee.Filter.gte("fireyear", 2017))
-                    .merge(US_2019.filterBounds(queryEvent.roi))
-                    # .filter(ee.Filter.gte("gisacres", 5000)) # burned area
-                ).union(ee.ErrorMargin(30))
+        # # USA
+        # US_bef_2018 = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/US_HIST_FIRE_PERIMTRS_2000_2018_DD83")
+        # US_2019 = ee.FeatureCollection("users/omegazhangpzh/C_US_Fire_Perimeters/US_HIST_FIRE_PERIM_2019_dd83")
+        
+        # MTBS Burned Area Boundary
+        poly = (ee.FeatureCollection("USFS/GTAC/MTBS/burned_area_boundaries/v1")
+                    .filterBounds(queryEvent.roi)
+                    .union(ee.ErrorMargin(30)))
+        
         polyImg = poly.style(color='white', fillColor='white', width=0).select('vis-red').gt(0).rename('poly')
         mask_dict['poly'] = polyImg.unmask()
                     
-        # USA MTBS
-        WHERE = "CONUS" if WHERE == "US" else "AK"
-        mtbs = ee.Image.loadGeoTIFF(f"gs://sar4wildfire/US_BurnSeverityRaster/mtbs_{WHERE}_{queryEvent.year}.tif")
-        mask_dict['mtbs'] = mtbs.select('B0').rename('mtbs')
+        # USA MTBS Burn Severity
+        mtbs = ee.ImageCollection("USFS/GTAC/MTBS/annual_burn_severity_mosaics/v1")
+        mtbs_ak = mtbs.filter(ee.Filter.eq("system:index", f"mtbs_AK_{queryEvent.year}")).first()
+        mtbs_us = mtbs.filter(ee.Filter.eq("system:index", f"mtbs_CONUS_{queryEvent.year}")).first()
+        mtbs_yearly = ee.ImageCollection([mtbs_ak, mtbs_us]).mosaic()
+        mask_dict['mtbs'] = mtbs_yearly.select('Severity').rename('mtbs')
     
 
     if 'CA' in WHERE:
@@ -295,7 +299,9 @@ def get_mask_dict(queryEvent):
         CA_2017 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919")
         CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
         CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
-        CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019)
+        CA_2020 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2020_r9_20210810")
+        CA_2021 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2021_r9_20220624")
+        CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019).merge(CA_2020).merge(CA_2021)
 
         poly = (CA_BurnAreaPolys.filterBounds(queryEvent.roi)
                         .filter(ee.Filter.gte("year", queryEvent.year))
@@ -305,6 +311,9 @@ def get_mask_dict(queryEvent):
 
 
     if WHERE in ['EU']:
+        #TODO: add reference data for EU Wildfire events
         pass
 
-    return mask_dict
+    # return mask_dict 
+    # return {'poly': mask_dict['poly']} # update poly mask only
+    return {'mtbs': mask_dict['mtbs']} # update poly mask only

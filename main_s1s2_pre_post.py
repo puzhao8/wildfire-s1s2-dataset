@@ -37,13 +37,14 @@ json_dict = {
 """ CFG """
 cfg = edict({
     # make changes here
-    'where': 'CA_2021', # region and year
-    'dataset_folder': "wildfire-s1s2-dataset-ca-2021", # folder in GCS bucket
+    'where': 'US_2020', # region and year
+    'dataset_folder': "wildfire-s1s2-dataset-us-2020", # folder in GCS bucket
     
     # setting for export
     'BUCKET': "wildfire-dataset", # GCS bucket
     'scale': 20, # spatial resolution
     'export': ['S2', 'S1', 'ALOS', 'mask', 'AUZ'], # export list
+    # 'export': ['mask'], # export list
 
     'minBurnArea': 2000, # minimum burned areas being take as an event
 
@@ -63,7 +64,7 @@ cfg['JSON'] = json_dict[cfg.where]
 Wildfire Event
 ################################################################# """ 
 from eo_class.fireEvent import load_json
-from gee.export import update_query_event, query_s1s2_and_export, query_modis_and_export
+from gee.export import update_query_event, query_s1s2_and_export
 
 
 print(cfg.JSON)
@@ -71,11 +72,11 @@ EVENT_SET = load_json(cfg.JSON)
 
 EVENT_SET_subset = edict()
 for event_id in EVENT_SET.keys():
-    if cfg['where'] in ['AK', 'US']:
+    if ('US' in cfg['where']) or ('AK' in cfg['where']):
         if EVENT_SET[event_id]["BurnBndAc"] >= cfg.minBurnArea:
             EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
-    if cfg['where'] in ['CA_2017', 'CA_2018', 'CA_2019']:
+    if 'CA' in cfg['where']:
         if EVENT_SET[event_id]["ADJ_HA"] >= cfg.minBurnArea:
             EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
@@ -95,13 +96,13 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
 
-    if event['where'] in ['AK', 'US']:
+    if ('US' in cfg['where']) or ('AK' in cfg['where']):
         event['start_date'] = event['Ig_Date']
         event['end_date'] = event['modisEndDate']
         event['year'] = ee.Number(event['YEAR']).format().getInfo()
         # pprint(event)
 
-    if event['where'] in ['CA_2017', 'CA_2018', 'CA_2019']:
+    if 'CA' in event['where']:
         event['start_date'] = event['modisStartDate'] or event["AFSDATE"] or event['SDATE']
         event['end_date'] = event['modisEndDate'] or event["AFEDATE"] or event['EDATE']
         event['year'] = ee.Number(event['YEAR']).format().getInfo()

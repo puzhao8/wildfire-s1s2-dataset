@@ -22,7 +22,7 @@
         "dNBR_offst": 17,
         "dNBR_stdDv": 12,
         "irwinID": "0C819135-97BB-466B-B35E-8A2F4EA759DF",
-        "NAME": "US_2021_MN4771209630220210329",
+        "name": "US_2021_MN4771209630220210329",
         "roi": [
             [
                 -96.36281920452579,
@@ -33,11 +33,12 @@
                 47.76060640991658
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-17",
         "modisEndDate": "2021-04-28",
+        "modis_cloud_free_date": "2021-04-28",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -64,7 +65,7 @@
         "dNBR_offst": 13,
         "dNBR_stdDv": 18,
         "irwinID": "8D63C296-C2B6-4B1D-81F0-6BECDDEA54EE",
-        "NAME": "US_2021_WY4452010599620210726",
+        "name": "US_2021_WY4452010599620210726",
         "roi": [
             [
                 -106.06289342575634,
@@ -75,11 +76,12 @@
                 44.57909138390215
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-27",
         "modisEndDate": "2021-08-03",
+        "modis_cloud_free_date": "2021-08-04",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -106,7 +108,7 @@
         "dNBR_offst": -6,
         "dNBR_stdDv": 7,
         "irwinID": "47659E60-326D-48A4-AA71-9BD0D4087EBF",
-        "NAME": "US_2021_ID4253711500720210703",
+        "name": "US_2021_ID4253711500720210703",
         "roi": [
             [
                 -115.03414545107553,
@@ -117,11 +119,12 @@
                 42.56623083368663
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-03",
         "modisEndDate": "2021-07-07",
+        "modis_cloud_free_date": "2021-07-07",
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -148,7 +151,7 @@
         "dNBR_offst": -7,
         "dNBR_stdDv": 13,
         "irwinID": "236951C4-0149-4523-AE60-6AF68FD053D9",
-        "NAME": "US_2021_WA4637511716520210707",
+        "name": "US_2021_WA4637511716520210707",
         "roi": [
             [
                 -117.25054613371307,
@@ -159,11 +162,12 @@
                 46.386222298558614
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-07",
         "modisEndDate": "2021-07-08",
+        "modis_cloud_free_date": "2021-07-09",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -190,7 +194,7 @@
         "dNBR_offst": 7,
         "dNBR_stdDv": 9,
         "irwinID": "9A8D731C-DC94-420E-A000-F0CABD4D754C",
-        "NAME": "US_2021_SD4557910276520210329",
+        "name": "US_2021_SD4557910276520210329",
         "roi": [
             [
                 -102.7712162704675,
@@ -201,11 +205,12 @@
                 45.58361983305428
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-31",
         "modisEndDate": "2021-04-01",
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -232,7 +237,7 @@
         "dNBR_offst": 32,
         "dNBR_stdDv": 14,
         "irwinID": "72161559-DB04-4930-A80C-D576230FA0E9",
-        "NAME": "US_2021_ND4600310234320210114",
+        "name": "US_2021_ND4600310234320210114",
         "roi": [
             [
                 -102.34605882837894,
@@ -243,11 +248,12 @@
                 46.00310531215686
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -274,7 +280,7 @@
         "dNBR_offst": -20,
         "dNBR_stdDv": 21,
         "irwinID": "A82F08F3-174E-49E9-8055-78B316B02DB6",
-        "NAME": "US_2021_MN4797709558220210501",
+        "name": "US_2021_MN4797709558220210501",
         "roi": [
             [
                 -95.5894817264618,
@@ -285,11 +291,12 @@
                 47.976609790518026
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-26",
         "modisEndDate": "2021-05-09",
+        "modis_cloud_free_date": "2021-05-09",
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -316,7 +323,7 @@
         "dNBR_offst": 8,
         "dNBR_stdDv": 29,
         "irwinID": "29AF1E94-C4C1-4BA6-9D2C-BFD34C446418",
-        "NAME": "US_2021_MT4714310953420211004",
+        "name": "US_2021_MT4714310953420211004",
         "roi": [
             [
                 -109.5846825307894,
@@ -327,11 +334,12 @@
                 47.22775281600453
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-10-02",
         "modisEndDate": "2021-10-26",
+        "modis_cloud_free_date": "2021-11-01",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -358,7 +366,7 @@
         "dNBR_offst": 1,
         "dNBR_stdDv": 26,
         "irwinID": "3502EB16-012C-42FA-9531-B87897EEB494",
-        "NAME": "US_2021_ID4558511544420210705",
+        "name": "US_2021_ID4558511544420210705",
         "roi": [
             [
                 -115.4996578343836,
@@ -369,11 +377,12 @@
                 45.65338687615941
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-04",
         "modisEndDate": "2021-08-29",
+        "modis_cloud_free_date": "2021-08-29",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -400,7 +409,7 @@
         "dNBR_offst": 2,
         "dNBR_stdDv": 28,
         "irwinID": "D7B2E306-9501-4C37-AFA0-47CEC0204326",
-        "NAME": "US_2021_ID4645911452820210707",
+        "name": "US_2021_ID4645911452820210707",
         "roi": [
             [
                 -114.57092959291947,
@@ -411,11 +420,12 @@
                 46.525609397425285
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-01",
         "modisEndDate": "2021-08-10",
+        "modis_cloud_free_date": "2021-08-11",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -442,7 +452,7 @@
         "dNBR_offst": -2,
         "dNBR_stdDv": 24,
         "irwinID": "49473CF0-CD1E-4231-9570-64D35E48D66F",
-        "NAME": "US_2021_ID4663811466720210707",
+        "name": "US_2021_ID4663811466720210707",
         "roi": [
             [
                 -114.68947479366177,
@@ -453,11 +463,12 @@
                 46.67877503698916
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-09",
         "modisEndDate": "2021-08-01",
+        "modis_cloud_free_date": "2021-08-07",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -484,7 +495,7 @@
         "dNBR_offst": -4,
         "dNBR_stdDv": 22,
         "irwinID": "F0B1A5C5-29E6-4A9C-A683-FC7239BA18F4",
-        "NAME": "US_2021_ID4583711495820210717",
+        "name": "US_2021_ID4583711495820210717",
         "roi": [
             [
                 -115.02093313918573,
@@ -495,11 +506,12 @@
                 45.891832831169516
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-28",
         "modisEndDate": "2021-09-26",
+        "modis_cloud_free_date": "2021-09-27",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -526,7 +538,7 @@
         "dNBR_offst": 8,
         "dNBR_stdDv": 19,
         "irwinID": "07C75421-ED46-4D0C-90A7-9B89F6C80A9B",
-        "NAME": "US_2021_MT4568311385420210708",
+        "name": "US_2021_MT4568311385420210708",
         "roi": [
             [
                 -113.90771411427968,
@@ -537,11 +549,12 @@
                 45.70685154608031
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-06",
         "modisEndDate": "2021-09-19",
+        "modis_cloud_free_date": "2021-09-21",
         "BIOME_NUM": 5.000000000000009,
         "BIOME_NAME": "Mangroves"
     },
@@ -568,7 +581,7 @@
         "dNBR_offst": 15,
         "dNBR_stdDv": 28,
         "irwinID": "63FFB3A1-2BC3-4E08-9C97-B17F9A05F22B",
-        "NAME": "US_2021_ID4498311499320210717",
+        "name": "US_2021_ID4498311499320210717",
         "roi": [
             [
                 -115.06190782689471,
@@ -579,11 +592,12 @@
                 45.00065477743446
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-17",
         "modisEndDate": "2021-09-22",
+        "modis_cloud_free_date": "2021-09-22",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -610,7 +624,7 @@
         "dNBR_offst": 34,
         "dNBR_stdDv": 42,
         "irwinID": "52FEA762-2640-471F-B625-373D8B3C830D",
-        "NAME": "US_2021_ID4518311442120210708",
+        "name": "US_2021_ID4518311442120210708",
         "roi": [
             [
                 -114.51565899165978,
@@ -621,11 +635,12 @@
                 45.22597316738316
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-07",
         "modisEndDate": "2021-08-30",
+        "modis_cloud_free_date": "2021-08-30",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -652,7 +667,7 @@
         "dNBR_offst": 24,
         "dNBR_stdDv": 28,
         "irwinID": "9FF7CCAB-238B-49E8-A3FB-698DBD8E74A6",
-        "NAME": "US_2021_ID4453211532920210810",
+        "name": "US_2021_ID4453211532920210810",
         "roi": [
             [
                 -115.41291049540091,
@@ -663,11 +678,12 @@
                 44.74488522892722
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-06",
         "modisEndDate": "2021-10-04",
+        "modis_cloud_free_date": "2021-10-04",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -694,7 +710,7 @@
         "dNBR_offst": 12,
         "dNBR_stdDv": 27,
         "irwinID": "DCA36704-8A2D-4153-823F-B9BDC762CB1E",
-        "NAME": "US_2021_ID4762711608320210708",
+        "name": "US_2021_ID4762711608320210708",
         "roi": [
             [
                 -116.09297682818689,
@@ -705,11 +721,12 @@
                 47.656419568876345
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-08",
         "modisEndDate": "2021-09-05",
+        "modis_cloud_free_date": "2021-09-06",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -736,7 +753,7 @@
         "dNBR_offst": -30,
         "dNBR_stdDv": 45,
         "irwinID": "087636DC-25DC-4309-A1F4-5A3B9A5141DF",
-        "NAME": "US_2021_WA4879111827120210805",
+        "name": "US_2021_WA4879111827120210805",
         "roi": [
             [
                 -118.32442695177032,
@@ -747,11 +764,12 @@
                 48.821957226810355
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-07",
         "modisEndDate": "2021-09-02",
+        "modis_cloud_free_date": "2021-09-02",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -778,7 +796,7 @@
         "dNBR_offst": 4,
         "dNBR_stdDv": 43,
         "irwinID": "BE99D67C-9EF1-4674-91E9-8F97B77EAFCC",
-        "NAME": "US_2021_WA4828511853120210713",
+        "name": "US_2021_WA4828511853120210713",
         "roi": [
             [
                 -118.59001988290102,
@@ -789,11 +807,12 @@
                 48.468961414989394
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-13",
         "modisEndDate": "2021-09-18",
+        "modis_cloud_free_date": "2021-09-21",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -820,7 +839,7 @@
         "dNBR_offst": -21,
         "dNBR_stdDv": 38,
         "irwinID": "C217EF79-0FC4-4694-8DFC-F0CF67A2CF47",
-        "NAME": "US_2021_WA4822911901720210713",
+        "name": "US_2021_WA4822911901720210713",
         "roi": [
             [
                 -118.98097160424882,
@@ -831,11 +850,12 @@
                 48.2354694871592
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-12",
         "modisEndDate": "2021-07-20",
+        "modis_cloud_free_date": "2021-07-20",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -862,7 +882,7 @@
         "dNBR_offst": -21,
         "dNBR_stdDv": 29,
         "irwinID": "46E71AE7-7787-48B3-B584-9D63F43FA071",
-        "NAME": "US_2021_WA4856812048820210708",
+        "name": "US_2021_WA4856812048820210708",
         "roi": [
             [
                 -120.60301419118571,
@@ -873,11 +893,12 @@
                 48.60184262917673
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-10",
         "modisEndDate": "2021-08-17",
+        "modis_cloud_free_date": "2021-08-18",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -904,7 +925,7 @@
         "dNBR_offst": -17,
         "dNBR_stdDv": 42,
         "irwinID": "A0A9789D-7AC2-4784-8AD3-B348CF5E64DD",
-        "NAME": "US_2021_WA4855212019420210716",
+        "name": "US_2021_WA4855212019420210716",
         "roi": [
             [
                 -120.30859313628719,
@@ -915,11 +936,12 @@
                 48.79336103409144
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-17",
         "modisEndDate": "2021-08-25",
+        "modis_cloud_free_date": "2021-08-25",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -946,7 +968,7 @@
         "dNBR_offst": 7,
         "dNBR_stdDv": 29,
         "irwinID": "4952EF9D-9038-4292-AE95-4994DA495618",
-        "NAME": "US_2021_WA4876511978720210804",
+        "name": "US_2021_WA4876511978720210804",
         "roi": [
             [
                 -119.81138553983014,
@@ -957,11 +979,12 @@
                 48.79042249700657
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-01",
         "modisEndDate": "2021-08-27",
+        "modis_cloud_free_date": "2021-08-28",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -988,7 +1011,7 @@
         "dNBR_offst": 1,
         "dNBR_stdDv": 40,
         "irwinID": "ECFEA2C6-E734-40F6-9D8B-6B7A3196353B",
-        "NAME": "US_2021_WA4877811903420210803",
+        "name": "US_2021_WA4877811903420210803",
         "roi": [
             [
                 -119.18766879105472,
@@ -999,11 +1022,12 @@
                 48.85270272158075
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-10",
         "modisEndDate": "2021-08-29",
+        "modis_cloud_free_date": "2021-08-29",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1030,7 +1054,7 @@
         "dNBR_offst": 3,
         "dNBR_stdDv": 23,
         "irwinID": "F6044A7F-3946-477C-AA25-9EA3188EE3BE",
-        "NAME": "US_2021_MT4579011310120210708",
+        "name": "US_2021_MT4579011310120210708",
         "roi": [
             [
                 -113.30285046257177,
@@ -1041,11 +1065,12 @@
                 45.86458777637492
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-07-09",
         "modisEndDate": "2021-10-05",
+        "modis_cloud_free_date": "2021-10-17",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1072,7 +1097,7 @@
         "dNBR_offst": -22,
         "dNBR_stdDv": 20,
         "irwinID": "793F48A8-9AE3-4687-B84F-18B6BC0474DE",
-        "NAME": "US_2021_MT4801910865120210816",
+        "name": "US_2021_MT4801910865120210816",
         "roi": [
             [
                 -108.69166286864933,
@@ -1083,11 +1108,12 @@
                 48.035773145402615
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-13",
         "modisEndDate": "2021-08-30",
+        "modis_cloud_free_date": "2021-08-30",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1114,7 +1140,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "32A0D248-7FA4-4439-AC82-676B75775981",
-        "NAME": "US_2021_MN4796109539420210307",
+        "name": "US_2021_MN4796109539420210307",
         "roi": [
             [
                 -95.4321290133661,
@@ -1125,11 +1151,12 @@
                 47.97974003610603
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -1156,7 +1183,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "5355EDB2-7E25-4E3C-9A8E-643587A134A0",
-        "NAME": "US_2021_ND4757810265920210501",
+        "name": "US_2021_ND4757810265920210501",
         "roi": [
             [
                 -102.66851428871185,
@@ -1167,11 +1194,12 @@
                 47.588088302470716
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-26",
         "modisEndDate": "2021-05-10",
+        "modis_cloud_free_date": "2021-05-10",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1198,7 +1226,7 @@
         "dNBR_offst": 11,
         "dNBR_stdDv": 9,
         "irwinID": "660CFDC7-0442-4A37-9C64-23AE06C1A979",
-        "NAME": "US_2021_NV3774011500120210309",
+        "name": "US_2021_NV3774011500120210309",
         "roi": [
             [
                 -115.05509432068831,
@@ -1209,11 +1237,12 @@
                 37.74803837578434
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": "2021-04-03",
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -1240,7 +1269,7 @@
         "dNBR_offst": 7,
         "dNBR_stdDv": 7,
         "irwinID": "1EA57600-9731-46D7-9AE1-B576DC679E05",
-        "NAME": "US_2021_NV3700011641620210517",
+        "name": "US_2021_NV3700011641620210517",
         "roi": [
             [
                 -116.48889154560135,
@@ -1251,11 +1280,12 @@
                 37.14611775633687
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-05-14",
         "modisEndDate": "2021-05-27",
+        "modis_cloud_free_date": "2021-05-27",
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -1282,7 +1312,7 @@
         "dNBR_offst": -6,
         "dNBR_stdDv": 5,
         "irwinID": "4F0C331F-A20F-4949-8CBE-4F2717DD02DA",
-        "NAME": "US_2021_CA3298011643520210501",
+        "name": "US_2021_CA3298011643520210501",
         "roi": [
             [
                 -116.49904492050038,
@@ -1293,11 +1323,12 @@
                 33.01885852645361
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-28",
         "modisEndDate": "2021-05-04",
+        "modis_cloud_free_date": "2021-05-04",
         "BIOME_NUM": 12,
         "BIOME_NAME": "N/A"
     },
@@ -1324,7 +1355,7 @@
         "dNBR_offst": 21,
         "dNBR_stdDv": 15,
         "irwinID": "1A6EF06F-0508-42FE-B365-85850E42EBCC",
-        "NAME": "US_2021_UT4113611287920210330",
+        "name": "US_2021_UT4113611287920210330",
         "roi": [
             [
                 -112.88983068098462,
@@ -1335,11 +1366,12 @@
                 41.151152956284236
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -1366,7 +1398,7 @@
         "dNBR_offst": 8,
         "dNBR_stdDv": 12,
         "irwinID": "A144853E-A720-410F-B666-4E1B1DCDA556",
-        "NAME": "US_2021_NV3727011619820210825",
+        "name": "US_2021_NV3727011619820210825",
         "roi": [
             [
                 -116.20914537857857,
@@ -1377,11 +1409,12 @@
                 37.35137460648515
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-04",
         "modisEndDate": "2021-09-03",
+        "modis_cloud_free_date": "2021-09-03",
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -1408,7 +1441,7 @@
         "dNBR_offst": -15,
         "dNBR_stdDv": 36,
         "irwinID": "7E9BE942-1E0A-4350-9650-F71A3D17EB10",
-        "NAME": "US_2021_CA3568711855020210818",
+        "name": "US_2021_CA3568711855020210818",
         "roi": [
             [
                 -118.65059235013928,
@@ -1419,11 +1452,12 @@
                 35.7550208950083
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-19",
         "modisEndDate": "2021-09-10",
+        "modis_cloud_free_date": "2021-09-11",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1450,7 +1484,7 @@
         "dNBR_offst": -3,
         "dNBR_stdDv": 41,
         "irwinID": "ACD5C207-BB83-4419-977D-3F64778081A3",
-        "NAME": "US_2021_CA3604711863120210910",
+        "name": "US_2021_CA3604711863120210910",
         "roi": [
             [
                 -118.73801307526851,
@@ -1461,11 +1495,12 @@
                 36.11646667834927
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-09-10",
         "modisEndDate": "2021-10-06",
+        "modis_cloud_free_date": "2021-10-10",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1492,7 +1527,7 @@
         "dNBR_offst": -15,
         "dNBR_stdDv": 31,
         "irwinID": "751BAEA9-D0BC-43AF-AE3E-34CBFB059110",
-        "NAME": "US_2021_CA3627811855020210815",
+        "name": "US_2021_CA3627811855020210815",
         "roi": [
             [
                 -118.5858283871537,
@@ -1503,11 +1538,12 @@
                 36.351577256612686
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-14",
         "modisEndDate": "2021-09-02",
+        "modis_cloud_free_date": "2021-09-02",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1534,7 +1570,7 @@
         "dNBR_offst": -8,
         "dNBR_stdDv": 39,
         "irwinID": "499D6545-2A19-458A-8C7C-554932C6B86E",
-        "NAME": "US_2021_CA3658211879520210912",
+        "name": "US_2021_CA3658211879520210912",
         "roi": [
             [
                 -118.95391378866836,
@@ -1545,11 +1581,12 @@
                 36.730596349444596
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32611",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-09-09",
         "modisEndDate": "2021-10-30",
+        "modis_cloud_free_date": "2021-11-03",
         "BIOME_NUM": 5.000000000000003,
         "BIOME_NAME": "Mangroves"
     },
@@ -1576,7 +1613,7 @@
         "dNBR_offst": 44,
         "dNBR_stdDv": 29,
         "irwinID": "403B847B-B915-478A-87F0-1D8013C54B18",
-        "NAME": "US_2021_CA4086312235520210630",
+        "name": "US_2021_CA4086312235520210630",
         "roi": [
             [
                 -122.42022720554182,
@@ -1587,11 +1624,12 @@
                 40.961208664882214
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-29",
         "modisEndDate": "2021-07-09",
+        "modis_cloud_free_date": "2021-07-09",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1618,7 +1656,7 @@
         "dNBR_offst": 26,
         "dNBR_stdDv": 44,
         "irwinID": "00295066-E99F-4F61-8FDC-DC06A97F7B52",
-        "NAME": "US_2021_TX3385309829420211210",
+        "name": "US_2021_TX3385309829420211210",
         "roi": [
             [
                 -98.41016641189981,
@@ -1629,11 +1667,12 @@
                 33.87062702632187
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": "2022-01-03",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1660,7 +1699,7 @@
         "dNBR_offst": -52,
         "dNBR_stdDv": 33,
         "irwinID": "F6A52A51-02E6-4B9F-99AE-6B469C3AB07B",
-        "NAME": "US_2021_KS3910009890020211215",
+        "name": "US_2021_KS3910009890020211215",
         "roi": [
             [
                 -99.3491460107447,
@@ -1671,11 +1710,12 @@
                 39.165863090004066
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-12-16",
         "modisEndDate": "2021-12-18",
+        "modis_cloud_free_date": "2021-12-18",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1702,7 +1742,7 @@
         "dNBR_offst": -6,
         "dNBR_stdDv": 10,
         "irwinID": "936F6D80-8E6D-43E2-B024-908F39FA2AFC",
-        "NAME": "US_2021_TX3555210133220211215",
+        "name": "US_2021_TX3555210133220211215",
         "roi": [
             [
                 -101.39061609691284,
@@ -1713,11 +1753,12 @@
                 35.63493284988718
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-12-14",
         "modisEndDate": "2021-12-17",
+        "modis_cloud_free_date": "2021-12-18",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1744,7 +1785,7 @@
         "dNBR_offst": -10,
         "dNBR_stdDv": 16,
         "irwinID": "49803B57-08CE-4474-B3D7-4642CFC2FFE4",
-        "NAME": "US_2021_NM3344410803520210514",
+        "name": "US_2021_NM3344410803520210514",
         "roi": [
             [
                 -108.12008630180402,
@@ -1755,11 +1796,12 @@
                 33.49944255215627
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-05-15",
         "modisEndDate": "2021-06-07",
+        "modis_cloud_free_date": "2021-06-07",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1768,7 +1810,7 @@
         "BurnBndAc": 35281,
         "BurnBndLat": "32.887",
         "BurnBndLon": "-110.21",
-        "Comment": "Burn scar to the east is under a different ID and was burnt in the previous year.",
+        "Comment": "Burn scar to the east is under a different ID and was burnt in the previous YEAR.",
         "Event_ID": "AZ3286511020120210610",
         "High_T": 600,
         "Ig_Date": 1623308400000,
@@ -1786,7 +1828,7 @@
         "dNBR_offst": 82,
         "dNBR_stdDv": 28,
         "irwinID": "3FA55611-FC76-40A9-A2BC-E1A0DA93AF04",
-        "NAME": "US_2021_AZ3286511020120210610",
+        "name": "US_2021_AZ3286511020120210610",
         "roi": [
             [
                 -110.30377055945806,
@@ -1797,11 +1839,12 @@
                 32.95876321340324
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-09",
         "modisEndDate": "2021-06-24",
+        "modis_cloud_free_date": "2021-06-25",
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -1828,7 +1871,7 @@
         "dNBR_offst": -45,
         "dNBR_stdDv": 34,
         "irwinID": "B6304F5D-0658-49A8-BE97-64D4B17E7833",
-        "NAME": "US_2021_CA3451712013120211011",
+        "name": "US_2021_CA3451712013120211011",
         "roi": [
             [
                 -120.20482989422175,
@@ -1839,11 +1882,12 @@
                 34.52636466203606
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32610",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-10-05",
         "modisEndDate": "2021-10-17",
+        "modis_cloud_free_date": "2021-10-17",
         "BIOME_NUM": 12,
         "BIOME_NAME": "N/A"
     },
@@ -1870,7 +1914,7 @@
         "dNBR_offst": 27,
         "dNBR_stdDv": 34,
         "irwinID": "99D4C407-109C-4E95-8139-19E398792F09",
-        "NAME": "US_2021_AZ3368910927620210616",
+        "name": "US_2021_AZ3368910927620210616",
         "roi": [
             [
                 -109.36470614811195,
@@ -1881,11 +1925,12 @@
                 33.723681856086074
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-16",
         "modisEndDate": "2021-07-08",
+        "modis_cloud_free_date": "2021-07-08",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -1912,7 +1957,7 @@
         "dNBR_offst": -1,
         "dNBR_stdDv": 11,
         "irwinID": "4B7E8BE5-E47E-4EF0-AE34-46FFB8BA7795",
-        "NAME": "US_2021_TX3562510236720211215",
+        "name": "US_2021_TX3562510236720211215",
         "roi": [
             [
                 -102.36222747771362,
@@ -1923,11 +1968,12 @@
                 35.68175339724074
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-12-14",
         "modisEndDate": "2021-12-18",
+        "modis_cloud_free_date": "2021-12-19",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1954,7 +2000,7 @@
         "dNBR_offst": -4,
         "dNBR_stdDv": 37,
         "irwinID": "C63FC371-BC70-4615-841B-B0838C21064F",
-        "NAME": "US_2021_CO3995610523120211230",
+        "name": "US_2021_CO3995610523120211230",
         "roi": [
             [
                 -105.2344236381414,
@@ -1965,11 +2011,12 @@
                 39.986752384332306
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -1996,7 +2043,7 @@
         "dNBR_offst": 36,
         "dNBR_stdDv": 26,
         "irwinID": "A2BD68B8-B8EE-4A3B-AC93-7929EEA027D7",
-        "NAME": "US_2021_NE4150910339520210806",
+        "name": "US_2021_NE4150910339520210806",
         "roi": [
             [
                 -103.40799374973821,
@@ -2007,11 +2054,12 @@
                 41.55434484334777
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-08-05",
         "modisEndDate": "2021-08-10",
+        "modis_cloud_free_date": "2021-08-10",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2038,7 +2086,7 @@
         "dNBR_offst": -4,
         "dNBR_stdDv": 16,
         "irwinID": "AA982C59-F792-432C-891D-AFDD652CE7C0",
-        "NAME": "US_2021_NE4258910342620210913",
+        "name": "US_2021_NE4258910342620210913",
         "roi": [
             [
                 -103.48329452567548,
@@ -2049,11 +2097,12 @@
                 42.62658034926665
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-09-17",
         "modisEndDate": "2021-09-25",
+        "modis_cloud_free_date": "2021-09-25",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2080,7 +2129,7 @@
         "dNBR_offst": -58,
         "dNBR_stdDv": 21,
         "irwinID": "21C3BE24-0486-4433-983C-326D6E028C87",
-        "NAME": "US_2021_TX2695309808820210318",
+        "name": "US_2021_TX2695309808820210318",
         "roi": [
             [
                 -98.10917256872705,
@@ -2091,11 +2140,12 @@
                 26.96257433094159
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-01-20",
         "modisEndDate": "2021-03-22",
+        "modis_cloud_free_date": "2021-03-25",
         "BIOME_NUM": 7,
         "BIOME_NAME": "Tropical & Subtropical Dry Broadleaf Forests"
     },
@@ -2122,7 +2172,7 @@
         "dNBR_offst": -20,
         "dNBR_stdDv": 12,
         "irwinID": "A5F80A98-BBF3-46A8-ADD1-7AEE851B8CE1",
-        "NAME": "US_2021_OK3668810170220211215",
+        "name": "US_2021_OK3668810170220211215",
         "roi": [
             [
                 -101.70259271956907,
@@ -2133,11 +2183,12 @@
                 36.724041485149364
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-12-15",
         "modisEndDate": "2021-12-17",
+        "modis_cloud_free_date": "2021-12-17",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2164,7 +2215,7 @@
         "dNBR_offst": -19,
         "dNBR_stdDv": 21,
         "irwinID": "2C40143F-6308-409E-BB58-6894B621E130",
-        "NAME": "US_2021_OK3659409616720210329",
+        "name": "US_2021_OK3659409616720210329",
         "roi": [
             [
                 -96.22019932164879,
@@ -2175,11 +2226,12 @@
                 36.687218269386236
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-28",
         "modisEndDate": "2021-04-02",
+        "modis_cloud_free_date": "2021-04-02",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2206,7 +2258,7 @@
         "dNBR_offst": -20,
         "dNBR_stdDv": 15,
         "irwinID": "3238849B-BD88-4BD6-A65F-B4D67A0A39BE",
-        "NAME": "US_2021_OK3661709603920210403",
+        "name": "US_2021_OK3661709603920210403",
         "roi": [
             [
                 -96.13020570519365,
@@ -2217,11 +2269,12 @@
                 36.70542029442719
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-27",
         "modisEndDate": "2021-04-06",
+        "modis_cloud_free_date": "2021-04-08",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2248,7 +2301,7 @@
         "dNBR_offst": -3,
         "dNBR_stdDv": 37,
         "irwinID": "3A05D870-B9A3-40E6-A912-A52C3514A76E",
-        "NAME": "US_2021_AZ3135511114320210620",
+        "name": "US_2021_AZ3135511114320210620",
         "roi": [
             [
                 -111.18812173679844,
@@ -2259,11 +2312,12 @@
                 31.388178633979045
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-17",
         "modisEndDate": "2021-06-27",
+        "modis_cloud_free_date": "2021-06-27",
         "BIOME_NUM": 3,
         "BIOME_NAME": "Montane Grasslands & Shrublands"
     },
@@ -2290,7 +2344,7 @@
         "dNBR_offst": -13,
         "dNBR_stdDv": 7,
         "irwinID": "945669FF-7D66-4DEB-8193-101D6E1F8BA5",
-        "NAME": "US_2021_AZ3207411009320210620",
+        "name": "US_2021_AZ3207411009320210620",
         "roi": [
             [
                 -110.16471347470912,
@@ -2301,11 +2355,12 @@
                 32.12331943086683
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-10",
         "modisEndDate": "2021-06-26",
+        "modis_cloud_free_date": "2021-06-27",
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -2332,7 +2387,7 @@
         "dNBR_offst": -22,
         "dNBR_stdDv": 24,
         "irwinID": "90489F3B-FCAB-4086-8E55-BF44FA28D0BD",
-        "NAME": "US_2021_AZ3345510938920210616",
+        "name": "US_2021_AZ3345510938920210616",
         "roi": [
             [
                 -109.45552466828588,
@@ -2343,11 +2398,12 @@
                 33.551533818306254
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-06-16",
         "modisEndDate": "2021-07-06",
+        "modis_cloud_free_date": "2021-07-08",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2374,7 +2430,7 @@
         "dNBR_offst": -2,
         "dNBR_stdDv": 21,
         "irwinID": "534842F3-0195-4BDD-93DE-393F6967572A",
-        "NAME": "US_2021_NM3323810847220210520",
+        "name": "US_2021_NM3323810847220210520",
         "roi": [
             [
                 -108.63342698913547,
@@ -2385,11 +2441,12 @@
                 33.30553410662686
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-05-17",
         "modisEndDate": "2021-06-24",
+        "modis_cloud_free_date": "2021-06-25",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2416,7 +2473,7 @@
         "dNBR_offst": 1,
         "dNBR_stdDv": 39,
         "irwinID": "2EF73F92-8DFC-4533-97C3-B0456450C73E",
-        "NAME": "US_2021_NM3340210587120210426",
+        "name": "US_2021_NM3340210587120210426",
         "roi": [
             [
                 -105.87218663921533,
@@ -2427,11 +2484,12 @@
                 33.45474899809493
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-23",
         "modisEndDate": "2021-05-03",
+        "modis_cloud_free_date": "2021-05-03",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2458,7 +2516,7 @@
         "dNBR_offst": 20,
         "dNBR_stdDv": 20,
         "irwinID": "803B37D5-3CDD-49C6-9B5A-75E8281FA188",
-        "NAME": "US_2021_OK3441309727820210304",
+        "name": "US_2021_OK3441309727820210304",
         "roi": [
             [
                 -97.34473108066588,
@@ -2469,11 +2527,12 @@
                 34.46822684521729
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-02-20",
         "modisEndDate": "2021-03-28",
+        "modis_cloud_free_date": "2021-03-28",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2500,7 +2559,7 @@
         "dNBR_offst": 41,
         "dNBR_stdDv": 26,
         "irwinID": "C5B2640C-D963-4AF0-AA29-59A085177CFC",
-        "NAME": "US_2021_LA3116109260420211205",
+        "name": "US_2021_LA3116109260420211205",
         "roi": [
             [
                 -92.63574641862948,
@@ -2511,11 +2570,12 @@
                 31.1921565495315
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-07",
         "modisEndDate": "2021-12-07",
+        "modis_cloud_free_date": "2021-12-12",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2542,7 +2602,7 @@
         "dNBR_offst": 19,
         "dNBR_stdDv": 40,
         "irwinID": "",
-        "NAME": "US_2021_TX3168809387120210321",
+        "name": "US_2021_TX3168809387120210321",
         "roi": [
             [
                 -93.8789660889103,
@@ -2553,11 +2613,12 @@
                 31.717166603533723
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2584,7 +2645,7 @@
         "dNBR_offst": -45,
         "dNBR_stdDv": 43,
         "irwinID": "",
-        "NAME": "US_2021_TX3129809525420210311",
+        "name": "US_2021_TX3129809525420210311",
         "roi": [
             [
                 -95.28859944374571,
@@ -2595,11 +2656,12 @@
                 31.32638882156106
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-07",
         "modisEndDate": "2021-03-21",
+        "modis_cloud_free_date": "2021-03-21",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2626,7 +2688,7 @@
         "dNBR_offst": -35,
         "dNBR_stdDv": 22,
         "irwinID": "8CDBB0A1-FC35-4A36-A13C-991043BAC0F3",
-        "NAME": "US_2021_NE4252310060220210423",
+        "name": "US_2021_NE4252310060220210423",
         "roi": [
             [
                 -100.7225670261963,
@@ -2637,11 +2699,12 @@
                 42.57267870592824
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-27",
         "modisEndDate": "2021-05-05",
+        "modis_cloud_free_date": "2021-05-07",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2668,7 +2731,7 @@
         "dNBR_offst": 7,
         "dNBR_stdDv": 23,
         "irwinID": "",
-        "NAME": "US_2021_AZ3263511039820210217",
+        "name": "US_2021_AZ3263511039820210217",
         "roi": [
             [
                 -110.44702363318503,
@@ -2679,11 +2742,12 @@
                 32.73818038867278
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32612",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 13,
         "BIOME_NAME": "Boreal Forests/Taiga"
     },
@@ -2710,7 +2774,7 @@
         "dNBR_offst": -5,
         "dNBR_stdDv": 13,
         "irwinID": "464BB453-547B-4E78-B783-C71F31F34CC4",
-        "NAME": "US_2021_NE4183910043620210418",
+        "name": "US_2021_NE4183910043620210418",
         "roi": [
             [
                 -100.46880405654503,
@@ -2721,11 +2785,12 @@
                 41.87980571943756
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-16",
         "modisEndDate": "2021-04-24",
+        "modis_cloud_free_date": "2021-04-24",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2752,7 +2817,7 @@
         "dNBR_offst": -53,
         "dNBR_stdDv": 26,
         "irwinID": "4DDD658D-A6A9-4D27-8C6A-0546923B12EA",
-        "NAME": "US_2021_LA3147909303020210426",
+        "name": "US_2021_LA3147909303020210426",
         "roi": [
             [
                 -93.06018150075676,
@@ -2763,11 +2828,12 @@
                 31.491130358866364
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-26",
         "modisEndDate": "2021-05-05",
+        "modis_cloud_free_date": "2021-05-06",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2794,7 +2860,7 @@
         "dNBR_offst": -2,
         "dNBR_stdDv": 25,
         "irwinID": "",
-        "NAME": "US_2021_NM3676810505920211120",
+        "name": "US_2021_NM3676810505920211120",
         "roi": [
             [
                 -105.09761844507061,
@@ -2805,11 +2871,12 @@
                 36.80312810079168
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32613",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-11-19",
         "modisEndDate": "2021-12-18",
+        "modis_cloud_free_date": "2021-12-18",
         "BIOME_NUM": 5,
         "BIOME_NAME": "Mangroves"
     },
@@ -2836,7 +2903,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "F892CE08-AFB7-49E7-BF26-60EAEFCEBB43",
-        "NAME": "US_2021_OK3649009611020210329",
+        "name": "US_2021_OK3649009611020210329",
         "roi": [
             [
                 -96.13293911780022,
@@ -2847,11 +2914,12 @@
                 36.627015952317805
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-28",
         "modisEndDate": "2021-04-06",
+        "modis_cloud_free_date": "2021-04-08",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2878,7 +2946,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "B852427C-8826-47EC-A13C-C21D1FA5C5F1",
-        "NAME": "US_2021_SD4394710092120210329",
+        "name": "US_2021_SD4394710092120210329",
         "roi": [
             [
                 -100.95032891720194,
@@ -2889,11 +2957,12 @@
                 43.98225848612793
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32614",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-20",
         "modisEndDate": "2021-03-28",
+        "modis_cloud_free_date": "2021-03-28",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2920,7 +2989,7 @@
         "dNBR_offst": 20,
         "dNBR_stdDv": 14,
         "irwinID": "1726B013-EFBF-4582-A4C6-77A0F093106F",
-        "NAME": "US_2021_FL3033008461420210327",
+        "name": "US_2021_FL3033008461420210327",
         "roi": [
             [
                 -84.61917457734427,
@@ -2931,11 +3000,12 @@
                 30.338252085325408
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-19",
         "modisEndDate": "2021-03-30",
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -2962,7 +3032,7 @@
         "dNBR_offst": -24,
         "dNBR_stdDv": 18,
         "irwinID": "912E3F0E-AAC2-407C-AA55-0768C610D54F",
-        "NAME": "US_2021_FL3020008457920210405",
+        "name": "US_2021_FL3020008457920210405",
         "roi": [
             [
                 -84.62778509161424,
@@ -2973,11 +3043,12 @@
                 30.232143271127594
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-02-04",
         "modisEndDate": "2021-05-23",
+        "modis_cloud_free_date": "2021-05-25",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3004,7 +3075,7 @@
         "dNBR_offst": 13,
         "dNBR_stdDv": 23,
         "irwinID": "97545028-036E-485A-B009-4EB3645840F3",
-        "NAME": "US_2021_OK3469609469320210305",
+        "name": "US_2021_OK3469609469320210305",
         "roi": [
             [
                 -94.73699527422883,
@@ -3015,11 +3086,12 @@
                 34.737061583184534
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-02",
         "modisEndDate": "2021-03-21",
+        "modis_cloud_free_date": "2021-03-23",
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -3028,7 +3100,7 @@
         "BurnBndAc": 6363,
         "BurnBndLat": "25.957",
         "BurnBndLon": "-81.287",
-        "Comment": "High amounts of unburned/low and increased greeness due to multi-year imagery pair and hydrology influence in Souther FL wetlands.. Used best available scenes as cloud-free imagery was hard to find. Overlap with neighboring Rx Fire was delineated based o",
+        "Comment": "High amounts of unburned/low and increased greeness due to multi-YEAR imagery pair and hydrology influence in Souther FL wetlands.. Used best available scenes as cloud-free imagery was hard to find. Overlap with neighboring Rx Fire was delineated based o",
         "Event_ID": "FL2593908116020210314",
         "High_T": 9999,
         "Ig_Date": 1615708800000,
@@ -3046,7 +3118,7 @@
         "dNBR_offst": 16,
         "dNBR_stdDv": 22,
         "irwinID": "0D0B573E-97F6-4B1D-8BAD-7C9B079C1A75",
-        "NAME": "US_2021_FL2593908116020210314",
+        "name": "US_2021_FL2593908116020210314",
         "roi": [
             [
                 -81.31156053677338,
@@ -3057,11 +3129,12 @@
                 25.99440096976156
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-11",
         "modisEndDate": "2021-03-24",
+        "modis_cloud_free_date": "2021-04-02",
         "BIOME_NUM": 9,
         "BIOME_NAME": "Temperate Broadleaf & Mixed Forests"
     },
@@ -3088,7 +3161,7 @@
         "dNBR_offst": 75,
         "dNBR_stdDv": 29,
         "irwinID": "2B864200-173B-41F0-95FD-AF624D36ABD7",
-        "NAME": "US_2021_AR3475709432020210321",
+        "name": "US_2021_AR3475709432020210321",
         "roi": [
             [
                 -94.37549143919401,
@@ -3099,11 +3172,12 @@
                 34.79259083529916
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": "2021-04-02",
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -3130,7 +3204,7 @@
         "dNBR_offst": 5,
         "dNBR_stdDv": 30,
         "irwinID": "A188C6ED-4115-401A-ACBA-BBE5930E75CA",
-        "NAME": "US_2021_AR3461409345120210309",
+        "name": "US_2021_AR3461409345120210309",
         "roi": [
             [
                 -93.54425709567342,
@@ -3141,11 +3215,12 @@
                 34.63463161595643
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -3172,7 +3247,7 @@
         "dNBR_offst": 5,
         "dNBR_stdDv": 19,
         "irwinID": "9FF2CF86-10AD-499E-96B8-652E1AB776BD",
-        "NAME": "US_2021_AR3499609379020210308",
+        "name": "US_2021_AR3499609379020210308",
         "roi": [
             [
                 -93.81773820541704,
@@ -3183,11 +3258,12 @@
                 35.02335817840449
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-07",
         "modisEndDate": "2021-03-12",
+        "modis_cloud_free_date": "2021-03-15",
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -3214,7 +3290,7 @@
         "dNBR_offst": -22,
         "dNBR_stdDv": 21,
         "irwinID": "E42D8860-28D3-4AA2-83DA-70A1293860E6",
-        "NAME": "US_2021_MO3691309203920210307",
+        "name": "US_2021_MO3691309203920210307",
         "roi": [
             [
                 -92.0890472470614,
@@ -3225,11 +3301,12 @@
                 36.94685834000469
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-06",
         "modisEndDate": "2021-03-20",
+        "modis_cloud_free_date": "2021-03-20",
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -3256,7 +3333,7 @@
         "dNBR_offst": 48,
         "dNBR_stdDv": 23,
         "irwinID": "80785DD3-5321-4227-8206-67D16B23C2CD",
-        "NAME": "US_2021_FL3004608492720210226",
+        "name": "US_2021_FL3004608492720210226",
         "roi": [
             [
                 -84.96091114271296,
@@ -3267,11 +3344,12 @@
                 30.071887657877934
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-02-06",
         "modisEndDate": "2021-04-28",
+        "modis_cloud_free_date": "2021-05-07",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3298,7 +3376,7 @@
         "dNBR_offst": 32,
         "dNBR_stdDv": 19,
         "irwinID": "6ECEA39F-365D-4DBB-808F-A913A26C5CE9",
-        "NAME": "US_2021_FL3011108483320210225",
+        "name": "US_2021_FL3011108483320210225",
         "roi": [
             [
                 -84.89437248234695,
@@ -3309,11 +3387,12 @@
                 30.138074140744717
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-02-26",
         "modisEndDate": "2021-03-18",
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3340,7 +3419,7 @@
         "dNBR_offst": 39,
         "dNBR_stdDv": 31,
         "irwinID": "B4E5103C-D180-4E8C-B696-738AE57DDC32",
-        "NAME": "US_2021_FL2521008104520210308",
+        "name": "US_2021_FL2521008104520210308",
         "roi": [
             [
                 -81.10318231734047,
@@ -3351,11 +3430,12 @@
                 25.255046350938024
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-02-28",
         "modisEndDate": "2021-03-14",
+        "modis_cloud_free_date": "2021-03-21",
         "BIOME_NUM": 14,
         "BIOME_NAME": "Tundra"
     },
@@ -3382,7 +3462,7 @@
         "dNBR_offst": 77,
         "dNBR_stdDv": 30,
         "irwinID": "62694950-01B7-4EB6-9AC5-CFDA53BDBE1C",
-        "NAME": "US_2021_FL2762408126420210104",
+        "name": "US_2021_FL2762408126420210104",
         "roi": [
             [
                 -81.26773647873233,
@@ -3393,11 +3473,12 @@
                 27.66045488817173
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-01-03",
         "modisEndDate": "2021-05-25",
+        "modis_cloud_free_date": "2021-05-25",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3424,7 +3505,7 @@
         "dNBR_offst": 10,
         "dNBR_stdDv": 17,
         "irwinID": "CB40E32B-E9CA-4495-9209-E0BA4AD0D0E7",
-        "NAME": "US_2021_AR3607609232920210329",
+        "name": "US_2021_AR3607609232920210329",
         "roi": [
             [
                 -92.37139759237228,
@@ -3435,11 +3516,12 @@
                 36.108355610833186
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32615",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-02",
         "modisEndDate": "2021-04-01",
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     },
@@ -3466,7 +3548,7 @@
         "dNBR_offst": 22,
         "dNBR_stdDv": 21,
         "irwinID": "154503EB-8467-4689-A630-8A466DE730E8",
-        "NAME": "US_2021_FL3011208494120210203",
+        "name": "US_2021_FL3011208494120210203",
         "roi": [
             [
                 -84.98116439780242,
@@ -3477,11 +3559,12 @@
                 30.15902297797131
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-01-20",
         "modisEndDate": "2021-02-26",
+        "modis_cloud_free_date": "2021-03-04",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3508,7 +3591,7 @@
         "dNBR_offst": 16,
         "dNBR_stdDv": 27,
         "irwinID": "99FBA449-F2E4-4793-B2D8-E73D9DFA5D95",
-        "NAME": "US_2021_FL2752508106920210330",
+        "name": "US_2021_FL2752508106920210330",
         "roi": [
             [
                 -81.1946875058096,
@@ -3519,11 +3602,12 @@
                 27.590326611476325
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-28",
         "modisEndDate": "2021-07-19",
+        "modis_cloud_free_date": "2021-07-30",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3550,7 +3634,7 @@
         "dNBR_offst": 31,
         "dNBR_stdDv": 14,
         "irwinID": "54FD7758-8870-4CCE-94C7-6C2129B2361E",
-        "NAME": "US_2021_FL3007108472720210120",
+        "name": "US_2021_FL3007108472720210120",
         "roi": [
             [
                 -84.76652999573322,
@@ -3561,11 +3645,12 @@
                 30.101366800909975
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3592,7 +3677,7 @@
         "dNBR_offst": 34,
         "dNBR_stdDv": 15,
         "irwinID": "DA5D44C1-CF75-4D65-B38E-73413EC96DF7",
-        "NAME": "US_2021_FL3027308452320210129",
+        "name": "US_2021_FL3027308452320210129",
         "roi": [
             [
                 -84.54837293284434,
@@ -3603,11 +3688,12 @@
                 30.298753353275483
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-01-21",
         "modisEndDate": "2021-03-29",
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3634,7 +3720,7 @@
         "dNBR_offst": -2,
         "dNBR_stdDv": 13,
         "irwinID": "3CC2A430-FB99-4E2F-A29E-637B75C0F20C",
-        "NAME": "US_2021_FL3005708480020210311",
+        "name": "US_2021_FL3005708480020210311",
         "roi": [
             [
                 -84.85564070328171,
@@ -3645,11 +3731,12 @@
                 30.084529208124998
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32616",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-03-09",
         "modisEndDate": "2021-03-18",
+        "modis_cloud_free_date": "2021-04-01",
         "BIOME_NUM": 8,
         "BIOME_NAME": "Tropical & Subtropical Coniferous Forests"
     },
@@ -3676,7 +3763,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "F00852FC-C02D-44A0-9C76-39BE6BCD4469",
-        "NAME": "US_2021_FL2539108041420210430",
+        "name": "US_2021_FL2539108041420210430",
         "roi": [
             [
                 -80.45355816051092,
@@ -3687,11 +3774,12 @@
                 25.45399805533787
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-04-16",
         "modisEndDate": "2021-05-06",
+        "modis_cloud_free_date": "2021-05-13",
         "BIOME_NUM": 9,
         "BIOME_NAME": "Temperate Broadleaf & Mixed Forests"
     },
@@ -3718,7 +3806,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "1E31E6B8-293B-48F3-97F9-BF460523E6A8",
-        "NAME": "US_2021_FL2633308073620210529",
+        "name": "US_2021_FL2633308073620210529",
         "roi": [
             [
                 -80.80651830035833,
@@ -3729,11 +3817,12 @@
                 26.43526336417748
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": "2021-05-25",
         "modisEndDate": "2021-06-06",
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 9,
         "BIOME_NAME": "Temperate Broadleaf & Mixed Forests"
     },
@@ -3760,7 +3849,7 @@
         "dNBR_offst": 0,
         "dNBR_stdDv": 0,
         "irwinID": "",
-        "NAME": "US_2021_WV3841207930720210427",
+        "name": "US_2021_WV3841207930720210427",
         "roi": [
             [
                 -79.31554205620554,
@@ -3771,11 +3860,12 @@
                 38.492070629004324
             ]
         ],
-        "year": 2021,
+        "YEAR": 2021,
         "crs": "EPSG:32617",
         "modis_min_area": 100.0,
         "modisStartDate": null,
         "modisEndDate": null,
+        "modis_cloud_free_date": null,
         "BIOME_NUM": 4,
         "BIOME_NAME": "Deserts & Xeric Shrublands"
     }

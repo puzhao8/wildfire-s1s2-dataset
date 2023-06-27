@@ -14,11 +14,12 @@ vis_dict = {
     'ALOS': [0, 1, 2],
     'S1': [0, 1, 2],
     # 'S2': [9, 6, 2], # B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, cloud
-    'S2': [5, 3, 2], # B2, B3, B4, B8, B11, B12
+    # 'S2': [5, 3, 2], # B2, B3, B4, B8, B11, B12
+    'S2': [2, 1, 0], # B2, B3, B4, B8, B11, B12
     'mask': 0,
     'AUZ': 0,
 
-    'modis': [2,1,0]
+    # 'modis': [2,1,0]
 }
 
 sat = os.listdir(rootPath)
