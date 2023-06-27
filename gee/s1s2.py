@@ -314,6 +314,6 @@ def get_mask_dict(queryEvent):
         #TODO: add reference data for EU Wildfire events
         pass
 
-    # return mask_dict 
+    return mask_dict 
     # return {'poly': mask_dict['poly']} # update poly mask only
-    return {'mtbs': mask_dict['mtbs']} # update poly mask only
+    # return {'mtbs': mask_dict['mtbs']} # update poly mask only
