@@ -28,11 +28,13 @@ json_dict = {
     'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json", # "minBurnArea": 2000
     'CA_2018': "./wildfire_events/POLY_CA_2018_events_gt2k.json",
     'CA_2019': "./wildfire_events/POLY_CA_2019_events_gt2k.json",
+    'CA_2020': "./wildfire_events_final/Canada_Wildfires_2020.json",
+    'CA_2021': "./wildfire_events_final/Canada_Wildfires_2021.json",
 }
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2019', # 'US,
+    'where': 'CA_2020', # 'US,
     'minBurnArea': 2000,
 
     # # AK
@@ -78,7 +80,7 @@ print(f"total number of events to query: {num} \n")
 # for event_id in list(EVENT_SET_subset.keys())[idx_stop:]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
 ALL_EVENTS = edict()
-fp = open(f"/Users/puzhao/PyProjects/wildfire-s1s2-dataset/wildfire_events_final/Canada_Wildfires_2017to2019.json", 'w')
+fp = open(f"/Users/puzhao/PyProjects/wildfire-s1s2-dataset/wildfire_events_final/Canada_Wildfires_2020_modis.json", 'w')
 for event_id in sorted(list(EVENT_SET_subset.keys())): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
     event = EVENT_SET[event_id]

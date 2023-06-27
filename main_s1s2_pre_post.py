@@ -18,13 +18,15 @@ import json
 
 json_dict = {
     # United States
-    'AK': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
-    'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
+    'AK_2017_2019': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
+    'US_2017_2019': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
+    'US_2020': "./wildfire_events/MTBS_US_2020_events.json",
+    'US_2021': "./wildfire_events/MTBS_US_2021_events.json",
 
     # Canada 2017-2021
-    'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json", # "minBurnArea": 2000
-    'CA_2018': "./wildfire_events/POLY_CA_2018_events_gt2k.json",
-    'CA_2019': "./wildfire_events/POLY_CA_2019_events_gt2k.json",
+    'CA_2017': "./wildfire_events_final/Canada_Wildfires_2017.json", # "minBurnArea": 2000
+    'CA_2018': "./wildfire_events_final/Canada_Wildfires_2018.json",
+    'CA_2019': "./wildfire_events_final/Canada_Wildfires_2019.json",
     'CA_2020': "./wildfire_events_final/Canada_Wildfires_2020.json",
     'CA_2021': "./wildfire_events_final/Canada_Wildfires_2021.json"
 
@@ -34,8 +36,16 @@ json_dict = {
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2021', # 'US,
-    'minBurnArea': 2000,
+    # make changes here
+    'where': 'CA_2021', # region and year
+    'dataset_folder': "wildfire-s1s2-dataset-ca-2021", # folder in GCS bucket
+    
+    # setting for export
+    'BUCKET': "wildfire-dataset", # GCS bucket
+    'scale': 20, # spatial resolution
+    'export': ['S2', 'S1', 'ALOS', 'mask', 'AUZ'], # export list
+
+    'minBurnArea': 2000, # minimum burned areas being take as an event
 
     # # AK
     # "period": 'fire_period', #'fire_period', # "season" for AK only?
@@ -109,16 +119,14 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
     # if event.end_date is None: event['end_date'] = f"{event['YEAR']}-09-01"
 
     queryEvent = update_query_event(cfg, event)
-    dataset_folder = "wildfire-s1s2-dataset-ca-2021"
     
     if ('end_date' in event.keys()):
         print(f"-----------------> {event.name} <------------------ ")
 
         # Sentinel-1, Sentinel-2
         query_s1s2_and_export(queryEvent, 
-                scale=20, 
-                BUCKET="wildfire-dataset",
-                dataset_folder=dataset_folder,
-                # export=['S2'],
-                export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
+                scale=cfg.scale, 
+                BUCKET=cfg.BUCKET,
+                dataset_folder=cfg.dataset_folder,
+                export=cfg.export
             )

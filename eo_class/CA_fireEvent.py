@@ -17,6 +17,7 @@ import os
 os.environ["PYDEVD_WARN_EVALUATION_TIMEOUT"] = "1e5"
 os.environ["PYDEVD_THREAD_DUMP_ON_WARN_EVALUATION_TIMEOUT"] = "True"
 
+from eo_class.modisPoly import get_first_cloud_free_modis
 
 
 def save_fireEvents_to_json(EVENT_SET, save_url):
@@ -37,6 +38,7 @@ def get_local_crs_by_query_S2(roi):
                 .filterDate("2020-05-01", "2021-01-01")\
                 .filterBounds(roi.centroid(ee.ErrorMargin(20))).first()\
                 .select(0).projection().crs().getInfo()
+
 
 class FIREEVENT:
     def __init__(self, cfg):
@@ -160,12 +162,16 @@ class FIREEVENT:
             event.modisStartDate = modis.unionPoly.startDate 
             event.modisEndDate = modis.unionPoly.endDate 
 
+            # add the date when the first cloud-free modis image was acquried after fire
+            end_date = event['modisEndDate'] or event["EDATE"] or ee.Date(event.YEAR).advance(9, 'month')
+            modis_cloud_free_date = get_first_cloud_free_modis(roi, end_date)
+            event.modis_cloud_free_date = modis_cloud_free_date
+
             # Get BIOME info. 
             event.BIOME_NUM = self.get_biome(roi)
             event.BIOME_NAME = self.eco_names.getInfo()[int(event.BIOME_NUM)]
 
             self.EVENT_SET.update({eventName: event})
-
             save_fireEvents_to_json(self.EVENT_SET, self.save_url)
 
     def define_event_by_poly(self, poly):

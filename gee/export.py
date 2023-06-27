@@ -185,6 +185,7 @@ def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", da
 
     else:
         print("scale can only be 250m or 500m!")
+        
 
     ''' Export '''
     saveName = f"{event.name}"

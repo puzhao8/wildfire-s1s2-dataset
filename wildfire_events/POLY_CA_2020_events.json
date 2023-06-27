@@ -1,0 +1,242 @@
+{
+    "CA_2020_AB_360": {
+        "ADJ_FLAG": 2,
+        "ADJ_HA": 2251.01866305,
+        "AFSDATE": null,
+        "AGENCY": "AB",
+        "BASRC": 3,
+        "BT_GID": 119,
+        "BURNCLAS": 4,
+        "COMMENTS": "CWF-156-2020[alias:Devil_s Head Fire,BURNCODE:B,SOURCE:0 - hand sketch of any type]",
+        "EDATE": null,
+        "FIRECAUS": 4,
+        "FIREMAPM": 2,
+        "FIREMAPS": 0,
+        "NFIREID": 360,
+        "POLY_HA": 2417.25696982,
+        "SDATE": null,
+        "VERSION": "2020_r9_20210810",
+        "YEAR": 2020,
+        "NAME": "CA_2020_AB_360",
+        "roi": [
+            [
+                -115.32088896888413,
+                51.29458997034502
+            ],
+            [
+                -115.14141584050833,
+                51.353245058545475
+            ]
+        ],
+        "year": 2020,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFEDATE": null,
+        "CAPDATE": null,
+        "modisStartDate": "2020-09-06",
+        "modisEndDate": "2020-09-07",
+        "modis_cloud_free_date": "2020-09-10",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2020_BC_344": {
+        "ADJ_FLAG": 2,
+        "ADJ_HA": 2003.52830653,
+        "AGENCY": "BC",
+        "BASRC": 3,
+        "BT_GID": 218,
+        "BURNCLAS": 4,
+        "CAPDATE": null,
+        "COMMENTS": "K51287[SOURCE:2020 ROLLOVER]",
+        "EDATE": null,
+        "FIRECAUS": 1,
+        "FIREMAPM": 3,
+        "FIREMAPS": 2,
+        "NFIREID": 344,
+        "POLY_HA": 2141.45549586,
+        "SDATE": null,
+        "VERSION": "2020_r9_20210810",
+        "YEAR": 2020,
+        "NAME": "CA_2020_BC_344",
+        "roi": [
+            [
+                -119.56412276063786,
+                49.379579653727106
+            ],
+            [
+                -119.50618415928032,
+                49.45128148200529
+            ]
+        ],
+        "year": 2020,
+        "crs": "EPSG:32610",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2020-08-18",
+        "modisEndDate": "2020-08-26",
+        "modis_cloud_free_date": "2020-08-26",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2020_BC_293": {
+        "ADJ_FLAG": 0,
+        "ADJ_HA": 7188.89330665,
+        "AGENCY": "BC",
+        "BASRC": 1,
+        "BT_GID": 73,
+        "BURNCLAS": 4,
+        "CAPDATE": null,
+        "COMMENTS": "Null",
+        "EDATE": null,
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NFIREID": 293,
+        "POLY_HA": 7188.89330665,
+        "SDATE": null,
+        "VERSION": "2020_r9_20210810",
+        "YEAR": 2020,
+        "NAME": "CA_2020_BC_293",
+        "roi": [
+            [
+                -116.16549296587536,
+                50.01704988581015
+            ],
+            [
+                -115.97008193208607,
+                50.132348399868604
+            ]
+        ],
+        "year": 2020,
+        "crs": "EPSG:32611",
+        "modis_min_area": 100.0,
+        "AFSDATE": null,
+        "AFEDATE": null,
+        "modisStartDate": "2020-08-03",
+        "modisEndDate": "2020-09-16",
+        "modis_cloud_free_date": "2020-09-29",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Mangroves"
+    },
+    "CA_2020_MB_343": {
+        "ADJ_FLAG": 2,
+        "ADJ_HA": 2074.04920747,
+        "AFEDATE": null,
+        "AFSDATE": null,
+        "AGENCY": "MB",
+        "BASRC": 3,
+        "BT_GID": 564,
+        "BURNCLAS": 4,
+        "CAPDATE": null,
+        "COMMENTS": "MB2020WE009[notes:,datasource:GPS - unknown,sourcekeys:Visual Survey,creatmethd:Direct from source,waterrem:f,unburnrem:f,perimtype:Final]",
+        "EDATE": null,
+        "FIRECAUS": 4,
+        "FIREMAPM": 5,
+        "FIREMAPS": 0,
+        "NFIREID": 343,
+        "POLY_HA": 2219.91114796,
+        "SDATE": null,
+        "VERSION": "2020_r9_20210810",
+        "YEAR": 2020,
+        "NAME": "CA_2020_MB_343",
+        "roi": [
+            [
+                -100.50776164481789,
+                51.7460531048118
+            ],
+            [
+                -100.43056525859541,
+                51.793947016201564
+            ]
+        ],
+        "year": 2020,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2020-05-16",
+        "modisEndDate": "2020-05-19",
+        "modis_cloud_free_date": "2020-05-19",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2020_MB_266": {
+        "ADJ_FLAG": 0,
+        "ADJ_HA": 9023.9558751,
+        "AFEDATE": null,
+        "AFSDATE": null,
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 55,
+        "BURNCLAS": 4,
+        "CAPDATE": null,
+        "COMMENTS": "Null",
+        "EDATE": null,
+        "FIRECAUS": 2,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NFIREID": 266,
+        "POLY_HA": 9023.9558751,
+        "SDATE": null,
+        "VERSION": "2020_r9_20210810",
+        "YEAR": 2020,
+        "NAME": "CA_2020_MB_266",
+        "roi": [
+            [
+                -95.82589302687269,
+                50.757484492751956
+            ],
+            [
+                -95.51658358311435,
+                50.89154764809636
+            ]
+        ],
+        "year": 2020,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2020-06-01",
+        "modisEndDate": "2020-06-14",
+        "modis_cloud_free_date": "2020-06-14",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    },
+    "CA_2020_MB_269": {
+        "ADJ_FLAG": 0,
+        "ADJ_HA": 21532.4787789,
+        "AFEDATE": null,
+        "AFSDATE": null,
+        "AGENCY": "MB",
+        "BASRC": 1,
+        "BT_GID": 29,
+        "BURNCLAS": 4,
+        "CAPDATE": null,
+        "COMMENTS": "Null",
+        "EDATE": null,
+        "FIRECAUS": 1,
+        "FIREMAPM": 7,
+        "FIREMAPS": 9,
+        "NFIREID": 269,
+        "POLY_HA": 21532.4787789,
+        "SDATE": null,
+        "VERSION": "2020_r9_20210810",
+        "YEAR": 2020,
+        "NAME": "CA_2020_MB_269",
+        "roi": [
+            [
+                -100.32731588056762,
+                51.817747702537574
+            ],
+            [
+                -100.12250267154855,
+                52.2105766606832
+            ]
+        ],
+        "year": 2020,
+        "crs": "EPSG:32614",
+        "modis_min_area": 100.0,
+        "modisStartDate": "2020-05-16",
+        "modisEndDate": "2020-06-03",
+        "modis_cloud_free_date": "2020-06-13",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub"
+    }
+}

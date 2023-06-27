@@ -184,3 +184,53 @@ class MODIS_POLY:
         'maxPixels': 86062013
       })
       return stats
+
+
+
+def get_first_cloud_free_modis(roi, end_date):
+    ''' This function is written to search for the date when the first cloud-free modis image was acquired after wildfire ended.'''
+    def add_ROI_Cloud_Rate(img):
+        cloud = img.select('cloud')
+        cloud_pixels = cloud.eq(0).reduceRegion(ee.Reducer.sum(), roi, 1000).get('cloud')
+        all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), roi, 1000).get('cloud')
+        return img.set("ROI_CLOUD_RATE", ee.Number(cloud_pixels).divide(all_pixels).multiply(100))
+
+    modis = ee.ImageCollection("MODIS/061/MOD09GA") # Terra (MOD) vs. Aqua (MYD)
+    filtered_modis = (modis.filterDate(end_date, ee.Date(end_date).advance(30, 'day'))
+                        .map(maskClouds)
+                        .map(add_ROI_Cloud_Rate)
+                        .filter(ee.Filter.lte("ROI_CLOUD_RATE", 10))
+                        .map(maskEmptyPixels)
+                )
+    
+    img_modis = filtered_modis.first()
+
+    try:
+      return img_modis.date().format().slice(0,10).getInfo()
+    except:
+      return None
+
+
+
+
+# A function to mask out pixels that did not have observations.
+def maskEmptyPixels(image):
+    # Find pixels that had observations.
+    withObs = image.select('num_observations_1km').gt(0)
+    return image.updateMask(withObs)
+
+# A function to mask out cloudy pixels.
+def maskClouds(image):
+    # Select the QA band.
+    QA = image.select('state_1km')
+    # Make a mask to get bit 10, the internal_cloud_algorithm_flag bit.
+    bitMask = 1 << 10
+    # Return an image masking out cloudy areas.
+    cloud_mask = QA.bitwiseAnd(bitMask).eq(0)
+    # return image.updateMask(cloud_mask);
+    return image.addBands(cloud_mask.rename('cloud'))
+
+def modis_terra_merger(img):
+    date = img.date()
+    img_250m = ee.ImageCollection("MODIS/061/MOD09GQ").filterDate(date, ee.Date(date).advance(1, 'day')).first()
+    return img.select('sur_refl_b07').addBands(img_250m.select(['sur_refl_b01', 'sur_refl_b02']))
