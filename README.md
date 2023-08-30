@@ -1,4 +1,5 @@
-"# wildfire-s1s2-dataset" 
+# Changes
+This repo contains modifications made to the master branch based on need. 
 
 # wildfire-s1s2-dataset
 - **data: SAR and MSI Data**
