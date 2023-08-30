@@ -1,6 +1,6 @@
 
 # from eo_class.CA_fireEvent import FIREEVENT
-from eo_class.fireEvent import FIREEVENT
+from eo_class.EU_fireEvent import FIREEVENT
 from easydict import EasyDict as edict
 
 cfg = edict({
@@ -12,7 +12,7 @@ cfg = edict({
         # 'yml_url': 'CA_2017_Wildfire_V1.yaml'
     })
 
-for YEAR in range(2018, 2019):
+for YEAR in [2022]:
     cfg.YEAR = YEAR
 
     fireEvents = FIREEVENT(cfg)

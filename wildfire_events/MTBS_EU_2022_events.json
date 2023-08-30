@@ -1,0 +1,26 @@
+{
+    "EU_2022_EMSR579": {
+        "EMS_Star_1": "2022-06-16",
+        "EMS_StartD": "2022-06-16",
+        "EMS_id": "EMSR579",
+        "EMS_year": "2022",
+        "area_id": "07",
+        "emsr_id": "EMSR579",
+        "glide_no": "",
+        "locality": "San Martin",
+        "map_type": "Grading",
+        "NAME": "EU_2022_EMSR579",
+        "roi": [
+            [
+                -2.274123729881168,
+                42.12638509649681
+            ],
+            [
+                -1.169376925059455,
+                42.78507905854225
+            ]
+        ],
+        "year": 2022,
+        "crs": "EPSG:32630",
+        "modis_min_area": 100.0,
+        "modisStartDate": 

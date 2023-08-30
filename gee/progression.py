@@ -1,7 +1,10 @@
 
 from typing import Dict
 import ee
-ee.Initialize()
+# ee.Initialize()
+service_account = 'gee-login@ee-vishalned.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, '../ee-vishalned-455e271a521c.json')
+ee.Initialize(credentials)
 
 from easydict import EasyDict as edict
 from prettyprinter import pprint
@@ -36,12 +39,13 @@ def updateCloudMaskS2(img):
 
 
 def rescale_s2(img): 
-    BANDS = ['B4', 'B8', 'B12'] # 6 bands
-    # BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
+    # BANDS = ['B4', 'B8', 'B12'] # 6 bands
+    BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
     # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
     return (img.select(BANDS).toFloat()
                 .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
                 .addBands(img.select('cloud'))
+                # .addBands(img.select('QA60'))
         ).copyProperties(img, img.propertyNames())
 
 def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False):
@@ -74,9 +78,19 @@ def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False):
                     .filterDate(period_start, period_end)
                     .map(updateCloudMaskS2)
     )
+    
+    s2ImgCol_pre = (ee.ImageCollection(S2_Dict['TOA'])
+                    .filterBounds(queryEvent['roi'])
+                    .filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+                    .map(updateCloudMaskS2)
+    )
 
     s2ImgCol_grouped = group_MSI_ImgCol(s2ImgCol)
-    if True: s2ImgCol_grouped = s2ImgCol_grouped.filter(queryEvent.pntsFilter)
+    s2ImgCol_grouped_pre = group_MSI_ImgCol(s2ImgCol_pre)
+    
+    if False: 
+        s2ImgCol_grouped = s2ImgCol_grouped.filter(queryEvent.pntsFilter)
+        s2ImgCol_grouped_pre = s2ImgCol_grouped_pre.filter(queryEvent.pntsFilter)
 
     # mosaic s2 data acquired on the same day
     from gee.group_data import set_group_index_4_S2
@@ -86,12 +100,20 @@ def get_s2_progression(queryEvent, cloud_level=10, filter_by_cloud=False):
                 .map(rescale_s2)
             )
     
-    if filter_by_cloud: s2_prgImgCol = s2_prgImgCol.filter(cloudFilter)
+    s2_prgImgCol_pre = (s2ImgCol_grouped_pre
+                        .map(set_group_index_4_S2)
+                        .map(add_ROI_Cloud_Rate)
+                        .map(rescale_s2)
+        )
+    
+    if filter_by_cloud: 
+        s2_prgImgCol = s2_prgImgCol.filter(cloudFilter)
+        s2_prgImgCol_pre = s2_prgImgCol_pre.filter(cloudFilter)
   
-    pprint(s2_prgImgCol.aggregate_array("IMG_LABEL").getInfo())
+    # pprint(s2_prgImgCol.aggregate_array("IMG_LABEL").getInfo())
     print(f"s2_prgImgCol: {s2_prgImgCol.size().getInfo()}")
 
-    return s2_prgImgCol.map(add_NBR).select(queryEvent.S2_BANDS)
+    return [s2_prgImgCol.map(add_NBR).select(queryEvent.S2_BANDS), s2_prgImgCol_pre.map(add_NBR).select(queryEvent.S2_BANDS)]
 
 """ #################################################################
 Query S1 SAR Data
@@ -131,20 +153,37 @@ def get_s1_progression(queryEvent):
                 .filterDate(period_start, period_end)
                 .select(['VH', 'VV'])
         )
+    S1_flt_pre = (ee.ImageCollection("COPERNICUS/S1_GRD")
+                    .filterBounds(queryEvent.roi)
+                    .filterMetadata('instrumentMode', "equals", 'IW')
+                    .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VV'))
+                    .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VH'))
+                    .filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+                    .select(['VH', 'VV'])
+            )
 
     s1ImgCol_grouped = group_S1_by_date_orbit(S1_flt)
-    if False: s1ImgCol_grouped = s1ImgCol_grouped.filter(queryEvent.pntsFilter)
+    s1ImgCol_grouped_pre = group_S1_by_date_orbit(S1_flt_pre)
+    if False: 
+        s1ImgCol_grouped = s1ImgCol_grouped.filter(queryEvent.pntsFilter)
+        # s1ImgCol_grouped_pre = s1ImgCol_grouped_pre.filter(queryEvent.pntsFilter)
+    
 
     s1ImgCol = (s1ImgCol_grouped
                     .map(add_RFDI)
                     .map(set_group_index_4_S1)
             )
+    s1ImgCol_pre = (s1ImgCol_grouped_pre
+                    .map(add_RFDI)
+                    .map(set_group_index_4_S1)
+        )
 
     if ('orbKeyList' in queryEvent.keys()) and (len(queryEvent.orbKeyList) > 0):
         s1ImgCol = s1ImgCol.filter(ee.Filter.inList(opt_leftField='Orbit_Key', opt_rightValue=queryEvent.orbKeyList))
+        s1ImgCol_pre = s1ImgCol_pre.filter(ee.Filter.inList(opt_leftField='Orbit_Key', opt_rightValue=queryEvent.orbKeyList))
 
 
-    return s1ImgCol.select(['ND', 'VH', 'VV'])
+    return [s1ImgCol.select(['ND', 'VH', 'VV']), s1ImgCol_pre.select(['ND', 'VH', 'VV'])]
 
 
 """ #################################################################
@@ -250,7 +289,7 @@ def get_mask_dict(queryEvent):
 
 """ Export Progression """
 from gee.aux_data import get_aux_dict
-def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'mask', 'AUZ']):
+def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'mask', 'AUZ'], get_pre = True):
     roi_cloud_level = cfg.roi_cloud_level
     filter_by_cloud = cfg.filter_by_cloud
     extend_months = cfg.extend_months
@@ -271,7 +310,7 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
             'S2': get_s2_progression(queryEvent, cloud_level=roi_cloud_level, filter_by_cloud=filter_by_cloud),
             # 'ALOS': get_alos_dict(queryEvent),
             
-            'AUZ': get_aux_dict()
+            # 'AUZ': get_aux_dict()
         })
 
     export_dict = {key: export_dict[key] for key in export_sat}
@@ -285,8 +324,8 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
     # Export Progression
     for sat in [sat_ for sat_ in ['S1', 'S2'] if sat_ in export_dict]:
 
-        imgCol = export_dict[sat]
-
+        imgCol = export_dict[sat][0]
+        # imgCol = export_dict[sat]
         img_num = imgCol.size().getInfo()
         print(f"\n--> {sat}: {img_num} <--")
         imgList = imgCol.toList(img_num)
@@ -294,9 +333,24 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
             image = ee.Image(imgList.get(i))
             imgLabel = image.get("IMG_LABEL").getInfo()
             dst_url = f"{event_folder}/{sat}/{imgLabel}"
+            # dst_url = f"{imgLabel}"
 
             print(dst_url)
             export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
+        
+        if get_pre:    
+            imgCol_pre = export_dict[sat][1]
+            img_num = imgCol_pre.size().getInfo()
+            print(f"\n--> {sat}_pre: {img_num} <--")
+            imgList = imgCol_pre.toList(img_num)
+            for i in range(0, img_num):
+                image = ee.Image(imgList.get(i))
+                imgLabel = image.get("IMG_LABEL").getInfo()
+                dst_url = f"{event_folder}/{sat}_pre/{imgLabel}"
+
+                print(dst_url)
+                export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
+                break # only storing 1 pre image since most pre images show the same information
 
     # Export Mask 
     for sat in [sat_ for sat_ in ["mask", "AUZ"] if sat_ in export_dict] :

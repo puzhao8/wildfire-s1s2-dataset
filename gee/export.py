@@ -53,7 +53,7 @@ def update_query_event(cfg, event):
     # pprint(queryEvent)
 
     # pprint(queryEvent.roi)
-    if event['where'] in ['AK', 'US']:
+    if ('US' in cfg['where']) or ('AK' in cfg['where']):
         burned_area = queryEvent['BurnBndAc'] * 0.4047 # to ha
     
     if 'CA' in event['where']:
@@ -89,6 +89,15 @@ def update_query_event(cfg, event):
 
 """ Query and Export """
 def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca', export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+    """
+        queryEvent: the event info used to query data
+        scale: the spatial resolution in meters, 20 as default
+        BUCKET: Google Cloud Storage (GCS) Bucket, make sure it is available in your GCS
+        dataset_folder: unique folder name for a specific task 
+        export: a list including all data sources to export, S2, S1, and ALOS denote Sentinel-2, Sentinel-1, and ALOS PARSAR respectively. mask denotes the reference masks rasterized from official fire perimiters, or MODIS/VIIRS Montly Burned Area products, while AUZ denotes some auxiliary data, such as land cover, DEM/DSM or climate zone etc.
+    """
+        
+        
     """ Event to Query """
 
     """ Query Data: S1, S2, & ALOS """
@@ -99,9 +108,9 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
     export_dict = edict({
         'S2': get_s2_dict(queryEvent, cloud_level=10),
         'S1': get_s1_dict(queryEvent),
-        # 'ALOS': get_alos_dict(queryEvent),
-        # 'mask': get_mask_dict(queryEvent),
-        # 'AUZ': get_aux_dict()
+        'ALOS': get_alos_dict(queryEvent),
+        'mask': get_mask_dict(queryEvent),
+        'AUZ': get_aux_dict()
     })
     
     export_dict = {key: export_dict[key] for key in export}
@@ -112,8 +121,8 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
 
     saveName = f"{queryEvent.name}"
     for sat in export_dict.keys():
-        # for stage in export_dict[sat].keys():
-        for stage in ['post']:
+        for stage in export_dict[sat].keys():
+        # for stage in ['post', 'pre']:
             dst_url = f"{dataset_folder}/{sat}/{stage}/{saveName}"
 
             if 'S1' == sat:
@@ -176,6 +185,7 @@ def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", da
 
     else:
         print("scale can only be 250m or 500m!")
+
 
     ''' Export '''
     saveName = f"{event.name}"

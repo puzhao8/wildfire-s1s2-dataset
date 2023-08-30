@@ -1,7 +1,11 @@
 
 from typing import Dict
 import ee
-ee.Initialize()
+# ee.Initialize()
+service_account = 'gee-login@rapid-entry-390509.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, '../rapid-entry-390509-3651b6818efb.json')
+ee.Initialize(credentials)
+
 
 from easydict import EasyDict as edict
 from prettyprinter import pprint
@@ -66,14 +70,14 @@ def get_s2_dict(queryEvent, cloud_level=5):
         period_end.advance(1, "year").format().getInfo())
 
     s2_dict = edict()
-    # s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
-    #                     .map(updateCloudMaskS2)
-    #                     .map(add_ROI_Cloud_Rate)
-    #                     .filter(cloudFilter)
-    #                     .median()
-    #                     # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
+    s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
+                        .map(updateCloudMaskS2)
+                        .map(add_ROI_Cloud_Rate)
+                        .filter(cloudFilter)
+                        .median()
+                        # .sort("ROI_CLOUD_RATE", False).mosaic() # add on Oct. 10
 
-    #                 )
+                    )
     
 
     if queryEvent.end_date is not None:
@@ -99,7 +103,7 @@ def get_s2_dict(queryEvent, cloud_level=5):
     # s2_dict['cloud'] = None
 
     # rescale to [0, 1]
-    # s2_dict['pre'] = rescale_s2(s2_dict['pre'])
+    s2_dict['pre'] = rescale_s2(s2_dict['pre'])
     s2_dict['post'] = rescale_s2(s2_dict['post'])
 
     return s2_dict
@@ -287,7 +291,7 @@ def get_mask_dict(queryEvent):
         # USA MTBS
         WHERE = "CONUS" if WHERE == "US" else "AK"
         mtbs = ee.Image.loadGeoTIFF(f"gs://sar4wildfire/US_BurnSeverityRaster/mtbs_{WHERE}_{queryEvent.year}.tif")
-        mask_dict['mtbs'] = mtbs.select('B0').rename('mtbs')
+        mask_dict['mtbs'] = mtbs.seleomegazhangct('B0').rename('mtbs')
     
 
     if 'CA' in WHERE:

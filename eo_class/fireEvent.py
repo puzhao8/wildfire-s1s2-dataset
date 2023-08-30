@@ -1,6 +1,9 @@
 from typing import Dict
 import ee
-ee.Initialize()
+service_account = 'gee-login@rapid-entry-390509.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, '../rapid-entry-390509-3651b6818efb.json')
+ee.Initialize(credentials)
+
 
 from easydict import EasyDict as edict
 from prettyprinter import pprint

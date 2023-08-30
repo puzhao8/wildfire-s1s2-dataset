@@ -30,8 +30,8 @@ def get_BANDS_and_BANDS_INDEX(sat, REGION, folder):
 
         # CA
         if 'ca' == REGION:
-            BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12']
-            BANDS_INDEX = [0, 1, 2, 3, 5, 6]
+            BANDS = ['B4', 'B8', 'B12']
+            BANDS_INDEX = [0, 1, 2]
 
         # US
         if 'us' == REGION:
@@ -63,13 +63,12 @@ def get_BANDS_and_BANDS_INDEX(sat, REGION, folder):
 def tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size, do_tilling=True):
     """ find events having S1, S2 and ALOS data """
     eventList = [eventName[:-4] for eventName in os.listdir(workPath / "mask" / "poly")]
-    pprint(eventList)
+    # pprint(eventList)
+    # print(len(eventList))
 
     S2_preDir = workPath / "S2" / "pre"
     S2_postDir = workPath / "S2" / "post"
 
-    ALOS_preDir = workPath / "ALOS" / "pre"
-    ALOS_postDir = workPath / "ALOS" / "post"
 
     """ S1 Selection """
     S1_preDir = workPath / "S1" / "pre"
@@ -81,19 +80,20 @@ def tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size, do_tilli
         S1_preList = map(path2str, list(S1_preDir.glob(f"{event}*.tif")))
         S1_postList = map(path2str, list(S1_postDir.glob(f"{event}*.tif")))
 
+        
         S1_intersection = list(set(S1_preList).intersection(set(S1_postList)))
         if len(S1_intersection) > 0 \
             and os.path.isfile(S2_preDir / f"{event}.tif") \
-            and os.path.isfile(S2_postDir / f"{event}.tif") \
-                and os.path.isfile(ALOS_preDir / f"{event}.tif") \
-                and os.path.isfile(ALOS_postDir / f"{event}.tif"):
-                    rand = np.random.randint(0, len(S1_intersection), 1)[0]
-                    # print(rand, S1_intersection[rand])
-                    event_sets.append(S1_intersection[rand][:-4])
+            and os.path.isfile(S2_postDir / f"{event}.tif") :
+                rand = np.random.randint(0, len(S1_intersection), 1)[0]
+                # print(rand, S1_intersection[rand])
+                event_sets.append(S1_intersection[rand][:-4])
 
     pprint(event_sets)
     print(len(event_sets))
+    # print(len(event_sets))
 
+    # exit()
     """ Train & Test Split """
     split_dict = {
         'seed': SEED,
@@ -117,6 +117,7 @@ def tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size, do_tilli
     print("train: ", len(train_idx))
     print(train_idx)
     for idx, sarname in enumerate(event_sets):
+        print(idx, sarname)
         phase = 'train' if idx in train_idx else "test"
         # print(idx, phase)
 
@@ -125,19 +126,22 @@ def tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size, do_tilli
         if 'DSC' in sarname: split_dict[phase]['DSC'] += 1
 
         if do_tilling:
-            for sat in ["S2", "S1", "ALOS", "mask", "AUZ"]:
+            for sat in ["S2", "S1", "mask"]:
                 for folder in os.listdir(workPath / sat):
+                    if sat == "mask": folder = "poly"
                     dstFolder = savePath / phase / sat / folder
                     dstFolder.mkdir(parents=True, exist_ok=True)
+                    
+                    
 
-                    event = sarname.split("_")[0]
+                    event = ('_').join(sarname.split("_")[:-1])
                     filename = f"{sarname}.tif" if sat == "S1" else f"{event}.tif"
                     src_url = workPath / sat / folder / filename
-                    # print(src_url)
+
 
                     BANDS, BANDS_INDEX = get_BANDS_and_BANDS_INDEX(sat, REGION, folder)
 
-                    geotiff_tiling(src_url, dstFolder, BANDS, BANDS_INDEX, tile_size)
+                    geotiff_tiling(sat, phase, src_url, dstFolder, BANDS, BANDS_INDEX, tile_size)
 
 
     for phase in ['train', 'test']:
@@ -151,11 +155,14 @@ def tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size, do_tilli
 
 if __name__ == "__main__":
 
-    REGION = 'us'
-    workPath = Path(f"D://wildfire-s1s2-dataset-{REGION}")
+    REGION = 'ca'
+    YEAR = '2021'
+    # 2020 all are train
+    # 2021 train ratio 0.7
+    workPath = Path(f"/home/v/i/vishaln/datasets/wildfire-dataset-{REGION}-{YEAR}")
     savePath = Path(f"{str(workPath)}-tiles")
  
-    tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size=256, do_tilling=False)
+    tiling_wildfire_s1s2_dataset(REGION, workPath, savePath, tile_size=256, do_tilling=True)
     
 
 

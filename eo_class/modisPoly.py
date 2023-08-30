@@ -76,16 +76,30 @@ class MODIS_POLY:
   def union_polyCol_inside_roi(self):
       """ Union PolyCol """
       self.convert_burnDateImg_toPolyCol(self.modisYearlyMosaic)
+      print(self.polyCol.first().getInfo())
       self.unionPoly = self.polyCol.union()
-
-      self.unionPoly.startDate = (self.polyCol.reduceColumns(ee.Reducer.min(), ['startDate']).get('min')                                      .getInfo())
+      print(self.unionPoly.getInfo())
+      
+      
+      # print the start date and end date of the polycol
+      # print(self.polyCol.first().get('startDate').getInfo())
+      
+      
+      # print(self.polyCol.first().propertyNames().getInfo())
+      # print(self.polyCol.first().get('type').getInfo())
+      
+      self.unionPoly.startDate = self.polyCol.reduceColumns(ee.Reducer.min(), ['startDate']).get('min').getInfo()
       self.unionPoly.endDate = self.polyCol.reduceColumns(ee.Reducer.max(), ['endDate']).get('max').getInfo()
       
+      
+      
+      
       print("--------------- modis ---------------")
+      
       # print(f"unionPoly.startDate: {self.unionPoly.startDate}, \nunionPoly.endDate: {self.unionPoly.endDate}")
       print(f"modis.startDate: {self.unionPoly.startDate}, \nmodis.endDate: {self.unionPoly.endDate}")
       print("-------------------------------------")
-
+      exit()
 
   def get_single_fireEvent(self, idxPoly):
       # Quary images according to derived polyBox from polyCol.
@@ -130,7 +144,7 @@ class MODIS_POLY:
       areaHa = img.multiply(ee.Image.pixelArea()).divide(10000) #convert to "ha"
       stats = areaHa.reduceRegion(
             reducer=ee.Reducer.sum(),
-            geometry=polyFeatCol.geometry(),
+            geometry=polyFeatCol.geometry(1), # CHANGED TO 1
             scale=100,
             maxPixels=86062013
           )
@@ -142,11 +156,15 @@ class MODIS_POLY:
         # reducer = ee.Reducer.minMax(),
         reducer = ee.Reducer.percentile([0.1, 99.9], ["min", "max"]), # BurnDate is more accurate using percentile
         scale = 100,
-        geometry = ee.FeatureCollection([feat]).geometry()
+        geometry = ee.FeatureCollection([feat]).geometry(1) # CHANGED TO 1
       )
       BurnDate_min = burnDate.get("BurnDate_min")
       BurnDate_max = burnDate.get("BurnDate_max")
 
+      if BurnDate_min is None or not isinstance(BurnDate_min, (int, float)):
+        BurnDate_min = 1  
+      if BurnDate_max is None or not isinstance(BurnDate_max, (int, float)):
+        BurnDate_max = 1
       startDate = self.yearFirstDay \
                 .advance(ee.Number(BurnDate_min).subtract(1), 'day').format().slice(0,10)
       endDate = self.yearFirstDay \

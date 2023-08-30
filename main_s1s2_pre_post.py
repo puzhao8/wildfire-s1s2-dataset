@@ -8,23 +8,28 @@ logger = logging.getLogger(__name__)
 
 from typing import Dict
 import ee
-ee.Initialize()
+
+service_account = 'gee-login@rapid-entry-390509.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, '../rapid-entry-390509-3651b6818efb.json')
+ee.Initialize(credentials)
 
 
-# from eo_class.modisPoly import MODIS_POLY
+
 import yaml
 import numpy as np
 import json
 
 json_dict = {
     # United States
-    'AK': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
-    'US': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
+    'AK_2017_2019': "./wildfire_events/MTBS_AK_2017_2019_events_ROI.json",
+    'US_2017_2019': "./wildfire_events/MTBS_US_2017_2019_events_ROI.json",
+    'US_2020': "./wildfire_events/MTBS_US_2020_events.json",
+    'US_2021': "./wildfire_events/MTBS_US_2021_events.json",
 
     # Canada 2017-2021
-    'CA_2017': "./wildfire_events/POLY_CA_2017_events_gt2k.json", # "minBurnArea": 2000
-    'CA_2018': "./wildfire_events/POLY_CA_2018_events_gt2k.json",
-    'CA_2019': "./wildfire_events/POLY_CA_2019_events_gt2k.json",
+    'CA_2017': "./wildfire_events_final/Canada_Wildfires_2017.json", # "minBurnArea": 2000
+    'CA_2018': "./wildfire_events_final/Canada_Wildfires_2018.json",
+    'CA_2019': "./wildfire_events_final/Canada_Wildfires_2019.json",
     'CA_2020': "./wildfire_events_final/Canada_Wildfires_2020.json",
     'CA_2021': "./wildfire_events_final/Canada_Wildfires_2021.json"
 
@@ -34,8 +39,17 @@ json_dict = {
 
 """ CFG """
 cfg = edict({
-    'where': 'CA_2021', # 'US,
-    'minBurnArea': 2000,
+    # make changes here
+    'where': 'US_2020', # region and year
+    'dataset_folder': "wildfire-s1s2-dataset-us-2020", # folder in GCS bucket
+    
+    # setting for export
+    'BUCKET': "wildfire-dataset-1", # GCS bucket
+    'scale': 20, # spatial resolution
+    'export': ['S2', 'S1', 'ALOS', 'mask', 'AUZ'], # export list
+    # 'export': ['mask'], # export list
+
+    'minBurnArea': 2000, # minimum burned areas being take as an event
 
     # # AK
     # "period": 'fire_period', #'fire_period', # "season" for AK only?
@@ -53,7 +67,7 @@ cfg['JSON'] = json_dict[cfg.where]
 Wildfire Event
 ################################################################# """ 
 from eo_class.fireEvent import load_json
-from gee.export import update_query_event, query_s1s2_and_export, query_modis_and_export
+from gee.export import update_query_event, query_s1s2_and_export
 
 
 print(cfg.JSON)
@@ -61,11 +75,11 @@ EVENT_SET = load_json(cfg.JSON)
 
 EVENT_SET_subset = edict()
 for event_id in EVENT_SET.keys():
-    if cfg['where'] in ['AK', 'US']:
+    if ('US' in cfg['where']) or ('AK' in cfg['where']):
         if EVENT_SET[event_id]["BurnBndAc"] >= cfg.minBurnArea:
             EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
-    if cfg['where'] in ['CA_2017', 'CA_2018', 'CA_2019']:
+    if 'CA' in cfg['where']:
         if EVENT_SET[event_id]["ADJ_HA"] >= cfg.minBurnArea:
             EVENT_SET_subset.update({event_id: EVENT_SET[event_id]})
 
@@ -80,24 +94,29 @@ print(f"total number of events to query: {num} \n")
 # for event_id in list(EVENT_SET_subset.keys())[idx_stop:idx_stop+1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
 ''' Loop over each wildfire event '''
+
+
 for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
     
+    
     event = EVENT_SET[event_id]
+
+    
     event['where'] = cfg['where']
 
-    if event['where'] in ['AK', 'US']:
+    if ('US' in cfg['where']) or ('AK' in cfg['where']):
         event['start_date'] = event['Ig_Date']
         event['end_date'] = event['modisEndDate']
-        event['year'] = ee.Number(event['YEAR']).format().getInfo()
+        event['year'] = ee.Number(event['year']).format().getInfo()
         # pprint(event)
 
-    if event['where'] in ['CA_2017', 'CA_2018', 'CA_2019']:
+    if 'CA' in event['where']:
         event['start_date'] = event['modisStartDate'] or event["AFSDATE"] or event['SDATE']
         event['end_date'] = event['modisEndDate'] or event["AFEDATE"] or event['EDATE']
         event['year'] = ee.Number(event['YEAR']).format().getInfo()
 
-        event['name'] = event['NAME']
-
+    event['name'] = event['NAME']
+    
         # tmp = event['NAME'].split("_")
         # event['name'] = f"{tmp[0]}_{tmp[-1]}_{tmp[1]}_{tmp[2]}"
 
@@ -109,16 +128,14 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
     # if event.end_date is None: event['end_date'] = f"{event['YEAR']}-09-01"
 
     queryEvent = update_query_event(cfg, event)
-    dataset_folder = "wildfire-s1s2-dataset-ca-2021"
     
-    if ('end_date' in event.keys()):
+    if ('end_date' in event.keys() and event['end_date'] is not None):
         print(f"-----------------> {event.name} <------------------ ")
 
         # Sentinel-1, Sentinel-2
         query_s1s2_and_export(queryEvent, 
-                scale=20, 
-                BUCKET="wildfire-dataset",
-                dataset_folder=dataset_folder,
-                # export=['S2'],
-                export=['S2', 'S1', 'ALOS', 'mask', 'AUZ']
+                scale=cfg.scale, 
+                BUCKET=cfg.BUCKET,
+                dataset_folder=cfg.dataset_folder,
+                export=cfg.export   
             )
