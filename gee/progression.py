@@ -265,16 +265,13 @@ def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-data
 
     # from gee.progression import get_s1_progression, get_s2_progression, get_mask_dict
 
-    export_dict = edict({
-            'mask': get_mask_dict(queryEvent),
-            'S1': get_s1_progression(queryEvent),
-            'S2': get_s2_progression(queryEvent, cloud_level=roi_cloud_level, filter_by_cloud=filter_by_cloud),
-            # 'ALOS': get_alos_dict(queryEvent),
-            
-            'AUZ': get_aux_dict()
-        })
+    export_dict = {}
+    if 'mask' in export_sat: export_dict.update({'mask': get_mask_dict(queryEvent)})
+    if 'S1' in export_sat: export_dict.update({'S1': get_s1_progression(queryEvent)})
+    if 'S2' in export_sat: export_dict.update({'S2': get_s2_progression(queryEvent, cloud_level=roi_cloud_level, filter_by_cloud=filter_by_cloud)}),
+    if 'AUZ' in export_sat: export_dict.update({'AUZ': get_aux_dict()})
+    export_dict = edict(export_dict)
 
-    export_dict = {key: export_dict[key] for key in export_sat}
     pprint(export_dict)
 
     """ Export Both SAR and MSI to Cloud """

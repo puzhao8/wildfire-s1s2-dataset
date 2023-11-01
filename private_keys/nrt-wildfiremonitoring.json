@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nrt-wildfiremonitoring",
+  "private_key_id": "ed6e4b98c99212d02a24083fe50e8d481b438680",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCHv0g4yBs2LdsQ\nU/rogniOLQ6irzS6p3aBkS9fvdDAEZdv7J0/rgKipEYSx++pNseKObtCj7aVNyR4\nDFcf+4eSbD+bi4xtrfnjQOtZASsMJSgE2d79P8Ov5l2tv33A1krqzYs3CRw2bJ24\n974SiNhQ+aLd+w9Xbn1mxI3jY+eIuXEllZO3JNE4KR4VwVrijgV2yvJ2ffJJLFVs\nbpQq8mpQwUHNFVmhbEkNCCvlQBUztrN7KyOoIf0Irrgj+mw58vGPa1VtY4fCnj13\nC9/xw+6m4e692sFO3SAjhcYHbqEmjpfBGuKH/f9Qx+0I270RMrCKX/gqBXwZFjKB\nfh+c7E09AgMBAAECggEABubwsORpz8oqmIywlghmQVJkq1xtuazgn2tmpX9VASMT\n2F7HSxDZtPPV1UghtTCiGjLfxN1iSvl8CveTqX5kUQtce5fvmrcNHOM05DhlPC+a\ndo6uYiGPHV9A9Z/mMLskoYY0dSarLtA8f8Zm/XHET++1eoR0rf0h9qr5TO3MPL0g\nINfZR8VLwo1ShSuoZM3UhjzP5muEfjIZL3lWpYe2hHQgOxC/5hCAriWpoT95mq6o\nK1rbOEjap4cJxnxO9HUilnuKZY5hr1hlMoNrMCGUuJZKWmG5MywGSuUa0Oe9hazr\nfIk6CpwSan/3Ytir8BAbrFRPL6SWkh5sSd4okSWh4QKBgQC7J3tPvwVCIh+2lG1V\nv//ybhEwUo7XQXhwYKmIYrBQ6FaXE5E4xTdVvtT8a3RKFPEEkVdMEpBHJm3a3xBU\nnfjTQJyIWHYIeRw0nhPhD+2sCwiR8mAbeFErEwUwj/6ClgNenRVmytDVR7219KHJ\nY6ISNLx7c7SNDtAeJ4/pzCeUnQKBgQC5rr6B/wgbEqZt0xg+y4iTScVAmHvbCaec\nogSvreEuT4iYYyDCDaHP0e2tDZR9pjuj41pgSJDP/oKabf151CrmFQaMAOmjL3VH\nQXEYP/IyihoD6hGaQ8ZKE9U1pVYoe0SNDmD51yxHW5QCbgyuHTn67sCLhhtLIypf\nO7khEYkpIQKBgQCkagz0g9W0wZGmrkJXALNzYKqNDxoZlJSf9Os6u6g1i8b2NeRw\nQSFZnKozjpq8siUCZESSugQx3VrI2wnXrGf5/lsFlOEslGjo+K5yG7IqYA8JWCqC\nN3LnKnB2tylZwzv2lH1GropDtCC/hsfSykqJP/cNZRqKiSbgNtVBCW8EKQKBgCEV\ndpI4+5u/RfIZg59kqm/72+53fNH5NWkeIRGgPJgAycjFGMgan7Mkp2GHIucEYGoC\nD09KfqrgoSqc4GX9nKskIed+HiLaSN4qVdlJQ4EnxBzgbsR6wPDf+cQ2MlTCKeOs\nJTE+2n/YXFXWf+HiCTuhoKL7gQ9xM5KGVKUEt9ihAoGBAIr55mb3bJU98ZNlDcl0\nbye/q1sFtJr8xyG/t1+8HxzovnHwsIRYsE9tKg/dt1J4U/W+DVhUqPBdrjE4dslZ\n/AJIrNCfBJYD6RBbs9UXrR6DUKv1+H7J0SBos4Pq0zJNITwjIzAev/nTSndEq/IH\nGVcfmrE0nEhA1TXoB06B4JxW\n-----END PRIVATE KEY-----\n",
+  "client_email": "ai4wildfire@nrt-wildfiremonitoring.iam.gserviceaccount.com",
+  "client_id": "111801862215154081979",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ai4wildfire%40nrt-wildfiremonitoring.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

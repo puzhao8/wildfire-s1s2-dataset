@@ -1,8 +1,14 @@
 # from main import EVENT_SET
 from prettyprinter import pprint
 from easydict import EasyDict as edict
+import json
 import ee
-ee.Initialize()
+
+keyfile='private_keys/nrt-wildfiremonitoring.json'
+key=json.load(open(keyfile))
+service_account=key['client_email']
+credentials = ee.ServiceAccountCredentials(service_account, keyfile)
+ee.Initialize(credentials)
 
 
 def get_pntsFilter(roi, buffer_size=0):
@@ -134,13 +140,23 @@ EVENT_SET = edict({
     #     "where": 'SE'
     # }
 
+    'CA_2023_DonnieCreek': {
+        "name": "CA_2023_DonnieCreek",
+        "roi": [-123.134, 57.023, -120.344, 58.171],
+        "year": 2023,
+        'crs': "EPSG:32610",
 
+        "modisStartDate": "2023-04-21",
+        "modisEndDate": "2023-05-01",
+
+        "where": 'CA'
+    },
 })
 
 
 # event = EVENT_SET['CA2017Elephant']
 
-for name in ['CA_2021_Kamloops']: # list(EVENT_SET.keys())[:1]:
+for name in ['CA_2023_DonnieCreek']: # list(EVENT_SET.keys())[:1]:
     event = EVENT_SET[name]
 
     event['start_date'] = event['modisStartDate']
@@ -156,13 +172,14 @@ for name in ['CA_2021_Kamloops']: # list(EVENT_SET.keys())[:1]:
 
     # Query Progression and Export 
     from gee.progression import query_progression_and_export
+    print()
     print(f"-----------------> {event.name} <------------------ ")
 
     query_progression_and_export(
         cfg, 
         event, 
-        scale=20, # spatial resolution
-        BUCKET="wildfire-prg-dataset-v1", # GCP
-        export_sat=['S2', 'S1'],
+        scale=100, # spatial resolution
+        BUCKET="wildfire-prg-dataset-100m", # GCP
+        export_sat=['S1'],
         # export_sat=['S1', 'S2', 'mask', 'AUZ']
     )

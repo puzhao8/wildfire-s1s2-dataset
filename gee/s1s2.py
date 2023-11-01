@@ -62,8 +62,8 @@ def get_s2_dict(queryEvent, cloud_level=5):
     # cloudFilter = ee.Filter.lte("CLOUDY_PIXEL_PERCENTAGE", cloud_level)
     cloudFilter = ee.Filter.lte("ROI_CLOUD_RATE", cloud_level)
 
-    print("post: ", period_start.advance(1, 'year').format().getInfo(), \
-        period_end.advance(1, "year").format().getInfo())
+    # print("post: ", period_start.advance(1, 'year').format().getInfo(), \
+    #     period_end.advance(1, "year").format().getInfo())
 
     s2_dict = edict()
     s2_dict['pre'] = (MSI.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
@@ -253,13 +253,20 @@ def get_mask_dict(queryEvent):
 
     # MODIS
     MODIS = ee.ImageCollection("MODIS/006/MCD64A1")
-    modis = MODIS.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
+    try:
+        modis = MODIS.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
+    except:
+        modis = MODIS.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(12.1, 'month')).mosaic()
+
     # print("modis: ", modis.bandNames().getInfo())
     mask_dict['modis'] = modis.select('BurnDate').unmask()
 
     # FireCCI51
     FireCCI51 = ee.ImageCollection("ESA/CCI/FireCCI/5_1")
-    firecci = FireCCI51.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
+    try:
+        firecci = FireCCI51.filterDate(ee.Date(queryEvent.start_date).advance(-10, 'day'), ee.Date(queryEvent.end_date).advance(10, 'day')).mosaic()
+    except:
+        firecci = FireCCI51.filterDate(ee.Date(queryEvent.year), ee.Date(queryEvent.year).advance(12.1, 'month')).mosaic()
 
     # print("firecci: ", firecci.bandNames().getInfo())
     mask_dict['firecci'] = firecci.select('BurnDate').unmask()
@@ -314,6 +321,6 @@ def get_mask_dict(queryEvent):
         #TODO: add reference data for EU Wildfire events
         pass
 
-    return mask_dict 
-    # return {'poly': mask_dict['poly']} # update poly mask only
+    # return mask_dict 
+    return {'poly': mask_dict['poly']} # update poly mask only
     # return {'mtbs': mask_dict['mtbs']} # update poly mask only

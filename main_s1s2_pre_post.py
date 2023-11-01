@@ -37,14 +37,14 @@ json_dict = {
 """ CFG """
 cfg = edict({
     # make changes here
-    'where': 'US_2020', # region and year
-    'dataset_folder': "wildfire-s1s2-dataset-us-2020", # folder in GCS bucket
+    'where': 'CA_2020', # region and year
+    'dataset_folder': "wildfire-s1s2-dataset-ca-2020", # folder in GCS bucket
     
     # setting for export
     'BUCKET': "wildfire-dataset", # GCS bucket
     'scale': 20, # spatial resolution
-    'export': ['S2', 'S1', 'ALOS', 'mask', 'AUZ'], # export list
-    # 'export': ['mask'], # export list
+    # 'export': ['S2', 'S1', 'ALOS', 'mask', 'AUZ'], # export list
+    'export': ['mask'], # export list
 
     'minBurnArea': 2000, # minimum burned areas being take as an event
 
@@ -121,13 +121,14 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
 
     queryEvent = update_query_event(cfg, event)
     
-    if ('end_date' in event.keys()):
-        print(f"-----------------> {event.name} <------------------ ")
+    # if (event['start_date'] is not None): 
+    if event['end_date'] is None: event['end_date'] = f'{event.year}-10-01'
+    print(f"-----------------> {event.name} <------------------ ")
 
-        # Sentinel-1, Sentinel-2
-        query_s1s2_and_export(queryEvent, 
-                scale=cfg.scale, 
-                BUCKET=cfg.BUCKET,
-                dataset_folder=cfg.dataset_folder,
-                export=cfg.export
-            )
+    # Sentinel-1, Sentinel-2
+    query_s1s2_and_export(queryEvent, 
+            scale=cfg.scale, 
+            BUCKET=cfg.BUCKET,
+            dataset_folder=cfg.dataset_folder,
+            export=cfg.export
+        )
