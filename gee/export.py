@@ -104,16 +104,15 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
     from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict
     from gee.aux_data import get_aux_dict
 
-    # pprint(queryEvent.roi.getInfo()['coordinates'])
-    export_dict = edict({
-        'S2': get_s2_dict(queryEvent, cloud_level=10),
-        'S1': get_s1_dict(queryEvent),
-        'ALOS': get_alos_dict(queryEvent),
-        'mask': get_mask_dict(queryEvent),
-        'AUZ': get_aux_dict()
-    })
+    # pprint(queryEvent.roi.getInfo()['coordinates'])    
+    export_dict = {}
+    if 'mask' in export_sat: export_dict.update({'mask': get_mask_dict(queryEvent)})
+    if 'S1' in export_sat: export_dict.update({'S1': get_s1_dict(queryEvent)})
+    if 'ALOS' in export_sat: export_dict.update({'S1': get_alos_dict(queryEvent)})
+    if 'S2' in export_sat: export_dict.update({'S2': get_s2_dict(queryEvent, cloud_level=10)}),
+    if 'AUZ' in export_sat: export_dict.update({'AUZ': get_aux_dict()})
+    export_dict = edict(export_dict)
     
-    export_dict = {key: export_dict[key] for key in export}
     pprint(export_dict)
 
     """ Export Both SAR and MSI to Cloud """

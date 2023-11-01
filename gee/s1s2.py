@@ -43,6 +43,7 @@ def get_s2_dict(queryEvent, cloud_level=5):
     roi = queryEvent.roi
 
     def add_ROI_Cloud_Rate(img):
+        ''' Calculate the cloud cover percentage inside a given ROI, and add it as a property of an ee.Image '''
         cloud = img.select('cloud').updateMask(img.select(0).mask())
         cloud_pixels = cloud.eq(0).reduceRegion(ee.Reducer.sum(), roi, 60).get('cloud')
         all_pixels = cloud.gte(0).reduceRegion(ee.Reducer.sum(), roi, 60).get('cloud')
