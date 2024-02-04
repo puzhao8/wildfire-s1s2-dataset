@@ -193,20 +193,31 @@ def get_s1_dict(queryEvent):
 
     # Compute average image for each orbit
     S1_dict = edict({'pre':{}, 'post': {}})
+    orbImgCol_post_size_max = 0 # record the size at the most frequent orbit
     for orbit in common_orbits:
     # for orbit in ['DSC160']:
         orbImgCol_pre = S1_pre.filter(ee.Filter.eq("Orbit_Key", orbit))#.sort("GROUP_INDEX", False)
         orbImgCol_post = S1_post.filter(ee.Filter.eq("Orbit_Key", orbit))#.sort("GROUP_INDEX", False)
+        orbImgCol_post_size = orbImgCol_post.size().getInfo()
+        print(f"{orbit} size:  {orbImgCol_post_size}")
 
         orb_images = orbImgCol_pre.filter(ee.Filter.eq("IMG_LABEL", orbImgCol_pre.first().get("IMG_LABEL")))
         firstImgGeom = orb_images.first().geometry()
         orb_geom = ee.Geometry(orb_images.iterate(unionGeomFun, firstImgGeom))
 
-        if orb_geom.contains(queryEvent.roi.buffer(-1e3), ee.ErrorMargin(1)).getInfo():
-            S1_dict['pre'][f"{orbit}"] = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
-            S1_dict['post'][f"{orbit}"] = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
+        # if orb_geom.contains(queryEvent.roi.buffer(-1e3), ee.ErrorMargin(1)).getInfo():
+        #     S1_dict['pre'][f"{orbit}"] = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
+        #     S1_dict['post'][f"{orbit}"] = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
 
-    return S1_dict
+        # obtain the most frequent orbit
+        if orbImgCol_post_size > orbImgCol_post_size_max:
+            orbImgCol_post_size_max = orbImgCol_post_size
+            print(f"{orbit} max:  {orbImgCol_post_size_max}")
+            pre = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
+            post = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
+            
+
+    return edict({'pre': pre, 'post': post})
 
 
 """ #################################################################
@@ -322,6 +333,6 @@ def get_mask_dict(queryEvent):
         #TODO: add reference data for EU Wildfire events
         pass
 
-    # return mask_dict 
-    return {'poly': mask_dict['poly']} # update poly mask only
+    return mask_dict 
+    # return {'poly': mask_dict['poly']} # update poly mask only
     # return {'mtbs': mask_dict['mtbs']} # update poly mask only

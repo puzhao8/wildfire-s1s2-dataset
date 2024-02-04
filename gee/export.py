@@ -2,6 +2,8 @@ from gee.aux_data import get_aux_dict
 from gee.s1s2 import get_alos_dict
 import os
 import ee
+import xarray
+from pathlib import Path
 
 import logging
 logger = logging.getLogger(__name__)
@@ -59,7 +61,8 @@ def update_query_event(cfg, event):
     if 'CA' in event['where']:
         burned_area = queryEvent['ADJ_HA']
 
-    if len(event['roi']) == 2: # if two points provided .. 
+    print(event['roi'])
+    if len(event['roi']) == 4: # if two points provided .. 
         queryEvent['roi'] = ee.Geometry.Rectangle(event['roi']).bounds()
     else: # if five points provided ...
         queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
@@ -88,7 +91,10 @@ def update_query_event(cfg, event):
 
 
 """ Query and Export """
-def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca', export=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+def query_s1s2_and_export(queryEvent, scale=20, 
+                          BUCKET="wildfire-dataset", 
+                          dataset_folder='wildfire-s1s2-dataset-ca', 
+                          export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
     """
         queryEvent: the event info used to query data
         scale: the spatial resolution in meters, 20 as default
@@ -134,7 +140,74 @@ def query_s1s2_and_export(queryEvent, scale=20, BUCKET="wildfire-dataset", datas
                 image = export_dict[sat][stage]
                 print(dst_url)
                 export_image_to_CloudStorage(image, queryEvent.roi, str(dst_url), scale=scale, crs=queryEvent.crs, BUCKET=BUCKET)
-                
+
+""" Query and Export witg Xee """
+def xee_export(queryEvent, 
+               scale=20,  
+               dataset_folder='exported_data/wildfire-s1s2-dataset-ca', 
+               export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']):
+    """
+        queryEvent: the event info used to query data
+        scale: the spatial resolution in meters, 20 as default
+        dataset_folder: unique folder name for a specific task 
+        export: a list including all data sources to export, S2, S1, and ALOS denote Sentinel-2, Sentinel-1, and ALOS PARSAR respectively. mask denotes the reference masks rasterized from official fire perimiters, or MODIS/VIIRS Montly Burned Area products, while AUZ denotes some auxiliary data, such as land cover, DEM/DSM or climate zone etc.
+    """
+    Path(dataset_folder).mkdir(exist_ok=True, parents=True)    
+        
+    """ ---------- Event to Query ---------- """
+    """ Query Data: S1, S2, & ALOS """
+    from gee.s1s2 import get_s2_dict, get_s1_dict, get_mask_dict
+    from gee.aux_data import get_aux_dict
+
+    # pprint(queryEvent.roi.getInfo()['coordinates'])    
+    export_dict = {}
+    if 'mask' in export_sat: export_dict.update({'mask': get_mask_dict(queryEvent)})
+    if 'S1' in export_sat: export_dict.update({'S1': get_s1_dict(queryEvent)})
+    if 'ALOS' in export_sat: export_dict.update({'S1': get_alos_dict(queryEvent)})
+    if 'S2' in export_sat: export_dict.update({'S2': get_s2_dict(queryEvent, cloud_level=10)}),
+    if 'AUZ' in export_sat: export_dict.update({'AUZ': get_aux_dict()})
+    export_dict = edict(export_dict)
+    
+    pprint(export_dict)
+    # export_dict = {
+        # {'mask': {'modis': ee.Image, 
+                # 'viirs': ee.Image, 
+                # 'poly': ee.Image}
+        # {'S1': {'pre': ee.Image (VH, VV)}
+        #       {'post': ee.Image (VH, VV)}
+        # {'S2': {'pre': {ee.Image (B1-B12)}
+        #       {'post': {ee.Image (B1-B12)}}
+        # {'ALOS': {'pre': ee.Image (HV, HH)}
+        #       {'post': ee.Image (HV, HH)}
+    # }
+
+    print(queryEvent['crs'])
+    saveName = f"{queryEvent.name}"
+    imgList = []
+    for sat in export_dict.keys():
+        for stage in export_dict[sat].keys():
+            print(f"{saveName}/{sat}/{stage}")
+            image = ee.Image(export_dict[sat][stage]).setDefaultProjection(crs=queryEvent['crs'], scale=scale)
+            # imgCol = ee.ImageCollection(image)
+            imgList.append(image)
+
+    imgCol = ee.ImageCollection.fromImages(imgList)
+    ds = xarray.open_dataset(imgCol, 
+                    engine='ee', 
+                    projection=image.select(0).projection(),
+                    geometry=queryEvent.roi,
+                    scale=scale,
+            )
+    
+    # del ds.label.attrs['dimensions']
+    ds.to_netcdf(f'{dataset_folder}/{saveName}.h5', 
+                    engine='h5netcdf',
+                    # group=f'{sat}/{stage}'
+                )
+
+    return 
+
+    
 
 """ MODIS """
 def query_modis_viirs_and_export(event, scale=500, BUCKET="wildfire-dataset", dataset_folder='wildfire-s1s2-dataset-ca', export_mask=True):

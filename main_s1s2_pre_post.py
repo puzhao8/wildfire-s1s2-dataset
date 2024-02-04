@@ -37,7 +37,7 @@ json_dict = {
 """ CFG """
 cfg = edict({
     # make changes here
-    'where': 'CA_2020', # region and year
+    'where': 'CA_2019', # region and year
     'dataset_folder': "wildfire-s1s2-dataset-ca-2020", # folder in GCS bucket
     
     # setting for export
@@ -91,8 +91,9 @@ print(f"total number of events to query: {num} \n")
 # for event_id in list(EVENT_SET_subset.keys())[idx_stop:idx_stop+1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
 
 ''' Loop over each wildfire event '''
-for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
-    
+# for event_id in list(EVENT_SET_subset.keys())[:1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
+for event_id in ['CA_2019_AB_172']: # CA_2019_NT_8, CA_2019_ON_730
+
     event = EVENT_SET[event_id]
     event['where'] = cfg['where']
 
@@ -125,10 +126,18 @@ for event_id in list(EVENT_SET_subset.keys()): #list(EVENT_SET_subset.keys()): #
     if event['end_date'] is None: event['end_date'] = f'{event.year}-10-01'
     print(f"-----------------> {event.name} <------------------ ")
 
-    # Sentinel-1, Sentinel-2
-    query_s1s2_and_export(queryEvent, 
-            scale=cfg.scale, 
-            BUCKET=cfg.BUCKET,
-            dataset_folder=cfg.dataset_folder,
-            export=cfg.export
-        )
+    # # Sentinel-1, Sentinel-2
+    # query_s1s2_and_export(queryEvent, 
+    #         scale=cfg.scale, 
+    #         BUCKET=cfg.BUCKET,
+    #         dataset_folder=cfg.dataset_folder,
+    #         export=cfg.export
+    #     )
+
+    from gee.export import xee_export
+    xee_export(queryEvent, 
+               scale=50,  
+               dataset_folder='outputs/wildfire-s1s2-dataset-ca', 
+            #    export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']
+                export_sat=['S1', 'S2', 'mask']
+            )
