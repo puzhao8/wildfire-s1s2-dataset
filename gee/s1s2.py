@@ -31,9 +31,9 @@ def rescale_s2(img):
     BANDS = ['B4', 'B8', 'B12'] # 6 bands
     # BANDS = ['B2', 'B3', 'B4', 'B8', 'B11', 'B12'] # 6 bands
     # BANDS = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B11', 'B12'] # 10 bands
-    return (img.select(BANDS)
-                .toFloat()
-                .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
+    return (img.select(BANDS).clamp(0, 5000).int()
+                # .toFloat()
+                # .divide(1e4).clamp(0,0.5).unitScale(0,0.5)
                 # # .addBands(img.select('cloud'))
     )
 
@@ -156,21 +156,21 @@ def get_s1_dict(queryEvent):
 
 
     S1_pre = (S1_flt.filterDate(period_start.advance(-1, 'year'), period_end.advance(-1, "year"))
-                    .map(add_RFDI)
+                    # .map(add_RFDI)
                     .map(set_group_index_4_S1)
             )
 
     if queryEvent.end_date is not None:
         # post s1 image in the same year
         S1_post = (S1_flt.filterDate(queryEvent.end_date, ee.Date(queryEvent.end_date).advance(2,"month"))
-                        .map(add_RFDI)
+                        # .map(add_RFDI)
                         .map(set_group_index_4_S1)
                 )
 
     else:
         # post s1 image in the next year
         S1_post = (S1_flt.filterDate(period_start.advance(1, 'year'), period_end.advance(1, "year"))
-                        .map(add_RFDI)
+                        # .map(add_RFDI)
                         .map(set_group_index_4_S1)
                 )
 
@@ -182,7 +182,7 @@ def get_s1_dict(queryEvent):
 
     if S1_post.size().getInfo() == 0: #if there is no images in the after-year
          S1_post = (S1_flt.filterDate(queryEvent['end_date'], ee.Date(queryEvent['end_date']).advance(2, 'month'))
-                    .map(add_RFDI)
+                    # .map(add_RFDI)
                     .map(set_group_index_4_S1)
             )
 
@@ -213,8 +213,10 @@ def get_s1_dict(queryEvent):
         if orbImgCol_post_size > orbImgCol_post_size_max:
             orbImgCol_post_size_max = orbImgCol_post_size
             print(f"{orbit} max:  {orbImgCol_post_size_max}")
-            pre = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
-            post = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
+            # pre = orbImgCol_pre.mean().select(['ND', 'VH', 'VV'])
+            # post = orbImgCol_post.mean().select(['ND', 'VH', 'VV'])
+            pre = orbImgCol_pre.mean().select(['VH', 'VV'])
+            post = orbImgCol_post.mean().select(['VH', 'VV'])
             
 
     return edict({'pre': pre, 'post': post})
@@ -251,8 +253,8 @@ def get_alos_dict(queryEvent):
     ALOS_post = PALSAR_dB.filter(ee.Filter.eq("system:index", after_year)).first()
 
     ALOS = edict()
-    ALOS['pre'] = ALOS_pre.select(["ND", "HV", "HH"])
-    ALOS['post'] = ALOS_post.select(["ND", "HV", "HH"])
+    ALOS['pre'] = ALOS_pre.select(["HV", "HH"])
+    ALOS['post'] = ALOS_post.select(["HV", "HH"])
 
     return ALOS
 
