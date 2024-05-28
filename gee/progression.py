@@ -248,6 +248,35 @@ def get_mask_dict(queryEvent):
     return {'poly': mask_dict['poly']}
 
 
+""" XEE Export Progression """
+from gee.aux_data import get_aux_dict
+def query_progression(cfg, event, export_sat=['S1', 'S2', 'mask', 'AUZ']):
+    roi_cloud_level = cfg.roi_cloud_level
+    filter_by_cloud = cfg.filter_by_cloud
+    extend_months = cfg.extend_months
+
+    """ Event to Query """
+    queryEvent = edict(event.copy())
+
+    queryEvent['period_start'] = ee.Date(queryEvent['start_date']).advance(-extend_months, 'month')
+    queryEvent['period_end'] = ee.Date(queryEvent['end_date']).advance(extend_months, 'month')
+    queryEvent['roi'] = ee.Geometry.Polygon(event['roi']).bounds()
+    queryEvent['S2_BANDS'] = cfg.S2_BANDS
+
+    # from gee.progression import get_s1_progression, get_s2_progression, get_mask_dict
+
+    export_dict = {}
+    if 'mask' in export_sat: export_dict.update({'mask': get_mask_dict(queryEvent)})
+    if 'S1' in export_sat: export_dict.update({'S1': get_s1_progression(queryEvent)})
+    if 'S2' in export_sat: export_dict.update({'S2': get_s2_progression(queryEvent, cloud_level=roi_cloud_level, filter_by_cloud=filter_by_cloud)}),
+    if 'AUZ' in export_sat: export_dict.update({'AUZ': get_aux_dict()})
+    export_dict = edict(export_dict)
+
+    pprint(export_dict)
+
+    return export_dict
+
+
 """ Export Progression """
 from gee.aux_data import get_aux_dict
 def query_progression_and_export(cfg, event, scale=20, BUCKET="wildfire-prg-dataset", export_sat=['S1', 'S2', 'mask', 'AUZ']):

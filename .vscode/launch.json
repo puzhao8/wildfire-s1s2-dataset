@@ -11,6 +11,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+            "justMyCode": false,
             "env": {
                 "PYTHONPATH": "/Users/puzhao/opt/anaconda3/envs/gee/bin/python"},
         }

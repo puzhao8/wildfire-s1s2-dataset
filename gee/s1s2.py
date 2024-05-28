@@ -244,7 +244,7 @@ def add_ALOS_CR(img):
 # ALOS
 def get_alos_dict(queryEvent):
     PALSAR = ee.ImageCollection("JAXA/ALOS/PALSAR/YEARLY/SAR")
-    PALSAR_dB = PALSAR.map(add_ALOS_RFDI).map(to_ALOS_dB)#.map(add_ALOS_CR)
+    PALSAR_dB = PALSAR.map(to_ALOS_dB)#.map(add_ALOS_CR) # .map(add_ALOS_RFDI)
 
     before_year = ee.Number.parse(queryEvent.year).subtract(1).format().getInfo()
     after_year = ee.Number.parse(queryEvent.year).add(1).format().getInfo()
@@ -317,15 +317,19 @@ def get_mask_dict(queryEvent):
 
     if 'CA' in WHERE:
         # CA
-        CA_2017 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919")
-        CA_2018 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703")
-        CA_2019 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703")  
-        CA_2020 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2020_r9_20210810")
-        CA_2021 = ee.FeatureCollection("users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2021_r9_20220624")
-        CA_BurnAreaPolys = CA_2017.merge(CA_2018).merge(CA_2019).merge(CA_2020).merge(CA_2021)
+        NBAC = {
+            '2017':  "users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2017_r9_20190919",
+            '2018': "users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2018_r9_20200703",
+            '2019': "users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2019_r9_20200703",
+            '2020': "users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2020_r9_20210810",
+            '2021': "users/omegazhangpzh/Canada_Fire_Perimeters/nbac_2021_r9_20220624"
+        }
 
-        poly = (CA_BurnAreaPolys.filterBounds(queryEvent.roi)
-                        .filter(ee.Filter.gte("year", queryEvent.year))
+        poly = (ee.FeatureCollection(NBAC[queryEvent.year])
+                    # .filter(ee.Filter.gte("year", queryEvent.year))
+                    # .filter(ee.Filter.isContained('item', queryEvent.roi))
+                    .filterBounds(queryEvent.roi)
+                        
                 ).union(ee.ErrorMargin(30))
         polyImg = poly.style(color='white', fillColor='white', width=0).select('vis-red').gt(0).rename('poly')
         mask_dict['poly'] = polyImg.unmask()

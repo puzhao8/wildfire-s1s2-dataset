@@ -39,6 +39,7 @@ cfg = edict({
     "extend_months": 0, # 1
 })
 
+
 # Wildfire Event
 EVENT_SET = edict({
 

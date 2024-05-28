@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
     ''' Loop over each wildfire event '''
     # for event_id in list(EVENT_SET_subset.keys())[:1]: #list(EVENT_SET_subset.keys()): #: # [idx_stop:] 
-    for event_id in ['CA_2019_NT_8', 'CA_2019_AB_172', 'CA_2019_ON_730']: # CA_2019_NT_8, CA_2019_ON_730, CA_2019_AB_172
+    for event_id in ['CA_2019_ON_730']: # CA_2019_NT_8, CA_2019_ON_730, CA_2019_AB_172
 
         event = EVENT_SET[event_id]
         event['where'] = cfg['where']
@@ -143,10 +143,11 @@ if __name__ == "__main__":
         from gee.export import xee_export
         xee_export(queryEvent, 
                 scale=20,  
-                dataset_folder='outputs/wildfire-s1s2-dataset-ca-V1', 
-                export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']
+                dataset_folder='outputs/wildfire-s1s2-dataset-ca-V0', 
+                # export_sat=['S1', 'S2', 'ALOS', 'mask', 'AUZ']
+                export_sat=['mask']
                     # export_sat=['mask', 'AUZ']
-                )
+            )
         
 
     #%% read .nc file with tables

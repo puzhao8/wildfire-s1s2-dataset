@@ -1,21 +1,28 @@
 
 import ee
 
-
-
 def unionGeomFun(img, first):
     rightGeo = ee.Geometry(img.geometry())
     return ee.Geometry(first).union(rightGeo)
 
 """ Sentinel-2 MSI Data """
-def set_group_index_4_S2(img, groupLevel=13, labelShowLevel=13):
-    imgDateStr = img.date().format()
-    groupIndex = imgDateStr.slice(0, groupLevel)  # 2017 - 07 - 23T14:11:22(len: 19)
+def set_group_index_4_S2(img, groupLevel='day'):
 
-    Date = (imgDateStr.slice(0, labelShowLevel)
+    group_dict = {
+        'month': 7,
+        'day': 10,
+        'hour': 13,
+        'minute': 16,
+        'second': 19
+    }
+        
+    imgDateStr = img.date().format()
+    groupIndex = imgDateStr.slice(0, group_dict[groupLevel])  # 2017-07-23T14:11:22(len: 19)
+
+    date = (imgDateStr.slice(0, group_dict[groupLevel])
             .replace('-', '').replace('-', '').replace(':', '').replace(':', ''))
 
-    imgLabel = (Date).cat(f"_S2")
+    imgLabel = date.cat(f"_S2")
 
     return img.setMulti({
         'GROUP_INDEX': groupIndex,
@@ -24,9 +31,10 @@ def set_group_index_4_S2(img, groupLevel=13, labelShowLevel=13):
     })
 
 # "group by date
-def group_MSI_ImgCol(imgcollection, multiSensorGroupFlag=False):
+def group_MSI_ImgCol(imgcollection, groupLevel='day', multiSensorGroupFlag=False):
+    
     imgCol_sort = imgcollection.sort("system:time_start")
-    imgCol = imgCol_sort.map(set_group_index_4_S2)
+    imgCol = imgCol_sort.map(lambda img: set_group_index_4_S2(img, groupLevel))
 
     d = imgCol.distinct(['GROUP_INDEX'])
     di = ee.ImageCollection(d)
@@ -43,14 +51,18 @@ def group_MSI_ImgCol(imgcollection, multiSensorGroupFlag=False):
     j = saveall.apply(di, imgCol, date_eq_filter)
     ji = ee.ImageCollection(j)
 
-    # original_proj = ee.Image(ji.first()).select(0).projection()
+    org_proj = ee.Image(ji.first()).select(0).projection()
+    propertyList = ['GROUP_INDEX', 'system:time_start', 'IMG_LABEL']
 
     def mosaicImageBydate(img):
         imgCol2mosaic = ee.ImageCollection.fromImages(img.get('to_mosaic'))
-        firstImgGeom = imgCol2mosaic.first().geometry()
-        mosaicGeom = ee.Geometry(imgCol2mosaic.iterate(unionGeomFun, firstImgGeom))
-        mosaiced = imgCol2mosaic.mosaic().copyProperties(img, img.propertyNames())
-        return ee.Image(mosaiced).set("system:footprint", mosaicGeom)  # lost
+        mosaicGeom = imgCol2mosaic.geometry().dissolve(ee.ErrorMargin(100, 'meters'))
+        mosaiced = ee.Image(imgCol2mosaic.mosaic().copyProperties(img, propertyList))
+        return ee.Image(
+            mosaiced.set("system:footprint", mosaicGeom)
+                # .set('system:time_start', mosaiced.date().format("Y-MM-01")) # first day of month
+                .setDefaultProjection(crs=org_proj)
+        )
 
     imgcollection_grouped = ji.map(mosaicImageBydate)
     return ee.ImageCollection(imgcollection_grouped.copyProperties(imgCol, imgCol.propertyNames()))
@@ -94,15 +106,10 @@ def group_S1_by_date_orbit(imgcollection):
     ji = ee.ImageCollection(j)
 
     def mosaicImageBydate(img):
-        ## Old version
-        # mosaiced = ee.ImageCollection.fromImages(img.get('to_mosaic')).mosaic().updateMask(1)
-        # return ee.Image(mosaiced).copyProperties(img, img.propertyNames())
-
         imgCol2mosaic = ee.ImageCollection.fromImages(img.get('to_mosaic'))
-        firstImgGeom = imgCol2mosaic.first().geometry()
-        mosaicGeom = ee.Geometry(imgCol2mosaic.iterate(unionGeomFun, firstImgGeom))
+        mosaicGeom = imgCol2mosaic.geometry().dissolve()
         mosaiced = imgCol2mosaic.mosaic().copyProperties(img, img.propertyNames())
-        return ee.Image(mosaiced).set("system:footprint", mosaicGeom)  # lost
+        return ee.Image(mosaiced).set("system:footprint", mosaicGeom) 
 
     imgcollection_grouped = ji.map(mosaicImageBydate)
     return ee.ImageCollection(imgcollection_grouped.copyProperties(imgCol, imgCol.propertyNames()))

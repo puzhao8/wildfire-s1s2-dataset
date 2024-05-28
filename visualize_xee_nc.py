@@ -8,11 +8,11 @@ norm = PercentileInterval(95)
 import warnings
 warnings.filterwarnings("ignore")
 
-# CA_2019_NT_8, CA_2019_AB_172
+# CA_2019_NT_8 (EPSG:32608, WxH: 2181x2065)
+# CA_2019_AB_172 (EPSG:32611, WxH: 4273x4534)
 filename = "CA_2019_NT_8"
-ds = tables.open_file(f'outputs\wildfire-s1s2-dataset-ca-V2\{filename}.h5')
-
-
+data_dir = "outputs\wildfire-s1s2-dataset-ca-V1"
+ds = tables.open_file(f'{data_dir}\{filename}.h5')
 
 bandDict = {
     'S2': ['B4', 'B8', 'B12'],
@@ -24,6 +24,7 @@ images = []
 
 LC = np.array(ds.root['AUZ/landcover/landcover']).transpose(0,2,1)[0,]
 waterMask = (LC!=80).astype(float)
+print(f"shape: {waterMask.shape}")
 
 # Sentinel-2
 def nbr(stage='post'): 
@@ -35,17 +36,26 @@ S2_post = np.vstack((ds.root['S2/post/B12'], ds.root['S2/post/B8'], ds.root['S2/
 S2_pre = np.vstack((ds.root['S2/pre/B12'], ds.root['S2/pre/B8'], ds.root['S2/pre/B4'])).transpose(2,1,0)
 NBR_post = np.nan_to_num(nbr('post'))
 dNBR = np.nan_to_num(nbr('pre')) - NBR_post
-images = images + [(norm(S2_pre), 'S2/pre'), 
+images += [(norm(S2_pre), 'S2/pre'), 
                    (norm(S2_post), 'S2/post'), 
-                   (norm(NBR_post * waterMask), 'S2/post/NBR'), 
+                #    (norm(NBR_post * waterMask), 'S2/post/NBR'), 
                    (norm(dNBR * waterMask), 'S2/dNBR')]
 
+# mask
+modis = np.array(ds.root['mask/modis/BurnDate']).transpose(0,2,1)[0,]
+firecci = np.array(ds.root['mask/firecci/BurnDate']).transpose(0,2,1)[0,]
+poly = np.array(ds.root['mask/poly/poly']).transpose(0,2,1)[0,]
+images += [
+            (poly, 'poly'), 
+            ((modis > 0).astype(float), 'modis'), 
+            ((firecci > 0).astype(float), 'firecci'), 
+    ]
 # AUZ
 # LC = np.array(ds.root['AUZ/landcover/landcover']).transpose(0,2,1)[0,]
 # waterMask = (LC!=80).astype(float)
 DEM = np.array(ds.root['AUZ/DEM/elevation']).transpose(0,2,1)[0,]
 slope = np.array(ds.root['AUZ/DEM/slope']).transpose(0,2,1)[0,]
-images = images + [(LC, 'LandCover'), (DEM, 'DEM')]
+# images = images + [(LC, 'LandCover'), (DEM, 'DEM')]
 
 # SAR
 for sat in ['S1', 'AL']:
@@ -54,9 +64,9 @@ for sat in ['S1', 'AL']:
         pre = norm(np.array(ds.root[f"{sat}/pre/{band}"]).transpose(0,2,1)[0,])
         post = norm(np.array(ds.root[f"{sat}/post/{band}"]).transpose(0,2,1)[0,])
         logRt = norm(pre - post)
-        images = images + [(pre, f"{sat}/pre/{band}"), 
-                           (post, f"{sat}/post/{band}"), 
-                           (logRt, f"{sat}/logRt/{band}")]
+        images += [ (pre, f"{sat}/pre/{band}"), 
+                    (post, f"{sat}/post/{band}"), 
+                    (logRt, f"{sat}/logRt/{band}")]
 
 
 #%%
@@ -77,4 +87,4 @@ for i in range(nRows):
 
 # plt.show()   
 fig.tight_layout()
-fig.savefig(f"outputs/wildfire-s1s2-dataset-ca-V2/{filename}.png", dpi=200) 
+fig.savefig(f"{data_dir}/{filename}.png", dpi=200) 
